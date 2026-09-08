@@ -66,6 +66,13 @@ class MainScreenViewModel @Inject constructor(
         started = SharingStarted.WhileSubscribed(5000)
     )
 
+    val isBottomBarPinnedFlow: StateFlow<Boolean> =
+        userPreferences.isBottomBarPinnedFlow.stateIn(
+            initialValue = false,
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000)
+        )
+
     // Unlock state lives for the process lifetime: once authenticated, the app stays
     // unlocked until it is killed. Reset when the lock is disabled by the user.
     private val _isUnlocked = MutableStateFlow(false)

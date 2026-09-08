@@ -33,6 +33,8 @@
   "settings_use_24_hour_clock": "使用24小時制",
   "settings_stats_by_ingestion_time": "依攝入時間統計",
   "settings_stats_by_ingestion_time_description": "每次攝入依真實發生日期計入，而不是把整段體驗算在第一天",
+  "settings_keep_bottom_bar_visible": "保持底部選單常顯",
+  "settings_keep_bottom_bar_visible_description": "開啟後，捲動時底部選單固定不動，不再自動隱藏",
   "settings_app_data": "應用程式資料",
   "settings_export_file": "匯出檔案",
   "settings_export_title": "匯出？",

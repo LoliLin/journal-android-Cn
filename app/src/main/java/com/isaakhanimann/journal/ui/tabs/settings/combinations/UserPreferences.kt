@@ -54,6 +54,7 @@ class UserPreferences @Inject constructor(private val dataStore: DataStore<Prefe
         val KEY_APP_LOCK_ENABLED = booleanPreferencesKey("key_app_lock_enabled")
         val KEY_EFFECT_NOTIFICATION_ENABLED = booleanPreferencesKey("key_effect_notification_enabled")
         val KEY_ARE_SUBSTANCE_HEIGHTS_INDEPENDENT = booleanPreferencesKey("KEY_ARE_SUBSTANCE_HEIGHTS_INDEPENDENT")
+        val KEY_IS_BOTTOM_BAR_PINNED = booleanPreferencesKey("key_is_bottom_bar_pinned")
         val KEY_IS_TIMELINE_HIDDEN = booleanPreferencesKey("KEY_IS_TIMELINE_HIDDEN")
         val KEY_MIDNIGHT_CUTOFF_ENABLED = booleanPreferencesKey("key_midnight_cutoff_enabled")
         val KEY_USE_24_HOUR_CLOCK = booleanPreferencesKey("key_use_24_hour_clock")
@@ -180,6 +181,17 @@ class UserPreferences @Inject constructor(private val dataStore: DataStore<Prefe
     suspend fun saveIsTimelineHidden(value: Boolean) {
         dataStore.edit { preferences ->
             preferences[PreferencesKeys.KEY_IS_TIMELINE_HIDDEN] = value
+        }
+    }
+
+    val isBottomBarPinnedFlow: Flow<Boolean> = dataStore.data
+        .map { preferences ->
+            preferences[PreferencesKeys.KEY_IS_BOTTOM_BAR_PINNED] ?: false
+        }
+
+    suspend fun saveIsBottomBarPinned(value: Boolean) {
+        dataStore.edit { preferences ->
+            preferences[PreferencesKeys.KEY_IS_BOTTOM_BAR_PINNED] = value
         }
     }
 

@@ -33,6 +33,8 @@
   "settings_use_24_hour_clock": "使用24小时制",
   "settings_stats_by_ingestion_time": "按摄入时间统计",
   "settings_stats_by_ingestion_time_description": "每次摄入按真实发生日期计入，而不是把整段体验算在第一天",
+  "settings_keep_bottom_bar_visible": "保持底部菜单常显",
+  "settings_keep_bottom_bar_visible_description": "开启后，滚动时底部菜单固定不动，不再自动隐藏",
   "settings_app_data": "应用数据",
   "settings_export_file": "导出文件",
   "settings_export_title": "导出？",
