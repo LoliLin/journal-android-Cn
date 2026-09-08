@@ -66,6 +66,16 @@ class SettingsViewModel @Inject constructor(
         started = SharingStarted.WhileSubscribed(5000)
     )
 
+    fun saveIsBottomBarPinned(value: Boolean) = viewModelScope.launch {
+        userPreferences.saveIsBottomBarPinned(value)
+    }
+
+    val isBottomBarPinnedFlow = userPreferences.isBottomBarPinnedFlow.stateIn(
+        initialValue = false,
+        scope = viewModelScope,
+        started = SharingStarted.WhileSubscribed(5000)
+    )
+
     val areSubstanceHeightsIndependentFlow = userPreferences.areSubstanceHeightsIndependentFlow.stateIn(
         initialValue = false,
         scope = viewModelScope,

@@ -76,6 +76,8 @@ fun PreferencesScreen(
         saveOpenLinkInBrowser = viewModel::saveOpenLinkInBrowser,
         isTimelineHidden = viewModel.isTimelineHiddenFlow.collectAsState().value,
         saveIsTimelineHidden = viewModel::saveIsTimelineHidden,
+        isBottomBarPinned = viewModel.isBottomBarPinnedFlow.collectAsState().value,
+        saveIsBottomBarPinned = viewModel::saveIsBottomBarPinned,
         areSubstanceHeightsIndependent =
             viewModel.areSubstanceHeightsIndependentFlow.collectAsState().value,
         saveAreSubstanceHeightsIndependent = viewModel::saveAreSubstanceHeightsIndependent,
@@ -109,6 +111,8 @@ fun PreferencesScreen(
     saveOpenLinkInBrowser: (Boolean) -> Unit,
     isTimelineHidden: Boolean,
     saveIsTimelineHidden: (Boolean) -> Unit,
+    isBottomBarPinned: Boolean,
+    saveIsBottomBarPinned: (Boolean) -> Unit,
     areSubstanceHeightsIndependent: Boolean,
     saveAreSubstanceHeightsIndependent: (Boolean) -> Unit,
     isMidnightCutoffEnabled: Boolean,
@@ -222,6 +226,13 @@ fun PreferencesScreen(
                     title = i18n("settings_hide_timeline"),
                     checked = isTimelineHidden,
                     onCheckedChange = saveIsTimelineHidden
+                )
+                HorizontalDivider()
+                PreferenceSwitchRow(
+                    title = i18n("settings_keep_bottom_bar_visible"),
+                    description = i18n("settings_keep_bottom_bar_visible_description"),
+                    checked = isBottomBarPinned,
+                    onCheckedChange = saveIsBottomBarPinned
                 )
                 HorizontalDivider()
                 IndependentHeightsRow(

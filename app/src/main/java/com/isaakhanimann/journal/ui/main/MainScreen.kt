@@ -99,6 +99,7 @@ fun MainScreen(viewModel: MainScreenViewModel = hiltViewModel()) {
         I18n.setPreferredLanguageKey(selectedLanguageKey)
     }
     val isAccepted = viewModel.isAcceptedFlow.collectAsState().value
+    val isBottomBarPinned = viewModel.isBottomBarPinnedFlow.collectAsState().value
 
     // Notification taps can steer the app to a target screen (quick note / time capsule).
     // Tracked above the gate so the intent survives the accept/lock screens and is
@@ -163,48 +164,57 @@ fun MainScreen(viewModel: MainScreenViewModel = hiltViewModel()) {
         val isKeyboardOpenNow = isKeyboardOpen().value
         val isOnMainTabRoot = isMainTabRootRoute(currentDestination?.route)
         val isBottomBarShown = isOnMainTabRoot && !isKeyboardOpenNow
-
         // Official Material3 hide-on-scroll connection, plus onPreScroll so an
         // upward swipe at the list top (consumed.y == 0) still reveals the bar.
+        // When the user pins the bar (issue #144) no connection is provided at
+        // all: lists scroll normally and the bar never moves.
         val bottomBarScrollBehavior = BottomAppBarDefaults.exitAlwaysScrollBehavior(
             canScroll = { isOnMainTabRoot && !isKeyboardOpenNow }
         )
-        val nestedScrollConnection = remember(bottomBarScrollBehavior) {
-            val official = bottomBarScrollBehavior.nestedScrollConnection
-            object : NestedScrollConnection {
-                override fun onPreScroll(
-                    available: Offset,
-                    source: NestedScrollSource
-                ): Offset {
-                    if (available.y > 0f &&
-                        bottomBarScrollBehavior.state.heightOffset < 0f
-                    ) {
-                        val state = bottomBarScrollBehavior.state
-                        val next = (state.heightOffset + available.y)
-                            .coerceIn(state.heightOffsetLimit, 0f)
-                        val consumedY = next - state.heightOffset
-                        state.heightOffset = next
-                        return Offset(0f, consumedY)
+        val nestedScrollConnection = if (isBottomBarPinned) {
+            null
+        } else {
+            remember(bottomBarScrollBehavior) {
+                val official = bottomBarScrollBehavior.nestedScrollConnection
+                object : NestedScrollConnection {
+                    override fun onPreScroll(
+                        available: Offset,
+                        source: NestedScrollSource
+                    ): Offset {
+                        if (available.y > 0f &&
+                            bottomBarScrollBehavior.state.heightOffset < 0f
+                        ) {
+                            val state = bottomBarScrollBehavior.state
+                            val next = (state.heightOffset + available.y)
+                                .coerceIn(state.heightOffsetLimit, 0f)
+                            val consumedY = next - state.heightOffset
+                            state.heightOffset = next
+                            return Offset(0f, consumedY)
+                        }
+                        return Offset.Zero
                     }
-                    return Offset.Zero
-                }
 
-                override fun onPostScroll(
-                    consumed: Offset,
-                    available: Offset,
-                    source: NestedScrollSource
-                ): Offset = official.onPostScroll(consumed, available, source)
+                    override fun onPostScroll(
+                        consumed: Offset,
+                        available: Offset,
+                        source: NestedScrollSource
+                    ): Offset = official.onPostScroll(consumed, available, source)
+                }
             }
         }
-        LaunchedEffect(isOnMainTabRoot, isKeyboardOpenNow) {
-            if (!isOnMainTabRoot || isKeyboardOpenNow) {
+        LaunchedEffect(isOnMainTabRoot, isKeyboardOpenNow, isBottomBarPinned) {
+            if (!isOnMainTabRoot || isKeyboardOpenNow || isBottomBarPinned) {
                 bottomBarScrollBehavior.state.heightOffset = 0f
             }
         }
 
         Box(modifier = Modifier.fillMaxSize()) {
             val barHeightPx = remember { mutableIntStateOf(0) }
-            val heightOffset = bottomBarScrollBehavior.state.heightOffset
+            val heightOffset = if (isBottomBarPinned) {
+                0f
+            } else {
+                bottomBarScrollBehavior.state.heightOffset
+            }
             val visibleBarPx = if (isBottomBarShown) {
                 (barHeightPx.intValue + heightOffset.toInt()).coerceAtLeast(0)
             } else {
@@ -244,7 +254,11 @@ fun MainScreen(viewModel: MainScreenViewModel = hiltViewModel()) {
                         .offset {
                             IntOffset(
                                 x = 0,
-                                y = -bottomBarScrollBehavior.state.heightOffset.toInt()
+                                y = if (isBottomBarPinned) {
+                                    0
+                                } else {
+                                    -bottomBarScrollBehavior.state.heightOffset.toInt()
+                                }
                             )
                         }
                 ) {

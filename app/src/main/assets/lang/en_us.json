@@ -33,6 +33,8 @@
   "settings_use_24_hour_clock": "Use 24-hour time",
   "settings_stats_by_ingestion_time": "Stats by ingestion time",
   "settings_stats_by_ingestion_time_description": "Place each ingestion on the day it happened instead of grouping a whole experience into its first day",
+  "settings_keep_bottom_bar_visible": "Keep bottom menu visible",
+  "settings_keep_bottom_bar_visible_description": "When enabled, the bottom menu stays fixed while you scroll instead of hiding",
   "settings_app_data": "App data",
   "settings_export_file": "Export file",
   "settings_export_title": "Export?",
