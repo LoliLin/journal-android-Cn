@@ -1,6 +1,6 @@
 [versions]
 # Gradle 插件
-androidGradlePlugin = "9.3.2"
+androidGradlePlugin = "9.4.0"
 fragment = "1.9.0"
 kotlin = "2.4.10"
 ksp = "2.3.11"
