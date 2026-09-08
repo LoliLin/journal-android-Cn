@@ -6,5 +6,6 @@
   },
   "toxicities": ["低毒性"],
   "summary": "普瑞巴林（Lyrica）是一種GABA衍生物，用於治療神經病變性疼痛、癲癇發作以及焦慮。",
-  "localizedName": "普瑞巴林"
+  "localizedName": "普瑞巴林",
+  "metabolism": "在人體內代謝程度極低，主要以普瑞巴林原形經腎臟排出；其清除不能用 CYP 生物轉化來解釋。"
 }

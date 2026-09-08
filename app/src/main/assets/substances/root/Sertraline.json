@@ -1,0 +1,22 @@
+{
+  "name": "Sertraline",
+  "localizedName": "Sertraline",
+  "commonNames": ["舍曲林", "sertraline", "zoloft", "lustral"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06AB06&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidepressant", "ssri"],
+  "summary": "Sertraline is a selective serotonin reuptake inhibitor (SSRI) antidepressant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Initial N-demethylation forms less active N-desmethylsertraline. Further deamination, reduction, hydroxylation and glucuronidation precede elimination in urine and feces. Multiple enzymes participate; the reviewed label does not identify one exclusive CYP pathway.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3"
+  ]
+}

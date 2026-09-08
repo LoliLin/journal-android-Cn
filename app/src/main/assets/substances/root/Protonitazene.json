@@ -1,0 +1,13 @@
+{
+  "name": "Protonitazene",
+  "localizedName": "Protonitazene",
+  "commonNames": ["丙托尼秦"],
+  "url": "https://www.euda.europa.eu/publications/eu-drug-markets/new-psychoactive-substances/distribution-and-supply/new-opioids_en",
+  "isApproved": false,
+  "categories": ["opioid", "research-chemical", "tentative"],
+  "summary": "Protonitazene. Classification: Opioid.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [],
+  "metabolism": "Human hepatocyte studies identified N-deethylation, O-dealkylation, N-oxidation and glucuronidation. These laboratory findings do not define complete clinical pharmacokinetics.",
+  "metabolismSources": ["https://pubmed.ncbi.nlm.nih.gov/38679851/"]
+}

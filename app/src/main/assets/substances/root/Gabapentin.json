@@ -10,7 +10,7 @@
   },
   "crossTolerances": [],
   "toxicities": ["low toxicity"],
-  "categories": ["depressant", "habit-forming"],
+  "categories": ["depressant", "habit-forming", "antiepileptic"],
   "summary": "An analogue of GABA also known as Neurontin, originally developed to treat epilepsy. Commonly prescribed for neuropathic pain, it also has pronounced anxiolytic effects leading to its use in treating anxiety disorders.",
   "interactions": {
     "dangerous": ["Opioids", "Depressants"],
@@ -49,5 +49,9 @@
         "max": 60
       }
     }
+  ],
+  "metabolism": "Does not undergo appreciable metabolism in humans. It is eliminated by the kidneys as unchanged gabapentin; hepatic CYP metabolism is not a major clearance pathway.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d35cd5ac-5ed6-2405-e053-2995a90a6946"
   ]
 }

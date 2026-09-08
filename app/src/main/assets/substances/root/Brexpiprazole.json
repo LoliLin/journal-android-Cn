@@ -1,0 +1,22 @@
+{
+  "name": "Brexpiprazole",
+  "localizedName": "Brexpiprazole",
+  "commonNames": ["布瑞哌唑"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N05AX16&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antipsychotic"],
+  "summary": "Brexpiprazole. Classification: Antipsychotic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "CYP3A4 and CYP2D6 are the principal metabolic enzymes. Elimination occurs mainly after metabolism, through urine and feces; little unchanged drug is recovered in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6991c065-0f6e-433a-8f4f-796e0ece327f"
+  ]
+}

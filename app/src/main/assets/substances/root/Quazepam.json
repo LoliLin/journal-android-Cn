@@ -1,0 +1,22 @@
+{
+  "name": "Quazepam",
+  "localizedName": "Quazepam",
+  "commonNames": ["夸西泮", "quazepam", "doral"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N05CD10&showdescription=yes",
+  "isApproved": false,
+  "categories": ["hypnotic", "benzodiazepine"],
+  "summary": "Quazepam. Classification: Hypnotic, Benzodiazepine.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Extensively metabolized in the liver to 2-oxoquazepam and N-desalkyl-2-oxoquazepam. These circulating metabolites can persist; the reviewed label does not identify one principal enzyme.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7d63f3f-5303-48ab-bce2-35fd62c45799"
+  ]
+}

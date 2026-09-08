@@ -1,0 +1,20 @@
+{
+  "name": "4-Fluorobutyrfentanyl",
+  "localizedName": "4-Fluorobutyrfentanyl",
+  "commonNames": ["parafluorobutyrfentanyl", "pfbf", "4-fbf"],
+  "url": "https://tripsit.me/factsheets/?name=parafluorobutyrfentanyl&p=substance",
+  "isApproved": false,
+  "categories": ["opioid", "research-chemical", "depressant"],
+  "summary": "4-Fluorobutyrfentanyl. Classification: Opioid, Depressant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "µg"
+      }
+    }
+  ],
+  "metabolism": "Human metabolism has not yet been verified for this entry. Responsible enzymes, metabolites and elimination routes are not specified. This is a documentation gap, not evidence that the substance is not metabolized; do not infer a pathway from related compounds.",
+  "metabolismSources": []
+}

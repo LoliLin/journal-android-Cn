@@ -1,0 +1,27 @@
+{
+  "name": "Dexmethylphenidate",
+  "localizedName": "Dexmethylphenidate",
+  "commonNames": [
+    "右哌甲酯",
+    "focalin",
+    "dexmethylphenidate",
+    "dextromethylphenidate"
+  ],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06BA11&showdescription=yes",
+  "isApproved": false,
+  "categories": ["stimulant", "adhd-medication"],
+  "summary": "Dexmethylphenidate. Classification: Stimulant, ADHD medication.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Primarily de-esterified to d-ritalinic acid, a metabolite with little pharmacological activity. Drug-related material is eliminated mainly in urine; very little parent drug is recovered unchanged.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dd659d39-41f5-4612-8f17-bad602b4784d"
+  ]
+}

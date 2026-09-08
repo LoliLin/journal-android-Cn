@@ -12,7 +12,7 @@
   "isApproved": true,
   "crossTolerances": [],
   "toxicities": [],
-  "categories": ["stimulant"],
+  "categories": ["stimulant", "adhd-medication"],
   "interactions": {
     "dangerous": ["Tramadol", "aMT", "MAOIs"],
     "unsafe": ["DXM", "PCP", "25x-NBOMe", "2C-T-x", "5-MeO-xxT", "DOx"],

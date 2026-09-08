@@ -10,7 +10,7 @@
   },
   "crossTolerances": [],
   "toxicities": ["low toxicity"],
-  "categories": ["depressant", "habit-forming", "common"],
+  "categories": ["depressant", "habit-forming", "common", "antiepileptic"],
   "summary": "Pregabalin (Lyrica) is a GABA derivative that is used to treat neuropathic pain and seizures, as well as anxiety.",
   "interactions": {
     "dangerous": [],
@@ -105,5 +105,9 @@
         }
       }
     }
+  ],
+  "metabolism": "Undergoes negligible human metabolism. Elimination is primarily renal as unchanged pregabalin, so CYP biotransformation does not explain its clearance.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e897d7e8-2743-4512-8417-375cb11ceec6"
   ]
 }

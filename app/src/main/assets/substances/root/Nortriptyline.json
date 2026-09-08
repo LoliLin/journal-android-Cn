@@ -1,0 +1,20 @@
+{
+  "name": "Nortriptyline",
+  "localizedName": "Nortriptyline",
+  "commonNames": ["去甲替林"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06AA10&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidepressant"],
+  "summary": "Nortriptyline. Classification: Antidepressant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "CYP2D6-mediated hydroxylation is a major clearance pathway.",
+  "metabolismSources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479/"]
+}

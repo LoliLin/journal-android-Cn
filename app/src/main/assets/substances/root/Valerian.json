@@ -1,0 +1,13 @@
+{
+  "name": "Valerian",
+  "localizedName": "Valerian",
+  "commonNames": ["Valerianae radix", "缬草", "纈草"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N05CM09&showdescription=yes",
+  "isApproved": false,
+  "categories": ["hypnotic", "botanical"],
+  "summary": "Valerian. Classification: Hypnotic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [],
+  "metabolism": "This material contains multiple constituents and has no single ingredient-level metabolic pathway. Composition and constituent-specific metabolism must be distinguished; this entry does not yet provide a verified constituent-by-constituent account.",
+  "metabolismSources": []
+}

@@ -82,7 +82,7 @@ fun prepareShareableExperienceCardData(
         val ingestion = oneIngestionWithComp.ingestion
 
         val substance = substanceRepo.getSubstance(ingestion.substanceName)
-        val roa = substance?.getRoa(ingestion.administrationRoute)
+        val roa = substance?.getRoa(ingestion.administrationRoute, ingestion.releaseForm)
 
         val numDots = if (oneIngestionWithComp.customUnit != null) {
             roa?.roaDose?.getNumDots(

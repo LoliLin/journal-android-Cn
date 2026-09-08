@@ -1,0 +1,13 @@
+{
+  "name": "Etodesnitazene",
+  "localizedName": "Etodesnitazene",
+  "commonNames": ["etazene"],
+  "url": "https://tripsit.me/factsheets/?name=etodesnitazene&p=substance",
+  "isApproved": false,
+  "categories": ["opioid", "research-chemical", "tentative"],
+  "summary": "Etodesnitazene. Classification: Opioid.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [],
+  "metabolism": "Human hepatocytes and case samples support N-deethylation, O-dealkylation and conjugation. Specific enzyme contributions and clinical kinetics remain insufficiently defined.",
+  "metabolismSources": ["https://pubmed.ncbi.nlm.nih.gov/38582802/"]
+}

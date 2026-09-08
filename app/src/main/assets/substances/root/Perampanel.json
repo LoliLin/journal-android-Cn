@@ -1,0 +1,22 @@
+{
+  "name": "Perampanel",
+  "localizedName": "Perampanel",
+  "commonNames": ["吡仑帕奈", "吡侖帕奈"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N03AX22&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antiepileptic"],
+  "summary": "Perampanel. Classification: Antiepileptic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Primarily oxidized by CYP3A4/5, with smaller CYP1A2/CYP2B6 contributions in vitro. Subsequent glucuronidation produces metabolites eliminated through feces and urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c72a5f7-bb22-4c48-942a-543ca84ed5a9"
+  ]
+}

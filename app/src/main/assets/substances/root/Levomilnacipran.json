@@ -1,0 +1,22 @@
+{
+  "name": "Levomilnacipran",
+  "localizedName": "Levomilnacipran",
+  "commonNames": ["左米那普仑", "左米那普侖"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06AX28&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidepressant"],
+  "summary": "Levomilnacipran. Classification: Antidepressant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Much is eliminated unchanged in urine. The metabolized fraction undergoes mainly CYP3A4 desethylation and hydroxylation, followed by glucuronidation and renal elimination.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f371258d-91b3-4b6a-ac99-434a1964c3af"
+  ]
+}

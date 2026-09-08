@@ -20,10 +20,12 @@ package com.isaakhanimann.journal.ui.tabs.settings
 
 import com.isaakhanimann.journal.data.room.experiences.entities.AdaptiveColor
 import com.isaakhanimann.journal.data.room.experiences.entities.CustomSubstance
+import com.isaakhanimann.journal.data.room.experiences.entities.Ingestion
 import com.isaakhanimann.journal.data.room.experiences.entities.ShulginRatingOption
 import com.isaakhanimann.journal.data.room.experiences.entities.StomachFullness
 import com.isaakhanimann.journal.data.room.experiences.entities.SubstanceCompanion
 import com.isaakhanimann.journal.data.substances.AdministrationRoute
+import com.isaakhanimann.journal.data.substances.ReleaseForm
 import java.time.Instant
 import kotlinx.serialization.Serializable
 
@@ -87,7 +89,43 @@ data class IngestionSerializable(
     var notes: String? = null,
     var stomachFullness: StomachFullness? = null,
     var consumerName: String? = null,
-    var customUnitId: Int? = null
+    var customUnitId: Int? = null,
+    var releaseForm: ReleaseForm? = null
+)
+
+fun Ingestion.toIngestionSerializable(): IngestionSerializable = IngestionSerializable(
+    substanceName = substanceName,
+    time = time,
+    endTime = endTime,
+    creationDate = creationDate,
+    administrationRoute = administrationRoute,
+    dose = dose,
+    isDoseAnEstimate = isDoseAnEstimate,
+    estimatedDoseStandardDeviation = estimatedDoseStandardDeviation,
+    units = units,
+    notes = notes,
+    stomachFullness = stomachFullness,
+    consumerName = consumerName,
+    customUnitId = customUnitId,
+    releaseForm = releaseForm
+)
+
+fun IngestionSerializable.toIngestion(experienceId: Int): Ingestion = Ingestion(
+    substanceName = substanceName,
+    time = time,
+    endTime = endTime,
+    creationDate = creationDate,
+    administrationRoute = administrationRoute,
+    dose = dose,
+    isDoseAnEstimate = isDoseAnEstimate,
+    estimatedDoseStandardDeviation = estimatedDoseStandardDeviation,
+    units = units,
+    experienceId = experienceId,
+    notes = notes,
+    stomachFullness = stomachFullness,
+    consumerName = consumerName,
+    customUnitId = customUnitId,
+    releaseForm = releaseForm
 )
 
 @Serializable

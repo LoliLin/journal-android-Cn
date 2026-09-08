@@ -33,5 +33,9 @@
         "max": 90
       }
     }
+  ],
+  "metabolism": "CYP2D6 forms O-desmethylgalantamine and CYP3A4 forms galantamine N-oxide. Glucuronidation and urinary excretion of unchanged drug also contribute.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=261889d3-41c8-4655-98f7-41317778e7a1"
   ]
 }

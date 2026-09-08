@@ -1,0 +1,13 @@
+{
+  "name": "Metonitazene",
+  "localizedName": "Metonitazene",
+  "commonNames": ["美托尼秦"],
+  "url": "https://www.euda.europa.eu/publications/eu-drug-markets/new-psychoactive-substances/distribution-and-supply/new-opioids_en",
+  "isApproved": false,
+  "categories": ["opioid", "research-chemical", "tentative"],
+  "summary": "Metonitazene. Classification: Opioid.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [],
+  "metabolism": "N-deethylation, O-dealkylation and glucuronidation were seen in human hepatocytes, with supporting postmortem sample findings. This is limited metabolic evidence, not a complete clinical clearance model.",
+  "metabolismSources": ["https://pubmed.ncbi.nlm.nih.gov/38582802/"]
+}

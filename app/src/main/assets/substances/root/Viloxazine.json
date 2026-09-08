@@ -1,0 +1,22 @@
+{
+  "name": "Viloxazine",
+  "localizedName": "Viloxazine",
+  "commonNames": ["维洛沙嗪", "維洛沙嗪", "viloxazine"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06AX09&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidepressant", "adhd-medication"],
+  "summary": "Viloxazine. Classification: Antidepressant, ADHD medication.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Mainly metabolized through CYP2D6, UGT1A9 and UGT2B15. The major circulating metabolite is 5-hydroxyviloxazine glucuronide; elimination is predominantly renal.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aedf408d-0f84-418d-9416-7c39ddb0d29a"
+  ]
+}

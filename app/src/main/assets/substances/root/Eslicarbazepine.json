@@ -1,0 +1,22 @@
+{
+  "name": "Eslicarbazepine",
+  "localizedName": "Eslicarbazepine",
+  "commonNames": ["艾司利卡西平"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N03AF04&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antiepileptic"],
+  "summary": "Eslicarbazepine. Classification: Antiepileptic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "The marketed acetate prodrug is hydrolyzed during first-pass processing to active eslicarbazepine. Eslicarbazepine is then partly glucuronidated and eliminated mainly by the kidneys, both unchanged and conjugated.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2067fb77-9657-44da-b430-02e8a4efacb5"
+  ]
+}

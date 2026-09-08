@@ -35,7 +35,7 @@ fun buildIngestionElements(
     .map { oneIngestionWithComp ->
         val ingestion = oneIngestionWithComp.ingestion
         val roa = substanceRepo.getSubstance(ingestion.substanceName)
-            ?.getRoa(ingestion.administrationRoute)
+            ?.getRoa(ingestion.administrationRoute, ingestion.releaseForm)
         // Custom-unit doses must resolve through the unit conversion; mirroring
         // ExperienceViewModel.getIngestionElements.
         val numDots = if (oneIngestionWithComp.customUnit != null) {

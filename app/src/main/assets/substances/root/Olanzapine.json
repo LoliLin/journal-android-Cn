@@ -70,5 +70,9 @@
         }
       }
     }
+  ],
+  "metabolism": "Primarily undergoes direct glucuronidation and CYP-mediated oxidation, with CYP1A2 important to oxidation. Major metabolites include 10-N-glucuronide and N-desmethylolanzapine; elimination is through urine and feces.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=63bcfe98-d1fc-4cd7-9212-f59ee4dcc6d1"
   ]
 }

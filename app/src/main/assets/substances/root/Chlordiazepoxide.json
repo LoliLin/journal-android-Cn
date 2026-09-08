@@ -1,0 +1,20 @@
+{
+  "name": "Chlordiazepoxide",
+  "localizedName": "Chlordiazepoxide",
+  "commonNames": ["氯氮䓬", "librium", "chlordiazepoxide"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N05BA02&showdescription=yes",
+  "isApproved": false,
+  "categories": ["anxiolytic", "benzodiazepine"],
+  "summary": "Chlordiazepoxide. Classification: Anxiolytic, Benzodiazepine.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Hepatic metabolism produces active desmethylchlordiazepoxide and demoxepam. Active metabolites persist and can accumulate; urinary elimination includes metabolites and a small unchanged fraction.",
+  "metabolismSources": ["https://www.medicines.org.uk/emc/product/1728/smpc"]
+}

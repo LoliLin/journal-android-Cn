@@ -69,6 +69,7 @@ import com.isaakhanimann.journal.data.room.experiences.entities.AdaptiveColor
 import com.isaakhanimann.journal.data.room.experiences.entities.CustomSubstance
 import com.isaakhanimann.journal.data.room.experiences.entities.CustomUnit
 import com.isaakhanimann.journal.data.substances.AdministrationRoute
+import com.isaakhanimann.journal.data.substances.ReleaseForm
 import com.isaakhanimann.journal.localization.i18n
 import com.isaakhanimann.journal.ui.tabs.journal.addingestion.search.suggestion.SuggestionRow
 import com.isaakhanimann.journal.ui.tabs.journal.addingestion.search.suggestion.models.SubstanceRouteSuggestion
@@ -89,7 +90,8 @@ fun AddIngestionSearchScreen(
         units: String?,
         isEstimate: Boolean,
         estimatedDoseStandardDeviation: Double?,
-        customUnitId: Int?
+        customUnitId: Int?,
+        releaseForm: ReleaseForm?
     ) -> Unit,
     navigateToCustomSubstanceChooseRoute: (customSubstanceId: Int) -> Unit,
     navigateToCustomUnitChooseDose: (customUnitId: Int) -> Unit,
@@ -133,7 +135,8 @@ fun AddIngestionSearchScreen(
         units: String?,
         isEstimate: Boolean,
         estimatedDoseStandardDeviation: Double?,
-        customUnitId: Int?
+        customUnitId: Int?,
+        releaseForm: ReleaseForm?
     ) -> Unit,
     navigateToCustomSubstanceChooseRoute: (customSubstanceId: Int) -> Unit,
     navigateToAddCustomSubstanceScreen: () -> Unit,

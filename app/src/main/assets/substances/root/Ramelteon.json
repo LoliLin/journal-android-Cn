@@ -1,0 +1,15 @@
+{
+  "name": "Ramelteon",
+  "localizedName": "Ramelteon",
+  "commonNames": ["雷美替胺"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N05CH02&showdescription=yes",
+  "isApproved": false,
+  "categories": ["hypnotic"],
+  "summary": "Ramelteon. Classification: Hypnotic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [],
+  "metabolism": "Mainly oxidized by CYP1A2, with minor CYP2C/CYP3A4 contributions, followed by glucuronidation. Metabolites account for almost all elimination, predominantly through urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a3cf917-3569-4fc1-8b81-ffecfd2de005"
+  ]
+}

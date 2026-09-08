@@ -1,0 +1,20 @@
+{
+  "name": "6-EAPB",
+  "localizedName": "6-EAPB",
+  "commonNames": [],
+  "url": "https://tripsit.me/factsheets/?name=6-eapb&p=substance",
+  "isApproved": false,
+  "categories": ["stimulant", "psychedelic", "research-chemical", "entactogen"],
+  "summary": "6-EAPB. Classification: Stimulant, Psychedelic, Entactogen.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Human metabolism has not yet been verified for this entry. Responsible enzymes, metabolites and elimination routes are not specified. This is a documentation gap, not evidence that the substance is not metabolized; do not infer a pathway from related compounds.",
+  "metabolismSources": []
+}

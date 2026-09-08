@@ -1,0 +1,15 @@
+{
+  "name": "Gepirone",
+  "localizedName": "Gepirone",
+  "commonNames": ["吉哌隆"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06AX19&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidepressant"],
+  "summary": "Gepirone. Classification: Antidepressant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [],
+  "metabolism": "CYP3A4 forms the pharmacologically active metabolites 1-PP and 3'-hydroxygepirone. Elimination occurs mainly through urine as metabolites, with a smaller fecal component.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c78edd8-6acb-433c-9d34-2527da8d64e1"
+  ]
+}

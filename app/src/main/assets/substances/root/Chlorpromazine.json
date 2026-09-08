@@ -1,0 +1,20 @@
+{
+  "name": "Chlorpromazine",
+  "localizedName": "Chlorpromazine",
+  "commonNames": ["氯丙嗪"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N05AA01&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antipsychotic"],
+  "summary": "Chlorpromazine. Classification: Antipsychotic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Extensively processed in the liver with numerous metabolites. Metabolite excretion is much slower than the initial decline of chlorpromazine itself; a single CYP does not describe the complete pathway.",
+  "metabolismSources": ["https://www.medicines.org.uk/emc/product/3476/smpc"]
+}

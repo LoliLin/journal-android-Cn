@@ -60,5 +60,10 @@
         "max": 100
       }
     }
-  ]
+  ],
+  "metabolism": "Extensively metabolized in the liver, chiefly through CYP3A4. Products include active norquetiapine and inactive sulfoxide metabolites; drug-related material is eliminated in urine and feces.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=711f42c5-0719-46de-81fb-3d03801b9ed9"
+  ],
+  "oralReleaseForms": ["IMMEDIATE_RELEASE", "EXTENDED_RELEASE"]
 }

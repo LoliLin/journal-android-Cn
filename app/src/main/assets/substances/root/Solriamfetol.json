@@ -1,0 +1,22 @@
+{
+  "name": "Solriamfetol",
+  "localizedName": "Solriamfetol",
+  "commonNames": ["索利氨酯"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06BA14&showdescription=yes",
+  "isApproved": false,
+  "categories": ["stimulant"],
+  "summary": "Solriamfetol. Classification: Stimulant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Only minimally metabolized. Most is eliminated unchanged in urine; N-acetylsolriamfetol is a minor inactive metabolite.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=362f206b-73e7-4009-8c34-5a9df55679ab"
+  ]
+}

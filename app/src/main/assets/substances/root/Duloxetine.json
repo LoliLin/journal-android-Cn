@@ -1,0 +1,22 @@
+{
+  "name": "Duloxetine",
+  "localizedName": "Duloxetine",
+  "commonNames": ["度洛西汀"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06AX21&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidepressant"],
+  "summary": "Duloxetine. Classification: Antidepressant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "CYP1A2 and CYP2D6 mediate hepatic oxidation, followed by glucuronide or sulfate conjugation. Major circulating metabolites do not contribute substantially to activity; elimination is mainly urinary as metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00628e5e-4c5b-2573-e063-6294a90a0e3b"
+  ]
+}

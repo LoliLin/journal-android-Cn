@@ -78,13 +78,14 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import com.isaakhanimann.journal.data.room.experiences.entities.AdaptiveColor
 import com.isaakhanimann.journal.data.room.experiences.relations.ExperienceWithIngestions
+import com.isaakhanimann.journal.data.substances.ReleaseForm
 import com.isaakhanimann.journal.localization.i18n
+import com.isaakhanimann.journal.ui.tabs.journal.addingestion.ReleaseFormPicker
 import com.isaakhanimann.journal.ui.tabs.journal.experience.components.CardWithTitle
 import com.isaakhanimann.journal.ui.tabs.journal.experience.rating.FloatingDoneButton
 import com.isaakhanimann.journal.ui.theme.horizontalPadding
-import kotlinx.coroutines.launch
 import java.time.LocalDateTime
-
+import kotlinx.coroutines.launch
 
 @Composable
 fun FinishIngestionScreen(
@@ -128,7 +129,10 @@ fun FinishIngestionScreen(
         isEnteredTitleOk = viewModel.isEnteredTitleOk,
         consumerName = viewModel.consumerName,
         onChangeOfConsumerName = viewModel::changeConsumerName,
-        consumerNamesSorted = viewModel.sortedConsumerNamesFlow.collectAsState().value
+        consumerNamesSorted = viewModel.sortedConsumerNamesFlow.collectAsState().value,
+        availableReleaseForms = viewModel.availableReleaseForms,
+        releaseForm = viewModel.releaseForm,
+        onChangeReleaseForm = viewModel::changeReleaseForm
     )
 }
 
@@ -202,22 +206,25 @@ fun FinishIngestionScreen(
     isEnteredTitleOk: Boolean,
     consumerName: String,
     onChangeOfConsumerName: (String) -> Unit,
-    consumerNamesSorted: List<String>
+    consumerNamesSorted: List<String>,
+    availableReleaseForms: List<ReleaseForm> = emptyList(),
+    releaseForm: ReleaseForm? = null,
+    onChangeReleaseForm: (ReleaseForm?) -> Unit = {}
 ) {
     val focusManager = LocalFocusManager.current
     Scaffold(
         topBar = {
             TopAppBar(
                 title = {
-                Text(
-                    i18n(
-                        "substances_ingestion",
-                        replacements = mapOf(
-                            "substance" to getSubstanceDisplayName(substanceName)
+                    Text(
+                        i18n(
+                            "substances_ingestion",
+                            replacements = mapOf(
+                                "substance" to getSubstanceDisplayName(substanceName)
+                            )
                         )
                     )
-                )
-            }
+                }
             )
         },
         floatingActionButton = {
@@ -241,7 +248,7 @@ fun FinishIngestionScreen(
         ) {
             LinearProgressIndicator(
                 progress = { 0.9f },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth()
             )
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -250,6 +257,7 @@ fun FinishIngestionScreen(
                     .padding(horizontal = horizontalPadding)
             ) {
                 Spacer(modifier = Modifier.height(3.dp))
+                ReleaseFormPicker(availableReleaseForms, releaseForm, onChangeReleaseForm)
                 CardWithTitle(title = i18n("common_time")) {
                     TimePointOrRangePicker(
                         onChangeTimePickerOption = onChangeTimePickerOption,
@@ -262,7 +270,10 @@ fun FinishIngestionScreen(
                         onSelectDurationPreset = onSelectDurationPreset
                     )
                 }
-                CardWithTitle(title = i18n("common_experience"), modifier = Modifier.fillMaxWidth()) {
+                CardWithTitle(
+                    title = i18n("common_experience"),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
                     var isShowingDropDownMenu by remember { mutableStateOf(false) }
                     Box(
                         modifier = Modifier
@@ -273,7 +284,20 @@ fun FinishIngestionScreen(
                             modifier = Modifier.fillMaxWidth()
                         ) {
                             val selectedExperienceTitle = selectedExperience?.experience?.title
-                            Text(text = if (selectedExperienceTitle != null) i18n("finish_part_of_experience", mapOf("experience" to selectedExperienceTitle)) else i18n("finish_part_of_new_experience"))
+                            Text(
+                                text = if (selectedExperienceTitle !=
+                                    null
+                                ) {
+                                    i18n(
+                                        "finish_part_of_experience",
+                                        mapOf(
+                                            "experience" to selectedExperienceTitle
+                                        )
+                                    )
+                                } else {
+                                    i18n("finish_part_of_new_experience")
+                                }
+                            )
                         }
                         DropdownMenu(
                             expanded = isShowingDropDownMenu,
@@ -305,7 +329,9 @@ fun FinishIngestionScreen(
                             singleLine = true,
                             label = { Text(text = i18n("common_new_experience_title")) },
                             isError = !isEnteredTitleOk,
-                            keyboardActions = KeyboardActions(onDone = { focusManager.clearFocus() }),
+                            keyboardActions = KeyboardActions(onDone = {
+                                focusManager.clearFocus()
+                            }),
                             keyboardOptions = KeyboardOptions.Default.copy(
                                 imeAction = ImeAction.Done,
                                 capitalization = KeyboardCapitalization.Words
@@ -328,7 +354,12 @@ fun FinishIngestionScreen(
                         )
                     ) {
                         Text(
-                            text = i18n("consumed_by", mapOf("name" to consumerName.ifBlank { i18n("you") })),
+                            text = i18n(
+                                "consumed_by",
+                                mapOf(
+                                    "name" to consumerName.ifBlank { i18n("you") }
+                                )
+                            ),
                             style = MaterialTheme.typography.titleMedium
                         )
                         if (consumerNamesSorted.isNotEmpty() || consumerName.isNotBlank()) {
@@ -379,7 +410,8 @@ fun FinishIngestionScreen(
                                 checked = showNewConsumerTextField,
                                 onCheckedChange = {
                                     showNewConsumerTextField = !showNewConsumerTextField
-                                })
+                                }
+                            )
                             Text(i18n("common_enter_new_consumer"))
                         }
                         AnimatedVisibility(visible = showNewConsumerTextField) {
@@ -435,11 +467,7 @@ fun FinishIngestionScreen(
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun NoteSection(
-    previousNotes: List<String>,
-    note: String,
-    onNoteChange: (String) -> Unit
-) {
+fun NoteSection(previousNotes: List<String>, note: String, onNoteChange: (String) -> Unit) {
     var isShowingSuggestions by remember { mutableStateOf(true) }
     val focusManager = LocalFocusManager.current
     val coroutineScope = rememberCoroutineScope()

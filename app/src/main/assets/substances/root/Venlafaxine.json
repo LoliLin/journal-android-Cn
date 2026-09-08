@@ -1,0 +1,23 @@
+{
+  "name": "Venlafaxine",
+  "localizedName": "Venlafaxine",
+  "commonNames": ["文拉法辛"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06AX16&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidepressant"],
+  "summary": "Venlafaxine. Classification: Antidepressant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Hepatic CYP2D6 O-demethylation produces active O-desmethylvenlafaxine (desvenlafaxine). Other demethylation/conjugation routes also occur. Elimination is mainly urinary as parent and metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c41d847b-88ba-49a5-9d73-269ac4caa4ed"
+  ],
+  "oralReleaseForms": ["IMMEDIATE_RELEASE", "EXTENDED_RELEASE"]
+}

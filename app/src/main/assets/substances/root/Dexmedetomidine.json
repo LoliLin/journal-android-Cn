@@ -1,0 +1,15 @@
+{
+  "name": "Dexmedetomidine",
+  "localizedName": "Dexmedetomidine",
+  "commonNames": ["右美托咪定"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N05CM18&showdescription=yes",
+  "isApproved": false,
+  "categories": ["hypnotic"],
+  "summary": "Dexmedetomidine. Classification: Hypnotic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [],
+  "metabolism": "Direct N-glucuronidation and oxidation, especially through CYP2A6, produce metabolites; N-methylation also occurs. Little unchanged drug is eliminated; urinary metabolites dominate clearance.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eee6145b-d83f-4596-92d3-733934d8a3a4"
+  ]
+}

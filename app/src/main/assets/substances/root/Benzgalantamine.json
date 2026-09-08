@@ -1,0 +1,15 @@
+{
+  "name": "Benzgalantamine",
+  "localizedName": "Benzgalantamine",
+  "commonNames": [],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06DA06&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidementia"],
+  "summary": "Benzgalantamine. Classification: Dementia medication.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [],
+  "metabolism": "A prodrug converted to active galantamine. Galantamine subsequently undergoes CYP2D6/CYP3A4 metabolism and glucuronidation; clearance also includes unchanged galantamine in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=af47bf67-1f07-4650-8064-24c38afc4656"
+  ]
+}

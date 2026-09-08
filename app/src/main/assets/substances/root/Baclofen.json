@@ -75,5 +75,9 @@
         }
       }
     }
+  ],
+  "metabolism": "Eliminated primarily by the kidneys as unchanged baclofen. Hepatic conversion is not the main determinant of clearance.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e2cd27d-91c7-4f15-96cc-3971769dbeaa"
   ]
 }

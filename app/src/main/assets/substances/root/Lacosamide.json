@@ -1,0 +1,22 @@
+{
+  "name": "Lacosamide",
+  "localizedName": "Lacosamide",
+  "commonNames": ["拉考沙胺"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N03AX18&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antiepileptic"],
+  "summary": "Lacosamide. Classification: Antiepileptic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Cleared by both renal excretion of parent drug and metabolism. CYP3A4/CYP2C9/CYP2C19 form O-desmethyllacosamide; urinary elimination includes unchanged lacosamide and metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b9a0ca8c-593c-48e8-b2a7-d30d5f6e6a9b"
+  ]
+}

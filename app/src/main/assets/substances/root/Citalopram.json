@@ -1,0 +1,22 @@
+{
+  "name": "Citalopram",
+  "localizedName": "Citalopram",
+  "commonNames": ["西酞普兰", "西酞普蘭", "citalopram", "celexa", "cipramil"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06AB04&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidepressant", "ssri"],
+  "summary": "Citalopram is a selective serotonin reuptake inhibitor (SSRI) antidepressant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "CYP2C19 and CYP3A4 mediate N-demethylation to demethylcitalopram, followed by further metabolism. Metabolites are substantially less potent than the parent; unchanged drug and metabolites contribute to urinary elimination.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=625a78b2-4751-4ca5-91b6-7c85fd9f8c2e"
+  ]
+}

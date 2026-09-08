@@ -1,0 +1,22 @@
+{
+  "name": "Stiripentol",
+  "localizedName": "Stiripentol",
+  "commonNames": ["司替戊醇"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N03AX17&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antiepileptic"],
+  "summary": "Stiripentol. Classification: Antiepileptic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "In-vitro evidence identifies hepatic CYP1A2, CYP2C19 and CYP3A4 as major participating enzymes. The reviewed label does not provide a complete metabolite-by-metabolite elimination map.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=58304ba8-9779-4658-811e-94ffe08c3f16"
+  ]
+}

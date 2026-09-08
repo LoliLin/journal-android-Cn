@@ -1,0 +1,26 @@
+{
+  "name": "U-51754",
+  "localizedName": "U-51754",
+  "commonNames": ["methene-u47700", "methene-u-47700"],
+  "url": "https://tripsit.me/factsheets/?name=u-51754&p=substance",
+  "isApproved": false,
+  "categories": [
+    "tentative",
+    "opioid",
+    "dissociative",
+    "depressant",
+    "research-chemical"
+  ],
+  "summary": "U-51754. Classification: Opioid, Dissociative, Depressant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "rectal",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Human metabolism has not yet been verified for this entry. Responsible enzymes, metabolites and elimination routes are not specified. This is a documentation gap, not evidence that the substance is not metabolized; do not infer a pathway from related compounds.",
+  "metabolismSources": []
+}

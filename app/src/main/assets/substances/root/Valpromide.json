@@ -1,0 +1,20 @@
+{
+  "name": "Valpromide",
+  "localizedName": "Valpromide",
+  "commonNames": ["丙戊酰胺", "丙戊醯胺"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N03AG02&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antiepileptic"],
+  "summary": "Valpromide. Classification: Antiepileptic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Human metabolism has not yet been verified for this entry. Responsible enzymes, metabolites and elimination routes are not specified. This is a documentation gap, not evidence that the substance is not metabolized; do not infer a pathway from related compounds.",
+  "metabolismSources": []
+}

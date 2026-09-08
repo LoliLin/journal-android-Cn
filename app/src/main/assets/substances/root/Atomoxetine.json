@@ -1,0 +1,22 @@
+{
+  "name": "Atomoxetine",
+  "localizedName": "Atomoxetine",
+  "commonNames": ["托莫西汀", "atomoxetine", "strattera"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06BA09&showdescription=yes",
+  "isApproved": false,
+  "categories": ["centrally-acting-medication", "adhd-medication"],
+  "summary": "Atomoxetine is a non-stimulant ADHD medicine that selectively inhibits norepinephrine reuptake.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "CYP2D6 forms active 4-hydroxyatomoxetine, which is rapidly glucuronidated. CYP2C19 and other enzymes form the less active N-desmethyl metabolite. Elimination is predominantly urinary as metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0ab8d905-e890-4e91-a730-3e5d12f5c23f"
+  ]
+}

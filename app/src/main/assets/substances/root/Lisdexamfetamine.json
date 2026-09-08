@@ -5,7 +5,7 @@
   "isApproved": true,
   "crossTolerances": [],
   "toxicities": [],
-  "categories": ["stimulant"],
+  "categories": ["stimulant", "adhd-medication"],
   "interactions": {
     "dangerous": ["Tramadol", "aMT", "MAOIs"],
     "unsafe": ["DXM", "PCP", "25x-NBOMe", "2C-T-x", "5-MeO-xxT", "DOx"],
@@ -65,5 +65,9 @@
         }
       }
     }
+  ],
+  "metabolism": "A prodrug hydrolyzed mainly by red blood cells into active dextroamphetamine and L-lysine. This conversion does not rely on CYP enzymes; dextroamphetamine then has its own metabolic and renal elimination pathways.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c11cb3b6-3dff-477b-a249-b4c3118edc5f"
   ]
 }

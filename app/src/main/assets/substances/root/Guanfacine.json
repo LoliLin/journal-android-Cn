@@ -1,0 +1,23 @@
+{
+  "name": "Guanfacine",
+  "localizedName": "Guanfacine",
+  "commonNames": ["胍法辛"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=C02AC02&showdescription=yes",
+  "isApproved": false,
+  "categories": ["centrally-acting-medication", "adhd-medication"],
+  "summary": "Guanfacine. Classification: Other central nervous system medication, ADHD medication.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Primarily metabolized by CYP3A4. Clearance includes both hepatic processing and renal elimination; CYP3A4 inhibitors or inducers can alter exposure.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8348e63a-5cbc-489e-b7bf-046c65ba2e8e"
+  ],
+  "oralReleaseForms": ["IMMEDIATE_RELEASE", "EXTENDED_RELEASE"]
+}

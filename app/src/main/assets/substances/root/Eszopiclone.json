@@ -44,5 +44,9 @@
         }
       }
     }
+  ],
+  "metabolism": "CYP3A4 and CYP2E1 participate in oxidation and demethylation. Metabolites predominate in urinary elimination; only a small fraction is excreted as unchanged eszopiclone.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c4ff1d6a-918e-c046-e053-2a95a90a9c9b"
   ]
 }

@@ -1,0 +1,22 @@
+{
+  "name": "Propofol",
+  "localizedName": "Propofol",
+  "commonNames": ["milk-of-amnesia", "diprivan", "丙泊酚"],
+  "url": "https://tripsit.me/factsheets/?name=propofol&p=substance",
+  "isApproved": false,
+  "categories": ["anesthetic", "depressant"],
+  "summary": "Propofol. Classification: General anesthetic, Depressant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "intravenous",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Mainly conjugated in the liver to inactive products, especially glucuronides. Metabolites are eliminated by the kidneys; early plasma decline also reflects distribution.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=28d7ba00-f824-4e55-139a-03f509c099db"
+  ]
+}

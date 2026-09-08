@@ -1,0 +1,22 @@
+{
+  "name": "Perphenazine",
+  "localizedName": "Perphenazine",
+  "commonNames": ["奋乃静", "奮乃靜"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N05AB03&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antipsychotic"],
+  "summary": "Perphenazine. Classification: Antipsychotic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Hepatic pathways include sulfoxidation, hydroxylation, dealkylation and glucuronidation. CYP2D6 variation affects clearance; the available description does not establish a single exclusive pathway.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c4150683-0772-4344-bb1c-f050b84175d6"
+  ]
+}

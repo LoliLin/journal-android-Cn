@@ -54,5 +54,10 @@
         }
       }
     }
-  ]
+  ],
+  "metabolism": "Converted to inactive metabolites, which are eliminated mainly by the kidneys. The reviewed product label does not quantify each enzyme's contribution.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721"
+  ],
+  "oralReleaseForms": ["IMMEDIATE_RELEASE", "EXTENDED_RELEASE"]
 }

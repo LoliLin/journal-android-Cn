@@ -1,0 +1,20 @@
+{
+  "name": "Procyclidine",
+  "localizedName": "Procyclidine",
+  "commonNames": ["丙环定", "丙環定"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N04AA04&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antiparkinsonian"],
+  "summary": "Procyclidine. Classification: Antiparkinsonian.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Human metabolism has not yet been verified for this entry. Responsible enzymes, metabolites and elimination routes are not specified. This is a documentation gap, not evidence that the substance is not metabolized; do not infer a pathway from related compounds.",
+  "metabolismSources": []
+}

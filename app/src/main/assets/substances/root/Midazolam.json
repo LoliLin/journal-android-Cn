@@ -86,5 +86,9 @@
         }
       }
     }
+  ],
+  "metabolism": "CYP3A4 hydroxylation produces 1-hydroxymidazolam and other hydroxylated products, followed by glucuronidation. These conjugates are eliminated in urine; little parent drug is excreted unchanged.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b690f5c-2923-4c34-a8f7-11af5f546b62"
   ]
 }

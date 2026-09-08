@@ -1,0 +1,20 @@
+{
+  "name": "Amisulpride",
+  "localizedName": "Amisulpride",
+  "commonNames": ["氨磺必利"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N05AL05&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antipsychotic"],
+  "summary": "Amisulpride. Classification: Antipsychotic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Metabolism is limited. Much of the absorbed drug is eliminated unchanged by the kidneys; oxidative CYP metabolism is not its principal elimination route.",
+  "metabolismSources": ["https://www.medicines.org.uk/emc/product/102319/smpc"]
+}

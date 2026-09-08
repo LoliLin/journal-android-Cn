@@ -1,0 +1,26 @@
+{
+  "name": "Nitracaine",
+  "localizedName": "Nitracaine",
+  "commonNames": [],
+  "url": "https://tripsit.me/factsheets/?name=nitracaine&p=substance",
+  "isApproved": false,
+  "categories": ["stimulant", "tentative"],
+  "summary": "Nitracaine. Classification: Stimulant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "insufflated",
+      "dose": {
+        "units": "mg"
+      }
+    },
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Human metabolism has not yet been verified for this entry. Responsible enzymes, metabolites and elimination routes are not specified. This is a documentation gap, not evidence that the substance is not metabolized; do not infer a pathway from related compounds.",
+  "metabolismSources": []
+}

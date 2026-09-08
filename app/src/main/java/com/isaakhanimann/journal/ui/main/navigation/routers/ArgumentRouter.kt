@@ -18,12 +18,13 @@
 
 package com.isaakhanimann.journal.ui.main.navigation.routers
 
+import android.net.Uri
 import androidx.navigation.NamedNavArgument
 import androidx.navigation.NavController
 import androidx.navigation.NavType
-import android.net.Uri
 import androidx.navigation.navArgument
 import com.isaakhanimann.journal.data.substances.AdministrationRoute
+import com.isaakhanimann.journal.data.substances.ReleaseForm
 
 // argument keys
 const val EXPERIENCE_ID_KEY = "experienceId"
@@ -38,6 +39,7 @@ const val ADMINISTRATION_ROUTE_KEY = "administrationRoute"
 const val DOSE_KEY = "dose"
 const val ESTIMATED_DOSE_STANDARD_DEVIATION_KEY = "estimatedDoseStandardDeviation"
 const val CUSTOM_UNIT_ID_KEY = "customUnitId"
+const val RELEASE_FORM_KEY = "releaseForm"
 const val IS_ESTIMATE_KEY = "isEstimate"
 const val UNITS_KEY = "units"
 const val CATEGORY_KEY = "category"
@@ -246,7 +248,7 @@ sealed class ArgumentRouter(val route: String, val args: List<NamedNavArgument>)
     )
 
     object ChooseTimeRouter : ArgumentRouter(
-        route = "$ROUTE_START_CHOOSE_TIME{$ADMINISTRATION_ROUTE_KEY}/{$IS_ESTIMATE_KEY}/?$UNITS_KEY={$UNITS_KEY}/?$DOSE_KEY={$DOSE_KEY}/?$ESTIMATED_DOSE_STANDARD_DEVIATION_KEY={$ESTIMATED_DOSE_STANDARD_DEVIATION_KEY}/?$SUBSTANCE_NAME_KEY={$SUBSTANCE_NAME_KEY}/?$CUSTOM_UNIT_ID_KEY={$CUSTOM_UNIT_ID_KEY}/?$CUSTOM_SUBSTANCE_ID_KEY={$CUSTOM_SUBSTANCE_ID_KEY}",
+        route = "$ROUTE_START_CHOOSE_TIME{$ADMINISTRATION_ROUTE_KEY}/{$IS_ESTIMATE_KEY}/?$UNITS_KEY={$UNITS_KEY}/?$DOSE_KEY={$DOSE_KEY}/?$ESTIMATED_DOSE_STANDARD_DEVIATION_KEY={$ESTIMATED_DOSE_STANDARD_DEVIATION_KEY}/?$SUBSTANCE_NAME_KEY={$SUBSTANCE_NAME_KEY}/?$CUSTOM_UNIT_ID_KEY={$CUSTOM_UNIT_ID_KEY}/?$CUSTOM_SUBSTANCE_ID_KEY={$CUSTOM_SUBSTANCE_ID_KEY}/?$RELEASE_FORM_KEY={$RELEASE_FORM_KEY}",
         args = listOf(
             navArgument(ADMINISTRATION_ROUTE_KEY) { type = NavType.StringType },
             navArgument(IS_ESTIMATE_KEY) { type = NavType.BoolType },
@@ -255,7 +257,11 @@ sealed class ArgumentRouter(val route: String, val args: List<NamedNavArgument>)
             navArgument(ESTIMATED_DOSE_STANDARD_DEVIATION_KEY) { nullable = true },
             navArgument(SUBSTANCE_NAME_KEY) { nullable = true },
             navArgument(CUSTOM_UNIT_ID_KEY) { nullable = true },
-            navArgument(CUSTOM_SUBSTANCE_ID_KEY) { nullable = true }
+            navArgument(CUSTOM_SUBSTANCE_ID_KEY) { nullable = true },
+            navArgument(RELEASE_FORM_KEY) {
+                nullable = true
+                defaultValue = null
+            }
         )
     )
 
@@ -389,10 +395,11 @@ fun NavController.navigateToChooseTimeAndMaybeColor(
     estimatedDoseStandardDeviation: Double?,
     substanceName: String?,
     customUnitId: Int?,
-    customSubstanceId: Int?
+    customSubstanceId: Int?,
+    releaseForm: ReleaseForm? = null
 ) {
     navigate(
-        "$ROUTE_START_CHOOSE_TIME${administrationRoute.name}/$isEstimate/?$UNITS_KEY=$units/?$DOSE_KEY=$dose/?$ESTIMATED_DOSE_STANDARD_DEVIATION_KEY=$estimatedDoseStandardDeviation/?$SUBSTANCE_NAME_KEY=$substanceName/?$CUSTOM_UNIT_ID_KEY=$customUnitId/?$CUSTOM_SUBSTANCE_ID_KEY=$customSubstanceId"
+        "$ROUTE_START_CHOOSE_TIME${administrationRoute.name}/$isEstimate/?$UNITS_KEY=$units/?$DOSE_KEY=$dose/?$ESTIMATED_DOSE_STANDARD_DEVIATION_KEY=$estimatedDoseStandardDeviation/?$SUBSTANCE_NAME_KEY=$substanceName/?$CUSTOM_UNIT_ID_KEY=$customUnitId/?$CUSTOM_SUBSTANCE_ID_KEY=$customSubstanceId/?$RELEASE_FORM_KEY=${releaseForm?.name}"
     )
 }
 
@@ -400,5 +407,9 @@ fun NavController.navigateToFinishAddCustomUnit(
     substanceName: String,
     administrationRoute: AdministrationRoute
 ) {
-    navigate("$ROUTE_START_FINISH_ADD_CUSTOM_UNIT${Uri.encode(substanceName)}/${administrationRoute.name}")
+    navigate(
+        "$ROUTE_START_FINISH_ADD_CUSTOM_UNIT${Uri.encode(
+            substanceName
+        )}/${administrationRoute.name}"
+    )
 }

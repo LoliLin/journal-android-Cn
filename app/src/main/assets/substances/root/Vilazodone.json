@@ -1,0 +1,15 @@
+{
+  "name": "Vilazodone",
+  "localizedName": "Vilazodone",
+  "commonNames": ["维拉佐酮", "維拉佐酮"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06AX24&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidepressant"],
+  "summary": "Vilazodone. Classification: Antidepressant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [],
+  "metabolism": "CYP3A4 is the main CYP pathway, with smaller CYP2C19/CYP2D6 contributions and additional non-CYP metabolism. Only small amounts are eliminated unchanged in urine or feces.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f917f30d-f2a7-43eb-836f-53eaa2a31cb0"
+  ]
+}

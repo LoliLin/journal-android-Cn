@@ -1,0 +1,20 @@
+{
+  "name": "Halazepam",
+  "localizedName": "Halazepam",
+  "commonNames": ["哈拉西泮", "halazepam", "paxipam"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N05BA13&showdescription=yes",
+  "isApproved": false,
+  "categories": ["anxiolytic", "benzodiazepine"],
+  "summary": "Halazepam. Classification: Anxiolytic, Benzodiazepine.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Human metabolism has not yet been verified for this entry. Responsible enzymes, metabolites and elimination routes are not specified. This is a documentation gap, not evidence that the substance is not metabolized; do not infer a pathway from related compounds.",
+  "metabolismSources": []
+}

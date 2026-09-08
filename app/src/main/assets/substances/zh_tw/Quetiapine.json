@@ -7,5 +7,6 @@
   "addictionPotential": "中度生理及心理成癮性",
   "toxicities": ["低毒性"],
   "summary": "商品名為Seroquel的非典型抗精神病藥物。亦用於治療失眠與情緒波動。此藥物具有強烈鎮靜作用，能中斷或減緩迷幻藥物的作用。較少被濫用。",
-  "localizedName": "喹硫平"
+  "localizedName": "喹硫平",
+  "metabolism": "在肝臟廣泛代謝，以 CYP3A4 途徑爲主；產物包括有活性的去甲喹硫平及無活性的亞碸代謝物，隨後經尿液和糞便排出。"
 }

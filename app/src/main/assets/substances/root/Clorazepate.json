@@ -1,0 +1,29 @@
+{
+  "name": "Clorazepate",
+  "localizedName": "Clorazepate",
+  "commonNames": [
+    "potassium clorazepate",
+    "氯拉卓酸",
+    "clorazepate",
+    "tranxene",
+    "novo-clopate",
+    "tranzene"
+  ],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N05BA05&showdescription=yes",
+  "isApproved": false,
+  "categories": ["anxiolytic", "benzodiazepine"],
+  "summary": "Clorazepate. Classification: Anxiolytic, Benzodiazepine.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Rapidly converted to active nordazepam, which undergoes hepatic hydroxylation to oxazepam and further conjugation. Elimination is mainly urinary as conjugated metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=11b72861-64c9-4cdc-9289-c7fa9ea23bf6"
+  ]
+}

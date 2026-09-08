@@ -1,0 +1,22 @@
+{
+  "name": "Phenelzine",
+  "localizedName": "Phenelzine",
+  "commonNames": ["苯乙肼"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06AF03&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidepressant", "maoi"],
+  "summary": "Phenelzine. Classification: Antidepressant, MAO inhibitor.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Extensively metabolized, chiefly by monoamine-oxidase-mediated oxidation. The reviewed label does not establish a complete CYP contribution map.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa041652-fdde-4794-a8d2-279dd309e075"
+  ]
+}

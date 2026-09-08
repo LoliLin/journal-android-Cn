@@ -64,5 +64,9 @@
         }
       }
     }
+  ],
+  "metabolism": "A substantial fraction is excreted unchanged in urine. Partial metabolism produces glucuronidated, hydroxylated and deaminated derivatives. CYP450 enzymes do not have a major role in clearance.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=007d4cb9-3fa9-40f3-b5ca-4083eccd6038"
   ]
 }

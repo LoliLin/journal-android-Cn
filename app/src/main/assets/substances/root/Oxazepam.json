@@ -1,0 +1,22 @@
+{
+  "name": "Oxazepam",
+  "localizedName": "Oxazepam",
+  "commonNames": ["奥沙西泮", "奧沙西泮", "oxazepam", "serax"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N05BA04&showdescription=yes",
+  "isApproved": false,
+  "categories": ["anxiolytic", "benzodiazepine"],
+  "summary": "Oxazepam. Classification: Anxiolytic, Benzodiazepine.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Direct glucuronide conjugation forms a major inactive metabolite that is excreted in urine. It does not require conversion to another active benzodiazepine before this elimination step.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=67f821fa-5663-4d69-82c9-5ee13a09f324"
+  ]
+}

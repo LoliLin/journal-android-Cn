@@ -12,7 +12,7 @@
   "crossTolerances": [],
   "addictionPotential": "moderately addictive with a high potential for abuse",
   "toxicities": [],
-  "categories": ["stimulant", "habit-forming", "common"],
+  "categories": ["stimulant", "habit-forming", "common", "adhd-medication"],
   "summary": "A psychostimulant commonly used in the treatment of ADHD, narcolepsy and obesity, particularly in the EU instead of Adderall. Methylphenidate is also a 5HT1A receptor agonist. Sometimes prescribed off-label to help the withdrawals from cocaine and other stimulants.",
   "effectsSummary": "Taking methylphenidate increases the concentration of the nerve messengers dopamine, noradrenaline and serotonin in the brain. When prescribed for ADHD, the drug is supposed to act as a filter for incoming stimuli and alleviate symptoms such as distractibility, attention deficit disorder, disorganisation and impulsivity.\nHowever, due to its stimulating, energising and drive-enhancing properties, methylphenidate is also used as a party drug or to increase performance. Due to the increased release of dopamine, similar effects occur as with the use of cocaine.",
   "generalRisks": "If prescribed by a doctor or used as directed, sleep disturbances and irritability can often occur. Eating disorders, stomach complaints, nausea and vomiting are also known side effects.\nAbusive use and higher doses can lead to seizures, cardiac arrhythmias as well as headaches and confusion.\nTolerance develops relatively quickly, which is why higher and higher doses have to be consumed. In overdose, Ritalin can trigger hallucinations.",
@@ -110,5 +110,10 @@
         }
       }
     }
-  ]
+  ],
+  "metabolism": "Primarily hydrolyzed by de-esterification to ritalinic acid (PPAA), which has little or no activity. Metabolites account for most urinary elimination.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=768bf181-d0d8-49e5-9c87-cacbb069e0b2"
+  ],
+  "oralReleaseForms": ["IMMEDIATE_RELEASE", "EXTENDED_RELEASE"]
 }

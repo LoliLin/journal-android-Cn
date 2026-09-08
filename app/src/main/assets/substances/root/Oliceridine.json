@@ -1,0 +1,15 @@
+{
+  "name": "Oliceridine",
+  "localizedName": "Oliceridine",
+  "commonNames": ["奥赛利定", "奧賽利定"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N02AX07&showdescription=yes",
+  "isApproved": false,
+  "categories": ["opioid"],
+  "summary": "Oliceridine. Classification: Opioid.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [],
+  "metabolism": "CYP3A4/CYP2D6 oxidation predominates, with smaller CYP2C9/CYP2C19 contributions and subsequent glucuronidation. Inactive metabolites are eliminated mainly in urine and partly feces.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ce167984-8b9d-40b7-84ce-d0f33fff1eaa"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "A-PIHP",
+  "localizedName": "A-PIHP",
+  "commonNames": ["pihp"],
+  "url": "https://tripsit.me/factsheets/?name=a-pihp&p=substance",
+  "isApproved": false,
+  "categories": ["stimulant", "entactogen", "research-chemical", "tentative"],
+  "summary": "A-PIHP. Classification: Stimulant, Entactogen.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "insufflated",
+      "dose": {
+        "units": "mg"
+      }
+    },
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Human metabolism has not yet been verified for this entry. Responsible enzymes, metabolites and elimination routes are not specified. This is a documentation gap, not evidence that the substance is not metabolized; do not infer a pathway from related compounds.",
+  "metabolismSources": []
+}

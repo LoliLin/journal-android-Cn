@@ -1,0 +1,20 @@
+{
+  "name": "Hydroxyzine",
+  "localizedName": "Hydroxyzine",
+  "commonNames": ["羟嗪", "羥嗪", "hydroxyzine", "vistaril", "atarax"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N05BB01&showdescription=yes",
+  "isApproved": false,
+  "categories": ["anxiolytic"],
+  "summary": "Hydroxyzine. Classification: Anxiolytic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Alcohol dehydrogenase forms cetirizine by oxidation; CYP3A4/5 also participates in metabolism. Cetirizine is an active antihistamine and is eliminated substantially through the kidneys.",
+  "metabolismSources": ["https://www.medicines.org.uk/emc/product/101010/smpc"]
+}

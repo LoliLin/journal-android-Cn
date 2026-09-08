@@ -2,5 +2,6 @@
   "addictionPotential": "未知",
   "toxicities": ["確切的中毒劑量未知"],
   "summary": "一種NMDA拮抗劑，若被娛樂性使用，可能導致持續長達16小時以上的極長時間「迷幻黑洞」。",
-  "localizedName": "美金刚"
+  "localizedName": "美金刚",
+  "metabolism": "相當比例以原形經尿排出；部分形成葡萄糖醛酸結合物、羥化及脫氨衍生物。CYP450 酶系統在其清除中不佔主要地位。"
 }

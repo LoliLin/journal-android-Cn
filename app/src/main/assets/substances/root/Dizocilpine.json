@@ -1,0 +1,20 @@
+{
+  "name": "Dizocilpine",
+  "localizedName": "Dizocilpine",
+  "commonNames": ["mk-801", "mk801", "地佐环平", "地佐環平"],
+  "url": "https://tripsit.me/factsheets/?name=mk-801&p=substance",
+  "isApproved": false,
+  "categories": ["dissociative", "research-chemical", "tentative"],
+  "summary": "Dizocilpine. Classification: Dissociative.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "µg"
+      }
+    }
+  ],
+  "metabolism": "Human metabolism has not yet been verified for this entry. Responsible enzymes, metabolites and elimination routes are not specified. This is a documentation gap, not evidence that the substance is not metabolized; do not infer a pathway from related compounds.",
+  "metabolismSources": []
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Phenytoin",
+  "localizedName": "Phenytoin",
+  "commonNames": ["苯妥英"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N03AB02&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antiepileptic"],
+  "summary": "Phenytoin. Classification: Antiepileptic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Hepatic CYP2C9 and, to a lesser extent, CYP2C19 generate inactive metabolites. Metabolites pass through bile and/or renal excretion; metabolic capacity can become saturated.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=46d5c0d1-a97b-46d9-8cf4-994780673337"
+  ]
+}

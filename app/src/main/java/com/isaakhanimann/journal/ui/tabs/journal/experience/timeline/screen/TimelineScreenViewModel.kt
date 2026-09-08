@@ -112,7 +112,7 @@ class TimelineScreenViewModel @Inject constructor(
             ingestionsWithComps.map { oneIngestionWithComp ->
                 val ingestion = oneIngestionWithComp.ingestion
                 val roa = substanceRepo.getSubstance(oneIngestionWithComp.ingestion.substanceName)
-                    ?.getRoa(ingestion.administrationRoute)
+                    ?.getRoa(ingestion.administrationRoute, ingestion.releaseForm)
                 val roaDuration = roa?.roaDuration
                 IngestionWithAssociatedData(
                     ingestionWithCompanionAndCustomUnit = oneIngestionWithComp,

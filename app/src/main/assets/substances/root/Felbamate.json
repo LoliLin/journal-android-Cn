@@ -1,0 +1,22 @@
+{
+  "name": "Felbamate",
+  "localizedName": "Felbamate",
+  "commonNames": ["非尔氨酯", "非爾胺酯"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N03AX10&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antiepileptic"],
+  "summary": "Felbamate. Classification: Antiepileptic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "A substantial fraction is excreted unchanged in urine; the remainder includes metabolites and conjugates. Monocarbamate and hydroxylated metabolites have little contribution to anticonvulsant activity.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0afffb17-e6ac-4bea-a90e-7ef3c8150290"
+  ]
+}

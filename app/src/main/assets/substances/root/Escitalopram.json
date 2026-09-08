@@ -1,0 +1,28 @@
+{
+  "name": "Escitalopram",
+  "localizedName": "Escitalopram",
+  "commonNames": [
+    "艾司西酞普兰",
+    "艾司西酞普蘭",
+    "escitalopram",
+    "lexapro",
+    "cipralex"
+  ],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06AB10&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidepressant", "ssri"],
+  "summary": "Escitalopram is an SSRI antidepressant and the S-enantiomer of citalopram.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "CYP2C19 and CYP3A4 mediate N-demethylation to S-demethylcitalopram, followed by further demethylation. The metabolites have weaker serotonin-reuptake effects; some parent and metabolites are eliminated in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d75e3b97-1ead-4e7b-9ae3-3626aede1efd"
+  ]
+}

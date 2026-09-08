@@ -1,0 +1,22 @@
+{
+  "name": "Doxepin",
+  "localizedName": "Doxepin",
+  "commonNames": ["多塞平"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06AA12&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidepressant"],
+  "summary": "Doxepin. Classification: Antidepressant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Hepatic demethylation forms active nordoxepin. Additional pathways include N-oxidation, hydroxylation and glucuronidation. Elimination is mainly urinary as free or conjugated metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=21dc77be-23af-4a1f-b189-dfee8ae2f894"
+  ]
+}

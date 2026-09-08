@@ -1,0 +1,13 @@
+{
+  "name": "HHC acetate",
+  "localizedName": "HHC acetate",
+  "commonNames": ["HHC-O", "HHC-O-acetate"],
+  "url": "https://www.euda.europa.eu/publications/european-drug-report/2026/new-psychoactive-substances_en",
+  "isApproved": false,
+  "categories": ["cannabinoid", "tentative"],
+  "summary": "HHC acetate. Classification: Cannabinoid.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [],
+  "metabolism": "Human hepatocyte experiments show rapid conversion to HHC, followed by HHC-related hydroxylation, oxidation and conjugation. Controlled human pharmacokinetics remain limited.",
+  "metabolismSources": ["https://pubmed.ncbi.nlm.nih.gov/38804224/"]
+}

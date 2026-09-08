@@ -1,0 +1,22 @@
+{
+  "name": "Rasagiline",
+  "localizedName": "Rasagiline",
+  "commonNames": ["雷沙吉兰", "雷沙吉蘭"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N04BD02&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antiparkinsonian", "maoi"],
+  "summary": "Rasagiline. Classification: Antiparkinsonian, MAO inhibitor.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "CYP1A2 mediates N-dealkylation and hydroxylation, producing aminoindan derivatives. Subsequent glucuronidation and urinary excretion are major clearance steps.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9bf059f4-4da8-48fe-aacb-c50717d36606"
+  ]
+}

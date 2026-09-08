@@ -1,0 +1,22 @@
+{
+  "name": "Rivastigmine",
+  "localizedName": "Rivastigmine",
+  "commonNames": ["卡巴拉汀"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06DA03&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidementia"],
+  "summary": "Rivastigmine. Classification: Dementia medication.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Cholinesterase-mediated hydrolysis produces a decarbamylated metabolite. CYP enzymes contribute minimally; metabolites are subsequently eliminated mainly in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2bb5e0d6-f677-4021-9888-3ff90979ef7d"
+  ]
+}

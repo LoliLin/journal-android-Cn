@@ -43,6 +43,7 @@ import com.isaakhanimann.journal.data.room.experiences.relations.IngestionWithCo
 import com.isaakhanimann.journal.data.room.experiences.relations.IngestionWithCompanionAndCustomUnit
 import com.isaakhanimann.journal.data.room.experiences.relations.IngestionWithExperienceAndCustomUnit
 import com.isaakhanimann.journal.ui.tabs.settings.JournalExport
+import com.isaakhanimann.journal.ui.tabs.settings.toIngestion
 import java.time.Instant
 import kotlinx.coroutines.flow.Flow
 
@@ -57,9 +58,9 @@ interface ExperienceDao {
 
     @Query(
         "SELECT * FROM ingestion as i" +
-                " INNER JOIN (SELECT id, MAX(time) AS time FROM ingestion WHERE time > :instant GROUP BY substanceName) as sub" +
-                " ON i.id = sub.id AND i.time = sub.time" +
-                " ORDER BY time DESC"
+            " INNER JOIN (SELECT id, MAX(time) AS time FROM ingestion WHERE time > :instant GROUP BY substanceName) as sub" +
+            " ON i.id = sub.id AND i.time = sub.time" +
+            " ORDER BY time DESC"
     )
     @RewriteQueriesToDropUnusedColumns
     suspend fun getLatestIngestionOfEverySubstanceSinceDate(instant: Instant): List<Ingestion>
@@ -87,8 +88,13 @@ interface ExperienceDao {
     suspend fun getAllSubstanceCompanions(): List<SubstanceCompanion>
 
     @Transaction
-    @Query("SELECT * FROM experience WHERE sortDate > :fromInstant AND sortDate < :toInstant ORDER BY sortDate DESC")
-    suspend fun getSortedExperiencesWithIngestionsWithSortDateBetween(fromInstant: Instant, toInstant: Instant): List<ExperienceWithIngestions>
+    @Query(
+        "SELECT * FROM experience WHERE sortDate > :fromInstant AND sortDate < :toInstant ORDER BY sortDate DESC"
+    )
+    suspend fun getSortedExperiencesWithIngestionsWithSortDateBetween(
+        fromInstant: Instant,
+        toInstant: Instant
+    ): List<ExperienceWithIngestions>
 
     @Query("SELECT substanceName FROM ingestion ORDER BY time DESC LIMIT :limit")
     fun getSortedLastUsedSubstanceNamesFlow(limit: Int): Flow<List<String>>
@@ -121,7 +127,9 @@ interface ExperienceDao {
 
     @Transaction
     @Query("SELECT * FROM ingestion ORDER BY creationDate DESC LIMIT :limit")
-    fun getSortedIngestionsWithSubstanceCompanionsFlow(limit: Int): Flow<List<IngestionWithCompanionAndCustomUnit>>
+    fun getSortedIngestionsWithSubstanceCompanionsFlow(
+        limit: Int
+    ): Flow<List<IngestionWithCompanionAndCustomUnit>>
 
     @Query("SELECT * FROM ingestion ORDER BY time DESC LIMIT :limit")
     fun getSortedIngestions(limit: Int): Flow<List<Ingestion>>
@@ -210,9 +218,10 @@ interface ExperienceDao {
     fun getIngestionWithCompanionFlow(id: Int): Flow<IngestionWithCompanionAndCustomUnit?>
 
     @Transaction
-    @Query("UPDATE ingestion SET units = 'mg', dose = dose * 1000 WHERE substanceName = 'Benzydamine' AND units = 'g'")
+    @Query(
+        "UPDATE ingestion SET units = 'mg', dose = dose * 1000 WHERE substanceName = 'Benzydamine' AND units = 'g'"
+    )
     suspend fun migrateBenzydamine()
-
 
     @Transaction
     suspend fun migrateCannabisAndMushroomUnits() {
@@ -222,16 +231,24 @@ interface ExperienceDao {
         migrateMushroomsCustomUnits()
     }
 
-    @Query("UPDATE ingestion SET units = 'mg THC' WHERE substanceName = 'Cannabis' AND units = 'mg'")
+    @Query(
+        "UPDATE ingestion SET units = 'mg THC' WHERE substanceName = 'Cannabis' AND units = 'mg'"
+    )
     suspend fun migrateCannabisIngestionUnits()
 
-    @Query("UPDATE ingestion SET units = 'mg Psilocybin' WHERE substanceName = 'Psilocybin mushrooms' AND units = 'mg'")
+    @Query(
+        "UPDATE ingestion SET units = 'mg Psilocybin' WHERE substanceName = 'Psilocybin mushrooms' AND units = 'mg'"
+    )
     suspend fun migrateMushroomsIngestionUnits()
 
-    @Query("UPDATE customunit SET originalUnit = 'mg THC' WHERE substanceName = 'Cannabis' AND originalUnit = 'mg'")
+    @Query(
+        "UPDATE customunit SET originalUnit = 'mg THC' WHERE substanceName = 'Cannabis' AND originalUnit = 'mg'"
+    )
     suspend fun migrateCannabisCustomUnits()
 
-    @Query("UPDATE customunit SET originalUnit = 'mg Psilocybin' WHERE substanceName = 'Psilocybin mushrooms' AND originalUnit = 'mg'")
+    @Query(
+        "UPDATE customunit SET originalUnit = 'mg Psilocybin' WHERE substanceName = 'Psilocybin mushrooms' AND originalUnit = 'mg'"
+    )
     suspend fun migrateMushroomsCustomUnits()
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -270,7 +287,9 @@ interface ExperienceDao {
     }
 
     @Transaction
-    @Query("DELETE FROM substancecompanion WHERE substanceName NOT IN (SELECT substanceName FROM ingestion)")
+    @Query(
+        "DELETE FROM substancecompanion WHERE substanceName NOT IN (SELECT substanceName FROM ingestion)"
+    )
     suspend fun deleteUnusedSubstanceCompanions()
 
     @Delete
@@ -398,22 +417,7 @@ interface ExperienceDao {
             )
             insert(newExperience)
             experienceSerializable.ingestions.forEach { ingestionSerializable ->
-                val newIngestion = Ingestion(
-                    substanceName = ingestionSerializable.substanceName,
-                    time = ingestionSerializable.time,
-                    endTime = ingestionSerializable.endTime,
-                    creationDate = ingestionSerializable.creationDate,
-                    administrationRoute = ingestionSerializable.administrationRoute,
-                    dose = ingestionSerializable.dose,
-                    isDoseAnEstimate = ingestionSerializable.isDoseAnEstimate,
-                    estimatedDoseStandardDeviation = ingestionSerializable.estimatedDoseStandardDeviation,
-                    units = ingestionSerializable.units,
-                    experienceId = experienceID,
-                    notes = ingestionSerializable.notes,
-                    stomachFullness = ingestionSerializable.stomachFullness,
-                    consumerName = ingestionSerializable.consumerName,
-                    customUnitId = ingestionSerializable.customUnitId
-                )
+                val newIngestion = ingestionSerializable.toIngestion(experienceID)
                 insert(newIngestion)
             }
             experienceSerializable.timedNotes.forEach { timedNoteSerializable ->

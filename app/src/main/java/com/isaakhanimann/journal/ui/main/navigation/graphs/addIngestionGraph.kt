@@ -74,7 +74,8 @@ fun NavGraphBuilder.addIngestionGraph(navController: NavController) {
                         units,
                         isEstimate,
                         estimatedDoseStandardDeviation,
-                        customUnitId
+                        customUnitId,
+                        releaseForm
                     ->
                     navController.navigateToChooseTimeAndMaybeColor(
                         administrationRoute = route,
@@ -84,7 +85,8 @@ fun NavGraphBuilder.addIngestionGraph(navController: NavController) {
                         estimatedDoseStandardDeviation = estimatedDoseStandardDeviation,
                         substanceName = substanceName,
                         customUnitId = customUnitId,
-                        customSubstanceId = null
+                        customSubstanceId = null,
+                        releaseForm = releaseForm
                     )
                 },
                 navigateToCustomDose = { customSubstanceId, route ->

@@ -1,0 +1,15 @@
+{
+  "name": "Suvorexant",
+  "localizedName": "Suvorexant",
+  "commonNames": ["苏沃雷生", "蘇沃雷生"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N05CJ01&showdescription=yes",
+  "isApproved": false,
+  "categories": ["hypnotic"],
+  "summary": "Suvorexant. Classification: Hypnotic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [],
+  "metabolism": "Primarily metabolized by CYP3A, with a smaller CYP2C19 contribution. Elimination of metabolites is mainly fecal, with a smaller urinary component.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e5b72731-1acb-45b7-9c13-290ad12d3951"
+  ]
+}

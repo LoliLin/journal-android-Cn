@@ -1,0 +1,22 @@
+{
+  "name": "Lamotrigine",
+  "localizedName": "Lamotrigine",
+  "commonNames": ["拉莫三嗪"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N03AX09&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antiepileptic", "mood-stabilizer"],
+  "summary": "Lamotrigine is an antiseizure medication also used for maintenance treatment of bipolar I disorder.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Primarily conjugated with glucuronic acid to inactive N-glucuronides, especially the 2-N-glucuronide, followed by urinary elimination. Valproate inhibits this conjugation pathway.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0833d3df-2df1-4abd-abe0-7fb2c0253c80"
+  ]
+}

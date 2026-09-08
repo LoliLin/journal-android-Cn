@@ -1,0 +1,22 @@
+{
+  "name": "Oxcarbazepine",
+  "localizedName": "Oxcarbazepine",
+  "commonNames": ["奥卡西平", "奧卡西平"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N03AF02&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antiepileptic"],
+  "summary": "Oxcarbazepine. Classification: Antiepileptic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Hepatic cytosolic reduction forms active monohydroxy derivative MHD. MHD then undergoes glucuronidation; elimination is mainly renal as MHD and its conjugates.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8841174a-9f4b-424f-a50d-01478f2aeb29"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Clobazam",
+  "localizedName": "Clobazam",
+  "commonNames": ["氯巴占", "clobazam", "frisium"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N05BA09&showdescription=yes",
+  "isApproved": false,
+  "categories": ["anxiolytic", "benzodiazepine"],
+  "summary": "Clobazam. Classification: Anxiolytic, Benzodiazepine.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "CYP3A4, with smaller CYP2C19/CYP2B6 contributions, forms active N-desmethylclobazam. This metabolite is cleared mainly by CYP2C19. Elimination is mostly urinary as metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fd1e63bf-496c-427c-83b7-6acabc00a5e5"
+  ]
+}

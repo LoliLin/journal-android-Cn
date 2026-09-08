@@ -81,5 +81,9 @@
         }
       }
     }
+  ],
+  "metabolism": "N-demethylation forms inactive EDDP. CYP2B6 and other CYP enzymes contribute; the label lists several enzymes rather than one exclusive pathway. Subsequent elimination is renal and fecal.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=544483e6-6f9d-4371-9e93-313e54e0ea05"
   ]
 }

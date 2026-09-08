@@ -1,0 +1,29 @@
+{
+  "name": "Cyclobenzaprine",
+  "localizedName": "Cyclobenzaprine",
+  "commonNames": [
+    "flexeril",
+    "apo-cyclobenzaprin",
+    "fexmid",
+    "novo-cycloprine",
+    "环苯扎林",
+    "環苯扎林"
+  ],
+  "url": "https://tripsit.me/factsheets/?name=cyclobenzaprine&p=substance",
+  "isApproved": false,
+  "categories": ["depressant"],
+  "summary": "Cyclobenzaprine. Classification: Depressant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Extensively metabolized, then eliminated mainly by the kidneys as glucuronide conjugates. The reviewed label does not quantify the contributions of individual enzymes.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=34e57aff-dc4b-4631-9d57-31020244835d"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Thioridazine",
+  "localizedName": "Thioridazine",
+  "commonNames": ["硫利达嗪", "硫利達嗪"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N05AC02&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antipsychotic"],
+  "summary": "Thioridazine. Classification: Antipsychotic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "CYP2D6 forms active mesoridazine, which is further converted to sulforidazine. Enzyme activity affects parent and active-metabolite exposure.",
+  "metabolismSources": ["https://www.ncbi.nlm.nih.gov/books/NBK424018/"]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Varenicline",
+  "localizedName": "Varenicline",
+  "commonNames": ["伐尼克兰", "伐尼克蘭"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N07BA03&showdescription=yes",
+  "isApproved": false,
+  "categories": ["addiction-treatment"],
+  "summary": "Varenicline. Classification: Addiction treatment.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Minimal metabolism; most is eliminated unchanged in urine through filtration and tubular secretion. CYP biotransformation contributes little to clearance.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59e125e3-5204-122b-e063-6394a90a0092"
+  ]
+}

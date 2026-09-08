@@ -1,0 +1,15 @@
+{
+  "name": "Methohexital",
+  "localizedName": "Methohexital",
+  "commonNames": ["美索比妥"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N05CA15&showdescription=yes",
+  "isApproved": false,
+  "categories": ["hypnotic", "barbiturate"],
+  "summary": "Methohexital. Classification: Hypnotic, Barbiturate.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [],
+  "metabolism": "Hepatic demethylation and oxidation precede renal excretion. The product information notes that the complete metabolic fate is not fully characterized.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f76d4ab9-2f6c-420b-afec-b9cdfdc083ce"
+  ]
+}

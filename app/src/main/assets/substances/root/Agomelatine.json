@@ -1,0 +1,22 @@
+{
+  "name": "Agomelatine",
+  "localizedName": "Agomelatine",
+  "commonNames": ["阿戈美拉汀"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06AX22&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidepressant"],
+  "summary": "Agomelatine. Classification: Antidepressant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Mainly oxidized by CYP1A2, with smaller CYP2C9/CYP2C19 contributions. Hydroxylated and demethylated metabolites are inactive, rapidly conjugated and eliminated in urine.",
+  "metabolismSources": [
+    "https://www.ema.europa.eu/en/documents/product-information/valdoxan-epar-product-information_en.pdf"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Cenobamate",
+  "localizedName": "Cenobamate",
+  "commonNames": ["塞诺氨酯", "塞諾胺酯"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N03AX25&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antiepileptic"],
+  "summary": "Cenobamate. Classification: Antiepileptic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "UGT2B7/UGT2B4 glucuronidation and oxidation involving CYP2E1, CYP2A6 and CYP2B6 are major pathways. Most drug-related material is eliminated through urine as metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=565c2126-57ae-4e29-b443-723bbe7e2072"
+  ]
+}

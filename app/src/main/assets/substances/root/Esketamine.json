@@ -1,0 +1,15 @@
+{
+  "name": "Esketamine",
+  "localizedName": "Esketamine",
+  "commonNames": ["艾司氯胺酮"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06AX27&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidepressant"],
+  "summary": "Esketamine. Classification: Antidepressant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [],
+  "metabolism": "CYP2B6/CYP3A4 N-demethylation forms noresketamine, followed by further CYP processing and glucuronidation. Elimination is mainly urinary as metabolites, with little unchanged parent drug.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d81a6a79-a74a-44b7-822c-0dfa3036eaed"
+  ]
+}

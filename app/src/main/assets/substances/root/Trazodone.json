@@ -1,0 +1,22 @@
+{
+  "name": "Trazodone",
+  "localizedName": "Trazodone",
+  "commonNames": ["曲唑酮", "trazodone"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06AX05&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidepressant"],
+  "summary": "Trazodone. Classification: Antidepressant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "CYP3A4-mediated oxidative cleavage forms active m-chlorophenylpiperazine (mCPP). Other metabolic routes are less well characterized; very little trazodone is excreted unchanged in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4672f8af-93e6-469a-a7b7-41cee7d4d193"
+  ]
+}

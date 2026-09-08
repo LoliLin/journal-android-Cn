@@ -1,0 +1,22 @@
+{
+  "name": "Rufinamide",
+  "localizedName": "Rufinamide",
+  "commonNames": ["卢非酰胺", "盧非醯胺"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N03AF03&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antiepileptic"],
+  "summary": "Rufinamide. Classification: Antiepileptic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Carboxylesterases hydrolyze the carboxamide to inactive CGP 47292; some further glucuronidation occurs. This principal route is not CYP dependent. Elimination is mainly urinary as metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a02ca527-bd8f-49ef-89fa-91fac154bffe"
+  ]
+}

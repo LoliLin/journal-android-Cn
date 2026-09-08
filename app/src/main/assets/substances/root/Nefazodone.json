@@ -1,0 +1,22 @@
+{
+  "name": "Nefazodone",
+  "localizedName": "Nefazodone",
+  "commonNames": ["奈法唑酮"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06AX06&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antidepressant"],
+  "summary": "Nefazodone. Classification: Antidepressant.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg"
+      }
+    }
+  ],
+  "metabolism": "Extensively metabolized through N-dealkylation and aliphatic/aromatic hydroxylation. Very little is eliminated as unchanged drug in urine; metabolites account for most clearance.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0bd4c34a-4f43-4c84-8b98-1d074cba97d5"
+  ]
+}

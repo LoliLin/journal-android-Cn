@@ -1,0 +1,15 @@
+{
+  "name": "Ganaxolone",
+  "localizedName": "Ganaxolone",
+  "commonNames": ["加奈索酮"],
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N03AX27&showdescription=yes",
+  "isApproved": false,
+  "categories": ["antiepileptic"],
+  "summary": "Ganaxolone. Classification: Antiepileptic.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [],
+  "metabolism": "Metabolism involves several CYPs, including CYP3A4/5, CYP2B6, CYP2C19 and CYP2D6, together with multiple UGT enzymes. Elimination is mainly fecal and urinary as metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d91612c4-b03a-4be4-a1ee-6a13e3b83d4e"
+  ]
+}

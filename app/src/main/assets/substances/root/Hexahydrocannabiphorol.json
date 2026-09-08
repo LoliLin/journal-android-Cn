@@ -1,0 +1,13 @@
+{
+  "name": "Hexahydrocannabiphorol",
+  "localizedName": "Hexahydrocannabiphorol",
+  "commonNames": ["HHC-P", "HHCP"],
+  "url": "https://www.euda.europa.eu/publications/european-drug-report/2026/new-psychoactive-substances_en",
+  "isApproved": false,
+  "categories": ["cannabinoid", "tentative"],
+  "summary": "Hexahydrocannabiphorol. Classification: Cannabinoid.",
+  "generalRisks": "This entry does not contain a complete risk or interaction assessment. Missing information or an absent interaction warning does not mean that a substance or combination is safe.",
+  "roas": [],
+  "metabolism": "Human hepatocyte experiments identify hydroxylation and further oxidation, including side-chain metabolism. These in-vitro results do not establish complete human disposition.",
+  "metabolismSources": ["https://pubmed.ncbi.nlm.nih.gov/38804224/"]
+}
