@@ -33,3 +33,10 @@ data class IngestionWithCompanion(
     )
     var substanceCompanion: SubstanceCompanion?
 )
+
+/** Counts one stats widget renders, computed entirely in SQL. */
+data class IngestionWindowCounts(
+    val ingestionCount: Int,
+    val experienceCount: Int,
+    val substanceCount: Int
+)

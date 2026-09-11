@@ -71,8 +71,8 @@ class JournalApplication : Application(), Configuration.Provider {
         }
         applicationScope.launch {
             // Keep desktop widgets in sync: an initial pass, then re-render
-            // whenever the ingestion table changes (insert/edit/delete) or the
-            // app language changes (widget labels are localized), so the desktop
+            // whenever journal data changes (JournalDataEvents) or the app
+            // language changes (widget labels are localized), so the desktop
             // never waits for the hourly updatePeriod.
             com.isaakhanimann.journal.ui.widgets.StatsWidgetUpdater.observeDataChanges(
                 this@JournalApplication,
