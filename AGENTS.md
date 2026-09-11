@@ -27,7 +27,7 @@ GPLv3 fork of PsychonautWiki Journal (a substance-use journaling app): single-mo
 | `app/src/main/java/com/isaakhanimann/journal/localization/` | `I18n.kt`, `I18nText.kt` |
 | `app/src/main/assets/` | `substances/{root,en_us,zh_cn,zh_tw}/` (per-substance JSON + `_categories.json`), `lang/` (UI strings), `images/achievements/` |
 | `app/src/test/` | JVM unit tests |
-| `docs/` | `substances-translation-protocol.md`, `extension-pack-protocol.md`, `scripts/` (Python translation pipeline), `VC_Demo_Extension/` |
+| `docs/` | `substances-translation-protocol.md`, `substances-pipeline.md`, `extension-pack-protocol.md`, `scripts/` (Python translation pipeline), `VC_Demo_Extension/` |
 | `Sample Files/` | Example journal export JSONs (import/export fixtures) |
 | `app/schemas/` | Room schema exports (KSP `room.schemaLocation`) |
 
@@ -86,7 +86,7 @@ GPLv3 fork of PsychonautWiki Journal (a substance-use journaling app): single-mo
 - **Toolchain**: Gradle 9.6.1 wrapper, JDK 17 compile target (CI builds with temurin 21), AGP 9.3.1, Kotlin 2.4.10, KSP 2.3.10, Compose BOM 2026.06.01, Hilt 2.60.1, Room 2.8.4. Versions live in `gradle/libs.versions.toml` (dependabot updates weekly, target branch `main`).
 - **Build quirks**: `buildConfig = false` (no `BuildConfig` class — don't reference it); `android.nonTransitiveRClass=true`; `FAIL_ON_PROJECT_REPOS`; jitpack repo required for `me.towdium:PinIn`. Release minifies + shrinks with proguard (`-dontobfuscate` only). `vcsInfo include=false` is deliberate for F-Droid reproducible builds — don't re-enable. `org.gradle.jvmargs=-Xmx2048m -Dfile.encoding=UTF-8` (UTF-8 matters: Chinese asset content).
 - **CI**: `build-apk.yml` (push/PR), `build-release.yml` (manual release), `format.yml` (manual ktlint+prettier auto-commit), `deepseek-review.yml` (PR review bot, triggered by mentioning `@github-actions`; secret `CHAT_TOKEN`).
-- **Translation tooling**: `docs/scripts/*.py` (Python 3, plain stdlib except `3_translator.py` which uses `requests`) implement the translation pipeline — read `docs/substances-translation-protocol.md` before touching bulk translation data.
+- **Translation tooling**: `docs/scripts/substances_pipeline.py` (Python 3; stdlib only except the `translate` step, which needs `requests`) is the single entry point for the substances pipeline — subcommands `split`/`scaffold`/`constants`/`translate`/`apply`/`review`/`fix-tolerances`, plus `guide` for the full walkthrough. Read `docs/substances-translation-protocol.md` (data format) and `docs/substances-pipeline.md` (steps) before touching bulk translation data.
 
 ## Testing & QA
 
