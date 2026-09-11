@@ -18,6 +18,9 @@
 
 数据格式与合并规则：docs/substances-translation-protocol.md
 完整操作流程与排错：docs/substances-pipeline.md
+
+从 PsychonautWiki 取数是独立工具：docs/scripts/fetch_psychonautwiki.py
+（字段映射与坑见 docs/substances-pw-extraction.md）
 """
 
 from __future__ import annotations
@@ -26,16 +29,24 @@ import argparse
 import json
 import re
 import shutil
-import sys
 import time
 from pathlib import Path
+
+from _common import (
+    CROSS_TOLERANCE_FIXES,
+    DEFAULT_WORK_DIR,
+    REPO_ASSETS_HINT,
+    die,
+    read_json,
+    resolve_assets_dir,
+    resolve_work_dir,
+    sanitize_filename,
+    write_json,
+)
 
 # --------------------------------------------------------------------------
 # 常量
 # --------------------------------------------------------------------------
-
-#: 从仓库根目录运行时，assets 的默认位置
-REPO_ASSETS_HINT = Path("app/src/main/assets/substances")
 
 #: scaffold 默认抽取的文本字段（root -> <lang> 覆盖层）
 DEFAULT_TEXT_FIELDS = (
@@ -50,34 +61,11 @@ DEFAULT_TEXT_FIELDS = (
     "saferUse",
 )
 
-#: 中间产物（常量表）默认目录，跟随脚本位置，已加入 .gitignore
-DEFAULT_WORK_DIR = Path(__file__).resolve().parent / "_work"
-
 #: fix-tolerances 默认处理的目录
 DEFAULT_TOLERANCE_DIRS = ("en_us", "zh_cn", "zh_tw", "root")
 
 #: review 默认并排打开的目录
 DEFAULT_REVIEW_DIRS = ("zh_cn", "en_us", "zh_tw")
-
-#: crossTolerances 历史变体 -> 标准名称（原 6.fixTolencesTypes.py 的硬编码表）
-CROSS_TOLERANCE_FIXES = {
-    "psychedelics": "psychedelic",
-    "stimulants": "stimulant",
-    "Stimulants": "stimulant",
-    "entactogens": "entactogen",
-    "opioids": "opioid",
-    "dissociatives": "dissociative",
-    "Dissociatives": "dissociative",
-    "dissociative|dissociatives": "dissociative",
-    "benzodiazepines": "benzodiazepine",
-    "Benzodiazepines": "benzodiazepine",
-    "cannabinoids": "cannabinoid",
-    "nootropic|nootropics": "nootropic",
-    "Deliriants": "deliriant",
-    "Barbiturates": "barbiturate",
-    "Antipsychotics": "antipsychotic",
-    "trycyclic antidepressants": "antidepressant",
-}
 
 #: translate 相关
 DEEPSEEK_ENDPOINT = "https://api.deepseek.com/v1/chat/completions"
@@ -120,6 +108,11 @@ Substances 多语言数据流水线 —— 推荐顺序
   7) 收尾（一次性历史数据修正，可重复执行，无变化时不会写文件）
        python docs/scripts/substances_pipeline.py fix-tolerances
 
+  相关工具（独立脚本，不在此流水线内）
+   * 从 PsychonautWiki 补全结构化字段（剂量/时长/耐受/相互作用/别名）：
+       python docs/scripts/fetch_psychonautwiki.py --dry-run --verbose
+     字段映射与坑见 docs/substances-pw-extraction.md
+
   常见问题
    * 翻译结果里出现 "[翻译失败] ..."：重跑 translate --resume，或手工补齐后再 apply
    * 想只翻译一部分：translate --limit 20 试跑；--skip-pattern 可跳过 URL/单位等
@@ -129,68 +122,8 @@ Substances 多语言数据流水线 —— 推荐顺序
 
 
 # --------------------------------------------------------------------------
-# 公共工具
+# 公共工具（与数据来源无关的部分见 _common.py）
 # --------------------------------------------------------------------------
-
-
-def die(message: str, code: int = 1) -> "NoReturn":  # type: ignore[valid-type]
-    """打印错误并退出。"""
-    print(f"错误：{message}", file=sys.stderr)
-    raise SystemExit(code)
-
-
-def resolve_assets_dir(cli_value: str | None, must_exist: bool = True) -> Path:
-    """定位 assets/substances 目录。
-
-    优先用 --assets-dir；否则若当前目录下存在 app/src/main/assets/substances 就用它；
-    否则退回当前目录（兼容“先 cd 进 substances 目录再跑”的旧习惯）。
-
-    must_exist=False 用于 split 这类自举命令：目录不存在时会提示并继续（稍后创建）。
-    """
-    if cli_value:
-        candidate = Path(cli_value)
-        if not candidate.is_dir():
-            if must_exist:
-                die(f"--assets-dir '{cli_value}' 不存在或不是目录。")
-            print(f"提示：'{candidate}' 尚不存在，将按需创建。")
-        return candidate
-    from_cwd = Path.cwd() / REPO_ASSETS_HINT
-    if from_cwd.is_dir():
-        return from_cwd
-    return Path.cwd()
-
-
-def resolve_work_dir(cli_value: str | None) -> Path:
-    """中间产物（常量表）目录，默认 docs/scripts/_work/。"""
-    work_dir = Path(cli_value) if cli_value else DEFAULT_WORK_DIR
-    work_dir.mkdir(parents=True, exist_ok=True)
-    return work_dir
-
-
-def sanitize_filename(name: str) -> str:
-    """把字符串中的非法文件名字符替换为下划线。"""
-    return re.sub(r'[\\/*?:"<>|]', "_", name)
-
-
-def read_json(path: Path):
-    """读取 JSON，失败时给出可操作的报错。"""
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except FileNotFoundError:
-        die(f"文件 '{path}' 不存在。")
-    except json.JSONDecodeError as exc:
-        die(f"'{path}' 不是合法 JSON：{exc}")
-
-
-def write_json(path: Path, data) -> None:
-    """按项目约定写 JSON（2 空格缩进、不转义非 ASCII）。"""
-    path.parent.mkdir(parents=True, exist_ok=True)
-    try:
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2, ensure_ascii=False)
-    except IOError as exc:
-        die(f"写入 '{path}' 失败：{exc}")
 
 
 def substance_files(directory: Path, recursive: bool = False):
@@ -985,6 +918,7 @@ def build_parser() -> argparse.ArgumentParser:
     fix.add_argument("--dry-run", action="store_true", help="只报告不写文件")
     add_assets_dir(fix)
     fix.set_defaults(func=cmd_fix_tolerances)
+
 
     # guide
     guide = subparsers.add_parser("guide", help="打印完整流程", description="推荐先看这个")

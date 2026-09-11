@@ -15,6 +15,8 @@ python docs/scripts/substances_pipeline.py guide
 - `translate` 子命令额外需要 `pip install requests`、网络，以及一个 DeepSeek API Key
 - 命令都在**仓库根目录**执行；数据目录默认自动探测 `app/src/main/assets/substances`
   （找不到时退回当前目录，兼容“先 cd 进 substances 再跑”的旧习惯），也可用 `--assets-dir` 指定
+- 从 PsychonautWiki 抓取/刷新结构化字段是**另一个工具**：`fetch_psychonautwiki.py`，
+  见 [`substances-pw-extraction.md`](substances-pw-extraction.md)
 
 ## 目录与文件约定
 
@@ -27,9 +29,10 @@ app/src/main/assets/substances/
 ├── zh_cn_replaced/       # apply 的默认输出（校对通过后再替换 zh_cn/）
 └── ...
 
-docs/scripts/_work/       # 中间产物（常量表），已 gitignore
+docs/scripts/_work/       # 中间产物，已 gitignore
 ├── zh_cn_constants.json
-└── zh_cn_constants_translated.json
+├── zh_cn_constants_translated.json
+└── pw-cache/             # fetch_psychonautwiki.py 的响应缓存
 ```
 
 ## 子命令与旧脚本对照
@@ -77,7 +80,7 @@ python docs/scripts/substances_pipeline.py constants zh_cn
 ```
 
 > 注意：常量表是**整个语言目录**里所有字符串值的集合。要让 URL、单位等不被翻译，
-> 在第 4 步加 `--skip-pattern`（见下）。
+> 在第 5 步加 `--skip-pattern`（见下）。
 
 ### 4. 翻译
 
@@ -159,6 +162,9 @@ python docs/scripts/substances_pipeline.py fix-tolerances
    且 `--dry-run` 不会创建/清空任何目录。
 6. **`fix-tolerances`** 不再在脚本被 import 时自动执行（旧 `6.fixTolencesTypes.py` 一 import 就跑
    四个目录），现在只在显式调用子命令时执行。
+7. **抓取工具独立**：从 PsychonautWiki 补全结构化字段是另一个脚本
+   `docs/scripts/fetch_psychonautwiki.py`（见 [`substances-pw-extraction.md`](substances-pw-extraction.md)），
+   各工具共用 `docs/scripts/_common.py` 里的路径/JSON 辅助函数。
 
 ## 排错
 
