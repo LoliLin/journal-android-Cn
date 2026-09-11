@@ -15,8 +15,9 @@ python docs/scripts/substances_pipeline.py guide
 - `translate` 子命令额外需要 `pip install requests`、网络，以及一个 DeepSeek API Key
 - 命令都在**仓库根目录**执行；数据目录默认自动探测 `app/src/main/assets/substances`
   （找不到时退回当前目录，兼容“先 cd 进 substances 再跑”的旧习惯），也可用 `--assets-dir` 指定
-- 从 PsychonautWiki 抓取/刷新结构化字段是**另一个工具**：`fetch_psychonautwiki.py`，
-  见 [`substances-pw-extraction.md`](substances-pw-extraction.md)
+- 从外部来源（PsychonautWiki / ATC / TripSit / EUDA）抓取与补全结构化字段是**独立工具**：
+  `fetch_psychonautwiki.py`、`fetch_atc.py`、`fetch_tripsit.py`、`fetch_euda.py`，
+  见 [`substances-catalog-sources.md`](substances-catalog-sources.md)
 
 ## 目录与文件约定
 
@@ -46,6 +47,7 @@ docs/scripts/_work/       # 中间产物，已 gitignore
 | `apply` | 把译文回填进语言目录 | `4_replaceCommonConstants.py` |
 | `review` | 三语并排人工校对 GUI | `5_translateFixViewer.py` |
 | `fix-tolerances` | 修正 `crossTolerances` 历史变体 | `6.fixTolencesTypes.py` |
+| `convert` | 语言之间本机转换（简繁等），不走 API | —（新功能） |
 | `guide` | 打印完整流程 | — |
 
 ## 完整流程
@@ -97,15 +99,21 @@ python docs/scripts/substances_pipeline.py translate \
 | `--api-key` | 直接传 Key（不推荐，会进 shell 历史；默认读 `DEEPSEEK_API_KEY`） |
 | `--api-key-env` | 换一个环境变量名 |
 | `--target-lang` | 目标语言，如 `简体中文` / `繁體中文` / `日本語`（默认 `简体中文`） |
-| `--dry-run` | 只列出将翻译的条目，不调 API、不写文件 |
+| `--batch N` | 一次请求翻 N 条（默认 1；**建议 20**，1148 条从 1148 次请求降到约 58 次） |
+| `--glossary FILE` | 术语表 `{原文: 译名}`，注入提示词保证译名一致（如 `docs/glossary/en_to_zh.json`） |
+| `--skip-ascii` | 跳过纯 ASCII 且不含空格的字符串（物质名/缩写/单位/URL），避免把 `2C-B`、`mg` 翻坏 |
+| `--dry-run` | 只列出将翻译的条目与预计请求数，不调 API、不写文件 |
 | `--limit N` | 只处理前 N 条，用于试跑 |
 | `--skip-pattern REGEX` | 命中则原样保留，可重复；例如 `--skip-pattern '^https?://'` 跳过 URL |
 | `--resume` | 接着已有输出继续，跳过已翻译条目（中断后重跑用） |
 | `--delay` | 请求间隔秒数（默认 0.1） |
 | `--model` / `--output` | 模型与输出路径（输出默认 `<input>_translated.json`） |
 
-翻译失败的条目会保留 `[翻译失败] 原文` 前缀，并在结尾汇总数量——补齐的方式是
+批量模式的返回契约是"等长 JSON 字符串数组"；模型一旦返回长度不符或无法解析，会**自动退回逐条翻译**
+（只是慢一点，不会丢条目）。翻译失败的条目保留 `[翻译失败] 原文` 前缀并在结尾汇总——补齐的方式是
 `--resume` 重跑，或手工编辑常量表。
+
+> **能转换就别翻译**：目标语言是 `zh_tw` 而 `zh_cn` 已有内容时，用下面的 `convert` 更快也更一致。
 
 ### 5. 回填译文
 
@@ -147,6 +155,32 @@ python docs/scripts/substances_pipeline.py fix-tolerances
 # 默认处理 en_us zh_cn zh_tw root，可显式指定目录
 ```
 
+### 8. 语言之间本机转换（convert，不走 API）
+
+简繁之间是**字符级映射 + 少量用词差异**，机器翻译是浪费：`zh_cn` 已有内容时，`zh_tw` 直接转。
+
+```bash
+# 先看影响面（零副作用，不建目录）
+python docs/scripts/substances_pipeline.py convert zh_cn zh_tw --dry-run
+# 默认输出 <assets>/zh_tw_converted/，校对后再决定是否 --in-place
+python docs/scripts/substances_pipeline.py convert zh_cn zh_tw \
+    --glossary docs/glossary/zh_cn_to_zh_tw.json
+```
+
+| 参数 | 用途 |
+|---|---|
+| `from_lang` / `to_lang` | 语言键（如 `zh_cn` / `zh_tw`），决定 OpenCC preset 或 zhconv target |
+| `--source` | 源目录或单个 JSON 文件（默认 `<assets>/<from_lang>`） |
+| `--target` | 输出目录（默认 `<assets>/<to_lang>_converted`） |
+| `--in-place` | 直接覆盖目标语言目录（不可恢复） |
+| `--glossary FILE` | 术语表 `{原词: 替换词}`，**在字符转换之前**按源语言写法匹配（长词优先） |
+| `--dry-run` / `--verbose` | 报告改动处数 / 逐文件打印 |
+
+依赖：优先 OpenCC（`s2twp`/`tw2sp`，带台湾用词本地化），没有就退回 `zhconv`（逐字转换，用词较弱，
+会打印提示）。两者都没有时报错并给出安装命令。实测 1148 条 `zh_cn` 常量繁化后 236 条（20%）不变，
+其余本地瞬时完成。术语表种子在 `docs/glossary/`（`en_to_zh.json` 42 条、
+`zh_cn_to_zh_tw.json` 32 条），需要人工审校后再用。
+
 ## 与旧脚本的差异
 
 行为语义保持不变，以下是要注意的变化：
@@ -156,15 +190,18 @@ python docs/scripts/substances_pipeline.py fix-tolerances
 2. **中间文件位置**：常量表默认落在 `docs/scripts/_work/`（旧版落在当前目录），已加入
    `.gitignore`，不会再混进 assets。
 3. **`split` 自举**：`--assets-dir` 指向的目录不存在时会提示并按需创建（其余子命令仍要求目录存在）。
-4. **`translate`** 新增环境变量取 Key、`--dry-run`、`--limit`、`--skip-pattern`、`--resume`；
-   默认行为（全量翻译、失败标记、`--delay 0.1`）与旧版一致。
+4. **`translate`** 新增环境变量取 Key、`--dry-run`、`--limit`、`--skip-pattern`、`--resume`、
+   `--batch`、`--glossary`、`--skip-ascii`；默认行为（逐条翻译、失败标记、`--delay 0.1`）与旧版一致
+   ——不传 `--batch` 时就是原来的逐条请求。
 5. **`apply`** 新增 `--dry-run` 与 `--strict`；默认输出目录与 `--in-place` 语义与旧版一致，
    且 `--dry-run` 不会创建/清空任何目录。
 6. **`fix-tolerances`** 不再在脚本被 import 时自动执行（旧 `6.fixTolencesTypes.py` 一 import 就跑
    四个目录），现在只在显式调用子命令时执行。
-7. **抓取工具独立**：从 PsychonautWiki 补全结构化字段是另一个脚本
-   `docs/scripts/fetch_psychonautwiki.py`（见 [`substances-pw-extraction.md`](substances-pw-extraction.md)），
-   各工具共用 `docs/scripts/_common.py` 里的路径/JSON 辅助函数。
+7. **抓取工具独立**：从 PsychonautWiki / ATC / TripSit / EUDA / FreeODwiki 补全字段是另外五个脚本
+   （`fetch_psychonautwiki.py`、`fetch_atc.py`、`fetch_tripsit.py`、`fetch_euda.py`、
+   `fetch_freeodwiki.py`，见 [`substances-catalog-sources.md`](substances-catalog-sources.md)），
+   各工具共用 `docs/scripts/_common.py` 里的路径/JSON/合并/台账辅助函数；目标是**一个来源一个脚本**。
+8. **`convert` 是新子命令**（旧脚本没有）：简繁等语言间本机转换，替代"再翻一遍"的做法。
 
 ## 排错
 
@@ -176,3 +213,4 @@ python docs/scripts/substances_pipeline.py fix-tolerances
 | `review` 报错说没有 tkinter | 安装带 tk 的 Python（Windows 官方安装包默认自带） |
 | `apply` 之后发现译错了 | 不要用 `--in-place`；重新 `apply` 即可覆盖 `<lang>_replaced/` |
 | assets 里出现了 `zh_cn_replaced/` 之类的目录 | 那是 `apply` 的输出目录，校对合并后自行删除；它不该提交 |
+| `convert` 报"没有 … 的可用转换器" | 装 OpenCC 或 zhconv：`pip install -i https://pypi.tuna.tsinghua.edu.cn/simple opencc`（国内默认 PyPI 连不上） |

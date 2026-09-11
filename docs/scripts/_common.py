@@ -45,6 +45,34 @@ CROSS_TOLERANCE_FIXES = {
 }
 
 
+# --------------------------------------------------------------------------
+# 分类词表：各来源工具写入 categories 前先对照，避免 UI 出现 missing_key
+# --------------------------------------------------------------------------
+
+#: 应用已采用并已翻译的分类（Klop233 的扩充分支；对应 lang/*.json 里的 categories.<name>）
+KNOWN_CATEGORIES = {
+    "common", "psychedelic", "stimulant", "entactogen", "depressant", "opioid",
+    "habit-forming", "research-chemical", "tentative", "dissociative", "benzodiazepine",
+    "cannabinoid", "nootropic", "deliriant", "barbiturate", "eugeroic", "hallucinogen",
+    "oneirogen", "antipsychotic", "antidepressant", "hypnotic", "mood-stabilizer",
+    "antiparkinsonian", "anxiolytic", "adhd-medication", "antiepileptic", "antidementia",
+    "addiction-treatment", "centrally-acting-medication", "ssri", "maoi", "botanical",
+    "anesthetic",
+}
+
+
+def warn_unknown_categories(categories, source: str) -> list:
+    """返回不在 KNOWN_CATEGORIES 里的分类，并提示需要补 lang/*.json 的翻译键。"""
+    unknown = [name for name in categories if name not in KNOWN_CATEGORIES]
+    if unknown:
+        print(
+            f"警告：{source} 产生的分类 {', '.join(unknown)} 不在已知词表内；"
+            "写入后需要在 app/src/main/assets/lang/*.json 补 categories.<name> 翻译键，"
+            "否则界面会显示 missing_key。"
+        )
+    return unknown
+
+
 def die(message: str, code: int = 1):
     """打印错误并退出。"""
     print(f"错误：{message}", file=sys.stderr)
@@ -110,3 +138,160 @@ def number(value):
     if isinstance(value, float) and value.is_integer():
         return int(value)
     return value
+
+
+# --------------------------------------------------------------------------
+# 资产合并：默认只补空缺，绝不覆盖人工内容
+# --------------------------------------------------------------------------
+
+
+def fill_roas(existing_roas: list, incoming_roas: list, overwrite: bool = False):
+    """按途径逐个补齐 dose/duration/bioavailability 里缺失的小项。
+
+    返回 (合并后的 roas, 变更说明, 因已存在而保留的说明)。overwrite=True 时整条替换。
+    """
+    if overwrite or not existing_roas:
+        return incoming_roas, [f"{r['name']}(整条)" for r in incoming_roas], []
+    merged = list(existing_roas)
+    index = {r.get("name"): i for i, r in enumerate(merged) if isinstance(r, dict)}
+    notes, kept = [], []
+    for incoming in incoming_roas:
+        name = incoming.get("name")
+        if name not in index:
+            merged.append(incoming)
+            notes.append(f"{name}(新增)")
+            continue
+        target = merged[index[name]]
+        for block in ("dose", "duration", "bioavailability"):
+            value = incoming.get(block)
+            if not value:
+                continue
+            if not target.get(block):
+                target[block] = value
+                notes.append(f"{name}.{block}")
+                continue
+            for key, sub_value in value.items():
+                if key not in target[block]:
+                    target[block][key] = sub_value
+                    notes.append(f"{name}.{block}.{key}")
+                else:
+                    kept.append(f"{name}.{block}.{key}")
+    return merged, notes, kept
+
+
+def fill_gaps(existing: dict, incoming: dict, managed_fields, overwrite: bool = False):
+    """把 incoming 中 managed_fields 的值合并进 existing。
+
+    返回 (合并结果, 变更说明, 因已存在而保留的说明)。未列在 managed_fields 里的字段
+    （文案、审核状态、翻译、代谢来源等）一律不参与合并。
+    """
+    merged = dict(existing)
+    changed, kept = [], []
+    for field, value in incoming.items():
+        if field not in managed_fields:
+            continue
+        if field == "roas":
+            new_roas, notes, skipped = fill_roas(existing.get("roas") or [], value or [], overwrite)
+            if notes:
+                merged["roas"] = new_roas
+                changed.extend(f"roas[{note}]" for note in notes)
+            kept.extend(f"roas[{sub}]" for sub in skipped)
+            continue
+        if field in existing and not overwrite:
+            kept.append(field)
+            continue
+        if existing.get(field) == value:
+            continue
+        merged[field] = value
+        changed.append(field)
+    return merged, changed, kept
+
+
+# --------------------------------------------------------------------------
+# 目录扩充台账（docs/substance-catalog-expansion.json）
+# --------------------------------------------------------------------------
+#
+# 多个来源工具共用同一份台账，结构（与既有文件一致）：
+#   checkedOn            本轮核对日期
+#   scope                本轮范围说明
+#   sourceSnapshots      [{source, url, version?, sha256?, hashNote?, query?}]
+#   added                [{name, sources: [{source, key?, url?}]}]
+#   excluded             [{source, key, name?, reason}]
+#   resolved             [{source, key, name}]
+#   normalizationNotes   [{source, key, name, note}]
+
+LEDGER_LIST_KEYS = ("sourceSnapshots", "added", "excluded", "resolved", "normalizationNotes")
+
+DEFAULT_LEDGER = Path("docs/substance-catalog-expansion.json")
+
+
+def load_ledger(path: Path) -> dict:
+    """读台账；不存在时返回空骨架。"""
+    path = Path(path)
+    if not path.exists():
+        return {}
+    data = read_json(path)
+    if not isinstance(data, dict):
+        die(f"台账 '{path}' 的根元素不是对象。")
+    return data
+
+
+def merge_ledger(path: Path, *, source: str, snapshot: dict | None = None,
+                 added=(), excluded=(), resolved=(), notes=()) -> dict:
+    """把本轮结果并入台账，按 (source, key/name) 幂等去重后排序写回。
+
+    重复执行同一个来源不会产生重复条目；`added` 会合并同一个物质的多来源记录。
+    """
+    import datetime
+
+    path = Path(path)
+    ledger = load_ledger(path)
+    for key in LEDGER_LIST_KEYS:
+        if not isinstance(ledger.get(key), list):
+            ledger[key] = []
+    ledger["checkedOn"] = datetime.date.today().isoformat()
+
+    if snapshot:
+        ledger["sourceSnapshots"] = [
+            item for item in ledger["sourceSnapshots"] if item.get("source") != source
+        ]
+        ledger["sourceSnapshots"].append(snapshot)
+
+    for item in added:
+        name = item.get("name")
+        found = next((a for a in ledger["added"] if a.get("name") == name), None)
+        if found is None:
+            ledger["added"].append({"name": name, "sources": list(item.get("sources") or [])})
+            continue
+        known = {(s.get("source"), s.get("key")) for s in found.get("sources") or []}
+        for entry in item.get("sources") or []:
+            if (entry.get("source"), entry.get("key")) not in known:
+                found.setdefault("sources", []).append(entry)
+
+    for key, items in (("excluded", excluded), ("resolved", resolved)):
+        for item in items:
+            if not any(
+                existing.get("source") == item.get("source") and existing.get("key") == item.get("key")
+                for existing in ledger[key]
+            ):
+                ledger[key].append(item)
+
+    for item in notes:
+        if not any(
+            existing.get("source") == item.get("source")
+            and existing.get("key") == item.get("key")
+            and existing.get("note") == item.get("note")
+            for existing in ledger["normalizationNotes"]
+        ):
+            ledger["normalizationNotes"].append(item)
+
+    ledger["added"].sort(key=lambda item: (item.get("name") or "").lower())
+    ledger["excluded"].sort(key=lambda item: (item.get("source") or "", item.get("key") or ""))
+    ledger["resolved"].sort(key=lambda item: (item.get("source") or "", item.get("key") or ""))
+    ledger["normalizationNotes"].sort(
+        key=lambda item: (item.get("source") or "", item.get("key") or "")
+    )
+    ledger["sourceSnapshots"].sort(key=lambda item: item.get("source") or "")
+
+    write_json(path, ledger)
+    return ledger

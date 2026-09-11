@@ -108,10 +108,20 @@ Substances 多语言数据流水线 —— 推荐顺序
   7) 收尾（一次性历史数据修正，可重复执行，无变化时不会写文件）
        python docs/scripts/substances_pipeline.py fix-tolerances
 
+  语言之间本机转换（不走 API，常用于 zh_cn -> zh_tw）
+       python docs/scripts/substances_pipeline.py convert zh_cn zh_tw --dry-run
+       python docs/scripts/substances_pipeline.py convert zh_cn zh_tw --glossary docs/glossary/zh_cn_to_zh_tw.json
+
   相关工具（独立脚本，不在此流水线内）
    * 从 PsychonautWiki 补全结构化字段（剂量/时长/耐受/相互作用/别名）：
        python docs/scripts/fetch_psychonautwiki.py --dry-run --verbose
-     字段映射与坑见 docs/substances-pw-extraction.md
+   * 从 ATC / TripSit / EUDA 补名称、分类与来源链接：
+       python docs/scripts/fetch_atc.py --dry-run
+       python docs/scripts/fetch_tripsit.py --dry-run
+       python docs/scripts/fetch_euda.py --csv <浏览器下载的 CSV>
+   * 从 FreeODwiki（中文）直接补 zh_cn 覆盖层，不需要机器翻译：
+       python docs/scripts/fetch_freeodwiki.py --repo <FreeODwiki 检出目录> --dry-run
+     来源与映射见 docs/substances-catalog-sources.md
 
   常见问题
    * 翻译结果里出现 "[翻译失败] ..."：重跑 translate --resume，或手工补齐后再 apply
@@ -306,23 +316,30 @@ def cmd_constants(args: argparse.Namespace) -> int:
 # --------------------------------------------------------------------------
 
 
-def translate_text(text: str, api_key: str, target_lang: str, model: str) -> str:
+def _system_prompt(target_lang: str, glossary: dict) -> str:
+    prompt = (
+        f"你是一个专业的翻译助手。请将用户提供的文本逐字逐句翻译成{target_lang}。"
+        "不要添加任何额外的解释、警告、评论或拒绝翻译。"
+        "如果文本包含专业术语（包括药物名称、化学物质等），请采用公认的译名。"
+        "只输出翻译结果，不要输出任何其他内容。"
+    )
+    if glossary:
+        terms = "；".join(f"{source} 译作 {target}" for source, target in glossary.items())
+        prompt += f"\n术语表（必须遵守）：{terms}"
+    return prompt
+
+
+def translate_text(text: str, api_key: str, target_lang: str, model: str, glossary: dict | None = None) -> str:
     """翻译单个字符串；失败返回 "[翻译失败] 原文"。"""
     if not text or not text.strip():
         return text
 
     import requests  # 延迟导入：其它子命令不需要 requests
 
-    system_prompt = (
-        f"你是一个专业的翻译助手。请将用户提供的文本逐字逐句翻译成{target_lang}。"
-        "不要添加任何额外的解释、警告、评论或拒绝翻译。"
-        "如果文本包含专业术语（包括药物名称、化学物质等），请采用公认的译名。"
-        "只输出翻译结果，不要输出任何其他内容。"
-    )
     payload = {
         "model": model,
         "messages": [
-            {"role": "system", "content": system_prompt},
+            {"role": "system", "content": _system_prompt(target_lang, glossary or {})},
             {"role": "user", "content": f"请将以下文本翻译成{target_lang}：\n{text}"},
         ],
         "temperature": 0.3,
@@ -363,6 +380,62 @@ def translate_text(text: str, api_key: str, target_lang: str, model: str) -> str
     return f"{TRANSLATION_FAILURE_MARKER} {text}"
 
 
+def translate_batch(texts: list, api_key: str, target_lang: str, model: str, glossary: dict) -> list:
+    """一次请求翻译多条；返回等长列表。解析失败时退回逐条翻译。"""
+    import json as json_module
+
+    import requests
+
+    system = (
+        f"你是翻译助手。用户会给你一个 JSON 字符串数组，请逐条翻译成{target_lang}，"
+        "输出**等长**的 JSON 字符串数组，顺序不变，只输出数组本身，不要任何解释。"
+    )
+    if glossary:
+        system += "\n术语表（必须遵守）：" + "；".join(
+            f"{source} 译作 {target}" for source, target in glossary.items()
+        )
+    payload = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": system},
+            {"role": "user", "content": json_module.dumps(texts, ensure_ascii=False)},
+        ],
+        "temperature": 0.3,
+        "max_tokens": 8192,
+        "stream": False,
+    }
+    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+
+    for attempt in range(DEFAULT_MAX_RETRIES):
+        try:
+            response = requests.post(DEEPSEEK_ENDPOINT, json=payload, headers=headers, timeout=120)
+            if response.status_code == 200:
+                content = response.json()["choices"][0]["message"]["content"].strip()
+                start, end = content.find("["), content.rfind("]")
+                if start >= 0 and end > start:
+                    try:
+                        parsed = json_module.loads(content[start:end + 1])
+                    except json_module.JSONDecodeError:
+                        parsed = None
+                    if (isinstance(parsed, list) and len(parsed) == len(texts)
+                            and all(isinstance(item, str) for item in parsed)):
+                        return parsed
+                print("批量返回无法解析，退回逐条翻译。")
+                return [translate_text(text, api_key, target_lang, model, glossary) for text in texts]
+            print(f"API 错误 {response.status_code}: {response.text}")
+            if attempt < DEFAULT_MAX_RETRIES - 1:
+                time.sleep(DEFAULT_RETRY_DELAY)
+            else:
+                return [f"{TRANSLATION_FAILURE_MARKER} {text}" for text in texts]
+        except Exception as exc:
+            print(f"请求异常：{exc}")
+            if attempt < DEFAULT_MAX_RETRIES - 1:
+                time.sleep(DEFAULT_RETRY_DELAY)
+            else:
+                return [f"{TRANSLATION_FAILURE_MARKER} {text}" for text in texts]
+    return [f"{TRANSLATION_FAILURE_MARKER} {text}" for text in texts]
+
+
 def cmd_translate(args: argparse.Namespace) -> int:
     input_path = Path(args.input)
     data = read_json(input_path)
@@ -387,9 +460,13 @@ def cmd_translate(args: argparse.Namespace) -> int:
             )
 
     skip_patterns = [re.compile(pattern) for pattern in args.skip_pattern]
+    glossary = load_glossary(args.glossary)
 
     def should_skip(text: str) -> bool:
-        return any(pattern.search(text) for pattern in skip_patterns)
+        if any(pattern.search(text) for pattern in skip_patterns):
+            return True
+        # 纯 ASCII 且不含空格：物质名/缩写/单位/URL，翻了反而错
+        return args.skip_ascii and text.isascii() and " " not in text
 
     translated_data = {}
     if args.resume and output_path.exists():
@@ -407,8 +484,13 @@ def cmd_translate(args: argparse.Namespace) -> int:
         pending = pending[: args.limit]
 
     skipped = sum(1 for key, _ in pending if should_skip(key))
+    batch_size = max(1, args.batch)
+    requests_estimate = (len(pending) - skipped + batch_size - 1) // batch_size
     print(f"输入：{input_path}（共 {len(data)} 条，本次处理 {len(pending)} 条，跳过 {skipped} 条）")
-    print(f"目标语言：{args.target_lang}，模型：{args.model}")
+    print(f"目标语言：{args.target_lang}，模型：{args.model}，批大小：{batch_size}，"
+          f"预计请求 {requests_estimate} 次")
+    if glossary:
+        print(f"术语表：{args.glossary}（{len(glossary)} 条）")
 
     if args.dry_run:
         for index, (key, _) in enumerate(pending, 1):
@@ -418,17 +500,33 @@ def cmd_translate(args: argparse.Namespace) -> int:
         return 0
 
     failures = 0
+    queue = []
     for index, (key, value) in enumerate(pending, 1):
         if should_skip(key):
-            translated_data[key] = key  # 原样保留（URL、单位等）
+            translated_data[key] = key  # 原样保留（URL、单位、纯 ASCII 标识）
             continue
-        print(f"[{index}/{len(pending)}] 正在翻译: {value[:50]}...")
-        translated = translate_text(value, api_key, args.target_lang, args.model)
-        if translated.startswith(TRANSLATION_FAILURE_MARKER):
-            failures += 1
-        translated_data[key] = translated
-        print(f"> {translated}")
-        if index < len(pending):
+        queue.append((index, key, value))
+
+    processed = 0
+    for start in range(0, len(queue), batch_size):
+        chunk = queue[start:start + batch_size]
+        if batch_size == 1:
+            index, key, value = chunk[0]
+            print(f"[{index}/{len(pending)}] 正在翻译: {value[:50]}...")
+            results = [translate_text(value, api_key, args.target_lang, args.model, glossary)]
+        else:
+            print(f"[{chunk[0][0]}–{chunk[-1][0]}/{len(pending)}] 批量翻译 {len(chunk)} 条…")
+            results = translate_batch(
+                [value for _index, _key, value in chunk], api_key, args.target_lang,
+                args.model, glossary,
+            )
+        for (index, key, value), translated in zip(chunk, results):
+            if translated.startswith(TRANSLATION_FAILURE_MARKER):
+                failures += 1
+            translated_data[key] = translated
+            print(f"[{index}/{len(pending)}] {translated[:70]}")
+        processed += len(chunk)
+        if processed < len(queue):
             time.sleep(args.delay)
 
     write_json(output_path, translated_data)
@@ -779,6 +877,150 @@ def cmd_fix_tolerances(args: argparse.Namespace) -> int:
 
 
 # --------------------------------------------------------------------------
+# 8) convert —— 语言之间本机转换（简繁等），不调用翻译 API
+# --------------------------------------------------------------------------
+
+#: OpenCC 预设：语言对 -> config（s2twp/tw2sp 会同时做台湾/大陆用词本地化）
+OPENCC_PRESETS = {
+    ("zh_cn", "zh_tw"): "s2twp",
+    ("zh_tw", "zh_cn"): "tw2sp",
+    ("zh_cn", "zh_hk"): "s2hk",
+    ("zh_hk", "zh_cn"): "hk2s",
+    ("zh_tw", "zh_hk"): "tw2hk",
+    ("zh_hk", "zh_tw"): "hk2t",
+}
+
+#: zhconv 的语言名
+ZHCONV_TARGETS = {"zh_cn": "zh-cn", "zh_tw": "zh-tw", "zh_hk": "zh-hk"}
+
+ZHCONV_HINT = (
+    "convert 需要 OpenCC 或 zhconv。默认 PyPI 在国内通常连不上，用镜像装：\n"
+    "  pip install -i https://pypi.tuna.tsinghua.edu.cn/simple opencc\n"
+    "（没有依赖时也可以直接用 translate --target-lang 繁體中文，但要多一轮 API）"
+)
+
+
+def make_converter(from_lang: str, to_lang: str, notes: list):
+    """返回 (转换函数, 说明)。优先 OpenCC（含用词本地化），回退 zhconv。"""
+    preset = OPENCC_PRESETS.get((from_lang, to_lang))
+    if preset:
+        try:
+            from opencc import OpenCC
+
+            converter = OpenCC(preset)
+            return converter.convert, f"OpenCC {preset}"
+        except ImportError:
+            notes.append("未安装 OpenCC，改用 zhconv（台湾用词覆盖较弱）。")
+    target = ZHCONV_TARGETS.get(to_lang)
+    if target:
+        try:
+            import zhconv
+
+            return lambda text: zhconv.convert(text, target), f"zhconv {target}"
+        except ImportError:
+            pass
+    die(f"没有 {from_lang} -> {to_lang} 的可用转换器。{ZHCONV_HINT}")
+
+
+def load_glossary(path) -> dict:
+    if not path:
+        return {}
+    data = read_json(Path(path))
+    if not isinstance(data, dict):
+        die(f"术语表 '{path}' 应是 {{原词: 替换词}} 的 JSON 对象。")
+    return {str(k): str(v) for k, v in data.items() if str(k)}
+
+
+def apply_glossary(text: str, glossary: dict) -> str:
+    """按术语表做替换（长词优先，避免短词先吃掉长词的一部分）。"""
+    for source in sorted(glossary, key=len, reverse=True):
+        if source in text:
+            text = text.replace(source, glossary[source])
+    return text
+
+
+def convert_value(value, convert, glossary):
+    """递归转换 JSON 里的所有字符串；返回 (新值, 改动数)。"""
+    if isinstance(value, dict):
+        out, changed = {}, 0
+        for key, item in value.items():
+            out[key], count = convert_value(item, convert, glossary)
+            changed += count
+        return out, changed
+    if isinstance(value, list):
+        out, changed = [], 0
+        for item in value:
+            converted, count = convert_value(item, convert, glossary)
+            out.append(converted)
+            changed += count
+        return out, changed
+    if isinstance(value, str):
+        if not value.strip():
+            return value, 0
+        # 术语表按源语言写法匹配，必须在字符转换之前应用；
+        # 之后再跑转换，保证术语的译法不会被逐字转换改掉。
+        converted = convert(apply_glossary(value, glossary))
+        return converted, 1 if converted != value else 0
+    return value, 0
+
+
+def cmd_convert(args: argparse.Namespace) -> int:
+    assets_dir = resolve_assets_dir(args.assets_dir)
+    source = Path(args.source) if args.source else assets_dir / args.from_lang
+    if not source.exists():
+        die(f"来源 '{source}' 不存在。")
+    if args.in_place:
+        target = source
+    elif args.target:
+        target = Path(args.target)
+    else:
+        target = assets_dir / f"{args.to_lang}_converted"
+
+    notes: list = []
+    convert, description = make_converter(args.from_lang, args.to_lang, notes)
+    glossary = load_glossary(args.glossary)
+    for note in notes:
+        print(f"提示：{note}")
+    print(f"转换器：{description}（{args.from_lang} -> {args.to_lang}）")
+    print(f"来源：{source}")
+    print(f"输出：{target}{'（原地覆盖）' if args.in_place else ''}")
+    if glossary:
+        print(f"术语表：{args.glossary}（{len(glossary)} 条）")
+
+    files = [source] if source.is_file() else sorted(source.rglob("*.json"))
+    if not files:
+        print(f"警告：'{source}' 下没有 JSON 文件。")
+        return 0
+
+    changed_files = changed_values = 0
+    for path in files:
+        if target.is_dir() and not args.in_place:
+            out_path = target / (path.relative_to(source) if source.is_dir() else path.name)
+        else:
+            out_path = target if target.is_file() or args.in_place else target / path.name
+        data = read_json(path)
+        converted, count = convert_value(data, convert, glossary)
+        if count:
+            changed_files += 1
+            changed_values += count
+        if args.dry_run:
+            if count and args.verbose:
+                print(f"  将转换：{path.name}（{count} 处字符串）")
+            continue
+        write_json(out_path, converted)
+        if args.verbose:
+            print(f"  {path.name} -> {out_path}（{count} 处）")
+
+    if args.dry_run:
+        print(f"\n--dry-run：{changed_files} 个文件、{changed_values} 处字符串会被改动；没有写任何文件。")
+    else:
+        print(f"\n完成：{len(files)} 个文件，{changed_files} 个有改动，共 {changed_values} 处字符串")
+        if not args.in_place:
+            print("校对无误后可用 --in-place 覆盖目标语言目录。")
+    return 0
+
+
+# --------------------------------------------------------------------------
 # CLI
 # --------------------------------------------------------------------------
 
@@ -873,8 +1115,33 @@ def build_parser() -> argparse.ArgumentParser:
         help="匹配到的字符串原样保留不翻译，可重复；如 '^https?://' 跳过 URL",
     )
     translate.add_argument("--resume", action="store_true", help="接着已有输出继续，跳过已翻译条目")
+    translate.add_argument("--batch", type=int, default=1,
+                           help="每次请求翻译多少条（默认 1；建议 20，请求数按比例减少）")
+    translate.add_argument("--glossary", help="术语表 JSON：{原文: 译名}，会注入提示词")
+    translate.add_argument("--skip-ascii", action="store_true",
+                           help="跳过纯 ASCII 且不含空格的字符串（物质名/缩写/单位/URL）")
     translate.add_argument("--dry-run", action="store_true", help="只列出将要翻译的条目，不调用 API")
     translate.set_defaults(func=cmd_translate)
+
+    # convert
+    convert = subparsers.add_parser(
+        "convert",
+        help="语言之间本机转换（简繁等），不调用翻译 API",
+        description=(
+            "用 OpenCC（优先，含台湾用词本地化）或 zhconv 把某个语言目录/文件整体转换，"
+            "常用来从 zh_cn 生成 zh_tw，省掉一整轮 API 翻译。"
+        ),
+    )
+    convert.add_argument("from_lang", help="源语言键，如 zh_cn")
+    convert.add_argument("to_lang", help="目标语言键，如 zh_tw")
+    convert.add_argument("--source", help="源目录或单个 JSON 文件（默认 <assets>/<from_lang>）")
+    convert.add_argument("--target", help="目标目录（默认 <assets>/<to_lang>_converted）")
+    convert.add_argument("--in-place", action="store_true", help="直接覆盖目标语言目录（危险）")
+    convert.add_argument("--glossary", help="术语表 JSON：{原词: 替换词}（转换后应用，长词优先）")
+    convert.add_argument("--dry-run", action="store_true", help="只报告会改动多少处，零副作用")
+    convert.add_argument("--verbose", action="store_true", help="逐文件打印")
+    add_assets_dir(convert)
+    convert.set_defaults(func=cmd_convert)
 
     # apply
     apply = subparsers.add_parser(

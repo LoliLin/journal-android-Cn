@@ -25,9 +25,12 @@ from pathlib import Path
 
 from _common import (
     CROSS_TOLERANCE_FIXES,
+    DEFAULT_LEDGER,
     DEFAULT_WORK_DIR,
     REPO_ASSETS_HINT,
     die,
+    fill_gaps,
+    merge_ledger,
     number,
     read_json,
     resolve_assets_dir,
@@ -405,61 +408,6 @@ def pw_to_asset(pw, with_categories: bool) -> dict:
     return record
 
 
-def merge_roas(existing_roas: list, incoming_roas: list, overwrite: bool):
-    """按途径逐个补齐缺失的小项；绝不覆盖已有值（除非 --overwrite）。"""
-    if overwrite or not existing_roas:
-        return incoming_roas, [f"{r['name']}(整条)" for r in incoming_roas], []
-    merged = list(existing_roas)
-    index = {r.get("name"): i for i, r in enumerate(merged) if isinstance(r, dict)}
-    notes, kept = [], []
-    for incoming in incoming_roas:
-        name = incoming.get("name")
-        if name not in index:
-            merged.append(incoming)
-            notes.append(f"{name}(新增)")
-            continue
-        target = merged[index[name]]
-        for block in ("dose", "duration", "bioavailability"):
-            value = incoming.get(block)
-            if not value:
-                continue
-            if not target.get(block):
-                target[block] = value
-                notes.append(f"{name}.{block}")
-                continue
-            for key, sub_value in value.items():
-                if key not in target[block]:
-                    target[block][key] = sub_value
-                    notes.append(f"{name}.{block}.{key}")
-                else:
-                    kept.append(f"{name}.{block}.{key}")
-    return merged, notes, kept
-
-
-def merge_asset(existing: dict, incoming: dict, overwrite: bool):
-    """返回 (合并结果, 变更说明, 因已存在而跳过的字段)。"""
-    merged = dict(existing)
-    changed, kept = [], []
-    for field, value in incoming.items():
-        if field not in FETCH_MANAGED_FIELDS:
-            continue  # categories/summary 等人工内容不参与合并
-        if field == "roas":
-            new_roas, notes, skipped = merge_roas(existing.get("roas") or [], value or [], overwrite)
-            if notes:
-                merged["roas"] = new_roas
-                changed.extend(f"roas[{note}]" for note in notes)
-            kept.extend(f"roas[{sub}]" for sub in skipped)
-            continue
-        if field in existing and not overwrite:
-            kept.append(field)
-            continue
-        if existing.get(field) == value:
-            continue
-        merged[field] = value
-        changed.append(field)
-    return merged, changed, kept
-
-
 # --------------------------------------------------------------------------
 # CLI
 # --------------------------------------------------------------------------
@@ -521,6 +469,7 @@ def run(args: argparse.Namespace) -> int:
         "substances": [],
     }
     counts = {"updated": 0, "created": 0, "unchanged": 0}
+    ledger_added, ledger_resolved = [], []
 
     for api_record in targets:
         api_name = api_record["name"]
@@ -531,9 +480,14 @@ def run(args: argparse.Namespace) -> int:
             incoming = pw_to_asset(api_record, with_categories=True)
             merged, changed, kept = incoming, sorted(incoming), []
             counts["created"] += 1
+            ledger_added.append({"name": api_name, "sources": [{
+                "source": "PsychonautWiki", "key": api_name, "url": api_record.get("url"),
+            }]})
         else:
             incoming = pw_to_asset(api_record, with_categories=False)
-            merged, changed, kept = merge_asset(existing, incoming, args.overwrite)
+            merged, changed, kept = fill_gaps(
+                existing, incoming, FETCH_MANAGED_FIELDS, args.overwrite
+            )
             counts["updated" if changed else "unchanged"] += 1
         if not args.dry_run and changed:
             write_json(path, merged)
@@ -548,6 +502,8 @@ def run(args: argparse.Namespace) -> int:
         })
         if args.verbose and changed:
             print(f"  {stem}: {', '.join(changed[:6])}{' …' if len(changed) > 6 else ''}")
+        if api_name in matched_by:
+            ledger_resolved.append({"source": "PsychonautWiki", "key": stem, "name": api_name})
 
     report["counts"] = counts
     # 与本次是否 --limit/--source 无关：以完整 API 目录为准
@@ -556,9 +512,16 @@ def run(args: argparse.Namespace) -> int:
     )
     report["index_entries_missing_in_api"] = index_missing
 
-    report_path = Path(args.report) if args.report else out_dir / "_fetch-report.json"
+    report_path = Path(args.report) if args.report else cache_dir / "pw-report.json"
     if not args.dry_run:
         write_json(report_path, report)
+        if args.ledger:
+            merge_ledger(
+                Path(args.ledger), source="PsychonautWiki",
+                snapshot={"source": "PsychonautWiki", "url": PW_GRAPHQL_ENDPOINT,
+                          "query": PW_GRAPHQL_CATALOG_QUERY % (PW_PAGE_SIZE, 0)},
+                added=ledger_added, resolved=ledger_resolved,
+            )
 
     print(f"\n完成：新建 {counts['created']}，更新 {counts['updated']}，无变化 {counts['unchanged']}")
     if report["repo_files_without_api_record"]:
@@ -595,7 +558,10 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--overwrite", action="store_true", help="允许覆盖已有的结构化字段（默认只补空缺）")
     parser.add_argument("--dry-run", action="store_true", help="不写文件、不建目录，只报告会改哪些字段")
     parser.add_argument("--refresh", action="store_true", help="忽略本地缓存重新抓取")
-    parser.add_argument("--report", help="报告文件（默认 <out>/_fetch-report.json）")
+    parser.add_argument("--report", help="报告文件（默认 <cache-dir>/pw-report.json）")
+    parser.add_argument("--ledger", nargs="?", const=str(DEFAULT_LEDGER), default=str(DEFAULT_LEDGER),
+                        help=f"目录扩充台账（默认 {DEFAULT_LEDGER}）")
+    parser.add_argument("--no-ledger", action="store_true", help="不写台账")
     parser.add_argument("--verbose", action="store_true", help="逐条打印变更字段")
     parser.add_argument(
         "--assets-dir",
@@ -606,6 +572,8 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv=None) -> int:
     args = build_parser().parse_args(argv)
+    if args.no_ledger:
+        args.ledger = None
     return run(args)
 
 

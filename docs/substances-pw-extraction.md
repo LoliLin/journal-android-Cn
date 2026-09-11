@@ -139,9 +139,14 @@ python docs/scripts/fetch_psychonautwiki.py --overwrite
 
 ### 产出
 
-`<out>/_fetch-report.json`：逐条记录 API 名、写回的文件名、对齐方式（`name` 或
-`redirect:<原文件名>`）、索引分组、`changed` 与 `kept` 字段，以及
-`repo_files_without_api_record`（仓库有、API 无记录）和 `index_entries_missing_in_api`。
+默认报告文件是 `<cache-dir>/pw-report.json`（即 `docs/scripts/_work/pw-cache/pw-report.json`，
+可用 `--report` 改）——**不要把它写进 assets**：那是随 APK 打包的目录，报告属于工作产物。
+报告逐条记录 API 名、写回的文件名、对齐方式（`name` 或 `redirect:<原文件名>`）、索引分组、
+`changed` 与 `kept` 字段，以及 `repo_files_without_api_record`（仓库有、API 无记录）和
+`index_entries_missing_in_api`。
+
+其他来源（ATC / TripSit / EUDA）见 [`substances-catalog-sources.md`](substances-catalog-sources.md)；
+它们共用同一份台账 `docs/substance-catalog-expansion.json`。
 
 ### 排错
 
