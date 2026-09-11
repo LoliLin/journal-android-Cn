@@ -28,6 +28,17 @@ import com.isaakhanimann.journal.data.substances.AdministrationRoute
 import com.isaakhanimann.journal.data.substances.ReleaseForm
 import java.time.Instant
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
+
+/**
+ * Parser for journal backups. Beyond ignoring fields written by other app versions,
+ * it coerces unknown values of optional enums (e.g. a formulation added later) to
+ * their default instead of failing the import.
+ */
+val journalImportJson = Json {
+    ignoreUnknownKeys = true
+    coerceInputValues = true
+}
 
 @Serializable
 data class JournalExport(

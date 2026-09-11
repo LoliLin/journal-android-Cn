@@ -108,7 +108,9 @@ internal fun relativeDoseOfIngestion(
 ): Double? {
     val ingestion = ingestionWith.ingestion
     val substance = substanceRepo.getSubstance(ingestion.substanceName) ?: return null
-    val roaDose = substance.getRoa(ingestion.administrationRoute, ingestion.releaseForm)?.roaDose ?: return null
+    val roaDose = substance.getRoa(ingestion.administrationRoute, ingestion.releaseForm)
+        ?.roaDose
+        ?: return null
     val reference = commonDoseReference(roaDose.commonMin, roaDose.strongMin) ?: return null
     if (reference <= 0) return null
     // relative dose is only defined when the entry is expressed in the ROA's units
@@ -225,7 +227,9 @@ class StatsAnalysisViewModel @Inject constructor(
     private fun doseClassOf(ingestionWith: IngestionWithCompanionAndCustomUnit): DoseClass? {
         val ingestion = ingestionWith.ingestion
         val substance = substanceRepo.getSubstance(ingestion.substanceName) ?: return null
-        val roaDose = substance.getRoa(ingestion.administrationRoute, ingestion.releaseForm)?.roaDose ?: return null
+        val roaDose = substance.getRoa(ingestion.administrationRoute, ingestion.releaseForm)
+            ?.roaDose
+            ?: return null
         return roaDose.getDoseClass(ingestionWith.pureDose, ingestionWith.originalUnit)
     }
 

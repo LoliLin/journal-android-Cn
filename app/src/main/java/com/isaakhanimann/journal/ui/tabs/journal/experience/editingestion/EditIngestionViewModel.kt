@@ -28,6 +28,7 @@ import androidx.lifecycle.viewModelScope
 import com.isaakhanimann.journal.data.room.experiences.ExperienceRepository
 import com.isaakhanimann.journal.data.room.experiences.entities.CustomUnit
 import com.isaakhanimann.journal.data.room.experiences.entities.Ingestion
+import com.isaakhanimann.journal.data.substances.AdministrationRoute
 import com.isaakhanimann.journal.data.substances.ReleaseForm
 import com.isaakhanimann.journal.data.substances.repositories.SubstanceRepository
 import com.isaakhanimann.journal.ui.main.navigation.routers.INGESTION_ID_KEY
@@ -59,7 +60,7 @@ class EditIngestionViewModel @Inject constructor(
     private val substanceRepo: SubstanceRepository
 ) : ViewModel() {
     private var ingestionFlow: MutableStateFlow<Ingestion?> = MutableStateFlow(null)
-    var ingestion: Ingestion? = null
+    var ingestion by mutableStateOf<Ingestion?>(null)
     var note by mutableStateOf("")
     var releaseForm by mutableStateOf<ReleaseForm?>(null)
         private set
@@ -227,7 +228,10 @@ class EditIngestionViewModel @Inject constructor(
                         null
                     }
                 it.consumerName = consumerName.ifBlank { null }
-                it.releaseForm = releaseForm
+                // Matches the create flow: a formulation is only meaningful for oral
+                // entries, and getRoa() drops all ROA data for extended release.
+                val route = it.administrationRoute
+                it.releaseForm = releaseForm.takeIf { route == AdministrationRoute.ORAL }
                 experienceRepo.update(it)
             }
         }
