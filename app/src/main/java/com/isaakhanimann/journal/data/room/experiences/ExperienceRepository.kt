@@ -30,6 +30,7 @@ import com.isaakhanimann.journal.data.room.experiences.relations.ExperienceWithI
 import com.isaakhanimann.journal.data.room.experiences.relations.ExperienceWithIngestionsAndCompanions
 import com.isaakhanimann.journal.data.room.experiences.relations.ExperienceWithIngestionsCompanionsAndRatings
 import com.isaakhanimann.journal.data.room.experiences.relations.ExperienceWithIngestionsTimedNotesAndRatings
+import com.isaakhanimann.journal.data.room.experiences.relations.IngestionWindowCounts
 import com.isaakhanimann.journal.data.room.experiences.relations.IngestionWithCompanion
 import com.isaakhanimann.journal.data.room.experiences.relations.IngestionWithExperienceAndCustomUnit
 import com.isaakhanimann.journal.ui.tabs.settings.JournalExport
@@ -62,13 +63,15 @@ class ExperienceRepository @Inject constructor(private val experienceDao: Experi
         ingestion,
         experience,
         substanceCompanion
-    )
+    ).also { JournalDataEvents.notifyJournalChanged() }
 
     suspend fun insertEverything(journalExport: JournalExport) =
         experienceDao.insertEverything(journalExport)
+            .also { JournalDataEvents.notifyJournalChanged() }
 
     suspend fun replaceEverything(journalExport: JournalExport) =
         experienceDao.replaceEverything(journalExport)
+            .also { JournalDataEvents.notifyJournalChanged() }
 
     suspend fun insertIngestionAndCompanion(
         ingestion: Ingestion,
@@ -76,9 +79,10 @@ class ExperienceRepository @Inject constructor(private val experienceDao: Experi
     ) = experienceDao.insertIngestionAndCompanion(
         ingestion,
         substanceCompanion
-    )
+    ).also { JournalDataEvents.notifyJournalChanged() }
 
     suspend fun deleteEverything() = experienceDao.deleteEverything()
+        .also { JournalDataEvents.notifyJournalChanged() }
 
     suspend fun delete(ingestion: Ingestion) = experienceDao.delete(ingestion).also { JournalDataEvents.notifyJournalChanged() }
     suspend fun delete(customUnit: CustomUnit) = experienceDao.delete(customUnit).also { JournalDataEvents.notifyJournalChanged() }
@@ -98,6 +102,7 @@ class ExperienceRepository @Inject constructor(private val experienceDao: Experi
 
     suspend fun delete(experienceWithIngestions: ExperienceWithIngestions) =
         experienceDao.deleteExperienceWithIngestions(experienceWithIngestions)
+            .also { JournalDataEvents.notifyJournalChanged() }
 
     suspend fun deleteUnusedSubstanceCompanions() =
         experienceDao.deleteUnusedSubstanceCompanions()
@@ -149,6 +154,13 @@ class ExperienceRepository @Inject constructor(private val experienceDao: Experi
         toInstant: Instant
     ): List<IngestionWithCompanion> =
         experienceDao.getIngestionsWithCompanions(fromInstant, toInstant)
+
+    suspend fun getIngestionWindowCounts(
+        fromInstant: Instant,
+        toInstant: Instant,
+        substanceName: String?
+    ): IngestionWindowCounts =
+        experienceDao.getIngestionWindowCounts(fromInstant, toInstant, substanceName)
 
     fun getSortedLastUsedSubstanceNamesFlow(limit: Int): Flow<List<String>> =
         experienceDao.getSortedLastUsedSubstanceNamesFlow(limit).flowOn(Dispatchers.IO).conflate()

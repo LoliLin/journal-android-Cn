@@ -77,21 +77,15 @@ class StatsWidgetConfigActivity : ComponentActivity() {
                                     appWidgetId,
                                     StatsWidgetConfig(substanceName, days)
                                 )
-                                val manager =
-                                    AppWidgetManager.getInstance(this@StatsWidgetConfigActivity)
-                                lifecycleScope.launch {
-                                    StatsWidgetData.refresh(
-                                        this@StatsWidgetConfigActivity,
-                                        appWidgetId,
-                                        app.experienceRepository
-                                    )
-                                    manager.updateAppWidget(
-                                        appWidgetId,
-                                        StatsWidgetProvider.render(
+                                app.applicationScope.launch {
+                                    try {
+                                        StatsWidgetUpdater.refreshAll(
                                             this@StatsWidgetConfigActivity,
-                                            appWidgetId
+                                            app.experienceRepository
                                         )
-                                    )
+                                    } catch (_: Exception) {
+                                        // Widget refresh must never crash the app process.
+                                    }
                                 }
                                 setResult(
                                     Activity.RESULT_OK,
