@@ -7,11 +7,11 @@
   ],
   "interactions": {
     "dangerous": [
-      "Opioids"
+      "opioid"
     ],
     "unsafe": [
       "Cholinergics",
-      "Depressant"
+      "depressant"
     ]
   }
 }

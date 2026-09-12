@@ -1,6 +1,11 @@
 {
   "name": "Omberacetam",
-  "commonNames": ["Noopept", "Ноопепт", "GVS-111", "Omberacetam"],
+  "commonNames": [
+    "Noopept",
+    "Ноопепт",
+    "GVS-111",
+    "Omberacetam"
+  ],
   "url": "https://psychonautwiki.org/wiki/Omberacetam",
   "isApproved": true,
   "tolerance": {
@@ -10,10 +15,18 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["racetam", "nootropic"],
+  "crossTolerances": [
+    "racetam",
+    "nootropic"
+  ],
   "addictionPotential": "non-addictive with a low potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
-  "categories": ["nootropic"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "categories": [
+    "nootropic",
+    "research-chemical"
+  ],
   "roas": [
     {
       "name": "insufflated",

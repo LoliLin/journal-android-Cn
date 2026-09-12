@@ -49,20 +49,20 @@
       "25x-NBOH",
       "Tramadol",
       "SNRIs",
-      "MAOI",
+      "maoi",
       "Serotonin releasers",
       "ssri",
-      "5-HTP"
+      "5-Hydroxytryptophan"
     ],
     "unsafe": [
       "Dextromethorphan",
       "MDMA",
-      "Stimulants"
+      "stimulant"
     ],
     "uncertain": [
       "Alcohol",
-      "MXE",
-      "Dissociatives"
+      "Methoxetamine",
+      "dissociative"
     ]
   },
   "roas": [

@@ -1,6 +1,8 @@
 {
   "name": "5-MeO-DiBF",
-  "commonNames": ["5-MeO-DiBF"],
+  "commonNames": [
+    "5-MeO-DiBF"
+  ],
   "url": "https://psychonautwiki.org/wiki/5-MeO-DiBF",
   "isApproved": true,
   "tolerance": {
@@ -10,14 +12,27 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic"
+  ],
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

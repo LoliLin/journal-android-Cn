@@ -23,12 +23,12 @@
   "summary": "An atypical antipsychotic medication under the brand name Seroquel. Also used to treat insomnia and mood swings. This drug is very sedating and can stop/slow down psychedelic drug trips. Infrequently abused.",
   "interactions": {
     "dangerous": [
-      "Depressant"
+      "depressant"
     ],
     "unsafe": [],
     "uncertain": [
-      "Stimulants",
-      "Dissociatives"
+      "stimulant",
+      "dissociative"
     ]
   },
   "roas": [

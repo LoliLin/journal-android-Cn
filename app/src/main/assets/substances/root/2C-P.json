@@ -1,6 +1,8 @@
 {
   "name": "2C-P",
-  "commonNames": ["2C-P"],
+  "commonNames": [
+    "2C-P"
+  ],
   "url": "https://psychonautwiki.org/wiki/2C-P",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +12,29 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "low potential for abuse and dependence",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "research-chemical"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical"
+  ],
   "summary": "A synthetic phenylethlyamine that is sometimes compared in effects to 2C-E, yet with a much longer duration. With a much more pronouced bodyload. Is one of the most potent of the 2C-X series.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

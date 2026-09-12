@@ -3,7 +3,8 @@
   "commonNames": [
     "Theanine",
     "L-Theanine",
-    "L-γ-glutamylethylamide and N5-ethyl-L-glutamine"
+    "L-γ-glutamylethylamide and N5-ethyl-L-glutamine",
+    "theanine"
   ],
   "url": "https://psychonautwiki.org/wiki/Theanine",
   "isApproved": true,
@@ -16,8 +17,13 @@
   },
   "crossTolerances": [],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["extremely low toxicity"],
-  "categories": ["nootropic"],
+  "toxicities": [
+    "extremely low toxicity"
+  ],
+  "categories": [
+    "nootropic",
+    "common"
+  ],
   "roas": [
     {
       "name": "oral",

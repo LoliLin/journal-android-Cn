@@ -3,7 +3,11 @@
   "commonNames": [
     "Desoxypipradol",
     "2-DPMP",
-    "Ivory Wave"
+    "Ivory Wave",
+    "desoxypipradrol",
+    "2dpmp",
+    "2-desoxypiperadol",
+    "desoxypipradol"
   ],
   "url": "https://psychonautwiki.org/wiki/Desoxypipradrol",
   "isApproved": true,
@@ -21,24 +25,27 @@
   "addictionPotential": "moderately addictive with a high potential for abuse",
   "toxicities": [],
   "categories": [
-    "stimulant"
+    "stimulant",
+    "research-chemical",
+    "habit-forming",
+    "tentative"
   ],
   "interactions": {
     "dangerous": [
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol",
-      "MAOI"
+      "maoi"
     ],
     "unsafe": [
       "Dextromethorphan",
       "MDMA",
-      "Stimulants"
+      "stimulant"
     ],
     "uncertain": [
       "Alcohol",
-      "MXE",
-      "Dissociatives"
+      "Methoxetamine",
+      "dissociative"
     ]
   },
   "roas": [

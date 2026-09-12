@@ -1,6 +1,9 @@
 {
   "name": "4-HO-MiPT",
-  "commonNames": ["4-HO-MiPT", "Miprocin"],
+  "commonNames": [
+    "4-HO-MiPT",
+    "Miprocin"
+  ],
   "url": "https://psychonautwiki.org/wiki/4-HO-MiPT",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +13,29 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "research-chemical"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical"
+  ],
   "summary": "A reasonably popular tryptamine deriviative and Psilocin analogue, first synthesised by Alexander Shulgin. It has been reported as having comparable effects to psychedelic mushrooms, though with a shorter duration.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

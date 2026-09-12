@@ -3,7 +3,12 @@
   "commonNames": [
     "α-PHP",
     "alpha-PHP",
-    "PV7"
+    "PV7",
+    "pv-7",
+    "a-php",
+    "aphp",
+    "α-php",
+    "αphp"
   ],
   "url": "https://psychonautwiki.org/wiki/A-PHP",
   "isApproved": true,
@@ -23,7 +28,10 @@
     "exact toxic dosage is unknown"
   ],
   "categories": [
-    "stimulant"
+    "stimulant",
+    "research-chemical",
+    "habit-forming",
+    "tentative"
   ],
   "interactions": {
     "dangerous": [
@@ -31,20 +39,20 @@
       "25x-NBOH",
       "Tramadol",
       "SNRIs",
-      "MAOI",
+      "maoi",
       "Serotonin releasers",
       "ssri",
-      "5-HTP"
+      "5-Hydroxytryptophan"
     ],
     "unsafe": [
       "Dextromethorphan",
       "MDMA",
-      "Stimulants"
+      "stimulant"
     ],
     "uncertain": [
       "Alcohol",
-      "MXE",
-      "Dissociatives"
+      "Methoxetamine",
+      "dissociative"
     ]
   },
   "roas": [

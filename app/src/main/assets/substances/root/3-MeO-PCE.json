@@ -29,8 +29,8 @@
   "summary": "3-MeO-PCP with a change of a ring replacement. Slightly more potent than 3-MeO-PCP.",
   "interactions": {
     "dangerous": [
-      "Stimulants",
-      "Depressant"
+      "stimulant",
+      "depressant"
     ],
     "unsafe": [],
     "uncertain": []

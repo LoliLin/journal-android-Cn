@@ -7,6 +7,9 @@
     "zeroToleranceInHours": 252
   },
   "addictionPotential": "中度成瘾性且具有高度濫用潛力",
-  "toxicities": ["確切的中毒劑量未知"],
-  "localizedName": "甲氧基乙胺"
+  "toxicities": [
+    "確切的中毒劑量未知"
+  ],
+  "localizedName": "甲氧基乙胺",
+  "metabolism": "本條目尚未核實該物質的人體代謝途徑，暫不指定代謝酶、代謝物及排洩路線。這表示資料有待補充，並不表示該物質不發生代謝；不能直接套用類似物質的途徑。"
 }

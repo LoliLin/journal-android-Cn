@@ -3,7 +3,8 @@
   "commonNames": [
     "Pseudoephedrine",
     "Sudafed",
-    "Pseudo"
+    "Pseudo",
+    "Pseudoephrine"
   ],
   "url": "https://en.wikipedia.org/wiki/Pseudoephedrine",
   "isApproved": true,
@@ -26,7 +27,8 @@
   "categories": [
     "stimulant",
     "decongestant",
-    "phenethylamine"
+    "phenethylamine",
+    "common"
   ],
   "summary": "Pseudoephedrine is a sympathomimetic drug of the phenethylamine and amphetamine chemical classes. It is used medically as a nasal/sinus decongestant and recreationally as a mild stimulant. It is structurally related to methamphetamine and is regulated as a precursor chemical in many countries.",
   "effectsSummary": "Mild to moderate stimulation, bronchodilation, appetite suppression, increased endurance, mild euphoria, vasoconstriction, increased heart rate and blood pressure, focus enhancement, anxiety at higher doses.",
@@ -40,7 +42,7 @@
   ],
   "interactions": {
     "dangerous": [
-      "MAOI",
+      "maoi",
       "25x-NBOMe"
     ],
     "unsafe": [
@@ -52,7 +54,7 @@
     ],
     "uncertain": [
       "Alcohol",
-      "Dissociatives"
+      "dissociative"
     ]
   },
   "roas": [

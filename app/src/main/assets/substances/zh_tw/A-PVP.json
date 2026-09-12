@@ -7,6 +7,9 @@
     "zeroToleranceInHours": 252
   },
   "addictionPotential": "高度成瘾性且具有高度濫用潛力",
-  "toxicities": ["確切的中毒劑量未知"],
-  "localizedName": "A-PVP"
+  "toxicities": [
+    "確切的中毒劑量未知"
+  ],
+  "localizedName": "A-PVP",
+  "summary": "⚠️ 警告哦： 始終要從低劑量開始嘗試，因為每個人的體重、耐受度、代謝和敏感度都不一樣呢。請務必檢視 傷害減少措施 這一節喵。"
 }

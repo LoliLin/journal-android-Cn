@@ -37,18 +37,18 @@
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol",
-      "MAOI",
+      "maoi",
       "Hormonal Birth Control"
     ],
     "unsafe": [
       "Dextromethorphan",
       "MDMA",
-      "Stimulants"
+      "stimulant"
     ],
     "uncertain": [
       "Alcohol",
-      "MXE",
-      "Dissociatives"
+      "Methoxetamine",
+      "dissociative"
     ]
   },
   "roas": [

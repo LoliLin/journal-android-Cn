@@ -7,6 +7,9 @@
     "zeroToleranceInHours": 252
   },
   "addictionPotential": "高度成瘾性且具有高度濫用潛力",
-  "toxicities": ["確切的中毒劑量未知"],
-  "localizedName": "A-PHP"
+  "toxicities": [
+    "確切的中毒劑量未知"
+  ],
+  "localizedName": "A-PHP",
+  "summary": "不要和 α-PVP 搞混了哦。"
 }

@@ -1,12 +1,22 @@
 {
   "name": "2C-B",
-  "commonNames": ["2C-B", "Nexus", "Bees"],
+  "commonNames": [
+    "2C-B",
+    "Nexus",
+    "Bees"
+  ],
   "url": "https://psychonautwiki.org/wiki/2C-B",
   "isApproved": true,
   "crossTolerances": [],
   "addictionPotential": "non-addictive with a low potential for abuse",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "entactogen", "common"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "entactogen",
+    "common"
+  ],
   "summary": "A popular psychedelic in the phenethylamine family. Provides empathic experiences at lower doses and strong visual and psychedelic experiences at higher doses. Commonly used as a party drug as it is more clear-headed than most psychedelics. 2C-B has been in use since the early 1990s",
   "effectsSummary": "Perceptions and feelings become more intense. From 10-15 mg (snorted already from 7 mg), the effect usually takes on a hallucinogenic character. The boundaries between inside and outside can dissolve. Often moving coloured patterns and luminous fields around objects and persons are perceived. However, the intoxication is felt to be less profound than with LSD.",
   "dosageRemark": "2C-B is effective even in small doses; a gradual approach to the individual dose is recommended. Over the 12 to 24 milligram range, every 2 milligrams can make a profound increase or change of response. Doses above 35 mg can be experienced as unpleasantly strong even by experienced users.",
@@ -22,9 +32,16 @@
     "People with cardiovascular diseases and diabetics are at increased risk when consuming 2C-B."
   ],
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

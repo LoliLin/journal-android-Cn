@@ -1,6 +1,8 @@
 {
   "name": "PRO-LAD",
-  "commonNames": ["PRO-LAD"],
+  "commonNames": [
+    "PRO-LAD"
+  ],
   "url": "https://psychonautwiki.org/wiki/PRO-LAD",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +12,29 @@
     "halfToleranceInHours": 144,
     "zeroToleranceInHours": 336
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "tentative"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "tentative"
+  ],
   "summary": "A very rare lysergamide that is slightly less potent than LSD, yet with a shorter duration of action.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

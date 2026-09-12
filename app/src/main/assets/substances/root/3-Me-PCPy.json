@@ -51,15 +51,15 @@
   "interactions": {
     "dangerous": [
       "other dissociatives",
-      "Stimulants",
-      "MAOI",
+      "stimulant",
+      "maoi",
       "serotonergic drugs",
       "other substances that can increase the risk of psychosis or seizures"
     ],
     "unsafe": [
       "Alcohol",
-      "Benzodiazepines",
-      "Opioids",
+      "benzodiazepine",
+      "opioid",
       "Cannabis",
       "Amphetamines",
       "Cocaine"
@@ -68,8 +68,8 @@
       "ssri",
       "SNRIs",
       "MDMA",
-      "nitrous oxide",
-      "Psychedelic"
+      "Nitrous oxide",
+      "psychedelic"
     ]
   },
   "roas": [

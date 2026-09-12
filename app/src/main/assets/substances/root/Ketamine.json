@@ -49,15 +49,15 @@
       "Alcohol",
       "GHB",
       "GBL",
-      "Opioids",
+      "opioid",
       "Tramadol"
     ],
     "unsafe": [],
     "uncertain": [
       "Amphetamines",
       "Cocaine",
-      "Benzodiazepines",
-      "MAOI",
+      "benzodiazepine",
+      "maoi",
       "Trazodone",
       "Grapefruit"
     ]

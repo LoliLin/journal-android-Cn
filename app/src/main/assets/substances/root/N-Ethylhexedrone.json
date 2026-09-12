@@ -4,7 +4,11 @@
     "Hexen",
     "Hex-en",
     "NEH",
-    "Ethyl-Hexedrone"
+    "Ethyl-Hexedrone",
+    "ethyl-hexedrone",
+    "n-ethylhexedrone",
+    "hex-en",
+    "n-ethyl-hexedrone"
   ],
   "url": "https://psychonautwiki.org/wiki/N-Ethylhexedrone",
   "isApproved": true,
@@ -25,24 +29,27 @@
     "exact toxic dosage is unknown"
   ],
   "categories": [
-    "stimulant"
+    "stimulant",
+    "tentative",
+    "habit-forming",
+    "research-chemical"
   ],
   "interactions": {
     "dangerous": [
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol",
-      "MAOI"
+      "maoi"
     ],
     "unsafe": [
       "Dextromethorphan",
       "MDMA",
-      "Stimulants"
+      "stimulant"
     ],
     "uncertain": [
       "Alcohol",
-      "MXE",
-      "Dissociatives"
+      "Methoxetamine",
+      "dissociative"
     ]
   },
   "roas": [

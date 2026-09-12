@@ -3,7 +3,6 @@
   "commonNames": [
     "Cocaine",
     "Coke",
-    "Coca",
     "Crack",
     "Blow",
     "Girl",
@@ -56,9 +55,9 @@
   "interactions": {
     "dangerous": [
       "ΑMT",
-      "Opioids",
+      "opioid",
       "Tramadol",
-      "MAOI"
+      "maoi"
     ],
     "unsafe": [
       "DOx",
@@ -75,9 +74,9 @@
       "DMT",
       "Mescaline",
       "2C-x",
-      "THC",
+      "Cannabis",
       "Ketamine",
-      "MXE",
+      "Methoxetamine",
       "Amphetamines",
       "MDMA",
       "Caffeine",

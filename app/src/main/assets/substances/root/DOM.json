@@ -1,6 +1,9 @@
 {
   "name": "DOM",
-  "commonNames": ["DOM", "STP (Serenity, Tranquility, and Peace)"],
+  "commonNames": [
+    "DOM",
+    "STP (Serenity, Tranquility, and Peace)"
+  ],
   "url": "https://psychonautwiki.org/wiki/DOM",
   "isApproved": true,
   "tolerance": {
@@ -10,10 +13,19 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "stimulant", "research-chemical", "common"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "stimulant",
+    "research-chemical",
+    "common"
+  ],
   "summary": "The most popular psychedelic amphetamine due to its pleasant effects, lower potency and shorter duration. Effects have been described as 'sillier' than LSD and related DOX chemicals",
   "effectsSummary": "At the beginning, typical effects of amphetamine unfold, such as increased alertness, accelerated pulse, slight euphoria, increased self-confidence and urge to talk. Afterwards, the effect changes: one often feels a strong urge to move, sensory perception, feelings and empathy are heightened, colours are perceived more distinctly. With DOB and DOI, coloured, superimposed, pulsating patterns are perceived. This effect is weaker with DOM.",
   "generalRisks": "Since the effect of DOM comes on late, the danger of overdosing by refilling is particularly great. The long duration of action poses a psychological burden. Confusion or anxiety is common, especially at high doses. Some DOB users report a burning or pressure sensation in the bladder. At high doses, temporary paralysis, inability to communicate or insensitivity to pain (caution: risk of injury and accidents) may occur. Teeth grinding and strain on the cardiovascular system are also possible.",
@@ -30,9 +42,15 @@
     "A trip with DOM should remain an exceptional experience. Make sure to take long breaks from consumption so that the experience can be processed."
   ],
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "stimulant"
+    ]
   },
   "roas": [
     {

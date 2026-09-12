@@ -1,11 +1,21 @@
 {
   "name": "Meclofenoxate",
-  "commonNames": [],
+  "commonNames": [
+    "Centrophenoxine",
+    "lucidril",
+    "meclofenoxate"
+  ],
   "url": "https://psychonautwiki.org/wiki/Meclofenoxate",
   "isApproved": true,
   "crossTolerances": [],
-  "toxicities": ["extremely low toxicity"],
-  "categories": ["nootropic"],
+  "toxicities": [
+    "extremely low toxicity"
+  ],
+  "categories": [
+    "nootropic",
+    "tentative",
+    "stimulant"
+  ],
   "roas": [
     {
       "name": "oral",

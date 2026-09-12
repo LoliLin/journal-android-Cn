@@ -29,8 +29,8 @@
   "summary": "An arylcyclohexamine dissociative analogue of PCP, this drug is relatively uncommon, and little information is available. It is reported to not only have dissociative activity but also be an opioid. Some trip reports suggest very negative side-effects including intense muscle tension.",
   "interactions": {
     "dangerous": [
-      "Stimulants",
-      "Depressant"
+      "stimulant",
+      "depressant"
     ],
     "unsafe": [],
     "uncertain": []

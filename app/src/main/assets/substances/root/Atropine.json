@@ -38,15 +38,15 @@
   "interactions": {
     "dangerous": [
       "Other anticholinergics",
-      "Deliriant"
+      "deliriant"
     ],
     "unsafe": [
       "CNS depressants",
       "Alcohol"
     ],
     "uncertain": [
-      "Antipsychotic",
-      "MAOI"
+      "antipsychotic",
+      "maoi"
     ]
   },
   "roas": [

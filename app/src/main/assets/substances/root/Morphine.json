@@ -38,20 +38,20 @@
   "interactions": {
     "dangerous": [
       "Alcohol",
-      "Benzodiazepines",
+      "benzodiazepine",
       "Dextromethorphan",
       "GHB",
       "GBL",
       "Ketamine",
-      "MXE",
+      "Methoxetamine",
       "Tramadol",
       "Grapefruit"
     ],
     "unsafe": [],
     "uncertain": [
-      "Stimulants",
-      "MAOI",
-      "Nitrous",
+      "stimulant",
+      "maoi",
+      "Nitrous oxide",
       "PCP"
     ]
   },

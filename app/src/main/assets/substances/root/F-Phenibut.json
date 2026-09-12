@@ -22,16 +22,18 @@
     "exact toxic dosage is unknown"
   ],
   "categories": [
-    "depressant"
+    "depressant",
+    "tentative",
+    "habit-forming"
   ],
   "interactions": {
     "dangerous": [
-      "Depressant",
-      "Dissociatives"
+      "depressant",
+      "dissociative"
     ],
     "unsafe": [],
     "uncertain": [
-      "Stimulants"
+      "stimulant"
     ]
   },
   "roas": [

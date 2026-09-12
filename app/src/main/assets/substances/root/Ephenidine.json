@@ -29,8 +29,8 @@
   "summary": "A dissociative drug which is less potent and less confusing than MXE but with otherwise similar properties. Reported as causing light stimulant effects at lower doses.",
   "interactions": {
     "dangerous": [
-      "Stimulants",
-      "Depressant"
+      "stimulant",
+      "depressant"
     ],
     "unsafe": [],
     "uncertain": []

@@ -2,31 +2,40 @@
   "name": "4F-MPH",
   "commonNames": [
     "4F-MPH",
-    "4-FMPH"
+    "4-FMPH",
+    "4-Fluoromethylphenidate",
+    "4f-mph",
+    "4-fmph",
+    "4fmph",
+    "4-fl-mph",
+    "4-fluoro-mph"
   ],
   "url": "https://psychonautwiki.org/wiki/4F-MPH",
   "isApproved": true,
   "crossTolerances": [],
   "toxicities": [],
   "categories": [
-    "stimulant"
+    "stimulant",
+    "research-chemical",
+    "habit-forming",
+    "tentative"
   ],
   "interactions": {
     "dangerous": [
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol",
-      "MAOI"
+      "maoi"
     ],
     "unsafe": [
       "Dextromethorphan",
       "MDMA",
-      "Stimulants"
+      "stimulant"
     ],
     "uncertain": [
       "Alcohol",
-      "MXE",
-      "Dissociatives"
+      "Methoxetamine",
+      "dissociative"
     ]
   },
   "roas": [

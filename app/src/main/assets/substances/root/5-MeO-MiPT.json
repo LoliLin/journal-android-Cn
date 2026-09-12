@@ -28,7 +28,7 @@
   "interactions": {
     "dangerous": [
       "ΑMT",
-      "MAOI",
+      "maoi",
       "PCP"
     ],
     "unsafe": [
@@ -40,7 +40,7 @@
     "uncertain": [
       "2C-T-x",
       "2C-x",
-      "THC",
+      "Cannabis",
       "DOx",
       "MDMA",
       "Mescaline",

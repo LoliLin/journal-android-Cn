@@ -44,9 +44,9 @@
       "Alcohol",
       "GHB",
       "GBL",
-      "Opioids",
+      "opioid",
       "Tramadol",
-      "MAOI",
+      "maoi",
       "ssri",
       "Antihistamines"
     ],
@@ -60,8 +60,8 @@
       "Bupropion"
     ],
     "uncertain": [
-      "Benzodiazepines",
-      "THC"
+      "benzodiazepine",
+      "Cannabis"
     ]
   },
   "roas": [

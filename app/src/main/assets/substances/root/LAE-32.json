@@ -5,11 +5,19 @@
   "isApproved": true,
   "crossTolerances": [],
   "toxicities": [],
-  "categories": ["psychedelic"],
+  "categories": [
+    "psychedelic"
+  ],
   "interactions": {
     "dangerous": [],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Amphetamines", "Cocaine"]
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "Amphetamines",
+      "Cocaine"
+    ]
   },
   "roas": [
     {

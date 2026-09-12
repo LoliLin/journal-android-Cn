@@ -31,9 +31,9 @@
   "summary": "A dissociative from the diarylethylamine class, a more potent analogue of diphenidine. Known to be unpredictable, and can cause blackouts.",
   "interactions": {
     "dangerous": [
-      "Depressant",
-      "Stimulants",
-      "Dissociatives"
+      "depressant",
+      "stimulant",
+      "dissociative"
     ],
     "unsafe": [],
     "uncertain": []

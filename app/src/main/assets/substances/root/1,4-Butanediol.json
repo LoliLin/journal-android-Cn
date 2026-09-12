@@ -29,12 +29,12 @@
   "summary": "1,4-BD is a clear liquid with intoxicating effects. It is a pro-drug for GHB, and has similar though reportedly inferior effects. It also carries the potential for more health risks than GHB, such as liver toxicity.",
   "interactions": {
     "dangerous": [
-      "Depressant",
-      "Dissociatives"
+      "depressant",
+      "dissociative"
     ],
     "unsafe": [],
     "uncertain": [
-      "Stimulants"
+      "stimulant"
     ]
   },
   "roas": [

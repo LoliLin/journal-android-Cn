@@ -1,6 +1,8 @@
 {
   "name": "2C-B-FLY",
-  "commonNames": ["2C-B-FLY"],
+  "commonNames": [
+    "2C-B-FLY"
+  ],
   "url": "https://psychonautwiki.org/wiki/2C-B-FLY",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +12,29 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "research-chemical"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical"
+  ],
   "summary": "Psychedelic phenethylamine that is the dihydrodifuran analog of 2C-B.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

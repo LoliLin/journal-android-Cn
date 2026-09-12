@@ -16,18 +16,18 @@
   ],
   "interactions": {
     "dangerous": [
-      "Opioids",
+      "opioid",
       "Dextromethorphan",
       "Diphenhydramine"
     ],
     "unsafe": [
-      "Stimulants",
+      "stimulant",
       "Alcohol",
       "Serotonin releasers"
     ],
     "uncertain": [
-      "Benzodiazepines",
-      "Depressant"
+      "benzodiazepine",
+      "depressant"
     ]
   },
   "roas": [

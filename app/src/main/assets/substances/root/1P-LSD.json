@@ -1,6 +1,8 @@
 {
   "name": "1P-LSD",
-  "commonNames": ["1P-LSD"],
+  "commonNames": [
+    "1P-LSD"
+  ],
   "url": "https://psychonautwiki.org/wiki/1P-LSD",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +12,29 @@
     "halfToleranceInHours": 144,
     "zeroToleranceInHours": 336
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "non-addictive with a low abuse potential",
-  "toxicities": ["extremely low toxicity relative to dose"],
-  "categories": ["psychedelic", "research-chemical"],
+  "toxicities": [
+    "extremely low toxicity relative to dose"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical"
+  ],
   "summary": "An LSD analogue which appears to be slightly more potent with a shorter duration. Its effects are reported to be extremely similar to LSD, and thus far seems to be similarly safe. Released in late 2014, It has quickly become a highly popular research chemical due to its implicit legality, similarity to LSD and wide availability on the Internet.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

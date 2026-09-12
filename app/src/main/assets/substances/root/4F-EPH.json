@@ -2,7 +2,10 @@
   "name": "4F-EPH",
   "commonNames": [
     "4F-EPH",
-    "4-FEPH"
+    "4-FEPH",
+    "4-Fluoroethylphenidate",
+    "4f-eph",
+    "4-feph"
   ],
   "url": "https://psychonautwiki.org/wiki/4F-EPH",
   "isApproved": true,
@@ -20,24 +23,27 @@
   "addictionPotential": "moderately addictive with a high potential for abuse",
   "toxicities": [],
   "categories": [
-    "stimulant"
+    "stimulant",
+    "research-chemical",
+    "habit-forming",
+    "tentative"
   ],
   "interactions": {
     "dangerous": [
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol",
-      "MAOI"
+      "maoi"
     ],
     "unsafe": [
       "Dextromethorphan",
       "MDMA",
-      "Stimulants"
+      "stimulant"
     ],
     "uncertain": [
       "Alcohol",
-      "MXE",
-      "Dissociatives"
+      "Methoxetamine",
+      "dissociative"
     ]
   },
   "roas": [

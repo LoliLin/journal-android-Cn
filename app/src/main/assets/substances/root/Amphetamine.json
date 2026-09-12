@@ -4,7 +4,12 @@
     "Amphetamine",
     "Speed",
     "Adderall",
-    "Pep"
+    "Pep",
+    "aderal",
+    "aderall",
+    "adderal",
+    "d-amphetamine",
+    "d-amph"
   ],
   "url": "https://psychonautwiki.org/wiki/Amphetamine",
   "isApproved": true,
@@ -49,7 +54,7 @@
     "dangerous": [
       "Tramadol",
       "ΑMT",
-      "MAOI"
+      "maoi"
     ],
     "unsafe": [
       "Dextromethorphan",
@@ -63,13 +68,13 @@
       "Alcohol",
       "GHB",
       "GBL",
-      "Opioids",
+      "opioid",
       "Cocaine",
-      "THC",
+      "Cannabis",
       "Caffeine",
       "Ketamine",
       "Methoxetamine",
-      "Psychedelic"
+      "psychedelic"
     ]
   },
   "roas": [

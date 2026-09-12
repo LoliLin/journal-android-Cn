@@ -1,6 +1,8 @@
 {
   "name": "2C-I",
-  "commonNames": ["2C-I"],
+  "commonNames": [
+    "2C-I"
+  ],
   "url": "https://psychonautwiki.org/wiki/2C-I",
   "isApproved": true,
   "tolerance": {
@@ -10,10 +12,17 @@
     "halfToleranceInHours": 96,
     "zeroToleranceInHours": 204
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "research-chemical"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical"
+  ],
   "summary": "A psychedelic similar to the more well-known 2C-B. Users frequently report very vivid and bright open-eye visuals and more mild closed-eye visuals compared to 2C-B and other drugs in the 2C family. Can also be more stimulating than 2C-B along with having a slight body load for some users. Less safe at high doses compared to 2C-B",
   "effectsSummary": "Perceptions and feelings become more intense. From 10-15 mg (snorted already from 7 mg), the effect usually takes on a hallucinogenic character. The boundaries between inside and outside can dissolve. Often moving coloured patterns and luminous fields around objects and persons are perceived. However, the intoxication is felt to be less profound than with LSD.",
   "dosageRemark": "2C-I is effective even in small doses; even 2 mg more or less can make a big difference in the effect experienced; a gradual approach to the individual dose is recommended. Doses above 35 mg can be experienced as unpleasantly strong even by experienced users.",
@@ -29,9 +38,16 @@
     "People with cardiovascular diseases and diabetics are at increased risk when consuming 2C-I."
   ],
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

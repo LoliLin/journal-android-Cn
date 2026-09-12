@@ -26,12 +26,12 @@
   ],
   "interactions": {
     "dangerous": [
-      "Depressant",
-      "Dissociatives"
+      "depressant",
+      "dissociative"
     ],
     "unsafe": [],
     "uncertain": [
-      "Stimulants"
+      "stimulant"
     ]
   },
   "roas": [

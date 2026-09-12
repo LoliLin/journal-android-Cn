@@ -224,7 +224,66 @@ other dissociatives    other substances that can increase the risk of psychosis 
 serotonergic drugs
 ```
 
-### 9. 语言之间本机转换（convert，不走 API）
+### 9. 删除“类型当物质”的条目、合并重复（fix-catalog）
+
+目录是从多个来源拼起来的，于是混进了两类东西：**分类/类型页被当成物质**（`Stimulants`、`Opioids`、
+`Benzodiazepines`、`Antihistamine`、`Synthetic cannabinoid`…）和**同一物质的多个条目**
+（`α-PHP`/`A-PHP`、`MXE`/`Methoxetamine`、`Adderall`/`Amphetamine`、`THC`/`Cannabis`…）。
+两者都会在搜索与浏览里以物质身份出现，也会让 interactions 的指向分裂。
+
+```bash
+python docs/scripts/substances_pipeline.py fix-catalog --dry-run   # 先看影响面
+python docs/scripts/substances_pipeline.py fix-catalog
+python docs/scripts/substances_pipeline.py fix-interactions        # 把旧名引用改指规范条目
+```
+
+它做四件事，规则都写在脚本顶部的表里（`CLASS_ENTRY_NAMES` / `MERGE_INTO` / `RENAMES`）：
+
+1. **重命名**去掉 PW 的消歧后缀：`Tryptamine (compound)` → `Tryptamine`、`Nitrous` → `Nitrous oxide`；
+2. **删除类型/垃圾条目**：名字就是分类键（`Stimulants`→`stimulant` 分类）、通用类型名
+   （`Classical psychedelics`、`Racetams`、`Xanthines`…）、系列统称（`2C-x`、`25x-NBOMe`、`DOx`）
+   以及俚语/谣言条目（`Cake`、`Jenkem`）。删除后 `Stimulants` 这类写法照样命中分类
+   （`isClassMatch` 是 `contains`，大小写不敏感），其余靠应用的通配规则（见下面的取舍）；
+3. **合并重复**到 PW 页面标题那个规范名，**保留条目名不被删**——被合并的名字会写进 `commonNames`，
+   搜索照样能找到，`roas`/`tolerance`/`interactions`/`localizedName` 都按“保留条目优先、缺则补齐”合并；
+   品牌名（`Adderall`、`Vyvanse`、`Librium`、`Sonata`）与同物异名（`Diamorphine`→`Heroin`、
+   `THC`→`Cannabis`）一并并掉；
+4. **清理错误别名**：删掉“别名正好是另一个现存条目名字”的别名。别名表是从多个来源拼的，
+   里面互相乱指（`1,3-Butanediol` 的别名是 `DMT`、`Banisteriopsis caapi` 的别名是 `Ayahuasca`、
+   `Cocaine` 的别名是 `Coca`），这些会让搜索把用户带到另一个物质。判断按“执行之后”的条目集合做，
+   所以 `--dry-run` 与真实结果一致。
+
+本轮结果（在 1062 条的目录上跑一遍）：
+
+| 指标 | 之前 | 之后 |
+|---|---|---|
+| 条目总数 | 1062 | **982** |
+| 删除的类型/垃圾条目 | — | **43** |
+| 合并的重复条目 | — | **37** |
+| 清理的错误别名 | — | **8** |
+
+**取舍：** `25x-NBOMe`、`2C-x`、`DOx`、`2C-T-x` 这类系列条目删掉之后，引用它们的 interactions 并没有失效
+——应用的 `isWildcardMatch` 会把名字里的 `x` 当 `[\S]{2}` 通配符（`25x-NBOMe` 能匹配 `25B-NBOMe`）。
+但 `25x-NBOH` 这条不满足两字符通配，它的 42 处引用（占全部 1989 处的 2%）从此匹配不到；
+要彻底解决得给 NBOH 类加一个分类键（`_categories.json` + 三种语言的 `categories.*`），属于另一件事。
+
+**验证方式**（别只看 `contains`）：按 `InteractionChecker` 的三条真实规则
+（精确名 / `x` 通配正则 / 分类 `contains` 且对方确实带该分类）统计——
+
+| 指标 | 改动前 | 改动后 |
+|---|---|---|
+| interactions 名字总数 | 2268 | 1989 |
+| 精确名命中 | 1999 | 1278 |
+| 通配命中 | 42 | 36 |
+| 分类命中 | 61 | 519 |
+| **命中率** | **92%** | **92%** |
+| 完全匹配不到的写法 | 166 次 / 26 种 | 188 次 / 25 种 |
+
+精确命中下降、分类命中上升，是 `Stimulants`→`stimulant` 这类**类型条目变成分类命中**的正常转移；
+匹配率不变。剩下的 25 种失效写法是上游本来就有的（`Amphetamines`、`SNRIs`、`Grapefruit`、
+`Hormonal Birth Control`、`ALDH2 inhibitors` 等），`25x-NBOH` 是唯一新增的一条。
+
+### 10. 语言之间本机转换（convert，不走 API）
 
 简繁之间是**字符级映射 + 少量用词差异**，机器翻译是浪费：`zh_cn` 已有内容时，`zh_tw` 直接转。
 

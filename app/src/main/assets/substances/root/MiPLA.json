@@ -1,6 +1,9 @@
 {
   "name": "MiPLA",
-  "commonNames": ["MiPLA", "Lamide"],
+  "commonNames": [
+    "MiPLA",
+    "Lamide"
+  ],
   "url": "https://psychonautwiki.org/wiki/MiPLA",
   "isApproved": true,
   "tolerance": {
@@ -10,14 +13,27 @@
     "halfToleranceInHours": 144,
     "zeroToleranceInHours": 336
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "low potential for abuse and dependence",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic"
+  ],
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

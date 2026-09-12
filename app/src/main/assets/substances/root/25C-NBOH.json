@@ -1,6 +1,8 @@
 {
   "name": "25C-NBOH",
-  "commonNames": ["25C-NBOH"],
+  "commonNames": [
+    "25C-NBOH"
+  ],
   "url": "https://psychonautwiki.org/wiki/25C-NBOH",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +12,30 @@
     "halfToleranceInHours": 168,
     "zeroToleranceInHours": 336
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["potentially fatal at heavy dosages"],
-  "categories": ["psychedelic", "research-chemical", "tentative"],
+  "toxicities": [
+    "potentially fatal at heavy dosages"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical",
+    "tentative"
+  ],
   "summary": "A phenethylamine psychedelic and stimulant derivative of 2C-C, this compound is related and has  similar effects to 25c-NBOMe. It is significantly more potent than 2C-C but less potent than 25c-NBOMe. Overdoses of NBOH compounds may cause dangerous vasoconstriction. May induce uncomfortable body load.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

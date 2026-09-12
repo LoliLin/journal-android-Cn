@@ -16,10 +16,17 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "low abuse potential, no physical dependence potential",
-  "toxicities": ["extremely low toxicity relative to dose"],
-  "categories": ["psychedelic", "common"],
+  "toxicities": [
+    "extremely low toxicity relative to dose"
+  ],
+  "categories": [
+    "psychedelic",
+    "common"
+  ],
   "summary": "Fungi containing psilocybin, a prototypical psychedelic with similar effects to LSD, but with a shorter duration; also considered as being more confusing, introspective and entheogenic. Usually refers to psilocybe mushrooms rather than Amanitas, which have different effects. Are considered physically safe if properly identified, which should always be done by an expert.",
   "effectsSummary": "Low doses have a stimulating and strengthening effect. Medium doses have a mild hallucinogenic effect and stimulate the imagination. High doses have a strong hallucinogenic effect, very psychedelic; the environment is often perceived as dreamlike; visionary immersion in strange worlds, deep insights into oneself and a feeling of strong connection with nature.",
   "dosageRemark": "Average dosages of dried* mushrooms:\nPointed cone bald: light 0.5-0.8 g, medium to strong 1.0-max. 2 g\nHawaiian: light 0.3-0.5 g, medium to strong 0.5-max. 1 g\nMexican: light 0.5-1.5 g, medium to strong 1.5-max. 5 g\n*for fresh mushrooms approx. ten times this amount.\nx mg psilocybin is stored in each fully developed fruit body. So the number of species is more relevant than the quantity.",
@@ -38,8 +45,15 @@
   ],
   "interactions": {
     "dangerous": [],
-    "unsafe": ["Tramadol", "Lithium"],
-    "uncertain": ["THC", "Amphetamines", "Cocaine"]
+    "unsafe": [
+      "Tramadol",
+      "Lithium"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "Amphetamines",
+      "Cocaine"
+    ]
   },
   "roas": [
     {

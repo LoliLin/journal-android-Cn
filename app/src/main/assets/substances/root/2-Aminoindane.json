@@ -1,7 +1,9 @@
 {
   "name": "2-Aminoindane",
   "commonNames": [
-    "2-AI"
+    "2-AI",
+    "2ai",
+    "2-aminoindan"
   ],
   "url": "https://psychonautwiki.org/wiki/2-Aminoindane",
   "isApproved": true,
@@ -21,27 +23,30 @@
     "exact toxic dosage is unknown"
   ],
   "categories": [
-    "stimulant"
+    "stimulant",
+    "research-chemical",
+    "habit-forming",
+    "tentative"
   ],
   "interactions": {
     "dangerous": [
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol",
-      "MAOI",
-      "Stimulants",
+      "maoi",
+      "stimulant",
       "MDMA",
       "Cocaine"
     ],
     "unsafe": [
       "Dextromethorphan",
       "MDMA",
-      "Stimulants"
+      "stimulant"
     ],
     "uncertain": [
       "Alcohol",
-      "MXE",
-      "Dissociatives"
+      "Methoxetamine",
+      "dissociative"
     ]
   },
   "roas": [

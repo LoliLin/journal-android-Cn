@@ -3,7 +3,14 @@
   "commonNames": [
     "2-Fluorodeschloroketamine",
     "Fluoroketamine",
-    "2-FDCK"
+    "2-FDCK",
+    "2f-ketamine",
+    "2f-ket",
+    "2-fluorodeschloroketamine",
+    "2-fl-2'-oxo-pcm",
+    "2f-dck",
+    "2fket",
+    "2fdck"
   ],
   "url": "https://psychonautwiki.org/wiki/2-Fluorodeschloroketamine",
   "isApproved": true,
@@ -22,20 +29,22 @@
     "exact toxic dosage is unknown"
   ],
   "categories": [
-    "dissociative"
+    "dissociative",
+    "tentative",
+    "habit-forming"
   ],
   "interactions": {
     "dangerous": [
       "Alcohol",
       "GHB",
       "GBL",
-      "Opioids",
+      "opioid",
       "Tramadol"
     ],
     "unsafe": [],
     "uncertain": [
-      "Benzodiazepines",
-      "MAOI"
+      "benzodiazepine",
+      "maoi"
     ]
   },
   "roas": [

@@ -26,16 +26,16 @@
   "summary": "Also known as Lioresal, Baclofen is a GABAb receptor agonist and central nervous system depressant used to treat spasticity, and holds promise as a treatment for alcoholism. It exhibits mild intoxicating effects similar to phenibut or pregabalin.",
   "interactions": {
     "dangerous": [
-      "Dissociatives",
-      "Stimulants",
+      "dissociative",
+      "stimulant",
       "Alcohol",
-      "Benzodiazepines",
-      "Barbiturates",
+      "benzodiazepine",
+      "barbiturate",
       "GHB",
       "GBL",
       "Methaqualone",
-      "Opioids",
-      "Depressant"
+      "opioid",
+      "depressant"
     ],
     "unsafe": [],
     "uncertain": []

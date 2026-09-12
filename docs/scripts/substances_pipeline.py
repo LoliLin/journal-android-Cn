@@ -13,6 +13,7 @@
     review           三语并排人工校对 GUI                    (原 5_translateFixViewer.py)
     fix-tolerances   批量修正 crossTolerances 历史变体       (原 6.fixTolencesTypes.py)
     fix-interactions 规范化 interactions 的写法（分类键/物质名，新增）
+    fix-catalog      删除“类型当物质”的条目、合并重复条目、清理错误别名（新增）
     guide            打印完整流程（不知道该干什么时先看这个）
 
 除 `translate` 需要 requests（外加网络与 API Key）外，只依赖标准库。
@@ -1071,7 +1072,250 @@ def cmd_fix_interactions(args: argparse.Namespace) -> int:
 
 
 # --------------------------------------------------------------------------
-# 9) convert —— 语言之间本机转换（简繁等），不调用翻译 API
+# 9) fix-catalog —— 删除“类型当物质”的条目、合并重复条目、清理错误别名
+# --------------------------------------------------------------------------
+
+#: 名字本身就是分类键或通用类型的条目：它们在搜索/浏览里以物质身份出现，但不是物质。
+#: 分类匹配走 contains，删掉之后 "Stimulants" 这类写法照样命中 stimulant 分类，
+#: 所以删除不影响相互作用匹配。Phenethylamine / Tryptamine 是真化合物，不在此列。
+CLASS_ENTRY_NAMES = (
+    "Antidepressants", "Antipsychotic", "Arylcyclohexylamines", "Barbiturates",
+    "Benzodiazepines", "Cannabinoid", "Deliriant", "Depressant", "Dissociatives",
+    "Entactogen", "Eugeroics", "Hallucinogens", "Hypnotic", "MAOI", "Nootropic",
+    "Opioids", "Psychedelic", "Stimulants",
+    "Antihistamine", "Beta-Carboline", "Bromides", "Classical psychedelics",
+    "Diarylethylamines", "Entheogen", "Harmala alkaloid", "Lysergamides", "Racetams",
+    "RIMA", "Sedative", "Selective serotonin reuptake inhibitor",
+    "Serotonergic psychedelic", "Serotonin-norepinephrine reuptake inhibitor",
+    "Synthetic cannabinoid", "Thienodiazepines", "Xanthines",
+    # 俚语条目：Cake（口服 30-300 g 的 depressant，来源页就是 PW 的 Cake）不是物质
+    "Cake",
+    # 系列条目：命名里带通配符 x 或整族统称，同样不是物质
+    "2C-x", "2C-T-x", "25x-NBOMe", "25x-NBOH", "DOx", "Aleph",
+    # 谣言/玩笑条目（Jenkem 是都市传说，无物质）
+    "Jenkem",
+)
+
+#: 重命名：去掉 PW 的消歧后缀，统一到不带后缀的规范名。
+RENAMES = {
+    "Tryptamine (compound)": "Tryptamine",
+    "Nitrous": "Nitrous oxide",
+}
+
+#: 重复条目合并：{多余条目: 规范条目}。规范名取 PW 页面标题（url 指向的那个名字），
+#: 被合并的名字保留为 commonNames 别名，搜索照样能找到。
+MERGE_INTO = {
+    "2-AI": "2-Aminoindane",
+    "2-DPMP": "Desoxypipradrol",
+    "2-FDCK": "2-Fluorodeschloroketamine",
+    "2-methyl-2-butanol": "2M2B",
+    "4-Fluoroethylphenidate": "4F-EPH",
+    "4-Fluoromethylphenidate": "4F-MPH",
+    "5-HTP": "5-Hydroxytryptophan",
+    "Oxitriptan": "5-Hydroxytryptophan",
+    "Fenetylline": "Fenethylline",
+    "Pseudoephrine": "Pseudoephedrine",
+    "α-PHP": "A-PHP",
+    "α-PVP": "A-PVP",
+    "Adderall": "Amphetamine",
+    "Dexedrine": "Dextroamphetamine",
+    "Diamorphine": "Heroin",
+    "RTI-111": "Dichloropane",
+    "Ethylcathinone": "ETH-CAT",
+    "Ethyl-Pentedrone": "NEP",
+    "Fluorophenibut": "F-Phenibut",
+    "HDMP-28": "Methylnaphthidate",
+    "Hexen": "N-Ethylhexedrone",
+    "L-Theanine": "Theanine",
+    "Vyvanse": "Lisdexamfetamine",
+    "MPA": "Methiopropamine",
+    "MXE": "Methoxetamine",
+    "Noopept": "Omberacetam",
+    "Phenethylamine (compound)": "Phenethylamine",
+    "N2O": "Nitrous oxide",
+    # 品牌名 / 同物异名（来源页与规范条目相同或指向同一物质）
+    "Librium": "Chlordiazepoxide",
+    "Sonata": "Zaleplon",
+    "Ronlax": "Ethyl loflazepate",
+    "Propoxyphene": "Dextropropoxyphene",
+    "Centrophenoxine": "Meclofenoxate",
+    "Dehydroxyfluorafinil": "N-Methylbisfluoromodafinil",
+    "YOPO": "Anadenanthera peregrina",
+    # 我们自己的 THC 条目取的就是 PW 的 Cannabis 页，属于同一条目
+    "THC": "Cannabis",
+    # Salvia 的 TripSit 条目就是 Salvia divinorum
+    "Salvia": "Salvia divinorum",
+}
+
+#: 合并时取并集的列表字段；标量字段则是“保留条目没有才用被合并条目的”。
+MERGE_LIST_FIELDS = ("categories", "crossTolerances", "commonNames", "metabolismSources")
+
+#: 语言覆盖层目录（合并/删除要同步处理）。
+OVERLAY_DIRS = ("en_us", "zh_cn", "zh_tw")
+
+
+def merge_objects(keep: dict, drop: dict) -> dict:
+    """把 drop 的信息并进 keep：列表取并集，标量填空缺，interactions 补缺键。"""
+    merged = dict(keep)
+    for field in MERGE_LIST_FIELDS:
+        values = list(merged.get(field) or [])
+        for value in drop.get(field) or []:
+            if value not in values:
+                values.append(value)
+        if values:
+            merged[field] = values
+    for field, value in drop.items():
+        if field in MERGE_LIST_FIELDS or field in ("name", "interactions", "roas"):
+            continue
+        if not merged.get(field) and value:
+            merged[field] = value
+    if not merged.get("roas") and drop.get("roas"):
+        merged["roas"] = drop["roas"]
+    interactions = dict(merged.get("interactions") or {})
+    for key, value in (drop.get("interactions") or {}).items():
+        interactions.setdefault(key, value)
+    if interactions:
+        merged["interactions"] = interactions
+    # 被合并条目的名字本身保留为别名
+    names = list(merged.get("commonNames") or [])
+    for candidate in [drop.get("name")] + list(drop.get("commonNames") or []):
+        if candidate and candidate != merged.get("name") and candidate not in names:
+            names.append(candidate)
+    if names:
+        merged["commonNames"] = names
+    return merged
+
+
+def rename_entry(assets_dir: Path, old: str, new: str, dry_run: bool) -> None:
+    """重命名条目（root 与各语言覆盖层同步改名，name 字段一并改）。"""
+    for directory in ("root",) + OVERLAY_DIRS:
+        src = assets_dir / directory / f"{old}.json"
+        if not src.exists():
+            continue
+        data = read_json(src)
+        if directory == "root" and isinstance(data, dict):
+            data["name"] = new
+        if not dry_run:
+            write_json(assets_dir / directory / f"{new}.json", data)
+            src.unlink()
+    print(f"{'将重命名' if dry_run else '已重命名'}：{old} -> {new}")
+
+
+def merge_entry(assets_dir: Path, keep_name: str, drop_name: str, dry_run: bool) -> None:
+    """把 drop_name 合并进 keep_name：root 与覆盖层逐层合并，然后删掉多余条目。"""
+    for directory in ("root",) + OVERLAY_DIRS:
+        keep_path = assets_dir / directory / f"{keep_name}.json"
+        drop_path = assets_dir / directory / f"{drop_name}.json"
+        if not drop_path.exists():
+            continue
+        drop = read_json(drop_path)
+        if keep_path.exists():
+            keep = read_json(keep_path)
+            merged = merge_objects(keep, drop) if isinstance(keep, dict) else drop
+        else:
+            merged = drop
+        if not dry_run:
+            write_json(keep_path, merged)
+            drop_path.unlink()
+    print(f"{'将合并' if dry_run else '已合并'}：{drop_name} -> {keep_name}")
+
+
+def prune_cross_entry_aliases(assets_dir: Path, dry_run: bool,
+                              removed: set | None = None,
+                              renames: dict | None = None) -> int:
+    """删掉“别名正好是另一个条目名字”的别名（别名表里互相乱指的垃圾）。
+
+    removed/renames 让本函数按“执行之后”的条目集合判断，--dry-run 与真实结果一致。
+    """
+    removed = removed or set()
+    renames = renames or {}
+    root = assets_dir / "root"
+    entry_names = {}
+    for path in substance_files(root):
+        if path.stem in removed:
+            continue
+        name = read_json(path).get("name") or path.stem
+        entry_names[path.stem] = renames.get(name, name)
+    folded = {fold_key(name): name for name in entry_names.values()}
+    removed_norms = set()
+    for path in substance_files(root):
+        if path.stem in removed:
+            continue
+        data = read_json(path)
+        own = entry_names[path.stem]
+        names = data.get("commonNames") or []
+        kept = []
+        for n in names:
+            owner = folded.get(fold_key(n), own)
+            if owner == own:
+                kept.append(n)
+            else:
+                print(f"  删除别名：{own} 的 \"{n}\"（是条目 {owner}）")
+        if len(kept) != len(names):
+            if not dry_run:
+                if kept:
+                    data["commonNames"] = kept
+                else:
+                    data.pop("commonNames", None)
+                write_json(path, data)
+            removed_norms.update(n for n in names if n not in kept)
+    return len(removed_norms)
+
+
+def cmd_fix_catalog(args: argparse.Namespace) -> int:
+    assets_dir = resolve_assets_dir(args.assets_dir)
+    dry_run = args.dry_run
+    root = assets_dir / "root"
+
+    print(f"目录：{assets_dir}{'（--dry-run，不写文件）' if dry_run else ''}")
+
+    # 1) 先重命名，让后面的合并用规范名
+    for old, new in RENAMES.items():
+        if (root / f"{old}.json").exists():
+            rename_entry(assets_dir, old, new, dry_run)
+    print()
+
+    # 2) 删除“类型当物质”的条目
+    deleted = 0
+    for name in CLASS_ENTRY_NAMES:
+        path = root / f"{name}.json"
+        if not path.exists():
+            continue
+        for directory in ("root",) + OVERLAY_DIRS:
+            target = assets_dir / directory / f"{name}.json"
+            if target.exists() and not dry_run:
+                target.unlink()
+        deleted += 1
+        print(f"{'将删除' if dry_run else '已删除'}：{name}")
+    print(f"\n类型/垃圾条目：{deleted} 个\n")
+
+    # 3) 合并重复条目
+    for drop_name, keep_name in MERGE_INTO.items():
+        if not (root / f"{drop_name}.json").exists():
+            continue
+        if not (root / f"{keep_name}.json").exists():
+            print(f"跳过 {drop_name} -> {keep_name}：规范条目不存在")
+            continue
+        merge_entry(assets_dir, keep_name, drop_name, dry_run)
+    print()
+
+    # 4) 清理别名表里“指向别的条目”的垃圾别名
+    print("清理跨条目别名：")
+    removed = prune_cross_entry_aliases(
+        assets_dir, dry_run,
+        removed=set(CLASS_ENTRY_NAMES) | set(MERGE_INTO),
+        renames=RENAMES,
+    )
+    if not removed:
+        print("  没有需要清理的别名")
+    print(f"\n完成：删除 {deleted} 个条目，合并 {len(MERGE_INTO)} 组重复，"
+          f"清理 {removed} 个错误别名")
+    print("建议接着跑 fix-interactions，把指向已合并旧名的 interactions 重新指向规范条目。")
+    return 0
+
+
+# --------------------------------------------------------------------------
+# 10) convert —— 语言之间本机转换（简繁等），不调用翻译 API
 # --------------------------------------------------------------------------
 
 #: OpenCC 预设：语言对 -> config（s2twp/tw2sp 会同时做台湾/大陆用词本地化）
@@ -1396,6 +1640,21 @@ def build_parser() -> argparse.ArgumentParser:
     fixinter.add_argument("--dry-run", action="store_true", help="只报告不写文件")
     add_assets_dir(fixinter)
     fixinter.set_defaults(func=cmd_fix_interactions)
+
+    # fix-catalog
+    fixcat = subparsers.add_parser(
+        "fix-catalog",
+        help="删除“类型当物质”的条目、合并重复条目、清理错误别名",
+        description=(
+            "目录里同时混着分类/类型页（Opioids、Stimulants、Antihistamine…）和同一物质的"
+            "多个条目（α-PHP/A-PHP、MXE/Methoxetamine、Adderall/Amphetamine…）。本命令删除"
+            "类型条目、把重复条目合并到 PW 页面标题那个规范名（旧名保留为别名）、并删掉别名表里"
+            "“指向另一个条目”的垃圾别名。"
+        ),
+    )
+    fixcat.add_argument("--dry-run", action="store_true", help="只报告不写文件")
+    add_assets_dir(fixcat)
+    fixcat.set_defaults(func=cmd_fix_catalog)
 
 
     # guide

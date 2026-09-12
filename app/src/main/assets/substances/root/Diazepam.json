@@ -39,9 +39,9 @@
   ],
   "interactions": {
     "dangerous": [
-      "Depressant",
-      "Dissociatives",
-      "Stimulants"
+      "depressant",
+      "dissociative",
+      "stimulant"
     ],
     "unsafe": [],
     "uncertain": []

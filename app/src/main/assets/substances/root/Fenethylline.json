@@ -2,7 +2,8 @@
   "name": "Fenethylline",
   "commonNames": [
     "Fenethylline",
-    "Captagon"
+    "Captagon",
+    "Fenetylline"
   ],
   "url": "https://psychonautwiki.org/wiki/Fenethylline",
   "isApproved": true,
@@ -15,7 +16,7 @@
     "dangerous": [
       "Tramadol",
       "ΑMT",
-      "MAOI"
+      "maoi"
     ],
     "unsafe": [
       "Dextromethorphan",
@@ -29,13 +30,13 @@
       "Alcohol",
       "GHB",
       "GBL",
-      "Opioids",
+      "opioid",
       "Cocaine",
-      "THC",
+      "Cannabis",
       "Caffeine",
       "Ketamine",
       "Methoxetamine",
-      "Psychedelic"
+      "psychedelic"
     ]
   },
   "roas": [

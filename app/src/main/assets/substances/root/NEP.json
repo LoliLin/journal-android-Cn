@@ -3,7 +3,9 @@
   "commonNames": [
     "N-Ethylpentedrone",
     "NEP",
-    "Ethyl-Pentedrone"
+    "Ethyl-Pentedrone",
+    "nep",
+    "n-ethylpentedrone"
   ],
   "url": "https://psychonautwiki.org/wiki/NEP",
   "isApproved": true,
@@ -23,28 +25,31 @@
     "exact toxic dosage is unknown"
   ],
   "categories": [
-    "stimulant"
+    "stimulant",
+    "entactogen",
+    "tentative",
+    "research-chemical"
   ],
   "interactions": {
     "dangerous": [
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol",
-      "MAOI",
+      "maoi",
       "SNRIs",
       "Serotonin releasers",
       "ssri",
-      "5-HTP"
+      "5-Hydroxytryptophan"
     ],
     "unsafe": [
       "Dextromethorphan",
       "MDMA",
-      "Stimulants"
+      "stimulant"
     ],
     "uncertain": [
       "Alcohol",
-      "MXE",
-      "Dissociatives"
+      "Methoxetamine",
+      "dissociative"
     ]
   },
   "roas": [

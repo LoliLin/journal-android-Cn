@@ -1,6 +1,10 @@
 {
   "name": "4-HO-DET",
-  "commonNames": ["4-HO-DET", "Ethocin", "CZ-74"],
+  "commonNames": [
+    "4-HO-DET",
+    "Ethocin",
+    "CZ-74"
+  ],
   "url": "https://psychonautwiki.org/wiki/4-HO-DET",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +14,29 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "research-chemical"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical"
+  ],
   "summary": "A rare compound first produced by Albert Hoffman, also known as ethocin. Structurally related to 4-HO-MET (metocin) and psilocin (4-HO-DMT), this drug has similar psychedelic effects but little recorded human usage. Probably similar to mushrooms. Potentially stimulating.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

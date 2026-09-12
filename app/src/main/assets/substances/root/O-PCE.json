@@ -29,8 +29,8 @@
   "summary": "Dissociative of the Arylcyclohexylamine class. Structurally related to Deschloroketamine.",
   "interactions": {
     "dangerous": [
-      "Stimulants",
-      "Depressant"
+      "stimulant",
+      "depressant"
     ],
     "unsafe": [],
     "uncertain": []

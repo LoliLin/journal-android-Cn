@@ -3,20 +3,26 @@
   "commonNames": [
     "Lisdexamfetamine",
     "Vyvanse",
-    "Elvanse"
+    "Elvanse",
+    "lisdextroamfetamine",
+    "lisdextroamphetamine",
+    "lisdexamphetamine",
+    "lisdexamfetamine"
   ],
   "url": "https://psychonautwiki.org/wiki/Lisdexamfetamine",
   "isApproved": true,
   "crossTolerances": [],
   "toxicities": [],
   "categories": [
-    "stimulant"
+    "stimulant",
+    "habit-forming",
+    "common"
   ],
   "interactions": {
     "dangerous": [
       "Tramadol",
       "ΑMT",
-      "MAOI"
+      "maoi"
     ],
     "unsafe": [
       "Dextromethorphan",
@@ -30,13 +36,13 @@
       "Alcohol",
       "GHB",
       "GBL",
-      "Opioids",
+      "opioid",
       "Cocaine",
-      "THC",
+      "Cannabis",
       "Caffeine",
       "Ketamine",
       "Methoxetamine",
-      "Psychedelic"
+      "psychedelic"
     ]
   },
   "roas": [

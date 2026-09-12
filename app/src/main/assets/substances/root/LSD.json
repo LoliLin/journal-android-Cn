@@ -51,13 +51,13 @@
     ],
     "unsafe": [
       "Tramadol",
-      "Deliriant",
+      "deliriant",
       "Tricyclic antidepressants",
       "Ritonavir"
     ],
     "uncertain": [
-      "THC",
-      "Stimulants"
+      "Cannabis",
+      "stimulant"
     ]
   },
   "roas": [

@@ -1,6 +1,8 @@
 {
   "name": "DOI",
-  "commonNames": ["DOI"],
+  "commonNames": [
+    "DOI"
+  ],
   "url": "https://psychonautwiki.org/wiki/DOI",
   "isApproved": true,
   "tolerance": {
@@ -10,10 +12,18 @@
     "halfToleranceInHours": 144,
     "zeroToleranceInHours": 288
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "stimulant", "research-chemical"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "stimulant",
+    "research-chemical"
+  ],
   "summary": "A potent, long-acting psychedelic stimulant. Historically, it has rarely been consumed deliberately, but occasionally sold as LSD. However, it has recently found its own little nest in the research chemical community.",
   "effectsSummary": "At the beginning, typical effects of amphetamine unfold, such as increased alertness, accelerated pulse, slight euphoria, increased self-confidence and urge to talk. Afterwards, the effect changes: one often feels a strong urge to move, sensory perception, feelings and empathy are heightened, colours are perceived more distinctly. With DOB and DOI, coloured, superimposed, pulsating patterns are perceived. This effect is weaker with DOM.",
   "generalRisks": "Since the effect of DOI comes on late, the danger of overdosing by refilling is particularly great. The long duration of action poses a psychological burden. Confusion or anxiety is common, especially at high doses. Some DOB users report a burning or pressure sensation in the bladder. At high doses, temporary paralysis, inability to communicate or insensitivity to pain (caution: risk of injury and accidents) may occur. Teeth grinding and strain on the cardiovascular system are also possible.",
@@ -30,9 +40,16 @@
     "A trip with DOI should remain an exceptional experience. Make sure to take long breaks from consumption so that the experience can be processed."
   ],
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

@@ -1,6 +1,9 @@
 {
   "name": "LSA",
-  "commonNames": ["LSA", "Ergine"],
+  "commonNames": [
+    "LSA",
+    "Ergine"
+  ],
   "url": "https://psychonautwiki.org/wiki/LSA",
   "isApproved": true,
   "tolerance": {
@@ -10,13 +13,25 @@
   },
   "crossTolerances": [],
   "addictionPotential": "non-addictive with a low abuse potential",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "common"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "common"
+  ],
   "summary": "A chemical found in Morning Glory and Hawaiian Baby Woodrose seeds, which are often legally available. Has mental effects similar to LSD, although with almost no visual effects. It is famous for being very nauseating, and for causing excessive time dilation at higher doses.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

@@ -8,7 +8,14 @@
     "O-2387",
     "β-ketone-prolintane",
     "Prolintanone",
-    "Gravel"
+    "Gravel",
+    "alpha-pvp",
+    "apvp",
+    "alpha-Pyrrolidinopentiophenone",
+    "flocka",
+    "flakka",
+    "α-pvp",
+    "αpvp"
   ],
   "url": "https://psychonautwiki.org/wiki/A-PVP",
   "isApproved": true,
@@ -28,7 +35,9 @@
     "exact toxic dosage is unknown"
   ],
   "categories": [
-    "stimulant"
+    "stimulant",
+    "research-chemical",
+    "habit-forming"
   ],
   "interactions": {
     "dangerous": [
@@ -36,20 +45,20 @@
       "25x-NBOH",
       "Tramadol",
       "SNRIs",
-      "MAOI",
+      "maoi",
       "Serotonin releasers",
       "ssri",
-      "5-HTP"
+      "5-Hydroxytryptophan"
     ],
     "unsafe": [
       "Dextromethorphan",
       "MDMA",
-      "Stimulants"
+      "stimulant"
     ],
     "uncertain": [
       "Alcohol",
-      "MXE",
-      "Dissociatives"
+      "Methoxetamine",
+      "dissociative"
     ]
   },
   "roas": [

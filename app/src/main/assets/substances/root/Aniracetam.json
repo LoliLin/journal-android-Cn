@@ -25,7 +25,7 @@
   "summary": "An anxiolytic nootropic which modulates the AMPA receptor. Significantly more potent than racetam. May have positive effects on memory and cognition. Little recreational value. Sold in Europe as a prescription drug, but not approved by the FDA in the US.",
   "interactions": {
     "dangerous": [
-      "MAOI"
+      "maoi"
     ],
     "unsafe": [],
     "uncertain": []

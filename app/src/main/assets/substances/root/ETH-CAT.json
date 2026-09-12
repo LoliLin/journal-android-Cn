@@ -3,7 +3,11 @@
   "commonNames": [
     "ETH-CAT",
     "Ethcathinone",
-    "Ethylpropion"
+    "Ethylpropion",
+    "Ethylcathinone",
+    "ethcathinone",
+    "e-cat",
+    "eth-cat"
   ],
   "url": "https://psychonautwiki.org/wiki/ETH-CAT",
   "isApproved": true,
@@ -23,11 +27,14 @@
     "exact toxic dosage is unknown"
   ],
   "categories": [
-    "stimulant"
+    "stimulant",
+    "psychedelic",
+    "research-chemical",
+    "habit-forming"
   ],
   "interactions": {
     "dangerous": [
-      "MAOI",
+      "maoi",
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol"
@@ -35,12 +42,12 @@
     "unsafe": [
       "Dextromethorphan",
       "MDMA",
-      "Stimulants"
+      "stimulant"
     ],
     "uncertain": [
       "Alcohol",
-      "MXE",
-      "Dissociatives"
+      "Methoxetamine",
+      "dissociative"
     ]
   },
   "roas": [

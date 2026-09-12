@@ -1,6 +1,9 @@
 {
   "name": "3C-E",
-  "commonNames": ["3C-E", "3C-Escaline"],
+  "commonNames": [
+    "3C-E",
+    "3C-Escaline"
+  ],
   "url": "https://psychonautwiki.org/wiki/3C-E",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +13,30 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "research-chemical", "stimulant"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical",
+    "stimulant"
+  ],
   "summary": "Three-Carbon Analog of Escaline. Substituted Amphetamine.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

@@ -41,17 +41,17 @@
   "interactions": {
     "dangerous": [
       "Ketamine",
-      "MXE",
+      "Methoxetamine",
       "Dextromethorphan",
       "PCP",
       "Alcohol",
-      "Opioids",
+      "opioid",
       "Tramadol",
-      "Benzodiazepines"
+      "benzodiazepine"
     ],
     "unsafe": [],
     "uncertain": [
-      "Nitrous",
+      "Nitrous oxide",
       "Amphetamines",
       "MDMA",
       "Cocaine"

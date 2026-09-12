@@ -1,7 +1,8 @@
 {
   "name": "Methiopropamine",
   "commonNames": [
-    "MPA"
+    "MPA",
+    "methiopropamine"
   ],
   "url": "https://psychonautwiki.org/wiki/Methiopropamine",
   "isApproved": true,
@@ -21,24 +22,26 @@
     "exact toxic dosage is unknown"
   ],
   "categories": [
-    "stimulant"
+    "stimulant",
+    "research-chemical",
+    "habit-forming"
   ],
   "interactions": {
     "dangerous": [
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol",
-      "MAOI"
+      "maoi"
     ],
     "unsafe": [
       "Dextromethorphan",
       "MDMA",
-      "Stimulants"
+      "stimulant"
     ],
     "uncertain": [
       "Alcohol",
-      "MXE",
-      "Dissociatives"
+      "Methoxetamine",
+      "dissociative"
     ]
   },
   "roas": [

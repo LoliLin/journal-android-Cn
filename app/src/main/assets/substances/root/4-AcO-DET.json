@@ -1,6 +1,10 @@
 {
   "name": "4-AcO-DET",
-  "commonNames": ["4-AcO-DET", "4-Acetoxy-DET", "Ethacetin"],
+  "commonNames": [
+    "4-AcO-DET",
+    "4-Acetoxy-DET",
+    "Ethacetin"
+  ],
   "url": "https://psychonautwiki.org/wiki/4-AcO-DET",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +14,30 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "tentative", "research-chemical"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "tentative",
+    "research-chemical"
+  ],
   "summary": "Rare drug that is of the tryptamine family, can be comparable to Psilocybin. Expected to quickly hydrolyzed into the free phenolic 4-HO-DET.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

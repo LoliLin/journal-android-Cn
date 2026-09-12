@@ -2,7 +2,6 @@
   "name": "Mescaline",
   "commonNames": [
     "Mescaline",
-    "Peyote",
     "San Pedro",
     "Cactus",
     "Buttons"
@@ -58,10 +57,10 @@
     ],
     "uncertain": [
       "5-MeO-xxT",
-      "THC",
+      "Cannabis",
       "Amphetamines",
       "Cocaine",
-      "MAOI"
+      "maoi"
     ]
   },
   "roas": [

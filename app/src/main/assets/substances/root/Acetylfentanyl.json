@@ -32,25 +32,25 @@
     "dangerous": [
       "SNRIs",
       "Alcohol",
-      "Benzodiazepines",
+      "benzodiazepine",
       "Dextromethorphan",
       "GHB",
       "GBL",
       "Ketamine",
-      "MXE",
+      "Methoxetamine",
       "Tramadol",
       "Grapefruit",
-      "MAOI",
+      "maoi",
       "Serotonin releasers",
       "ssri",
-      "5-HTP"
+      "5-Hydroxytryptophan"
     ],
     "unsafe": [],
     "uncertain": [
-      "MAOI",
-      "Nitrous",
+      "maoi",
+      "Nitrous oxide",
       "PCP",
-      "Stimulants"
+      "stimulant"
     ]
   },
   "roas": [

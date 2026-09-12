@@ -34,10 +34,10 @@
       "Cocaine",
       "DOx",
       "Dextromethorphan",
-      "MAOI",
+      "maoi",
       "MDMA",
       "Mescaline",
-      "MXE",
+      "Methoxetamine",
       "25x-NBOMe",
       "PCP",
       "ssri",
@@ -47,7 +47,7 @@
     "uncertain": [
       "Alcohol",
       "Caffeine",
-      "THC"
+      "Cannabis"
     ]
   },
   "roas": [

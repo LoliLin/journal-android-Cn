@@ -5,7 +5,8 @@
     "H",
     "Smack",
     "Junk",
-    "Brown"
+    "Brown",
+    "Diamorphine"
   ],
   "url": "https://psychonautwiki.org/wiki/Heroin",
   "isApproved": true,
@@ -24,7 +25,8 @@
     "opioid",
     "habit-forming",
     "depressant",
-    "common"
+    "common",
+    "addiction-treatment"
   ],
   "summary": "A powerful opioid derived from Morphine, with 2-4x its potency. Infamous for a high addiction potential and fatal respiratory depression in overdose, C. R. Alder Wright first synthesised this compound in 1874 trying to find a less addictive alternative to Morphine. In recent years, it has often been sold cut with the extremely potent fentanyl, causing a spike in overdose deaths.",
   "effectsSummary": "Pain-relieving, balancing, calming, anxiety-relieving and euphoric. The euphoric \"flash\" at the beginning is followed by a state of well-being and a feeling of indifference, serenity, light-heartedness and self-satisfaction.",
@@ -41,21 +43,21 @@
   "interactions": {
     "dangerous": [
       "Alcohol",
-      "Benzodiazepines",
+      "benzodiazepine",
       "Dextromethorphan",
       "GHB",
       "GBL",
       "Ketamine",
-      "MXE",
+      "Methoxetamine",
       "Tramadol",
       "Grapefruit"
     ],
     "unsafe": [],
     "uncertain": [
-      "MAOI",
-      "Nitrous",
+      "maoi",
+      "Nitrous oxide",
       "PCP",
-      "Stimulants"
+      "stimulant"
     ]
   },
   "roas": [

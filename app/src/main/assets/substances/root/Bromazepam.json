@@ -32,9 +32,9 @@
   "summary": "A benzodiazepine drug with a medium-long duration, developed by Roche in the 1960s. Has primarily anxiolytic properties. May cause lowered inhibitions and amnesia in high doses.",
   "interactions": {
     "dangerous": [
-      "Depressant",
-      "Dissociatives",
-      "Stimulants"
+      "depressant",
+      "dissociative",
+      "stimulant"
     ],
     "unsafe": [],
     "uncertain": []

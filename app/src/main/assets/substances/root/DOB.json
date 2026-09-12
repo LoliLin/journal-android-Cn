@@ -1,6 +1,10 @@
 {
   "name": "DOB",
-  "commonNames": ["DOB", "Brolamfetamine", "Bromo-DMA"],
+  "commonNames": [
+    "DOB",
+    "Brolamfetamine",
+    "Bromo-DMA"
+  ],
   "url": "https://psychonautwiki.org/wiki/DOB",
   "isApproved": true,
   "tolerance": {
@@ -10,10 +14,18 @@
     "halfToleranceInHours": 132,
     "zeroToleranceInHours": 204
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "stimulant", "research-chemical"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "stimulant",
+    "research-chemical"
+  ],
   "summary": "DOB is a relatively uncommon synthetic psychedelic. It is best known for its very low doses and long duration. Historically it has rarely been taken deliberately, but in place of LSD, however it has recently found its own place in the research chemical scene.",
   "effectsSummary": "At the beginning, typical effects of amphetamine unfold, such as increased alertness, accelerated pulse, slight euphoria, increased self-confidence and urge to talk. Afterwards, the effect changes: one often feels a strong urge to move, sensory perception, feelings and empathy are heightened, colours are perceived more distinctly. With DOB and DOI, coloured, superimposed, pulsating patterns are perceived. This effect is weaker with DOM.",
   "generalRisks": "Since the effect of DOB comes on late, the danger of overdosing by refilling is particularly great. The long duration of action poses a psychological burden. Confusion or anxiety is common, especially at high doses. Some DOB users report a burning or pressure sensation in the bladder. At high doses, temporary paralysis, inability to communicate or insensitivity to pain (caution: risk of injury and accidents) may occur. Teeth grinding and strain on the cardiovascular system are also possible.",
@@ -30,9 +42,16 @@
     "A trip with DOB should remain an exceptional experience. Make sure to take long breaks from consumption so that the experience can be processed."
   ],
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

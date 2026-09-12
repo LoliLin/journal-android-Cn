@@ -49,31 +49,31 @@
   ],
   "interactions": {
     "dangerous": [
-      "Depressant",
-      "Dissociatives",
-      "Benzodiazepines",
+      "depressant",
+      "dissociative",
+      "benzodiazepine",
       "Dextromethorphan",
       "GHB",
       "GBL",
       "Ketamine",
-      "MXE",
-      "Opioids",
+      "Methoxetamine",
+      "opioid",
       "Tramadol"
     ],
     "unsafe": [
       "Cocaine",
-      "MAOI",
+      "maoi",
       "PCP",
       "ALDH2 inhibitors",
       "Hepatotoxic drugs"
     ],
     "uncertain": [
-      "Stimulants",
-      "THC",
+      "stimulant",
+      "Cannabis",
       "Amphetamines",
       "ΑMT",
       "MDMA",
-      "Nitrous",
+      "Nitrous oxide",
       "ssri"
     ]
   },

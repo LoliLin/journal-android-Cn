@@ -1,6 +1,9 @@
 {
   "name": "4-HO-DPT",
-  "commonNames": ["4-HO-DPT", "Procin"],
+  "commonNames": [
+    "4-HO-DPT",
+    "Procin"
+  ],
   "url": "https://psychonautwiki.org/wiki/4-HO-DPT",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +13,30 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "tentative", "research-chemical"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "tentative",
+    "research-chemical"
+  ],
   "summary": "A psychedelic hallucinogenic first synthesized by alexander shulgin. At light doses it causes enhanced cognition and appreciation for things like art and music while high doses cause visuals. The drug is known to cause a bodyload.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

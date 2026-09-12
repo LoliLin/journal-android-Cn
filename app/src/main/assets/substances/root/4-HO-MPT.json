@@ -1,6 +1,9 @@
 {
   "name": "4-HO-MPT",
-  "commonNames": ["4-HO-MPT", "Meprocin"],
+  "commonNames": [
+    "4-HO-MPT",
+    "Meprocin"
+  ],
   "url": "https://psychonautwiki.org/wiki/4-HO-MPT",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +13,30 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "tentative", "research-chemical"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "tentative",
+    "research-chemical"
+  ],
   "summary": "Psychedelic drug of the tryptamine class. Higher homologue of Psilocin, and is the 4-hydroxy analogue of N-Methyl-N-Propyltryptamine.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

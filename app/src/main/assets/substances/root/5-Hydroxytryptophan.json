@@ -9,21 +9,27 @@
     "Oxyfan",
     "Telesol",
     "Tript-OH",
-    "Triptum"
+    "Triptum",
+    "5htp",
+    "5-hydroxytryptophan",
+    "l-tryptophan",
+    "oxitriptan"
   ],
   "url": "https://psychonautwiki.org/wiki/5-Hydroxytryptophan",
   "isApproved": true,
   "crossTolerances": [],
   "toxicities": [],
   "categories": [
-    "nootropic"
+    "nootropic",
+    "common",
+    "antidepressant"
   ],
   "interactions": {
     "dangerous": [
       "ssri",
       "SNRIs",
       "Serotonin releasers",
-      "MAOI",
+      "maoi",
       "Tricyclic antidepressants",
       "Tramadol"
     ],

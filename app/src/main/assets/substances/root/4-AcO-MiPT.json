@@ -1,6 +1,10 @@
 {
   "name": "4-AcO-MiPT",
-  "commonNames": ["4-AcO-MiPT", "Mipracetin", "O-Acetylmiprocin"],
+  "commonNames": [
+    "4-AcO-MiPT",
+    "Mipracetin",
+    "O-Acetylmiprocin"
+  ],
   "url": "https://psychonautwiki.org/wiki/4-AcO-MiPT",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +14,31 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "tentative", "entactogen", "research-chemical"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "tentative",
+    "entactogen",
+    "research-chemical"
+  ],
   "summary": "A quite potent tryptamine that has be related to having \"shroom-like\" visuals. Yet without much bodyload. Very hydroscopic. Seems to be quite safe in dosing. Similar to the likes of 2C-B.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

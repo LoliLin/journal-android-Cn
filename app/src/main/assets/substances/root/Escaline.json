@@ -1,6 +1,8 @@
 {
   "name": "Escaline",
-  "commonNames": ["Escaline"],
+  "commonNames": [
+    "Escaline"
+  ],
   "url": "https://psychonautwiki.org/wiki/Escaline",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +12,29 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "research-chemical"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical"
+  ],
   "summary": "First synthesised in the 50s, this uncommon drug was reexamined by David Nichols in the 1990s. It is an analogue of mescaline which is roughly six times more potent, and is thus a powerful psychedelic phenethylamine. Subjective effects may include stimulation and hallucinations.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

@@ -30,12 +30,12 @@
   "summary": "A medium-length common prescription benzodiazepine, often used to treat panic attacks because of its relatively fast sublingual onset. Primarily anxiolytic, but also possessing of other benzo traits.",
   "interactions": {
     "dangerous": [
-      "Depressant",
-      "Dissociatives"
+      "depressant",
+      "dissociative"
     ],
     "unsafe": [],
     "uncertain": [
-      "Stimulants"
+      "stimulant"
     ]
   },
   "roas": [

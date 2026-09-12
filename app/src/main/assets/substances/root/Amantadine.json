@@ -43,16 +43,16 @@
   ],
   "interactions": {
     "dangerous": [
-      "Deliriant",
-      "Stimulants"
+      "deliriant",
+      "stimulant"
     ],
     "unsafe": [
-      "Depressant",
+      "depressant",
       "Other NMDA antagonists"
     ],
     "uncertain": [
       "Anticholinergics",
-      "Antipsychotic"
+      "antipsychotic"
     ]
   },
   "roas": [

@@ -2,7 +2,8 @@
   "name": "2M2B",
   "commonNames": [
     "2M2B",
-    "2-methyl-2-butanol"
+    "2-methyl-2-butanol",
+    "2m2b"
   ],
   "url": "https://psychonautwiki.org/wiki/2M2B",
   "isApproved": true,
@@ -22,16 +23,18 @@
     "exact toxic dosage is unknown"
   ],
   "categories": [
-    "depressant"
+    "depressant",
+    "habit-forming",
+    "tentative"
   ],
   "interactions": {
     "dangerous": [
-      "Depressant",
-      "Dissociatives"
+      "depressant",
+      "dissociative"
     ],
     "unsafe": [],
     "uncertain": [
-      "Stimulants"
+      "stimulant"
     ]
   },
   "roas": [

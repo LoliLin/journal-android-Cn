@@ -1,6 +1,11 @@
 {
   "name": "4-AcO-DiPT",
-  "commonNames": ["4-AcO-DiPT", "4-Acetoxy-DiPT", "Ipracetin", "Aces"],
+  "commonNames": [
+    "4-AcO-DiPT",
+    "4-Acetoxy-DiPT",
+    "Ipracetin",
+    "Aces"
+  ],
   "url": "https://psychonautwiki.org/wiki/4-AcO-DiPT",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +15,29 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "research-chemical"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical"
+  ],
   "summary": "An uncommon psychedelic tryptamine with a short history of human use, also known as Ipracetin. Possibly first synthesised by Alexander Shulgin. Some reports of heavy nausea, with effects comparable to 2c-b and mushrooms.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

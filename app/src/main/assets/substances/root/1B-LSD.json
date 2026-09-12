@@ -1,6 +1,8 @@
 {
   "name": "1B-LSD",
-  "commonNames": ["1B-LSD"],
+  "commonNames": [
+    "1B-LSD"
+  ],
   "url": "https://psychonautwiki.org/wiki/1B-LSD",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +12,30 @@
     "halfToleranceInHours": 144,
     "zeroToleranceInHours": 336
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "non-addictive with a low abuse potential",
-  "toxicities": ["extremely low toxicity relative to dose"],
-  "categories": ["psychedelic", "tentative", "research-chemical"],
+  "toxicities": [
+    "extremely low toxicity relative to dose"
+  ],
+  "categories": [
+    "psychedelic",
+    "tentative",
+    "research-chemical"
+  ],
   "summary": "1B-LSD (1-butanoyl-lysergic acid diethylamide) is an LSD analogue which appears to be about as potent as 1P-LSD (slightly more potent than LSD) and has a slightly shorter duration than that of LSD, again thought to be about the same as 1P-LSD. Released in late 2018, and marketed agressively as a replacement for 1P-LSD. 1B-LSD does not yet have a clearly established safety profile,",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

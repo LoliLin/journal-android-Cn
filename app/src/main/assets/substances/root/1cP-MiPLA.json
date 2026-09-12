@@ -1,6 +1,8 @@
 {
   "name": "1cP-MiPLA",
-  "commonNames": ["1cP-MiPLA"],
+  "commonNames": [
+    "1cP-MiPLA"
+  ],
   "url": "https://psychonautwiki.org/wiki/1cP-MiPLA",
   "isApproved": true,
   "tolerance": {
@@ -10,14 +12,28 @@
     "halfToleranceInHours": 144,
     "zeroToleranceInHours": 336
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown", "extremely low toxicity"],
-  "categories": ["psychedelic"],
+  "toxicities": [
+    "toxic dose is unknown",
+    "extremely low toxicity"
+  ],
+  "categories": [
+    "psychedelic"
+  ],
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

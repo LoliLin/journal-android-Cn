@@ -1,17 +1,31 @@
 {
   "name": "2C-C",
-  "commonNames": ["2C-C"],
+  "commonNames": [
+    "2C-C"
+  ],
   "url": "https://psychonautwiki.org/wiki/2C-C",
   "isApproved": true,
   "crossTolerances": [],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "research-chemical"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical"
+  ],
   "summary": "A short-acting psychedelic research chemical of the 2c-x family. Often described as being less stimulating than the other 2c-x, and is a relatively unique psychedelic in this respect.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {

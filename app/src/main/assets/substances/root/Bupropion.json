@@ -43,13 +43,13 @@
   ],
   "interactions": {
     "dangerous": [
-      "MAOI",
+      "maoi",
       "Tramadol",
       "Other seizure threshold lowering drugs",
       "Alcohol"
     ],
     "unsafe": [
-      "Stimulants",
+      "stimulant",
       "Dextromethorphan",
       "Cocaine",
       "Ketamine"
@@ -57,7 +57,7 @@
     "uncertain": [
       "Caffeine",
       "Cannabis",
-      "Psychedelic",
+      "psychedelic",
       "ssri"
     ]
   },

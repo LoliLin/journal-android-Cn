@@ -51,7 +51,7 @@
       "Dextromethorphan",
       "GHB",
       "GBL",
-      "MAOI",
+      "maoi",
       "Grapefruit",
       "MDMA",
       "ΑMT"
@@ -60,10 +60,10 @@
       "2C-T-x"
     ],
     "uncertain": [
-      "Benzodiazepines",
-      "MXE",
+      "benzodiazepine",
+      "Methoxetamine",
       "Alcohol",
-      "Nitrous",
+      "Nitrous oxide",
       "Amphetamines"
     ]
   },

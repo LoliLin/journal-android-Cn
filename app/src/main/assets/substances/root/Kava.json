@@ -8,11 +8,11 @@
   "isApproved": false,
   "interactions": {
     "dangerous": [
-      "Depressant",
-      "Dissociatives"
+      "depressant",
+      "dissociative"
     ],
     "uncertain": [
-      "Stimulants"
+      "stimulant"
     ]
   },
   "metabolism": "This material contains multiple constituents and has no single ingredient-level metabolic pathway. Composition and constituent-specific metabolism must be distinguished; this entry does not yet provide a verified constituent-by-constituent account."

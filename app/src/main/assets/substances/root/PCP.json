@@ -40,7 +40,7 @@
       "GHB",
       "GBL",
       "Tramadol",
-      "MAOI"
+      "maoi"
     ],
     "unsafe": [
       "DOx",
@@ -48,13 +48,13 @@
       "MDMA",
       "Cocaine",
       "Alcohol",
-      "Benzodiazepines",
+      "benzodiazepine",
       "ssri"
     ],
     "uncertain": [
-      "MXE",
+      "Methoxetamine",
       "Caffeine",
-      "Opioids"
+      "opioid"
     ]
   },
   "roas": [

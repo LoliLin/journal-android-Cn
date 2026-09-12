@@ -7,11 +7,11 @@
   ],
   "interactions": {
     "dangerous": [
-      "Depressant",
-      "Dissociatives"
+      "depressant",
+      "dissociative"
     ],
     "uncertain": [
-      "Stimulants"
+      "stimulant"
     ]
   },
   "roas": [

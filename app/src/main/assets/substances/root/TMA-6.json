@@ -29,10 +29,10 @@
   "interactions": {
     "dangerous": [
       "SNRIs",
-      "MAOI",
+      "maoi",
       "Serotonin releasers",
       "ssri",
-      "5-HTP"
+      "5-Hydroxytryptophan"
     ],
     "unsafe": [],
     "uncertain": []

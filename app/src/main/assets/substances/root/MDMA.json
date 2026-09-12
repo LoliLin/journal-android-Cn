@@ -63,7 +63,7 @@
   "interactions": {
     "dangerous": [
       "Tramadol",
-      "MAOI",
+      "maoi",
       "Dextromethorphan"
     ],
     "unsafe": [
@@ -71,7 +71,7 @@
       "PCP",
       "Serotonin releasers",
       "2C-T-x",
-      "5-HTP"
+      "5-Hydroxytryptophan"
     ],
     "uncertain": [
       "5-MeO-xxT",
@@ -80,7 +80,7 @@
       "DOx",
       "GHB",
       "GBL",
-      "MXE",
+      "Methoxetamine",
       "ΑMT",
       "Protease Inhibitors",
       "ssri",

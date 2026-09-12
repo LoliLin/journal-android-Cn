@@ -31,8 +31,8 @@
   "summary": "A novel analogue of Ketamine which is much more potent and has a longer duration.",
   "interactions": {
     "dangerous": [
-      "Stimulants",
-      "Depressant"
+      "stimulant",
+      "depressant"
     ],
     "unsafe": [],
     "uncertain": []

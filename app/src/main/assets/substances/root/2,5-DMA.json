@@ -1,6 +1,9 @@
 {
   "name": "2,5-DMA",
-  "commonNames": ["2,5-DMA", "DOH"],
+  "commonNames": [
+    "2,5-DMA",
+    "DOH"
+  ],
   "url": "https://psychonautwiki.org/wiki/2%2C5-DMA",
   "isApproved": true,
   "tolerance": {
@@ -10,14 +13,28 @@
     "halfToleranceInHours": 96,
     "zeroToleranceInHours": 204
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "stimulant"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "stimulant"
+  ],
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "stimulant"
+    ]
   },
   "roas": [
     {
