@@ -47,6 +47,7 @@ docs/scripts/_work/       # 中间产物，已 gitignore
 | `apply` | 把译文回填进语言目录 | `4_replaceCommonConstants.py` |
 | `review` | 三语并排人工校对 GUI | `5_translateFixViewer.py` |
 | `fix-tolerances` | 修正 `crossTolerances` 历史变体 | `6.fixTolencesTypes.py` |
+| `fix-interactions` | 规范化 `interactions` 的写法（分类键 / 规范物质名） | —（新功能） |
 | `convert` | 语言之间本机转换（简繁等），不走 API | —（新功能） |
 | `guide` | 打印完整流程 | — |
 
@@ -155,7 +156,75 @@ python docs/scripts/substances_pipeline.py fix-tolerances
 # 默认处理 en_us zh_cn zh_tw root，可显式指定目录
 ```
 
-### 8. 语言之间本机转换（convert，不走 API）
+### 8. 规范化 interactions 的写法
+
+`interactions`（`dangerous`/`unsafe`/`uncertain`）里的字符串必须能被应用匹配上。应用的
+`InteractionChecker` 有两条规则：
+
+```kotlin
+isDirectMatch : extendedInteractions.contains(substanceName)                  // 物质名：精确相等
+isClassMatch  : interactionName.contains(categoryKey, ignoreCase = true)      // 分类：包含即可
+```
+
+也就是说**物质名必须与 `root/<Name>.json` 的 `name` 完全一致**（大小写敏感），而分类只要"包含"分类键就行。
+实测 2268 条里混着 100 种写法：`Stimulants`、`MAOIs`、`SSRIs`（复数分类）、`DXM`/`aMT`/`DPH`（简称）、
+`alcohol`/`cocaine`（大小写不对）、`amphetamines`/`5-meo-xxt`（大小写不统一）等。
+
+```bash
+python docs/scripts/substances_pipeline.py fix-interactions --dry-run
+python docs/scripts/substances_pipeline.py fix-interactions
+```
+
+规范化优先级（`fix-interactions`，可重复执行，无变化时不写文件）：
+
+1. **目录里的物质名**：只修大小写，让它与 `root` 完全一致（`alcohol → Alcohol`、`cocaine → Cocaine`、
+   `cannabis → Cannabis`）。**类目条目也算物质名**——目录里确实有 `Stimulants`、`Opioids`、
+   `Benzodiazepines`、`Dissociatives`、`MAOI`、`Depressant`、`Psychedelic`、`Antipsychotic`、`Deliriant`
+   这些条目，而且它们自己没有 `categories`，改动它们会丢掉精确匹配，所以保持条目名（这些名字本身就是规范写法）；
+   **不合并**两个都存在的条目（`MXE`/`Methoxetamine`、`THC`/`Cannabis`、`N2O`/`Nitrous` 各留各的）；
+2. **分类键**（`_categories.json`）及其复数写法：`SSRIs → ssri`（没有同名条目时用分类键）、
+   `Depressants → Depressant`、`Psychedelics → Psychedelic`、`Antipsychotics → Antipsychotic`、
+   `Deliriants → Deliriant`、`MAOIs → MAOI`（有同名条目时用条目名——应用对分类是
+   `interactionName.contains(categoryKey, ignoreCase = true)`，大小写不敏感，所以 `MAOI` 照样命中 `maoi` 分类）；
+3. **只被一个条目登记的别名**：`DXM → Dextromethorphan`、`DPH → Diphenhydramine`、`aMT → ΑMT`；
+4. **其余只统一大小写**：同一折叠形式取出现最多的拼法（`amphetamines → Amphetamines`、
+   `5-meo-xxt`/`5-MeO-xxt → 5-MeO-xxT`）。
+
+**必须原样保留**（应用用代码展开，不能规范化）：`Substituted amphetamines`、`Serotonin releasers`、
+`Tricyclic antidepressants`（最后一个在应用里被有意清空，避免被 `contains("depressant")` 误匹配）。
+
+本轮结果（在完整目录上跑一遍）：
+
+| 指标 | 之前 | 之后 |
+|---|---|---|
+| interactions 列表被规范化 | — | **317 个（188 个 root 文件）** |
+| 不同写法 | 100 种 | **80 种**（折叠后重复 0 组） |
+| 「完全匹配不到任何物质」的条目 | 312 条 | **160 条（−152）** |
+| 命中组合（按出现次数加权，模拟应用的匹配规则） | 50 219 | **50 575（+356）** |
+
+再跑一次输出 `0`，即一轮收敛、幂等。
+
+**55 个写法有歧义**（被两个以上条目登记为别名，如 `nitrous oxide → {N2O, Nitrous}`、
+`2ai → {2-AI, 2-Aminoindane}`），工具保持原样并记进报告——它们暴露的是**重复条目**问题，需要单独合并，
+不在这个子命令的范围内。
+
+**33 种写法无法归类**（目录里没有对应分类或物质），保持原样。它们要么是我们没收录的类别，
+要么是"含分类词的组合写法"（后者靠 `contains` 依然生效）：
+
+```
+5-MeO-xxT              ALDH2 inhibitors       Amphetamines           Anticholinergics
+Antihistamines         CNS depressants        CYP2C19-substrates     Cholinergics
+Classical psychedelics (seizure risk)         Diuretics              Dopaminergic agonists
+GHB/GBL                Grapefruit             Hepatotoxic drugs      Hormonal Birth Control
+NBOMe                  NBOMes                 NSAIDs                 Other CNS depressants
+Other NMDA antagonists Other anticholinergics Other antipsychotics   Other benzodiazepines
+Other mood stabilizers Other seizure threshold lowering drugs        Other stimulants
+Protease Inhibitors    Ritonavir              SNRIs                  nitrous oxide
+other dissociatives    other substances that can increase the risk of psychosis or seizures
+serotonergic drugs
+```
+
+### 9. 语言之间本机转换（convert，不走 API）
 
 简繁之间是**字符级映射 + 少量用词差异**，机器翻译是浪费：`zh_cn` 已有内容时，`zh_tw` 直接转。
 

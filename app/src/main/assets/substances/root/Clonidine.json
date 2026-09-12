@@ -18,7 +18,7 @@
   "summary": "Is a medication that is used to treat high blood pressure, anxiety, withdrawal (Typically from Alcohol, Opioids, Smoking) and many other uses.",
   "interactions": {
     "dangerous": [
-      "Depressants",
+      "Depressant",
       "Dissociatives"
     ],
     "unsafe": [],

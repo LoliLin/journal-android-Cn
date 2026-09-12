@@ -1,6 +1,11 @@
 {
   "name": "25C-NBOMe",
-  "commonNames": ["25C-NBOMe", "Cimbi-82", "NBOMe-2C-C", "2C-C-NBOMe"],
+  "commonNames": [
+    "25C-NBOMe",
+    "Cimbi-82",
+    "NBOMe-2C-C",
+    "2C-C-NBOMe"
+  ],
   "url": "https://psychonautwiki.org/wiki/25C-NBOMe",
   "isApproved": true,
   "tolerance": {
@@ -10,21 +15,37 @@
     "halfToleranceInHours": 168,
     "zeroToleranceInHours": 336
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["fatal at heavy dosages"],
-  "categories": ["psychedelic", "research-chemical", "common"],
+  "toxicities": [
+    "fatal at heavy dosages"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical",
+    "common"
+  ],
   "summary": "A relatively new and popular research chemical. A short acting psychedelic related to 2C-C with similar effects to LSD, though more visual with less of a 'head-trip.' Frequently mis-sold as LSD. Causes an uncomfortable body load and has caused several deaths even within regular dose ranges.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Amphetamines", "aMT", "Cocaine", "DXM", "Tramadol"],
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Amphetamines",
+      "ΑMT",
+      "Cocaine",
+      "Dextromethorphan",
+      "Tramadol"
+    ],
     "uncertain": [
       "2C-T-x",
-      "5-MeO-xxt",
+      "5-MeO-xxT",
       "Caffeine",
       "THC",
       "DOx",
-      "MAOIs",
+      "MAOI",
       "MDMA",
       "MXE"
     ]

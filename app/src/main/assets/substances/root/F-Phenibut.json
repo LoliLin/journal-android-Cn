@@ -1,6 +1,10 @@
 {
   "name": "F-Phenibut",
-  "commonNames": ["F-Phenibut", "Fluorophenibut", "Fluorobut"],
+  "commonNames": [
+    "F-Phenibut",
+    "Fluorophenibut",
+    "Fluorobut"
+  ],
   "url": "https://psychonautwiki.org/wiki/F-Phenibut",
   "isApproved": true,
   "tolerance": {
@@ -8,18 +12,27 @@
     "zero": "7 - 14 days",
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["GABA"],
+  "crossTolerances": [
+    "GABA"
+  ],
   "addictionPotential": "moderately physically and psychologically addictive",
   "toxicities": [
     "low toxicity",
     "potentially lethal when mixed with depressants like alcohol, benzodiazepines or opioids",
     "exact toxic dosage is unknown"
   ],
-  "categories": ["depressant"],
+  "categories": [
+    "depressant"
+  ],
   "interactions": {
-    "dangerous": ["Depressants", "Dissociatives"],
+    "dangerous": [
+      "Depressant",
+      "Dissociatives"
+    ],
     "unsafe": [],
-    "uncertain": ["Stimulants"]
+    "uncertain": [
+      "Stimulants"
+    ]
   },
   "roas": [
     {

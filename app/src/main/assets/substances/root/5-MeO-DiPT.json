@@ -1,6 +1,10 @@
 {
   "name": "5-MeO-DiPT",
-  "commonNames": ["5-MeO-DiPT", "Foxy Methoxy", "Foxy"],
+  "commonNames": [
+    "5-MeO-DiPT",
+    "Foxy Methoxy",
+    "Foxy"
+  ],
   "url": "https://psychonautwiki.org/wiki/5-MeO-DiPT",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +14,40 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "research-chemical", "entactogen"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical",
+    "entactogen"
+  ],
   "summary": "5-methoxy-di isopropyl tryptamine, also known as 'foxy', a psychedelic tryptamine related to DMT, which distorts visual and audio perception. Reported to have a heavy body load at high doses, it behaves similarly to other drugs of its class.",
   "interactions": {
-    "dangerous": ["aMT", "MAOIs", "PCP"],
-    "unsafe": ["Amphetamines", "Cocaine", "DXM", "Tramadol"],
-    "uncertain": ["2C-T-x", "2C-x", "THC", "DOx", "MDMA", "Mescaline", "NBOMe"]
+    "dangerous": [
+      "ΑMT",
+      "MAOI",
+      "PCP"
+    ],
+    "unsafe": [
+      "Amphetamines",
+      "Cocaine",
+      "Dextromethorphan",
+      "Tramadol"
+    ],
+    "uncertain": [
+      "2C-T-x",
+      "2C-x",
+      "THC",
+      "DOx",
+      "MDMA",
+      "Mescaline",
+      "NBOMe"
+    ]
   },
   "roas": [
     {

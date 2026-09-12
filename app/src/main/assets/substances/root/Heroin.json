@@ -1,6 +1,12 @@
 {
   "name": "Heroin",
-  "commonNames": ["Heroin", "H", "Smack", "Junk", "Brown"],
+  "commonNames": [
+    "Heroin",
+    "H",
+    "Smack",
+    "Junk",
+    "Brown"
+  ],
   "url": "https://psychonautwiki.org/wiki/Heroin",
   "isApproved": true,
   "tolerance": {
@@ -10,9 +16,16 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["opioid"],
+  "crossTolerances": [
+    "opioid"
+  ],
   "toxicities": [],
-  "categories": ["opioid", "habit-forming", "depressant", "common"],
+  "categories": [
+    "opioid",
+    "habit-forming",
+    "depressant",
+    "common"
+  ],
   "summary": "A powerful opioid derived from Morphine, with 2-4x its potency. Infamous for a high addiction potential and fatal respiratory depression in overdose, C. R. Alder Wright first synthesised this compound in 1874 trying to find a less addictive alternative to Morphine. In recent years, it has often been sold cut with the extremely potent fentanyl, causing a spike in overdose deaths.",
   "effectsSummary": "Pain-relieving, balancing, calming, anxiety-relieving and euphoric. The euphoric \"flash\" at the beginning is followed by a state of well-being and a feeling of indifference, serenity, light-heartedness and self-satisfaction.",
   "dosageRemark": "The dose depends on the individual tolerance to heroin. The lethal dose in non-tolerant people is about 60 mg.",
@@ -29,7 +42,7 @@
     "dangerous": [
       "Alcohol",
       "Benzodiazepines",
-      "DXM",
+      "Dextromethorphan",
       "GHB",
       "GBL",
       "Ketamine",
@@ -38,7 +51,12 @@
       "Grapefruit"
     ],
     "unsafe": [],
-    "uncertain": ["MAOIs", "Nitrous", "PCP", "Stimulants"]
+    "uncertain": [
+      "MAOI",
+      "Nitrous",
+      "PCP",
+      "Stimulants"
+    ]
   },
   "roas": [
     {

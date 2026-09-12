@@ -1,6 +1,11 @@
 {
   "name": "N-Ethylhexedrone",
-  "commonNames": ["Hexen", "Hex-en", "NEH", "Ethyl-Hexedrone"],
+  "commonNames": [
+    "Hexen",
+    "Hex-en",
+    "NEH",
+    "Ethyl-Hexedrone"
+  ],
   "url": "https://psychonautwiki.org/wiki/N-Ethylhexedrone",
   "isApproved": true,
   "tolerance": {
@@ -10,14 +15,35 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["norepinephrine|noradrenergic", "dopamine", "stimulant"],
+  "crossTolerances": [
+    "norepinephrine|noradrenergic",
+    "dopamine",
+    "stimulant"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
-  "categories": ["stimulant"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "categories": [
+    "stimulant"
+  ],
   "interactions": {
-    "dangerous": ["25x-NBOMe", "25x-NBOH", "Tramadol", "MAOIs"],
-    "unsafe": ["DXM", "MDMA", "Stimulants"],
-    "uncertain": ["Alcohol", "MXE", "Dissociatives"]
+    "dangerous": [
+      "25x-NBOMe",
+      "25x-NBOH",
+      "Tramadol",
+      "MAOI"
+    ],
+    "unsafe": [
+      "Dextromethorphan",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {

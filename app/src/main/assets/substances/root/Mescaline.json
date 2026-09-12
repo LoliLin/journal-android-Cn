@@ -1,6 +1,12 @@
 {
   "name": "Mescaline",
-  "commonNames": ["Mescaline", "Peyote", "San Pedro", "Cactus", "Buttons"],
+  "commonNames": [
+    "Mescaline",
+    "Peyote",
+    "San Pedro",
+    "Cactus",
+    "Buttons"
+  ],
   "url": "https://psychonautwiki.org/wiki/Mescaline",
   "isApproved": true,
   "tolerance": {
@@ -10,10 +16,17 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "common"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "common"
+  ],
   "summary": "A psychedelic of the phenethylamine family. Found in psychedelic cacti that have long been used by peoples native to the Southwestern US and Mexico, including Peyote and San Pedro cacti, among others. Can be found as cactus pulp, as an extract from cacti, or as a synthetic substance created in a lab.",
   "effectsSummary": "Before the effect sets in, nausea and/or vomiting can often occur. Hot and cold flushes as well as sweating and dizziness may also occur. These side effects usually subside after a while. The trip begins with hyperactivity and inner restlessness, followed by altered, sharpened perception and intensified colour vision. In a second phase, a more meditative concentration occurs. Users report visions and a euphoria of religious depth, the feeling of a visionary experience and the change of ego sensation as well as feelings of ego dissolution.",
   "dosageRemark": "The mescaline content can vary greatly from plant to plant.",
@@ -37,9 +50,19 @@
     "People with mental problems or illnesses, people taking neuroleptics and people with circulatory and heart problems should refrain from using mescaline."
   ],
   "interactions": {
-    "dangerous": ["ΑMT"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["5-MeO-xxT", "THC", "Amphetamines", "Cocaine", "MAOIs"]
+    "dangerous": [
+      "ΑMT"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "5-MeO-xxT",
+      "THC",
+      "Amphetamines",
+      "Cocaine",
+      "MAOI"
+    ]
   },
   "roas": [
     {

@@ -24,10 +24,18 @@
     "low toxicity",
     "potentially lethal when mixed with depressants like alcohol or opioids"
   ],
-  "categories": ["benzodiazepine", "habit-forming", "depressant"],
+  "categories": [
+    "benzodiazepine",
+    "habit-forming",
+    "depressant"
+  ],
   "summary": "A benzodiazepine drug with a medium-long duration, developed by Roche in the 1960s. Has primarily anxiolytic properties. May cause lowered inhibitions and amnesia in high doses.",
   "interactions": {
-    "dangerous": ["Depressants", "Dissociatives", "Stimulants"],
+    "dangerous": [
+      "Depressant",
+      "Dissociatives",
+      "Stimulants"
+    ],
     "unsafe": [],
     "uncertain": []
   },

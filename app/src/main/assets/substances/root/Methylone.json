@@ -1,6 +1,11 @@
 {
   "name": "Methylone",
-  "commonNames": ["Methylone", "bk-MDMA", "M1", "MDMC"],
+  "commonNames": [
+    "Methylone",
+    "bk-MDMA",
+    "M1",
+    "MDMC"
+  ],
   "url": "https://psychonautwiki.org/wiki/Methylone",
   "isApproved": true,
   "tolerance": {
@@ -10,9 +15,14 @@
     "halfToleranceInHours": 336,
     "zeroToleranceInHours": 756
   },
-  "crossTolerances": ["dopamine", "stimulant"],
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
   "categories": [
     "entactogen",
     "stimulant",
@@ -36,13 +46,21 @@
       "25x-NBOH",
       "Tramadol",
       "SNRIs",
-      "MAOIs",
+      "MAOI",
       "Serotonin releasers",
-      "SSRIs",
+      "ssri",
       "5-HTP"
     ],
-    "unsafe": ["DXM", "MDMA", "Stimulants"],
-    "uncertain": ["Alcohol", "MXE", "Dissociatives"]
+    "unsafe": [
+      "Dextromethorphan",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {

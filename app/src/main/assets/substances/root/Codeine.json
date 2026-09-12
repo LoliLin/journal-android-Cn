@@ -45,7 +45,7 @@
     "dangerous": [
       "Alcohol",
       "Benzodiazepines",
-      "DXM",
+      "Dextromethorphan",
       "GHB",
       "GBL",
       "Ketamine",
@@ -55,7 +55,7 @@
     ],
     "unsafe": [],
     "uncertain": [
-      "MAOIs",
+      "MAOI",
       "Nitrous",
       "PCP",
       "Stimulants"

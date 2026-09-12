@@ -27,14 +27,14 @@
   "summary": "A potent, stimulating psychedelic tryptamine, sometimes compared to 5-MeO-DiPT.  Has an unusually strong body component and weak visual effects. Often said to be very empathogenic.",
   "interactions": {
     "dangerous": [
-      "aMT",
-      "MAOIs",
+      "ΑMT",
+      "MAOI",
       "PCP"
     ],
     "unsafe": [
       "Amphetamines",
       "Cocaine",
-      "DXM",
+      "Dextromethorphan",
       "Tramadol"
     ],
     "uncertain": [

@@ -32,13 +32,13 @@
   ],
   "interactions": {
     "dangerous": [
-      "MAOIs",
+      "MAOI",
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol"
     ],
     "unsafe": [
-      "DXM",
+      "Dextromethorphan",
       "MDMA",
       "Stimulants"
     ],

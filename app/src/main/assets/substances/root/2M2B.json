@@ -1,6 +1,9 @@
 {
   "name": "2M2B",
-  "commonNames": ["2M2B", "2-methyl-2-butanol"],
+  "commonNames": [
+    "2M2B",
+    "2-methyl-2-butanol"
+  ],
   "url": "https://psychonautwiki.org/wiki/2M2B",
   "isApproved": true,
   "tolerance": {
@@ -10,14 +13,26 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["GABA", "depressants"],
+  "crossTolerances": [
+    "GABA",
+    "depressants"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
-  "categories": ["depressant"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "categories": [
+    "depressant"
+  ],
   "interactions": {
-    "dangerous": ["Depressants", "Dissociatives"],
+    "dangerous": [
+      "Depressant",
+      "Dissociatives"
+    ],
     "unsafe": [],
-    "uncertain": ["Stimulants"]
+    "uncertain": [
+      "Stimulants"
+    ]
   },
   "roas": [
     {

@@ -33,14 +33,14 @@
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol",
-      "MAOIs",
+      "MAOI",
       "SNRIs",
       "Serotonin releasers",
-      "SSRIs",
+      "ssri",
       "5-HTP"
     ],
     "unsafe": [
-      "DXM",
+      "Dextromethorphan",
       "MDMA",
       "Stimulants"
     ],

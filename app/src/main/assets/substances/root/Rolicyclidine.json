@@ -32,7 +32,7 @@
       "GHB",
       "GBL",
       "Tramadol",
-      "MAOIs",
+      "MAOI",
       "Opioids"
     ],
     "unsafe": [
@@ -42,8 +42,8 @@
       "Cocaine",
       "Alcohol",
       "Benzodiazepines",
-      "SSRIs",
-      "DXM"
+      "ssri",
+      "Dextromethorphan"
     ],
     "uncertain": [
       "MXE",

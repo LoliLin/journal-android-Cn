@@ -19,11 +19,11 @@
   "interactions": {
     "dangerous": [
       "Tramadol",
-      "aMT",
-      "MAOIs"
+      "ΑMT",
+      "MAOI"
     ],
     "unsafe": [
-      "DXM",
+      "Dextromethorphan",
       "PCP",
       "25x-NBOMe",
       "2C-T-x",
@@ -40,7 +40,7 @@
       "Caffeine",
       "Ketamine",
       "Methoxetamine",
-      "Psychedelics"
+      "Psychedelic"
     ]
   },
   "roas": [

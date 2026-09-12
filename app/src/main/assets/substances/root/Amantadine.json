@@ -1,6 +1,12 @@
 {
   "name": "Amantadine",
-  "commonNames": ["Amantadine", "Midantan", "Mantadix", "PK-Merz", "Symmetrel"],
+  "commonNames": [
+    "Amantadine",
+    "Midantan",
+    "Mantadix",
+    "PK-Merz",
+    "Symmetrel"
+  ],
   "url": "https://en.wikipedia.org/wiki/Amantadine",
   "isApproved": true,
   "tolerance": {
@@ -10,12 +16,19 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dissociative", "NMDA antagonists", "Memantine"],
+  "crossTolerances": [
+    "dissociative",
+    "NMDA antagonists",
+    "Memantine"
+  ],
   "addictionPotential": "may produce dependence with long-term use; withdrawal syndrome is rare but can be severe including delirium and neuroleptic malignant syndrome",
   "toxicities": [
     "Doses over 2g may be fatal. Cardiac toxicity, renal failure, peripheral edema, leukopenia, neutropenia. Accumulates in patients with renal dysfunction."
   ],
-  "categories": ["dissociative", "deliriant"],
+  "categories": [
+    "dissociative",
+    "deliriant"
+  ],
   "summary": "Amantadine is an adamantane-class dissociative and weak stimulant. It was originally developed as an antiviral for influenza and later found to have dopaminergic effects for Parkinson's disease. At higher doses it produces long-lasting dissociative and deliriant effects.",
   "effectsSummary": "Stimulation, euphoria, dissociation, derealization, depersonalization, visual distortions, delirium at high doses, increased heart rate, dry mouth, pupil dilation, nausea, headache.",
   "dosageRemark": "Very long duration (12-48 hours). High doses can cause life-threatening cardiac complications. Strongly recommended to use harm reduction practices.",
@@ -29,9 +42,18 @@
     "Avoid if you have renal dysfunction"
   ],
   "interactions": {
-    "dangerous": ["Deliriants", "Stimulants"],
-    "unsafe": ["Depressants", "Other NMDA antagonists"],
-    "uncertain": ["Anticholinergics", "Antipsychotics"]
+    "dangerous": [
+      "Deliriant",
+      "Stimulants"
+    ],
+    "unsafe": [
+      "Depressant",
+      "Other NMDA antagonists"
+    ],
+    "uncertain": [
+      "Anticholinergics",
+      "Antipsychotic"
+    ]
   },
   "roas": [
     {

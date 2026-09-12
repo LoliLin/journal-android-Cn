@@ -1,6 +1,10 @@
 {
   "name": "Dextropropoxyphene",
-  "commonNames": ["Dextropropoxyphene", "Propoxyphene", "Darvon"],
+  "commonNames": [
+    "Dextropropoxyphene",
+    "Propoxyphene",
+    "Darvon"
+  ],
   "url": "https://psychonautwiki.org/wiki/Dextropropoxyphene",
   "isApproved": true,
   "tolerance": {
@@ -10,34 +14,45 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["opioid"],
+  "crossTolerances": [
+    "opioid"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
   "toxicities": [
     "high toxicity",
     "potentially lethal when mixed with depressants like alcohol or benzodiazepines",
     "known to cause potentially fatal heart arrhythmias"
   ],
-  "categories": ["opioid", "depressant", "habit-forming"],
+  "categories": [
+    "opioid",
+    "depressant",
+    "habit-forming"
+  ],
   "summary": "An opioid analgesic that is an optical isomer of levopropoxyphene. Used to treat mild pain and often used for its antitussive properties. It has been taken off the market in Europe and US due to concerns of health issues relating to the Kidney, Liver, Heart and Respiratory Disorders. Just a bit stronger than Tramadol.",
   "interactions": {
     "dangerous": [
       "SNRIs",
       "Alcohol",
       "Benzodiazepines",
-      "DXM",
+      "Dextromethorphan",
       "GHB",
       "GBL",
       "Ketamine",
       "MXE",
       "Tramadol",
       "Grapefruit",
-      "MAOIs",
+      "MAOI",
       "Serotonin releasers",
-      "SSRIs",
+      "ssri",
       "5-HTP"
     ],
     "unsafe": [],
-    "uncertain": ["MAOIs", "Nitrous", "PCP", "Stimulants"]
+    "uncertain": [
+      "MAOI",
+      "Nitrous",
+      "PCP",
+      "Stimulants"
+    ]
   },
   "roas": [
     {

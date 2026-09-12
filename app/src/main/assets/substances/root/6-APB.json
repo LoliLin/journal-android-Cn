@@ -1,6 +1,9 @@
 {
   "name": "6-APB",
-  "commonNames": ["6-APB", "Benzofury"],
+  "commonNames": [
+    "6-APB",
+    "Benzofury"
+  ],
   "url": "https://psychonautwiki.org/wiki/6-APB",
   "isApproved": true,
   "tolerance": {
@@ -10,9 +13,14 @@
     "halfToleranceInHours": 588,
     "zeroToleranceInHours": 1176
   },
-  "crossTolerances": ["dopamine", "stimulant"],
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
   "categories": [
     "psychedelic",
     "entactogen",
@@ -26,14 +34,22 @@
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol",
-      "MAOIs",
+      "MAOI",
       "SNRIs",
       "Serotonin releasers",
-      "SSRIs",
+      "ssri",
       "5-HTP"
     ],
-    "unsafe": ["DXM", "MDMA", "Stimulants"],
-    "uncertain": ["Alcohol", "MXE", "Dissociatives"]
+    "unsafe": [
+      "Dextromethorphan",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {

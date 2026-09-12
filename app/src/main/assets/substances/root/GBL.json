@@ -1,6 +1,9 @@
 {
   "name": "GBL",
-  "commonNames": ["GBL", "gamma-Butyrolactone"],
+  "commonNames": [
+    "GBL",
+    "gamma-Butyrolactone"
+  ],
   "url": "https://psychonautwiki.org/wiki/GBL",
   "isApproved": true,
   "tolerance": {
@@ -11,7 +14,11 @@
   "crossTolerances": [],
   "addictionPotential": "highly physically and moderately to highly psychologically addictive",
   "toxicities": [],
-  "categories": ["depressant", "habit-forming", "common"],
+  "categories": [
+    "depressant",
+    "habit-forming",
+    "common"
+  ],
   "summary": "A pro-drug to GHB whose rapid absorption leads it to have a faster onset and shorter duration. Used in a similar manner to GHB, as a less-toxic alternative to alcohol. Consume slowly instead of as a \"shot\" to hugely improve safety and reduce overdose risk.",
   "effectsSummary": "The effect is extremely dose-dependent and varies greatly from individual to individual. It also depends on the purity of the substance. The spectrum of effects ranges from euphoria, relaxation, disinhibition, intensification of perception, urge to talk (babble flash), slight dizziness and drowsiness to deep (coma-like) sleep or unconsciousness.",
   "dosageRemark": "The dosage depends on the degree of dilution and is even more delicate with GBL than with GHB, as not every body converts GBL into GHB at the same rate and in the same amount. GBL is a strong acid that can corrode the mucous membranes and must be heavily diluted with a non-alcoholic drink before drinking! In case of doubt: less is more!",
@@ -32,7 +39,7 @@
     "dangerous": [
       "Ketamine",
       "MXE",
-      "DXM",
+      "Dextromethorphan",
       "PCP",
       "Alcohol",
       "Opioids",
@@ -40,7 +47,12 @@
       "Benzodiazepines"
     ],
     "unsafe": [],
-    "uncertain": ["Nitrous", "Amphetamines", "MDMA", "Cocaine"]
+    "uncertain": [
+      "Nitrous",
+      "Amphetamines",
+      "MDMA",
+      "Cocaine"
+    ]
   },
   "roas": [
     {

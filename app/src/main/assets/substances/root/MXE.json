@@ -36,7 +36,7 @@
       "Tramadol"
     ],
     "unsafe": [
-      "MAOIs"
+      "MAOI"
     ],
     "uncertain": [
       "DOx",
@@ -47,7 +47,7 @@
       "MDMA",
       "Cocaine",
       "Benzodiazepines",
-      "SSRIs"
+      "ssri"
     ]
   },
   "roas": [

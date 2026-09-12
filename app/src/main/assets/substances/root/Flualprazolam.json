@@ -1,6 +1,8 @@
 {
   "name": "Flualprazolam",
-  "commonNames": ["Flualprazolam"],
+  "commonNames": [
+    "Flualprazolam"
+  ],
   "url": "https://psychonautwiki.org/wiki/Flualprazolam",
   "isApproved": true,
   "crossTolerances": [],
@@ -23,9 +25,14 @@
     "The simultaneous consumption of depressant substances such as alcohol, ketamine, GHB/GBL, nitrous oxide, opioids and/or other benzodiazepines is dangerous as there is an increased risk of vomiting and unconsciousness. The risk of suffocation is high!"
   ],
   "interactions": {
-    "dangerous": ["Depressants", "Dissociatives"],
+    "dangerous": [
+      "Depressant",
+      "Dissociatives"
+    ],
     "unsafe": [],
-    "uncertain": ["Stimulants"]
+    "uncertain": [
+      "Stimulants"
+    ]
   },
   "roas": [
     {

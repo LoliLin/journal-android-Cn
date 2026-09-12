@@ -1,6 +1,10 @@
 {
   "name": "Ethylmorphine",
-  "commonNames": ["Ethylmorphine", "Codethyline", "Dionine"],
+  "commonNames": [
+    "Ethylmorphine",
+    "Codethyline",
+    "Dionine"
+  ],
   "url": "https://psychonautwiki.org/wiki/Ethylmorphine",
   "isApproved": true,
   "tolerance": {
@@ -10,19 +14,25 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["opioid"],
+  "crossTolerances": [
+    "opioid"
+  ],
   "addictionPotential": "very addictive with a high potential for abuse",
   "toxicities": [
     "low toxicity",
     "potentially lethal when mixed with depressants like alcohol or benzodiazepines"
   ],
-  "categories": ["opioid", "habit-forming", "depressant"],
+  "categories": [
+    "opioid",
+    "habit-forming",
+    "depressant"
+  ],
   "summary": "A medium-strength opioid analgesic and analogue of morphine. Considered less potent than morphine but more potent than codeine, and has been used in Germany for this reason. Said to have a 'ceiling' effect where no more euphoria occurs with increased dosage. Under investigation as a maintainance drug in opioid dependence therapy.",
   "interactions": {
     "dangerous": [
       "Alcohol",
       "Benzodiazepines",
-      "DXM",
+      "Dextromethorphan",
       "GHB",
       "GBL",
       "Ketamine",
@@ -31,7 +41,12 @@
       "Grapefruit"
     ],
     "unsafe": [],
-    "uncertain": ["MAOIs", "Nitrous", "PCP", "Stimulants"]
+    "uncertain": [
+      "MAOI",
+      "Nitrous",
+      "PCP",
+      "Stimulants"
+    ]
   },
   "roas": [
     {

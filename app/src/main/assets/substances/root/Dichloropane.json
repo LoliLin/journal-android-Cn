@@ -1,6 +1,9 @@
 {
   "name": "Dichloropane",
-  "commonNames": ["Dichloropane", "RTI-111"],
+  "commonNames": [
+    "Dichloropane",
+    "RTI-111"
+  ],
   "url": "https://psychonautwiki.org/wiki/Dichloropane",
   "isApproved": true,
   "tolerance": {
@@ -10,12 +13,19 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 210
   },
-  "crossTolerances": ["dopamine", "stimulant"],
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
   "toxicities": [],
-  "categories": ["stimulant"],
+  "categories": [
+    "stimulant"
+  ],
   "interactions": {
-    "dangerous": ["MAOIs"],
+    "dangerous": [
+      "MAOI"
+    ],
     "unsafe": [],
     "uncertain": []
   },

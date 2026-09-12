@@ -1,6 +1,11 @@
 {
   "name": "Clonazolam",
-  "commonNames": ["Clonazolam", "Clonitrazolam", "Clam", "C-lam"],
+  "commonNames": [
+    "Clonazolam",
+    "Clonitrazolam",
+    "Clam",
+    "C-lam"
+  ],
   "url": "https://psychonautwiki.org/wiki/Clonazolam",
   "isApproved": true,
   "tolerance": {
@@ -8,9 +13,14 @@
     "zero": "7 - 14 days",
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["benzodiazepine"],
+  "crossTolerances": [
+    "benzodiazepine"
+  ],
   "addictionPotential": "extremely physically and psychologically addictive",
-  "toxicities": ["low toxicity", "potentially lethal"],
+  "toxicities": [
+    "low toxicity",
+    "potentially lethal"
+  ],
   "categories": [
     "depressant",
     "benzodiazepine",
@@ -20,9 +30,14 @@
   ],
   "summary": "A long lasting benzodiazepine with heavily hypnotic effects. The safety profile is not well established, and there have been reports that people taking it three days in a row have had a seizure. Most comparable to Triazolam, but with a much longer half-life.",
   "interactions": {
-    "dangerous": ["Depressants", "Dissociatives"],
+    "dangerous": [
+      "Depressant",
+      "Dissociatives"
+    ],
     "unsafe": [],
-    "uncertain": ["Stimulants"]
+    "uncertain": [
+      "Stimulants"
+    ]
   },
   "roas": [
     {

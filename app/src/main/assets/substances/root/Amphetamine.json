@@ -1,6 +1,11 @@
 {
   "name": "Amphetamine",
-  "commonNames": ["Amphetamine", "Speed", "Adderall", "Pep"],
+  "commonNames": [
+    "Amphetamine",
+    "Speed",
+    "Adderall",
+    "Pep"
+  ],
   "url": "https://psychonautwiki.org/wiki/Amphetamine",
   "isApproved": true,
   "tolerance": {
@@ -10,10 +15,19 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dopamine", "stimulant"],
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
   "addictionPotential": "has high abuse potential and can cause psychological dependence with chronic use",
-  "toxicities": ["exact toxic dosage is unknown"],
-  "categories": ["stimulant", "habit-forming", "common"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "categories": [
+    "stimulant",
+    "habit-forming",
+    "common"
+  ],
   "summary": "A very popular CNS stimulant available on prescription and black markets. Recreational in high doses, producing mild euphoria and an abundance of energy. Popular in eastern europe and the US.",
   "effectsSummary": "The release of the endogenous neurotransmitters noradrenalin and dopamine produced by the use of amphetamine can cause a feeling of increased performance, an increase in self-esteem, an increase in body temperature, the suppression of tiredness, hunger and thirst, an increased willingness to take risks and a suppressed feeling of pain, and can lead to euphoria as well as an increased urge to talk (babble flash).",
   "dosageRemark": "Because of the varying purity (the amphetamine content varies from almost 0 % to almost 100 %!), dosing is difficult and the risk of overdose is high. Doses of more than 25 mg of pure amphetamine increase the negative effects. A dose of 50 mg/night should be the maximum, whether snorted or swallowed.",
@@ -32,8 +46,19 @@
     "Amphetamine pastes should always be well dried before consumption."
   ],
   "interactions": {
-    "dangerous": ["Tramadol", "aMT", "MAOIs"],
-    "unsafe": ["DXM", "PCP", "25x-NBOMe", "2C-T-x", "5-MeO-xxT", "DOx"],
+    "dangerous": [
+      "Tramadol",
+      "ΑMT",
+      "MAOI"
+    ],
+    "unsafe": [
+      "Dextromethorphan",
+      "PCP",
+      "25x-NBOMe",
+      "2C-T-x",
+      "5-MeO-xxT",
+      "DOx"
+    ],
     "uncertain": [
       "Alcohol",
       "GHB",
@@ -44,7 +69,7 @@
       "Caffeine",
       "Ketamine",
       "Methoxetamine",
-      "Psychedelics"
+      "Psychedelic"
     ]
   },
   "roas": [

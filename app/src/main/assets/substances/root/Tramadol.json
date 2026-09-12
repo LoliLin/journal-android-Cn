@@ -48,13 +48,13 @@
   "interactions": {
     "dangerous": [
       "Cocaine",
-      "DXM",
+      "Dextromethorphan",
       "GHB",
       "GBL",
-      "MAOIs",
+      "MAOI",
       "Grapefruit",
       "MDMA",
-      "aMT"
+      "ΑMT"
     ],
     "unsafe": [
       "2C-T-x"

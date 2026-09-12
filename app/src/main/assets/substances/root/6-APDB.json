@@ -1,6 +1,8 @@
 {
   "name": "6-APDB",
-  "commonNames": ["6-APDB"],
+  "commonNames": [
+    "6-APDB"
+  ],
   "url": "https://psychonautwiki.org/wiki/6-APDB",
   "isApproved": true,
   "tolerance": {
@@ -10,9 +12,14 @@
     "halfToleranceInHours": 612,
     "zeroToleranceInHours": 1800
   },
-  "crossTolerances": ["dopamine", "stimulant"],
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
   "categories": [
     "entactogen",
     "stimulant",
@@ -26,14 +33,22 @@
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol",
-      "MAOIs",
+      "MAOI",
       "SNRIs",
       "Serotonin releasers",
-      "SSRIs",
+      "ssri",
       "5-HTP"
     ],
-    "unsafe": ["DXM", "MDMA", "Stimulants"],
-    "uncertain": ["Alcohol", "MXE", "Dissociatives"]
+    "unsafe": [
+      "Dextromethorphan",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {

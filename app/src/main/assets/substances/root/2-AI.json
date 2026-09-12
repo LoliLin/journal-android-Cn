@@ -31,13 +31,13 @@
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol",
-      "MAOIs",
+      "MAOI",
       "Stimulants",
       "MDMA",
       "Cocaine"
     ],
     "unsafe": [
-      "DXM",
+      "Dextromethorphan",
       "MDMA",
       "Stimulants"
     ],

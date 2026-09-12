@@ -17,10 +17,17 @@
     "zero": "5 days",
     "zeroToleranceInHours": 120
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "non-addictive with a low abuse potential",
-  "toxicities": ["extremely low toxicity relative to dose"],
-  "categories": ["psychedelic", "common"],
+  "toxicities": [
+    "extremely low toxicity relative to dose"
+  ],
+  "categories": [
+    "psychedelic",
+    "common"
+  ],
   "summary": "LSD is a popular psychedelic with a relatively long history of use and research, and as such is known to be relatively safe despite its extremely high potency. It is the archetypical psychedelic to which all others are compared, and remains in popular usage.",
   "effectsSummary": "The effect is very much dependent on dose, set and setting. As a hallucinogen, LSD intensifies and alienates sensory perceptions and the sense of space-time. Mood and feelings can change abruptly. At higher doses, feelings of detachment from one's own body can occur. Especially in the initial phase of the trip, slight breathing difficulties, palpitations, sweating, altered blood pressure and nausea may occur.",
   "generalRisks": "The risks of LSD use are psychological and depend on the personality structure of the user. The perceptual changes during a trip can be so intense that inexperienced users in particular feel overwhelmed by the flood of impressions. This can lead to erroneous reactions, loss of orientation, panic, paranoia and badtrips/horror trips.\nThere is a risk - even with single use - that latent (hidden) mental disorders can be triggered. LSD does not lead to organ damage or genetic mutations and is not physically addictive.",
@@ -39,14 +46,19 @@
     "Blotters: Orally administering (swallowing) substances whose identity is uncertain is a potential way to eliminate most of the effects from dangerous mimics like 25x-NBx (25x-NBOMe like 25I-NBOMe, and 25x-NBOH like 25I-NBOH, etc). 25I-NBOMe is widely rumored to be orally inactive; however, oral efficacy has not been disproven and apparent overdoses have occurred via oral administration. 25I-NBOMe (and other NB's like 25x-NBOMe, 25x-NBOH) have much lower oral bioavailability than sublingual, buccal, and sublabial administration. 25I-NBOMe, to which several deaths have been attributed may commonly be mistaken for LSD by sellers and users."
   ],
   "interactions": {
-    "dangerous": ["Lithium"],
+    "dangerous": [
+      "Lithium"
+    ],
     "unsafe": [
       "Tramadol",
-      "Deliriants",
+      "Deliriant",
       "Tricyclic antidepressants",
       "Ritonavir"
     ],
-    "uncertain": ["THC", "Stimulants"]
+    "uncertain": [
+      "THC",
+      "Stimulants"
+    ]
   },
   "roas": [
     {

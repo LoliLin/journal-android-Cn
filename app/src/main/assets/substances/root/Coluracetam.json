@@ -1,6 +1,8 @@
 {
   "name": "Coluracetam",
-  "commonNames": ["Coluracetam"],
+  "commonNames": [
+    "Coluracetam"
+  ],
   "url": "https://psychonautwiki.org/wiki/Coluracetam",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +12,28 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["racetam", "nootropic"],
+  "crossTolerances": [
+    "racetam",
+    "nootropic"
+  ],
   "addictionPotential": "not addictive with a low potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
-  "categories": ["nootropic", "research-chemical"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "categories": [
+    "nootropic",
+    "research-chemical"
+  ],
   "summary": "A nootropic drug of the racetam class, originally developed to treat Alzheimer's disease, it is currently being investigated as a treatment for major depressive disorder and generalised anxiety disorder. May be a modulator of the AMPA receptor. Limited recreational value.",
   "interactions": {
-    "dangerous": ["Depressants", "Dissociatives"],
+    "dangerous": [
+      "Depressant",
+      "Dissociatives"
+    ],
     "unsafe": [],
-    "uncertain": ["Stimulants"]
+    "uncertain": [
+      "Stimulants"
+    ]
   },
   "roas": [
     {

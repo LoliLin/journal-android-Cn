@@ -23,9 +23,15 @@
     "halfToleranceInHours": 720,
     "zeroToleranceInHours": 1800
   },
-  "crossTolerances": ["dopaminergic", "serotonergic", "stimulant"],
+  "crossTolerances": [
+    "dopaminergic",
+    "serotonergic",
+    "stimulant"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
   "categories": [
     "entactogen",
     "stimulant",
@@ -55,8 +61,18 @@
     "There is a small percentage of people, who due to their race and family history, have a lower level of the liver enzyme P450 2D6. This can cause them to be more sensitive to MDMA, requiring lower doses and extra caution should be taken."
   ],
   "interactions": {
-    "dangerous": ["Tramadol", "MAOIs", "DXM"],
-    "unsafe": ["25x-NBOMe", "PCP", "Serotonin releasers", "2C-T-x", "5-HTP"],
+    "dangerous": [
+      "Tramadol",
+      "MAOI",
+      "Dextromethorphan"
+    ],
+    "unsafe": [
+      "25x-NBOMe",
+      "PCP",
+      "Serotonin releasers",
+      "2C-T-x",
+      "5-HTP"
+    ],
     "uncertain": [
       "5-MeO-xxT",
       "Alcohol",
@@ -67,7 +83,7 @@
       "MXE",
       "ΑMT",
       "Protease Inhibitors",
-      "SSRIs",
+      "ssri",
       "SNRIs"
     ]
   },

@@ -1,6 +1,11 @@
 {
   "name": "MDA",
-  "commonNames": ["MDA", "Sass", "Sally", "Tenamfetamine"],
+  "commonNames": [
+    "MDA",
+    "Sass",
+    "Sally",
+    "Tenamfetamine"
+  ],
   "url": "https://psychonautwiki.org/wiki/MDA",
   "isApproved": true,
   "tolerance": {
@@ -10,7 +15,10 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic", "stimulant"],
+  "crossTolerances": [
+    "psychedelic",
+    "stimulant"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
   "toxicities": [],
   "categories": [
@@ -41,13 +49,21 @@
       "25x-NBOH",
       "Tramadol",
       "SNRIs",
-      "MAOIs",
+      "MAOI",
       "Serotonin releasers",
-      "SSRIs",
+      "ssri",
       "5-HTP"
     ],
-    "unsafe": ["DXM", "MDMA", "Stimulants"],
-    "uncertain": ["Alcohol", "MXE", "Dissociatives"]
+    "unsafe": [
+      "Dextromethorphan",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {

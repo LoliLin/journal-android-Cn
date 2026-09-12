@@ -1,6 +1,8 @@
 {
   "name": "25B-NBOMe",
-  "commonNames": ["25B-NBOMe"],
+  "commonNames": [
+    "25B-NBOMe"
+  ],
   "url": "https://psychonautwiki.org/wiki/25B-NBOMe",
   "isApproved": true,
   "tolerance": {
@@ -10,21 +12,36 @@
     "halfToleranceInHours": 168,
     "zeroToleranceInHours": 336
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["potentially fatal at heavy dosages"],
-  "categories": ["psychedelic", "research-chemical"],
+  "toxicities": [
+    "potentially fatal at heavy dosages"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical"
+  ],
   "summary": "Psychedelic Phenethylamine, active in the lower microgram range, that is not active orally.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Amphetamines", "aMT", "Cocaine", "DXM", "Tramadol"],
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Amphetamines",
+      "ΑMT",
+      "Cocaine",
+      "Dextromethorphan",
+      "Tramadol"
+    ],
     "uncertain": [
       "2C-T-x",
-      "5-MeO-xxt",
+      "5-MeO-xxT",
       "Caffeine",
       "THC",
       "DOx",
-      "MAOIs",
+      "MAOI",
       "MDMA",
       "MXE"
     ]

@@ -33,6 +33,7 @@ from pathlib import Path
 
 from _common import (
     DEFAULT_LEDGER,
+    fold_key,
     DEFAULT_WORK_DIR,
     REPO_ASSETS_HINT,
     die,
@@ -415,16 +416,11 @@ def build_catalog_index(assets_dir: Path, root_stems: set) -> tuple[dict, dict, 
         if path.name == "_categories.json":
             continue
         data = read_json(path)
-        name_index.setdefault(fold_name(data.get("name") or path.stem), path.stem)
+        name_index.setdefault(fold_key(data.get("name") or path.stem), path.stem)
         for alias in data.get("commonNames") or []:
             if isinstance(alias, str) and alias.strip():
-                alias_index.setdefault(fold_name(alias), path.stem)
+                alias_index.setdefault(fold_key(alias), path.stem)
     return zh_index, name_index, alias_index
-
-
-def fold_name(text: str) -> str:
-    """去大小写与标点，用于反查（1,3,7-Trimethylxanthine == 137trimethylxanthine）。"""
-    return re.sub(r"[^a-z0-9]", "", text.casefold())
 
 
 def canonical_name(stem: str, front: dict, h1: str, names: list, root_stems: set,
@@ -454,13 +450,13 @@ def canonical_name(stem: str, front: dict, h1: str, names: list, root_stems: set
             continue
         if text in root_stems:
             return text, "root-stem"
-        folded = fold_name(text)
+        folded = fold_key(text)
         if folded in name_index:
             return name_index[folded], "name-fold"
     for text in candidates:
         if len(text) < 2:
             continue
-        folded = fold_name(text)
+        folded = fold_key(text)
         if folded and folded in alias_index:
             return alias_index[folded], "alias-fold"
     for text in candidates:

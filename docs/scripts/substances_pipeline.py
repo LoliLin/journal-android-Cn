@@ -12,6 +12,7 @@
     apply            把译文回填进 <lang>/                    (原 4_replaceCommonConstants.py)
     review           三语并排人工校对 GUI                    (原 5_translateFixViewer.py)
     fix-tolerances   批量修正 crossTolerances 历史变体       (原 6.fixTolencesTypes.py)
+    fix-interactions 规范化 interactions 的写法（分类键/物质名，新增）
     guide            打印完整流程（不知道该干什么时先看这个）
 
 除 `translate` 需要 requests（外加网络与 API Key）外，只依赖标准库。
@@ -37,6 +38,7 @@ from _common import (
     DEFAULT_WORK_DIR,
     REPO_ASSETS_HINT,
     die,
+    fold_key,
     read_json,
     resolve_assets_dir,
     resolve_work_dir,
@@ -108,6 +110,8 @@ Substances 多语言数据流水线 —— 推荐顺序
 
   7) 收尾（一次性历史数据修正，可重复执行，无变化时不会写文件）
        python docs/scripts/substances_pipeline.py fix-tolerances
+       python docs/scripts/substances_pipeline.py fix-interactions --dry-run
+       python docs/scripts/substances_pipeline.py fix-interactions
 
   语言之间本机转换（不走 API，常用于 zh_cn -> zh_tw）
        python docs/scripts/substances_pipeline.py convert zh_cn zh_tw --dry-run
@@ -878,7 +882,196 @@ def cmd_fix_tolerances(args: argparse.Namespace) -> int:
 
 
 # --------------------------------------------------------------------------
-# 8) convert —— 语言之间本机转换（简繁等），不调用翻译 API
+# 8) fix-interactions —— 把 interactions 的写法规范成分类键或规范物质名
+# --------------------------------------------------------------------------
+
+#: 应用侧 InteractionChecker 会用代码展开这三个名字，必须原样保留：
+#: "Substituted amphetamines" -> substitutedAmphetamines；
+#: "Serotonin releasers" -> serotoninReleasers；
+#: "Tricyclic antidepressants" -> 有意清空（否则会被 contains 匹配到 depressant）。
+INTERACTION_SPECIAL_NAMES = {
+    "Substituted amphetamines",
+    "Serotonin releasers",
+    "Tricyclic antidepressants",
+}
+
+
+def _plural_forms(text: str) -> list:
+    """单数分类键 -> 可能的复数写法（Stimulants、MAOIs、SSRIs、Benzodiazepines …）。"""
+    forms = [text]
+    if text.endswith("y"):
+        forms.append(text[:-1] + "ies")
+    forms.append(text + "s")
+    if text.endswith(("s", "x", "z", "ch", "sh")):
+        forms.append(text + "es")
+    return forms
+
+
+def collect_interaction_values(directory: Path) -> dict:
+    """统计某个目录下 interactions 里各写法的出现次数（用于统一大小写拼法）。"""
+    counts: dict = {}
+    for json_file in sorted(directory.glob("*.json")):
+        data = read_json(json_file)
+        if not isinstance(data, dict):
+            continue
+        interactions = data.get("interactions")
+        if not isinstance(interactions, dict):
+            continue
+        for values in interactions.values():
+            for value in values or []:
+                if isinstance(value, str):
+                    counts[value] = counts.get(value, 0) + 1
+    return counts
+
+
+def build_interaction_map(assets_dir: Path, observed: dict) -> tuple[dict, dict]:
+    """构造规范化映射：折叠写法 -> 规范写法；同时返回被多个条目共享的别名（有歧义）。
+
+    优先级（对齐应用侧的匹配语义）：
+      1. 目录里的物质名：应用按**精确相等**匹配，所以大小写必须与 root 一致
+         （alcohol -> Alcohol、cocaine -> Cocaine）。**类目条目也算**——目录里确实有
+         `Stimulants`、`Opioids`、`Benzodiazepines`、`Dissociatives` 这样的条目，而且它们自身
+         没有分类，改动它们会丢掉精确匹配，所以原样保留（这些名字本身就是规范写法）；
+      2. 分类键（`_categories.json`）及其复数写法：`MAOIs -> maoi`、`SSRIs -> ssri`、
+         `Depressants -> depressant`、`Psychedelics -> psychedelic`、`Barbiturates -> barbiturate`、
+         `Antipsychotics -> antipsychotic`、`Deliriants -> deliriant`。应用对分类用
+         `interaction.contains(categoryKey, ignoreCase = true)` 匹配，分类键是它的规范词表；
+      3. 只被**一个**条目登记的别名（DXM -> Dextromethorphan、DPH -> Diphenhydramine、
+         aMT -> ΑMT）；被多个条目共享的（nitrous oxide）有歧义，保持原样并记入报告；
+      4. 其余写法只统一大小写：同一折叠形式取出现最多的那种拼法
+         （amphetamines -> Amphetamines、5-meo-xxt -> 5-MeO-xxT）。
+    """
+    root = assets_dir / "root"
+    categories: set = set()
+    categories_path = root / "_categories.json"
+    if categories_path.exists():
+        categories = {
+            item["name"] for item in read_json(categories_path)
+            if isinstance(item, dict) and item.get("name")
+        }
+
+    names: dict = {}
+    alias_owners: dict = {}
+    for path in sorted(root.glob("*.json")):
+        if path.name == "_categories.json":
+            continue
+        data = read_json(path)
+        if not isinstance(data, dict):
+            continue
+        name = data.get("name") or path.stem
+        names[fold_key(name)] = name
+        for alias in data.get("commonNames") or []:
+            if isinstance(alias, str) and alias.strip():
+                alias_owners.setdefault(fold_key(alias), set()).add(name)
+
+    category_by_fold = {fold_key(category): category for category in categories}
+    mapping: dict = {}
+    # 物质名优先：类目条目（Stimulants/Opioids/MAOI/Depressant/…）自身没有分类，必须靠精确匹配；
+    # 它们的名字与分类键只差大小写时，以条目名为准（应用对分类是大小写不敏感的 contains，
+    # 所以 MAOI 这样的写法照样能命中 maoi 分类）。
+    for folded, name in names.items():
+        mapping.setdefault(folded, name)
+    # 分类键与它的复数写法都指向同一个「归属」：同名条目优先，否则用分类键本身
+    for category in sorted(categories):
+        owner = names.get(fold_key(category), category)
+        for form in _plural_forms(category):
+            mapping.setdefault(fold_key(form), owner)
+    ambiguous = {}
+    for folded, owners in alias_owners.items():
+        if folded in mapping:
+            continue
+        if len(owners) == 1:
+            mapping[folded] = next(iter(owners))
+        else:
+            ambiguous[folded] = sorted(owners)
+    # 未归类的写法只统一大小写：同一折叠形式取出现最多的拼法
+    spelling: dict = {}
+    for value, count in sorted(observed.items(), key=lambda kv: (-kv[1], kv[0])):
+        if value in INTERACTION_SPECIAL_NAMES:
+            continue
+        folded = fold_key(value)
+        if folded and folded not in mapping:
+            spelling.setdefault(folded, value)
+    for name in INTERACTION_SPECIAL_NAMES:
+        mapping.pop(fold_key(name), None)
+    return mapping, ambiguous, spelling
+
+
+def fix_interactions(file_path: Path, mapping: dict, spelling: dict, unmatched: set,
+                     dry_run: bool = False) -> int:
+    """规范化单个文件里的 interactions；返回改动条数（0 表示未改动）。"""
+    data = read_json(file_path)
+    if not isinstance(data, dict):
+        return 0
+    interactions = data.get("interactions")
+    if not isinstance(interactions, dict):
+        return 0
+    changes = 0
+    for kind, values in list(interactions.items()):
+        if not isinstance(values, list):
+            continue
+        normalized, seen = [], set()
+        for value in values:
+            if not isinstance(value, str):
+                continue
+            folded = fold_key(value)
+            target = mapping.get(folded) or spelling.get(folded, value)
+            if folded not in mapping and value not in INTERACTION_SPECIAL_NAMES:
+                # 规则 1–3 都没覆盖：目录里没有对应分类/物质（多为我们没收录的类别）
+                unmatched.add(target)
+            if target not in seen:
+                seen.add(target)
+                normalized.append(target)
+        if normalized != values:
+            interactions[kind] = normalized
+            changes += 1
+    if changes and not dry_run:
+        write_json(file_path, data)
+    return changes
+
+
+def cmd_fix_interactions(args: argparse.Namespace) -> int:
+    assets_dir = resolve_assets_dir(args.assets_dir)
+    directories = args.directories or ["root"]
+    targets = []
+    for name in directories:
+        directory = Path(name) if "/" in name or "\\" in name else assets_dir / name
+        if not directory.is_dir():
+            print(f"跳过不存在的目录：{directory}")
+            continue
+        targets.append(directory)
+
+    observed: dict = {}
+    for directory in targets:
+        for value, count in collect_interaction_values(directory).items():
+            observed[value] = observed.get(value, 0) + count
+    mapping, ambiguous, spelling = build_interaction_map(assets_dir, observed)
+    print(f"规范化映射：{len(mapping)} 条（物质名 / 分类键 / 唯一别名）"
+          f"，另 {len(spelling)} 条只统一大小写")
+    if ambiguous:
+        print(f"有歧义的别名（保持原样）：{len(ambiguous)} 个，例如 "
+              + "、".join(sorted(ambiguous)[:5]))
+
+    unmatched: set = set()
+    total = 0
+    for directory in targets:
+        for json_file in sorted(directory.glob("*.json")):
+            changes = fix_interactions(
+                json_file, mapping, spelling, unmatched, dry_run=args.dry_run
+            )
+            if changes:
+                total += changes
+                print(f"{'将修复' if args.dry_run else '已修复'}: {json_file}")
+    print(f"\n完成：{total} 个 interactions 列表{'需要' if args.dry_run else '已'}规范化")
+    if unmatched:
+        print(f"未归类、保持原样的写法（{len(unmatched)} 种）：")
+        for value in sorted(unmatched):
+            print(f"  {value}")
+    return 0
+
+
+# --------------------------------------------------------------------------
+# 9) convert —— 语言之间本机转换（简繁等），不调用翻译 API
 # --------------------------------------------------------------------------
 
 #: OpenCC 预设：语言对 -> config（s2twp/tw2sp 会同时做台湾/大陆用词本地化）
@@ -1186,6 +1379,23 @@ def build_parser() -> argparse.ArgumentParser:
     fix.add_argument("--dry-run", action="store_true", help="只报告不写文件")
     add_assets_dir(fix)
     fix.set_defaults(func=cmd_fix_tolerances)
+
+    # fix-interactions
+    fixinter = subparsers.add_parser(
+        "fix-interactions",
+        help="规范化 interactions 的写法（分类键 / 规范物质名）",
+        description=(
+            "把 'Stimulants'、'MAOIs'、'DXM'、'aMT' 这类写法规范化成 "
+            "'stimulant'、'maoi'、'Dextromethorphan'、'ΑMT'。应用侧对物质名按精确相等匹配、"
+            "对分类按 contains 匹配，写法不对就匹配不上。"
+        ),
+    )
+    fixinter.add_argument(
+        "directories", nargs="*", help="要处理的目录（默认 root；interactions 只写在 root）"
+    )
+    fixinter.add_argument("--dry-run", action="store_true", help="只报告不写文件")
+    add_assets_dir(fixinter)
+    fixinter.set_defaults(func=cmd_fix_interactions)
 
 
     # guide

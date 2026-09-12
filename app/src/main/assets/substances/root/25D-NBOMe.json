@@ -1,22 +1,37 @@
 {
   "name": "25D-NBOMe",
-  "commonNames": ["25D-NBOMe"],
+  "commonNames": [
+    "25D-NBOMe"
+  ],
   "url": "https://psychonautwiki.org/wiki/25D-NBOMe",
   "isApproved": true,
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "toxicities": [],
-  "categories": ["psychedelic", "research-chemical"],
+  "categories": [
+    "psychedelic",
+    "research-chemical"
+  ],
   "summary": "Uncommon analogue of 2C-D. Extremely potent psychedelic with stimulating qualities. Could cause dangerous vasoconstriction at high doses. May induce uncomfortable body load.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Amphetamines", "aMT", "Cocaine", "DXM", "Tramadol"],
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Amphetamines",
+      "ΑMT",
+      "Cocaine",
+      "Dextromethorphan",
+      "Tramadol"
+    ],
     "uncertain": [
       "2C-T-x",
-      "5-MeO-xxt",
+      "5-MeO-xxT",
       "Caffeine",
       "THC",
       "DOx",
-      "MAOIs",
+      "MAOI",
       "MDMA",
       "MXE"
     ]

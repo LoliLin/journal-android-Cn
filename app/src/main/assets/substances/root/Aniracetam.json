@@ -1,6 +1,8 @@
 {
   "name": "Aniracetam",
-  "commonNames": ["Aniracetam"],
+  "commonNames": [
+    "Aniracetam"
+  ],
   "url": "https://psychonautwiki.org/wiki/Aniracetam",
   "isApproved": true,
   "tolerance": {
@@ -10,13 +12,21 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["racetam", "nootropic"],
+  "crossTolerances": [
+    "racetam",
+    "nootropic"
+  ],
   "addictionPotential": "non-addictive with a low potential for abuse",
   "toxicities": [],
-  "categories": ["nootropic", "research-chemical"],
+  "categories": [
+    "nootropic",
+    "research-chemical"
+  ],
   "summary": "An anxiolytic nootropic which modulates the AMPA receptor. Significantly more potent than racetam. May have positive effects on memory and cognition. Little recreational value. Sold in Europe as a prescription drug, but not approved by the FDA in the US.",
   "interactions": {
-    "dangerous": ["MAOIs"],
+    "dangerous": [
+      "MAOI"
+    ],
     "unsafe": [],
     "uncertain": []
   },

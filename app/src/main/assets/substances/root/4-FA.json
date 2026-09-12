@@ -1,6 +1,11 @@
 {
   "name": "4-FA",
-  "commonNames": ["4-FA", "4-FMP", "PAL-303", "Flux"],
+  "commonNames": [
+    "4-FA",
+    "4-FMP",
+    "PAL-303",
+    "Flux"
+  ],
   "url": "https://psychonautwiki.org/wiki/4-FA",
   "isApproved": true,
   "tolerance": {
@@ -10,7 +15,10 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dopamine", "stimulant"],
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
   "toxicities": [],
   "categories": [
@@ -22,8 +30,19 @@
   ],
   "summary": "An empathogen commonly used in place of MDMA, having a similar duration of empathogenic effects. This drug, however, has a longer stimulant \"tail,\" during which effects are more like those of amphetamines. Not to be confused with 4-FMA, which has a similar potency, but is not particularly empathogenic.",
   "interactions": {
-    "dangerous": ["Tramadol", "aMT", "MAOIs"],
-    "unsafe": ["DXM", "PCP", "25x-NBOMe", "2C-T-x", "5-MeO-xxT", "DOx"],
+    "dangerous": [
+      "Tramadol",
+      "ΑMT",
+      "MAOI"
+    ],
+    "unsafe": [
+      "Dextromethorphan",
+      "PCP",
+      "25x-NBOMe",
+      "2C-T-x",
+      "5-MeO-xxT",
+      "DOx"
+    ],
     "uncertain": [
       "Alcohol",
       "GHB",
@@ -34,7 +53,7 @@
       "Caffeine",
       "Ketamine",
       "Methoxetamine",
-      "Psychedelics"
+      "Psychedelic"
     ]
   },
   "roas": [

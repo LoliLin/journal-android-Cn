@@ -1,6 +1,10 @@
 {
   "name": "Isopropylphenidate",
-  "commonNames": ["Isopropylphenidate", "IPH", "IPPH"],
+  "commonNames": [
+    "Isopropylphenidate",
+    "IPH",
+    "IPPH"
+  ],
   "url": "https://psychonautwiki.org/wiki/Isopropylphenidate",
   "isApproved": true,
   "tolerance": {
@@ -10,9 +14,14 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dopamine", "stimulant"],
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
   "categories": [
     "stimulant",
     "research-chemical",
@@ -21,9 +30,22 @@
   ],
   "summary": "IPPH (or incorrectly IPH) is a novel piperidine based methylphenidate analogue and NDRI stimulant, but comes with much less physical side effects.",
   "interactions": {
-    "dangerous": ["25x-NBOMe", "25x-NBOH", "Tramadol", "MAOIs"],
-    "unsafe": ["DXM", "MDMA", "Stimulants"],
-    "uncertain": ["Alcohol", "MXE", "Dissociatives"]
+    "dangerous": [
+      "25x-NBOMe",
+      "25x-NBOH",
+      "Tramadol",
+      "MAOI"
+    ],
+    "unsafe": [
+      "Dextromethorphan",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {

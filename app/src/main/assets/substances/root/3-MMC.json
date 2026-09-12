@@ -1,6 +1,9 @@
 {
   "name": "3-MMC",
-  "commonNames": ["3-MMC", "Metaphedrone"],
+  "commonNames": [
+    "3-MMC",
+    "Metaphedrone"
+  ],
   "url": "https://psychonautwiki.org/wiki/3-MMC",
   "isApproved": true,
   "tolerance": {
@@ -10,10 +13,17 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dopamine", "stimulant"],
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
   "addictionPotential": "extremely addictive with a high potential for abuse",
   "toxicities": [],
-  "categories": ["entactogen", "stimulant", "habit-forming"],
+  "categories": [
+    "entactogen",
+    "stimulant",
+    "habit-forming"
+  ],
   "summary": "A euphoric stimulant similar to mephedrone but said to lack much of the \"magic.\" Never gained the same popularity. Slightly less potent.",
   "interactions": {
     "dangerous": [
@@ -21,13 +31,21 @@
       "25x-NBOH",
       "Tramadol",
       "SNRIs",
-      "MAOIs",
+      "MAOI",
       "Serotonin releasers",
-      "SSRIs",
+      "ssri",
       "5-HTP"
     ],
-    "unsafe": ["DXM", "MDMA", "Stimulants"],
-    "uncertain": ["Alcohol", "MXE", "Dissociatives"]
+    "unsafe": [
+      "Dextromethorphan",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {

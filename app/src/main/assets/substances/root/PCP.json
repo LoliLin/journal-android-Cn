@@ -36,11 +36,11 @@
       "2C-T-x",
       "ΑMT",
       "5-MeO-xxT",
-      "DXM",
+      "Dextromethorphan",
       "GHB",
       "GBL",
       "Tramadol",
-      "MAOIs"
+      "MAOI"
     ],
     "unsafe": [
       "DOx",
@@ -49,7 +49,7 @@
       "Cocaine",
       "Alcohol",
       "Benzodiazepines",
-      "SSRIs"
+      "ssri"
     ],
     "uncertain": [
       "MXE",

@@ -1,22 +1,35 @@
 {
   "name": "Methylnaphthidate",
-  "commonNames": ["Methylnaphthidate", "HDMP-28"],
+  "commonNames": [
+    "Methylnaphthidate",
+    "HDMP-28"
+  ],
   "url": "https://psychonautwiki.org/wiki/Methylnaphthidate",
   "isApproved": true,
   "crossTolerances": [],
   "toxicities": [],
-  "categories": ["stimulant"],
+  "categories": [
+    "stimulant"
+  ],
   "interactions": {
     "dangerous": [
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol",
-      "MAOIs",
+      "MAOI",
       "MDMA",
       "Cocaine"
     ],
-    "unsafe": ["DXM", "MDMA", "Stimulants"],
-    "uncertain": ["Alcohol", "MXE", "Dissociatives"]
+    "unsafe": [
+      "Dextromethorphan",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {

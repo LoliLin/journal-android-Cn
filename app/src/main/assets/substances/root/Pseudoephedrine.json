@@ -1,6 +1,10 @@
 {
   "name": "Pseudoephedrine",
-  "commonNames": ["Pseudoephedrine", "Sudafed", "Pseudo"],
+  "commonNames": [
+    "Pseudoephedrine",
+    "Sudafed",
+    "Pseudo"
+  ],
   "url": "https://en.wikipedia.org/wiki/Pseudoephedrine",
   "isApproved": true,
   "tolerance": {
@@ -10,12 +14,20 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["Amphetamines", "stimulant", "Dopaminergic agents"],
+  "crossTolerances": [
+    "Amphetamines",
+    "stimulant",
+    "Dopaminergic agents"
+  ],
   "addictionPotential": "moderate addictive potential; can cause psychological dependence",
   "toxicities": [
     "LD50 in rats is 1,674 mg/kg orally. Overdose may cause severe hypertension, cardiac arrhythmia, stroke, and seizures."
   ],
-  "categories": ["stimulant", "decongestant", "phenethylamine"],
+  "categories": [
+    "stimulant",
+    "decongestant",
+    "phenethylamine"
+  ],
   "summary": "Pseudoephedrine is a sympathomimetic drug of the phenethylamine and amphetamine chemical classes. It is used medically as a nasal/sinus decongestant and recreationally as a mild stimulant. It is structurally related to methamphetamine and is regulated as a precursor chemical in many countries.",
   "effectsSummary": "Mild to moderate stimulation, bronchodilation, appetite suppression, increased endurance, mild euphoria, vasoconstriction, increased heart rate and blood pressure, focus enhancement, anxiety at higher doses.",
   "dosageRemark": "Therapeutic decongestant doses are 30-60mg. Stimulant effects become noticeable at 60-120mg. Higher doses increase side effects disproportionately.",
@@ -27,7 +39,10 @@
     "Stay hydrated"
   ],
   "interactions": {
-    "dangerous": ["MAOIs", "25x-NBOMe"],
+    "dangerous": [
+      "MAOI",
+      "25x-NBOMe"
+    ],
     "unsafe": [
       "MDMA",
       "Cocaine",
@@ -35,7 +50,10 @@
       "Dextromethorphan",
       "Tramadol"
     ],
-    "uncertain": ["Alcohol", "Dissociatives"]
+    "uncertain": [
+      "Alcohol",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {

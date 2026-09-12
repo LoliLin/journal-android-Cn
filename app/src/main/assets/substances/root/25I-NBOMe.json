@@ -1,6 +1,10 @@
 {
   "name": "25I-NBOMe",
-  "commonNames": ["25i-NBOMe", "25i", "Cimbi-5"],
+  "commonNames": [
+    "25i-NBOMe",
+    "25i",
+    "Cimbi-5"
+  ],
   "url": "https://psychonautwiki.org/wiki/25I-NBOMe",
   "isApproved": true,
   "tolerance": {
@@ -10,21 +14,37 @@
     "halfToleranceInHours": 168,
     "zeroToleranceInHours": 336
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["potentially fatal at heavy dosages"],
-  "categories": ["psychedelic", "research-chemical", "common"],
+  "toxicities": [
+    "potentially fatal at heavy dosages"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical",
+    "common"
+  ],
   "summary": "A relatively new and popular research chemical with psychedelic properties. Users report an uncomfortable body load with very strong visuals, though with less of a mental aspect than most psychedelics. Commonly mis-sold as LSD, since it is much cheaper to produce. Is considered quite unsafe, and has caused several deaths at 'regular' doses.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Amphetamines", "aMT", "Cocaine", "DXM", "Tramadol"],
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Amphetamines",
+      "ΑMT",
+      "Cocaine",
+      "Dextromethorphan",
+      "Tramadol"
+    ],
     "uncertain": [
       "2C-T-x",
-      "5-MeO-xxt",
+      "5-MeO-xxT",
       "Caffeine",
       "THC",
       "DOx",
-      "MAOIs",
+      "MAOI",
       "MDMA",
       "MXE"
     ]

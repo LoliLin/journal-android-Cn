@@ -1,6 +1,8 @@
 {
   "name": "4-FMA",
-  "commonNames": ["4-FMA"],
+  "commonNames": [
+    "4-FMA"
+  ],
   "url": "https://psychonautwiki.org/wiki/4-FMA",
   "isApproved": true,
   "tolerance": {
@@ -10,9 +12,14 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dopamine", "stimulant"],
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
   "categories": [
     "entactogen",
     "stimulant",
@@ -21,8 +28,19 @@
   ],
   "summary": "A stimulant with some empathogenic properties, and analogue of Methamphetamine with similar effects. Reported to be less effective than 2-FMA and related compounds. Little is known about the pharmacological effects of this compound. Not to be confused with 4-FA, which has a different effect profile, despite similar potency.",
   "interactions": {
-    "dangerous": ["Tramadol", "aMT", "MAOIs"],
-    "unsafe": ["DXM", "PCP", "25x-NBOMe", "2C-T-x", "5-MeO-xxT", "DOx"],
+    "dangerous": [
+      "Tramadol",
+      "ΑMT",
+      "MAOI"
+    ],
+    "unsafe": [
+      "Dextromethorphan",
+      "PCP",
+      "25x-NBOMe",
+      "2C-T-x",
+      "5-MeO-xxT",
+      "DOx"
+    ],
     "uncertain": [
       "Alcohol",
       "GHB",
@@ -33,7 +51,7 @@
       "Caffeine",
       "Ketamine",
       "Methoxetamine",
-      "Psychedelics"
+      "Psychedelic"
     ]
   },
   "roas": [

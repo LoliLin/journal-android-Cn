@@ -40,14 +40,14 @@
   ],
   "interactions": {
     "dangerous": [
-      "aMT",
-      "MAOIs",
+      "ΑMT",
+      "MAOI",
       "PCP"
     ],
     "unsafe": [
       "Amphetamines",
       "Cocaine",
-      "DXM",
+      "Dextromethorphan",
       "Tramadol"
     ],
     "uncertain": [

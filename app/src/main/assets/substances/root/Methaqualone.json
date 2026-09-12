@@ -35,7 +35,7 @@
   "summary": "A pharmaceutical depressant and sedative phased out due to the better safety profile of benzodiazepines, part of the Qualone group of substances. Now very rare, except in South Africa.",
   "interactions": {
     "dangerous": [
-      "Depressants",
+      "Depressant",
       "Dissociatives"
     ],
     "unsafe": [],

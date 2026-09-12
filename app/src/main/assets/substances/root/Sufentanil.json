@@ -1,31 +1,45 @@
 {
   "name": "Sufentanil",
-  "commonNames": ["Sufentanil", "Sufentanyl", "Sufenta", "Chronogesic"],
+  "commonNames": [
+    "Sufentanil",
+    "Sufentanyl",
+    "Sufenta",
+    "Chronogesic"
+  ],
   "url": "https://psychonautwiki.org/wiki/Sufentanil",
   "isApproved": true,
   "crossTolerances": [],
   "toxicities": [],
-  "categories": ["opioid", "depressant", "habit-forming"],
+  "categories": [
+    "opioid",
+    "depressant",
+    "habit-forming"
+  ],
   "summary": "An synthetic analgesic drug that is roughly between 5-10x the potency of it's parent drug, (Fentanyl); It's use is very contained to surgery and post-operative pain.",
   "interactions": {
     "dangerous": [
       "SNRIs",
       "Alcohol",
       "Benzodiazepines",
-      "DXM",
+      "Dextromethorphan",
       "GHB",
       "GBL",
       "Ketamine",
       "MXE",
       "Tramadol",
       "Grapefruit",
-      "MAOIs",
+      "MAOI",
       "Serotonin releasers",
-      "SSRIs",
+      "ssri",
       "5-HTP"
     ],
     "unsafe": [],
-    "uncertain": ["MAOIs", "Nitrous", "PCP", "Stimulants"]
+    "uncertain": [
+      "MAOI",
+      "Nitrous",
+      "PCP",
+      "Stimulants"
+    ]
   },
   "roas": [
     {

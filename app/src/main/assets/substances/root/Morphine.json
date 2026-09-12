@@ -10,9 +10,16 @@
   ],
   "url": "https://psychonautwiki.org/wiki/Morphine",
   "isApproved": true,
-  "crossTolerances": ["opioid"],
+  "crossTolerances": [
+    "opioid"
+  ],
   "toxicities": [],
-  "categories": ["opioid", "habit-forming", "common", "depressant"],
+  "categories": [
+    "opioid",
+    "habit-forming",
+    "common",
+    "depressant"
+  ],
   "summary": "The prototypical opioid drug, a powerful analgesic with euphoric qualities, found in the seeds and wax of the plant papaver somniferum (opium poppy).  First isolated by Friedrich Sertürner in 1805, named for its sleep-inducing qualities. Do not combine with other depressants, may cause dangerous respiratory depression in overdose.",
   "effectsSummary": "Due to its strong analgesic, antitussive and psychotropic properties, morphine is used to treat severe pain in emergency and palliative care.\nDue to its depressant and sedative effect, the active substance is also misused as a euphoric intoxicant. In the context of opioid agonist therapy, morphine is used as a substitute for opiate/heroin addiction.",
   "dosageRemark": "When consuming for the first time, low doses should be used, as the risk of respiratory arrest is increased.",
@@ -32,7 +39,7 @@
     "dangerous": [
       "Alcohol",
       "Benzodiazepines",
-      "DXM",
+      "Dextromethorphan",
       "GHB",
       "GBL",
       "Ketamine",
@@ -41,7 +48,12 @@
       "Grapefruit"
     ],
     "unsafe": [],
-    "uncertain": ["Stimulants", "MAOIs", "Nitrous", "PCP"]
+    "uncertain": [
+      "Stimulants",
+      "MAOI",
+      "Nitrous",
+      "PCP"
+    ]
   },
   "roas": [
     {
