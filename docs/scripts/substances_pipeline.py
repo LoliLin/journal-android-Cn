@@ -55,6 +55,7 @@ DEFAULT_TEXT_FIELDS = (
     "toxicities",
     "summary",
     "effectsSummary",
+    "metabolism",
     "dosageRemark",
     "generalRisks",
     "longtermRisks",
