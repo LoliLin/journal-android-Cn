@@ -1,14 +1,15 @@
 {
   "name": "Flurazepam",
-  "url": "https://tripsit.me/factsheets/?name=flurazepam&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Flurazepam",
   "commonNames": [
     "Flurazepam",
     "dalmane"
   ],
   "categories": [
     "benzodiazepine",
+    "depressant",
     "habit-forming",
-    "depressant"
+    "hypnotic"
   ],
   "isApproved": false,
   "metabolism": "Rapidly metabolized, producing long-lived N-desalkylflurazepam and hydroxyethyl derivatives. Urinary elimination is mainly through conjugated metabolites rather than unchanged flurazepam.",

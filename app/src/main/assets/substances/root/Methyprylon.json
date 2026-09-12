@@ -1,6 +1,6 @@
 {
   "name": "Methyprylon",
-  "url": "https://tripsit.me/factsheets/?name=methyprylon&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Methyprylon",
   "commonNames": [
     "Methyprylon",
     "noludar"
@@ -8,6 +8,7 @@
   "categories": [
     "depressant",
     "habit-forming",
+    "hypnotic",
     "tentative"
   ],
   "isApproved": false,

@@ -1,11 +1,13 @@
 {
   "name": "Adinazolam",
-  "url": "https://tripsit.me/factsheets/?name=adinazolam&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Adinazolam",
   "commonNames": [
     "Adinazolam",
     "deracyn"
   ],
   "categories": [
+    "anxiolytic",
+    "benzodiazepine",
     "depressant",
     "habit-forming",
     "tentative"

@@ -1,12 +1,13 @@
 {
   "name": "Fluoxetine",
-  "url": "https://tripsit.me/factsheets/?name=fluoxetine&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Fluoxetine",
   "commonNames": [
     "Fluoxetine",
     "prozac",
     "sarafem"
   ],
   "categories": [
+    "antidepressant",
     "ssri"
   ],
   "isApproved": false,

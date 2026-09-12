@@ -1,21 +1,30 @@
 # 精神活性物质目录扩充与代谢资料
 
-本轮资料核对日期：2026-09-08。内置目录从 291 条增加到 865 条，新增 574 条。范围同时包括精神科医用药物、研究化学品、娱乐性物质及部分植物和真菌材料。
+最近一次核对：2026-09-12。内置目录当前 **1063** 条（`root/<Name>.json`），由下面几个来源合并而成，
+范围同时包括精神科医用药物、研究化学品、娱乐性物质及部分植物和真菌材料。
 
-“所有精神活性物质”没有固定、完整且持续有效的全球清单。本轮采用可审计的来源快照，不能据此宣称已收录世界上每一种物质，也不能把目录收录视为上市许可或治疗建议。
+“所有精神活性物质”没有固定、完整且持续有效的全球清单。这里采用可审计的来源快照，不能据此宣称已收录
+世界上每一种物质，也不能把目录收录视为上市许可或治疗建议。
 
 ## 覆盖来源
 
-| 新增条目的首要来源 | 数量 | 使用方式 |
-| --- | ---: | --- |
-| WHO 协作中心 ATC 索引 | 332 | 收录单一成分；包含历史用药，不推断现行获批状态 |
-| TripSit 物质资料库 | 225 | 核对名称和别名，映射分类，排除明确不适用或资料冲突的记录 |
-| PsychonautWiki | 10 | 逐项选择具体物质，不直接导入分类页及错误元数据 |
-| EUDA | 7 | 补充部分合成阿片、大麻素及卡西酮条目 |
+| 来源 | 贡献 | 使用方式 |
+| --- | --- | --- |
+| [Wikidata](https://www.wikidata.org/)（CC0） | 名称、药品类别、条目链接 | 按名称取条目，用其记录的 ATC 码事实核对类别，url 指向 Wikidata / 维基百科条目 |
+| TripSit 物质资料库 | 名称、别名、分类 | 核对名称和别名，映射分类，排除未确立精神活性或资料冲突的记录 |
+| PsychonautWiki | 剂量、时长、耐受、交叉耐受、毒性、成瘾性、相互作用、别名 | 只补空缺，不覆盖人工整理值 |
+| EUDA | 当年新通报 NPS | 补充部分合成阿片、大麻素及卡西酮条目 |
+| FreeODwiki | 简体中文正文与中文显示名 | 直接写 `zh_cn` 覆盖层，不需要机器翻译 |
 
-ATC 核对范围为 N05、N06、N03A、N02A、N07B、A08AA、C02AC、N04AA、N04BD。覆盖抗精神病、抗抑郁、抗焦虑、催眠镇静、ADHD、抗癫痫、部分心境稳定、认知障碍、成瘾治疗及相关中枢药物。抗癫痫药没有一律标记为心境稳定剂，非兴奋剂 ADHD 用药也没有一律标记为兴奋剂。
+类别推导按公开的 ATC 分类码（4 位类目兜底、5 位亚组覆盖）做**本仓库自己的映射**，覆盖抗精神病、
+抗抑郁、抗焦虑、催眠镇静、ADHD、抗癫痫、认知障碍、成瘾治疗及相关中枢药物。抗癫痫药没有一律标记为
+心境稳定剂，非兴奋剂 ADHD 用药也没有一律标记为兴奋剂。
 
-来源入口：[ATC 索引](https://atcddd.fhi.no/atc_ddd_index/)、[TripSit 数据库](https://github.com/TripSit/drugs)、[PsychonautWiki API](https://api.psychonautwiki.org/)、[EUDA 2026 新精神活性物质资料](https://www.euda.europa.eu/publications/european-drug-report/2026/new-psychoactive-substances_en)。逐条来源、规范名称对应和排除理由见 [substance-catalog-expansion.json](substance-catalog-expansion.json)。
+来源入口：[Wikidata](https://www.wikidata.org/)、[TripSit 数据库](https://github.com/TripSit/drugs)、
+[PsychonautWiki API](https://api.psychonautwiki.org/)、
+[EUDA 2026 新精神活性物质资料](https://www.euda.europa.eu/publications/european-drug-report/2026/new-psychoactive-substances_en)。
+逐条来源、规范名称对应和排除理由见 [substance-catalog-expansion.json](substance-catalog-expansion.json)；
+许可义务与免责声明见 [data-sources-and-licenses.md](data-sources-and-licenses.md)。
 
 ## 名称与本地化
 
@@ -26,7 +35,8 @@ ATC 核对范围为 N05、N06、N03A、N02A、N07B、A08AA、C02AC、N04AA、N04
 
 ## 代谢与排泄
 
-详情页新增独立的“代谢与排泄”栏目和来源按钮。148 种物质具有本轮核实的具体描述，其中 119 条为新增记录，29 条为原有记录。
+详情页有独立的“代谢与排泄”栏目和来源按钮。**591** 个条目带代谢与排泄说明，其中 **141 条**附有
+逐条说明书来源（DailyMed / EMA / SmPC / CPIC 及原始研究），其余为「尚未核实」占位。
 
 主要依据 DailyMed 药品说明书、EMA 产品资料、厂商发布的 SmPC、CPIC 指南，以及部分研究化学品的原始研究。逐条链接、证据类型和可用的说明书日期见 [substance-metabolism-sources.json](substance-metabolism-sources.json)。
 

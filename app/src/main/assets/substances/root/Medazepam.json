@@ -1,6 +1,6 @@
 {
   "name": "Medazepam",
-  "url": "https://tripsit.me/factsheets/?name=medazepam&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Medazepam",
   "commonNames": [
     "Medazepam",
     "nobrium",
@@ -11,8 +11,9 @@
     "talis"
   ],
   "categories": [
-    "depressant",
+    "anxiolytic",
     "benzodiazepine",
+    "depressant",
     "habit-forming"
   ],
   "isApproved": false,

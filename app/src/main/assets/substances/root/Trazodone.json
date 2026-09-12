@@ -1,7 +1,8 @@
 {
   "name": "Trazodone",
-  "url": "https://tripsit.me/factsheets/?name=trazodone&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Trazodone",
   "categories": [
+    "antidepressant",
     "depressant"
   ],
   "isApproved": false,

@@ -1,6 +1,6 @@
 {
   "name": "Clorazepate",
-  "url": "https://tripsit.me/factsheets/?name=clorazepate&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Clorazepate",
   "commonNames": [
     "Clorazepate",
     "tranxene",
@@ -8,8 +8,9 @@
     "tranzene"
   ],
   "categories": [
-    "depressant",
+    "anxiolytic",
     "benzodiazepine",
+    "depressant",
     "habit-forming"
   ],
   "isApproved": false,

@@ -1,12 +1,13 @@
 {
   "name": "Escitalopram",
-  "url": "https://tripsit.me/factsheets/?name=escitalopram&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Escitalopram",
   "commonNames": [
     "Escitalopram",
     "lexapro",
     "cipralex"
   ],
   "categories": [
+    "antidepressant",
     "ssri"
   ],
   "isApproved": false,

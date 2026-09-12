@@ -1,6 +1,6 @@
 {
   "name": "Quazepam",
-  "url": "https://tripsit.me/factsheets/?name=quazepam&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Quazepam",
   "commonNames": [
     "Quazepam",
     "doral"
@@ -8,7 +8,8 @@
   "categories": [
     "benzodiazepine",
     "depressant",
-    "habit-forming"
+    "habit-forming",
+    "hypnotic"
   ],
   "isApproved": false,
   "metabolism": "Extensively metabolized in the liver to 2-oxoquazepam and N-desalkyl-2-oxoquazepam. These circulating metabolites can persist; the reviewed label does not identify one principal enzyme.",

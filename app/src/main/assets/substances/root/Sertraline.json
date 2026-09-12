@@ -1,12 +1,13 @@
 {
   "name": "Sertraline",
-  "url": "https://tripsit.me/factsheets/?name=sertraline&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Sertraline",
   "commonNames": [
     "Sertraline",
     "zoloft",
     "lustral"
   ],
   "categories": [
+    "antidepressant",
     "ssri"
   ],
   "isApproved": false,

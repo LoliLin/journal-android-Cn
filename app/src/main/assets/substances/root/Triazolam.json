@@ -1,14 +1,15 @@
 {
   "name": "Triazolam",
-  "url": "https://tripsit.me/factsheets/?name=triazolam&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Triazolam",
   "commonNames": [
     "Triazolam",
     "halcion"
   ],
   "categories": [
     "benzodiazepine",
+    "depressant",
     "habit-forming",
-    "depressant"
+    "hypnotic"
   ],
   "isApproved": false,
   "metabolism": "CYP3A hydroxylation forms 1-hydroxytriazolam and 4-hydroxytriazolam. Subsequent glucuronidation produces conjugates eliminated mainly in urine.",

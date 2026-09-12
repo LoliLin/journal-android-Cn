@@ -116,10 +116,10 @@ Substances 多语言数据流水线 —— 推荐顺序
   相关工具（独立脚本，不在此流水线内）
    * 从 PsychonautWiki 补全结构化字段（剂量/时长/耐受/相互作用/别名）：
        python docs/scripts/fetch_psychonautwiki.py --dry-run --verbose
-   * 从 ATC / TripSit / EUDA 补名称、分类与来源链接：
-       python docs/scripts/fetch_atc.py --dry-run
+   * 从 TripSit / EUDA / Wikidata 补名称、分类与来源链接：
        python docs/scripts/fetch_tripsit.py --dry-run
        python docs/scripts/fetch_euda.py --csv <浏览器下载的 CSV>
+       python docs/scripts/fetch_wikidata.py --dry-run
    * 从 FreeODwiki（中文）直接补 zh_cn 覆盖层，不需要机器翻译：
        python docs/scripts/fetch_freeodwiki.py --repo <FreeODwiki 检出目录> --dry-run
      来源与映射见 docs/substances-catalog-sources.md

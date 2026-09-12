@@ -1,12 +1,13 @@
 {
   "name": "Paroxetine",
-  "url": "https://tripsit.me/factsheets/?name=paroxetine&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Paroxetine",
   "commonNames": [
     "Paroxetine",
     "paxil",
     "seroxat"
   ],
   "categories": [
+    "antidepressant",
     "ssri"
   ],
   "isApproved": false,

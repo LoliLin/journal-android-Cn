@@ -1,6 +1,6 @@
 {
   "name": "Glutethimide",
-  "url": "https://tripsit.me/factsheets/?name=glutethimide&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Glutethimide",
   "commonNames": [
     "Glutethimide",
     "doriden",
@@ -10,7 +10,8 @@
   ],
   "categories": [
     "depressant",
-    "habit-forming"
+    "habit-forming",
+    "hypnotic"
   ],
   "isApproved": false,
   "metabolism": "Human metabolism has not yet been verified for this entry. Responsible enzymes, metabolites and elimination routes are not specified. This is a documentation gap, not evidence that the substance is not metabolized; do not infer a pathway from related compounds."

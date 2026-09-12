@@ -1,11 +1,12 @@
 {
   "name": "Oxazepam",
-  "url": "https://tripsit.me/factsheets/?name=oxazepam&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Oxazepam",
   "commonNames": [
     "Oxazepam",
     "serax"
   ],
   "categories": [
+    "anxiolytic",
     "benzodiazepine",
     "depressant",
     "habit-forming"

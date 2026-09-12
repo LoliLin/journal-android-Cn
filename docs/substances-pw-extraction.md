@@ -57,7 +57,7 @@ Olanzapine Phenazepam  Pseudoephedrine  Psilocybin  THC
 - `interactions` 87 条：PW 改了页面名（仓库 `THC`，PW 现在叫 `Cannabis`）——默认不覆盖，留在报告里。
 - `dose` 50 条：仓库有值而 API 现在返回 `null`（如 `25B-NBOMe.insufflated.heavyMin=500`）——不覆盖。
 - `crossTolerances` 3 条、`tolerance`/`addictionPotential`/`commonNames`/`url` 各 2~3 条：
-  来自非 PW 来源的人工整理（Klop233 那批 ATC/TripSit/EUDA 条目）——不覆盖。
+  来自非 PW 来源的人工整理（处方药与其它目录条目）——不覆盖。
 
 ## PW 给不了的字段
 
@@ -89,8 +89,8 @@ Olanzapine Phenazepam  Pseudoephedrine  Psilocybin  THC
    两者对解析器等价（`SubstanceParser` 一律宽容处理）。
 7. **覆盖面**：仍有 61/281 没有 `tolerance`、63 没有 `toxicity`、74 没有 `crossTolerances`。
    **缺字段 ≠ 没有该性质**，不要据此下结论。
-8. **PW 不是唯一来源**：PW 目录 373 条；仓库当前 291 条 + Klop233 扩到 865 条，
-   后者主要来自 ATC(332)/TripSit(225)/EUDA(7)，且明确没有引入 PW 的剂量分级。
+8. **PW 不是唯一来源**：PW 目录 373 条，覆盖仓库 363 个条目；其余条目（处方药、研究化学品、
+   植物与真菌）来自 Wikidata/TripSit/EUDA/FreeODwiki，见 `substances-catalog-sources.md`。
 9. **重定向匹配会串味**：本地名不在 PW 目录时，`pw_resolve_names`（MediaWiki 搜索）会把它解析到
    **相关但不同**的页面——阿托品→曼陀罗、茶苯海明→苯海拉明、艾司氯胺酮→氯胺酮、右哌甲酯→哌甲酯、
    烟草→尼古丁、鼠尾草→鼠尾草素甲、喷他左辛→右丙氧芬、氯仿→吸入剂、去羟基氟莫达非尼→
@@ -161,7 +161,8 @@ python docs/scripts/fetch_psychonautwiki.py --overwrite
 `changed` 与 `kept` 字段，以及 `repo_files_without_api_record`（仓库有、API 无记录）和
 `index_entries_missing_in_api`。
 
-其他来源（ATC / TripSit / EUDA）见 [`substances-catalog-sources.md`](substances-catalog-sources.md)；
+其他来源（Wikidata / TripSit / EUDA）见 [`substances-catalog-sources.md`](substances-catalog-sources.md)；
+许可义务与免责声明见 [`data-sources-and-licenses.md`](data-sources-and-licenses.md)；
 它们共用同一份台账 `docs/substance-catalog-expansion.json`。
 
 ### 排错

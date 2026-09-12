@@ -1,12 +1,13 @@
 {
   "name": "Bentazepam",
-  "url": "https://tripsit.me/factsheets/?name=bentazepam&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Bentazepam",
   "commonNames": [
     "Bentazepam",
     "thiadipone",
     "tiadipona"
   ],
   "categories": [
+    "anxiolytic",
     "benzodiazepine",
     "depressant",
     "habit-forming"

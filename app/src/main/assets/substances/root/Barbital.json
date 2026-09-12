@@ -1,10 +1,11 @@
 {
   "name": "Barbital",
-  "url": "https://tripsit.me/factsheets/?name=barbital&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Barbital",
   "categories": [
     "barbiturate",
+    "depressant",
     "habit-forming",
-    "depressant"
+    "hypnotic"
   ],
   "isApproved": false,
   "metabolism": "Human metabolism has not yet been verified for this entry. Responsible enzymes, metabolites and elimination routes are not specified. This is a documentation gap, not evidence that the substance is not metabolized; do not infer a pathway from related compounds."

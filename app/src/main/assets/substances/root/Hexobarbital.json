@@ -1,10 +1,11 @@
 {
   "name": "Hexobarbital",
-  "url": "https://tripsit.me/factsheets/?name=hexobarbital&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Hexobarbital",
   "categories": [
     "barbiturate",
     "depressant",
     "habit-forming",
+    "hypnotic",
     "tentative"
   ],
   "isApproved": false,

@@ -1,6 +1,6 @@
 {
   "name": "Prazepam",
-  "url": "https://tripsit.me/factsheets/?name=prazepam&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Prazepam",
   "commonNames": [
     "Prazepam",
     "centrac",
@@ -14,6 +14,7 @@
     "trepidan"
   ],
   "categories": [
+    "anxiolytic",
     "benzodiazepine",
     "depressant",
     "habit-forming"

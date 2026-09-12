@@ -1,10 +1,11 @@
 {
   "name": "Clomethiazole",
-  "url": "https://tripsit.me/factsheets/?name=clomethiazole&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Clomethiazole",
   "categories": [
     "depressant",
-    "research-chemical",
     "habit-forming",
+    "hypnotic",
+    "research-chemical",
     "tentative"
   ],
   "isApproved": false,

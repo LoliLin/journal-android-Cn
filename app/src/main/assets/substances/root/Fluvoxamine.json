@@ -1,12 +1,13 @@
 {
   "name": "Fluvoxamine",
-  "url": "https://tripsit.me/factsheets/?name=fluvoxamine&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Fluvoxamine",
   "commonNames": [
     "Fluvoxamine",
     "luvox",
     "faverin"
   ],
   "categories": [
+    "antidepressant",
     "ssri"
   ],
   "isApproved": false,

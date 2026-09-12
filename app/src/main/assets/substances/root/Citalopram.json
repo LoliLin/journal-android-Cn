@@ -1,12 +1,13 @@
 {
   "name": "Citalopram",
-  "url": "https://tripsit.me/factsheets/?name=citalopram&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Citalopram",
   "commonNames": [
     "Citalopram",
     "celexa",
     "cipramil"
   ],
   "categories": [
+    "antidepressant",
     "common",
     "ssri"
   ],

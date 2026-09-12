@@ -1,6 +1,6 @@
 {
   "name": "Estazolam",
-  "url": "https://tripsit.me/factsheets/?name=estazolam&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Estazolam",
   "commonNames": [
     "Estazolam",
     "prosom",
@@ -9,8 +9,9 @@
   ],
   "categories": [
     "benzodiazepine",
+    "depressant",
     "habit-forming",
-    "depressant"
+    "hypnotic"
   ],
   "isApproved": false,
   "metabolism": "Hepatic CYP3A hydroxylation forms 4-hydroxyestazolam, with other oxidation products also present. Metabolites have low potency and concentrations; elimination is mainly urinary as free/conjugated metabolites.",

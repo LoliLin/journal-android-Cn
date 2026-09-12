@@ -1,8 +1,9 @@
 {
   "name": "Scopolamine",
-  "url": "https://tripsit.me/factsheets/?name=scopolamine&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Scopolamine",
   "categories": [
     "deliriant",
+    "hypnotic",
     "tentative"
   ],
   "isApproved": false,

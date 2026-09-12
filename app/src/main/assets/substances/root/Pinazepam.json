@@ -1,11 +1,12 @@
 {
   "name": "Pinazepam",
-  "url": "https://tripsit.me/factsheets/?name=pinazepam&p=substance",
+  "url": "https://en.wikipedia.org/wiki/Pinazepam",
   "commonNames": [
     "Pinazepam",
     "domar"
   ],
   "categories": [
+    "anxiolytic",
     "benzodiazepine",
     "depressant",
     "habit-forming"
