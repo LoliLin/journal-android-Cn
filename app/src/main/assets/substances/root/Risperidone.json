@@ -39,9 +39,5 @@
         }
       }
     }
-  ],
-  "metabolism": "CYP2D6 hydroxylates risperidone to active 9-hydroxyrisperidone (paliperidone). Parent plus active metabolite contribute to pharmacological activity; elimination is mainly urinary.",
-  "metabolismSources": [
-    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ab6d256-6590-45be-a5df-f505987f96c3"
   ]
 }

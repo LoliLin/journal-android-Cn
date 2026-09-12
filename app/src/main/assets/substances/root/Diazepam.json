@@ -63,9 +63,5 @@
         }
       }
     }
-  ],
-  "metabolism": "CYP2C19/CYP3A4 form active nordazepam; CYP3A4 also forms active temazepam. Both can be converted to oxazepam. Glucuronidation and urinary excretion follow.",
-  "metabolismSources": [
-    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=260e2041-2bb3-482f-850e-b5d47a7bdbe6"
   ]
 }

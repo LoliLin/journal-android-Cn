@@ -110,10 +110,5 @@
         }
       }
     }
-  ],
-  "metabolism": "CYP3A4 hydroxylates alprazolam to alpha-hydroxyalprazolam and 4-hydroxyalprazolam. These metabolites have activity but usually contribute little because their concentrations are low. Elimination is mainly urinary.",
-  "metabolismSources": [
-    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
-  ],
-  "oralReleaseForms": ["IMMEDIATE_RELEASE", "EXTENDED_RELEASE"]
+  ]
 }

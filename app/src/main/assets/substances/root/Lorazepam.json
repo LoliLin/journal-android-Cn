@@ -43,9 +43,5 @@
         }
       }
     }
-  ],
-  "metabolism": "Directly conjugated at the 3-hydroxy group to lorazepam glucuronide, which has no demonstrated CNS activity in the cited animal testing, then excreted in urine.",
-  "metabolismSources": [
-    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86630bdd-13ad-4ab5-9e94-fcf2ea2113e1"
   ]
 }

@@ -133,55 +133,5 @@
     "description": "These agent are used to treat Parkinson's disease.",
     "url": "https://en.wikipedia.org/wiki/Category:Antiparkinsonian_agents",
     "color": 4293455940
-  },
-  {
-    "name": "anxiolytic",
-    "description": "Medicines classified for the treatment of anxiety.",
-    "color": 4293455940
-  },
-  {
-    "name": "adhd-medication",
-    "description": "Medicines used in the treatment of attention-deficit/hyperactivity disorder; includes stimulant and non-stimulant medicines.",
-    "color": 4293455940
-  },
-  {
-    "name": "antiepileptic",
-    "description": "Medicines classified for seizure disorders. Only some are also used as mood stabilizers.",
-    "color": 4293455940
-  },
-  {
-    "name": "antidementia",
-    "description": "Medicines classified for dementia treatment. Inclusion does not imply cognitive enhancement in healthy people.",
-    "color": 4293455940
-  },
-  {
-    "name": "addiction-treatment",
-    "description": "Medicines classified for the treatment of substance dependence or withdrawal.",
-    "color": 4293455940
-  },
-  {
-    "name": "centrally-acting-medication",
-    "description": "Other medicines acting on the central nervous system; indications and pharmacology vary.",
-    "color": 4293455940
-  },
-  {
-    "name": "ssri",
-    "description": "Selective serotonin reuptake inhibitors, a group of antidepressants.",
-    "color": 4293455940
-  },
-  {
-    "name": "maoi",
-    "description": "Medicines or compounds that inhibit monoamine oxidase. Selectivity and interactions differ between compounds.",
-    "color": 4293455940
-  },
-  {
-    "name": "botanical",
-    "description": "Plant or fungal materials associated with psychoactive constituents. Material weight is not the dose of an isolated active ingredient.",
-    "color": 4293455940
-  },
-  {
-    "name": "anesthetic",
-    "description": "Substances used for general anesthesia under professional supervision.",
-    "color": 4293455940
   }
 ]

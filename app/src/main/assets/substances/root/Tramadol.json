@@ -94,9 +94,5 @@
         "max": 90
       }
     }
-  ],
-  "metabolism": "CYP2D6 forms active O-desmethyltramadol (M1); CYP3A4 and other pathways participate in N-demethylation. Glucuronidation/sulfation also occur. Parent and metabolites are cleared mainly by the kidneys.",
-  "metabolismSources": [
-    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
   ]
 }

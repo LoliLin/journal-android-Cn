@@ -6,7 +6,7 @@
   "crossTolerances": [],
   "addictionPotential": "not addictive and has a low potential for abuse",
   "toxicities": [],
-  "categories": ["depressant", "common", "adhd-medication"],
+  "categories": ["depressant", "common"],
   "summary": "Is a medication that is used to treat high blood pressure, anxiety, withdrawal (Typically from Alcohol, Opioids, Smoking) and many other uses.",
   "interactions": {
     "dangerous": ["Depressants", "Dissociatives"],
@@ -46,10 +46,5 @@
         }
       }
     }
-  ],
-  "metabolism": "Partly metabolized in the liver; a substantial fraction is excreted unchanged in urine. The reviewed label does not identify a single dominant metabolic enzyme.",
-  "metabolismSources": [
-    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=826de1dc-378e-4c90-86d1-e33f7a4248cd"
-  ],
-  "oralReleaseForms": ["IMMEDIATE_RELEASE", "EXTENDED_RELEASE"]
+  ]
 }

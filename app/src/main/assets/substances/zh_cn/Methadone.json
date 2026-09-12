@@ -9,6 +9,5 @@
   "addictionPotential": "极易上瘾，具有很高的滥用潜力",
   "toxicities": ["中等毒性", "与酒精或苯二氮卓类等抑制剂混合使用时可能致命"],
   "summary": "一种合成阿片类药物，用作镇痛药，常用于其他阿片类药物的戒断治疗，因其半衰期较长。",
-  "localizedName": "美沙酮",
-  "metabolism": "N-去甲基化形成无活性的 EDDP。CYP2B6 等多种 CYP 酶参与，说明书列出多个参与酶而非唯一途径；随后经肾脏与粪便清除。"
+  "localizedName": "美沙酮"
 }

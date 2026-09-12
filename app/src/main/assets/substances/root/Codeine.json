@@ -82,9 +82,5 @@
         }
       }
     }
-  ],
-  "metabolism": "UGT2B7/UGT2B4 form codeine-6-glucuronide; CYP2D6 O-demethylation forms active morphine, and CYP3A4 N-demethylation forms norcodeine. Further conjugation precedes mainly urinary elimination.",
-  "metabolismSources": [
-    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40d4a71e-341e-48b3-b925-ba35b7910dff"
   ]
 }

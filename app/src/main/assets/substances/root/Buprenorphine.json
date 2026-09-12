@@ -116,9 +116,5 @@
         }
       }
     }
-  ],
-  "metabolism": "CYP3A4 N-dealkylation forms norbuprenorphine; both parent and metabolite undergo glucuronidation. Drug-related material is eliminated mainly in feces and partly in urine.",
-  "metabolismSources": [
-    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4124c4ad-ef62-4c95-8e57-0d843862ae71"
   ]
 }

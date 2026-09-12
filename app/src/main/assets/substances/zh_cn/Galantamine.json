@@ -1,6 +1,5 @@
 {
   "addictionPotential": "无成瘾性",
   "toxicities": ["极低毒性"],
-  "localizedName": "加兰他敏",
-  "metabolism": "CYP2D6 参与形成 O-去甲加兰他敏，CYP3A4 参与形成加兰他敏 N-氧化物；清除还包括葡萄糖醛酸化及部分原形药经尿排出。"
+  "localizedName": "加兰他敏"
 }

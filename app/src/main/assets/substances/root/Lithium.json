@@ -58,10 +58,5 @@
         }
       }
     }
-  ],
-  "metabolism": "Not metabolized. Lithium ions are eliminated mainly through the kidneys, with renal handling linked to sodium and water balance. There is no hepatic CYP pathway to describe.",
-  "metabolismSources": [
-    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be1346df-4a39-45e8-874b-e2a496847fd5"
-  ],
-  "oralReleaseForms": ["IMMEDIATE_RELEASE", "EXTENDED_RELEASE"]
+  ]
 }
