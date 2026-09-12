@@ -1,9 +1,10 @@
 {
   "name": "Diamorphine",
-  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N07BC06&showdescription=yes",
+  "url": "https://psychonautwiki.org/wiki/Heroin",
   "isApproved": false,
   "categories": [
-    "addiction-treatment"
+    "addiction-treatment",
+    "opioid"
   ],
   "commonNames": [
     "Heroin",

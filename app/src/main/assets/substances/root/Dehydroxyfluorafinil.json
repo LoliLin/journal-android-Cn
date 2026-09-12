@@ -1,65 +1,11 @@
 {
   "name": "Dehydroxyfluorafinil",
   "url": "https://tripsit.me/factsheets/?name=dehydroxyfluorafinil&p=substance",
-  "commonNames": [
-    "Dehydroxyfluorafinil",
-    "modafiendz"
-  ],
   "categories": [
     "stimulant",
     "nootropic",
     "research-chemical",
     "tentative"
   ],
-  "isApproved": false,
-  "tolerance": {
-    "full": "develops with prolonged and repeated use",
-    "half": "3 - 7 days",
-    "zero": "1 - 2 weeks"
-  },
-  "crossTolerances": [
-    "modafanil",
-    "analog"
-  ],
-  "addictionPotential": "mildly addictive with a low potential for abuse",
-  "toxicities": [
-    "exact toxic dosage is unknown"
-  ],
-  "interactions": {
-    "dangerous": [
-      "25x-NBOMe",
-      "25x-NBOH",
-      "Tramadol",
-      "MAOIs"
-    ],
-    "unsafe": [
-      "DXM",
-      "MDMA",
-      "Stimulants"
-    ],
-    "uncertain": [
-      "Alcohol",
-      "MXE",
-      "Dissociatives"
-    ]
-  },
-  "roas": [
-    {
-      "name": "oral",
-      "dose": {
-        "units": "mg",
-        "lightMin": 25,
-        "commonMin": 100,
-        "strongMin": 150,
-        "heavyMin": 200
-      },
-      "duration": {
-        "total": {
-          "min": 5,
-          "max": 8,
-          "units": "hours"
-        }
-      }
-    }
-  ]
+  "isApproved": false
 }

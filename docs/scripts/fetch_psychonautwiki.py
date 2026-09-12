@@ -14,6 +14,7 @@
     python docs/scripts/fetch_psychonautwiki.py                    # 只补空缺
     python docs/scripts/fetch_psychonautwiki.py --source index     # 只用索引页列出的物质
     python docs/scripts/fetch_psychonautwiki.py --overwrite        # 覆盖结构化字段
+    python docs/scripts/fetch_psychonautwiki.py --prefer           # PW 优先：url 用 PW、别名与类别取并集
 """
 
 from __future__ import annotations
@@ -104,6 +105,15 @@ PW_INDEX_SKIP = {
 
 #: API 全量遍历里不是具体物质的页面：PW 的 "Substituted X" 类目页与消歧页
 PW_NON_SUBSTANCE_RE = re.compile(r"^Substituted\b|\(disambiguation\)\s*$", re.IGNORECASE)
+
+#: 这些本地条目在 PW 没有自己的页面，`pw_resolve_names` 会把它们解析到**相关但不同**的页面
+#: （阿托品→曼陀罗、茶苯海明→苯海拉明、艾司氯胺酮→氯胺酮、右哌甲酯→哌甲酯、烟草→尼古丁、
+#:  鼠尾草→鼠尾草素甲、喷他左辛→右丙氧芬、氯仿→吸入剂、去羟基氟莫达非尼→N-甲基双氟莫达非尼、
+#:  THC→大麻）。拿那边的剂量/耐受富化会串味，所以只跳过这些「重定向来的」记录。
+PW_REDIRECT_SKIP = {
+    "Atropine", "Chloroform", "Dehydroxyfluorafinil", "Dexmethylphenidate", "Dimenhydrinate",
+    "Esketamine", "Propoxyphene", "Salvia", "THC", "Tobacco",
+}
 
 PW_GRAPHQL_CATALOG_QUERY = """
 {
@@ -473,6 +483,7 @@ def run(args: argparse.Namespace) -> int:
     }
     counts = {"updated": 0, "created": 0, "unchanged": 0}
     skipped_pages: list = []
+    skipped_redirect: list = []
     ledger_added, ledger_resolved = [], []
 
     for api_record in targets:
@@ -481,6 +492,9 @@ def run(args: argparse.Namespace) -> int:
             skipped_pages.append(api_name)
             continue
         stem = alias.get(api_name, api_name)
+        if stem in PW_REDIRECT_SKIP and matched_by.get(api_name, "").startswith("redirect"):
+            skipped_redirect.append(stem)
+            continue
         path = out_dir / f"{sanitize_filename(stem)}.json"
         existing = read_json(path) if path.exists() else None
         if existing is None:
@@ -491,10 +505,22 @@ def run(args: argparse.Namespace) -> int:
                 "source": "PsychonautWiki", "key": api_name, "url": api_record.get("url"),
             }]})
         else:
-            incoming = pw_to_asset(api_record, with_categories=False)
+            incoming = pw_to_asset(api_record, with_categories=args.prefer)
             merged, changed, kept = fill_gaps(
                 existing, incoming, FETCH_MANAGED_FIELDS, args.overwrite
             )
+            if args.prefer:
+                # PW 是应用的原生来源：有 PW 页面时 url 用 PW 的
+                if incoming.get("url") and merged.get("url") != incoming["url"]:
+                    merged["url"] = incoming["url"]
+                    changed.append("url")
+                # 别名与精神活性类别是并列事实，跨来源取并集（先到先得的整块规则会丢掉后来的）
+                for field in ("commonNames", "categories"):
+                    current = list(merged.get(field) or [])
+                    extra = [value for value in (incoming.get(field) or []) if value not in current]
+                    if extra:
+                        merged[field] = current + extra
+                        changed.append(f"{field}(+{len(extra)})")
             counts["updated" if changed else "unchanged"] += 1
         if not args.dry_run and changed:
             write_json(path, merged)
@@ -519,6 +545,7 @@ def run(args: argparse.Namespace) -> int:
     )
     report["index_entries_missing_in_api"] = index_missing
     report["skipped_pages"] = sorted(skipped_pages)
+    report["skipped_redirect_matches"] = sorted(skipped_redirect)
 
     report_path = Path(args.report) if args.report else cache_dir / "pw-report.json"
     if not args.dry_run:
@@ -534,6 +561,8 @@ def run(args: argparse.Namespace) -> int:
     print(f"\n完成：新建 {counts['created']}，更新 {counts['updated']}，无变化 {counts['unchanged']}")
     if skipped_pages:
         print(f"跳过的非物质页面（{len(skipped_pages)}）：{'、'.join(sorted(skipped_pages))}")
+    if skipped_redirect:
+        print(f"跳过的重定向匹配（{len(skipped_redirect)}）：{'、'.join(sorted(skipped_redirect))}")
     if report["repo_files_without_api_record"]:
         print(f"仓库中找不到 API 记录的：{'、'.join(report['repo_files_without_api_record'])}")
     if index_missing:
@@ -566,6 +595,9 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--delay", type=float, default=DEFAULT_FETCH_DELAY, help="请求间隔秒数（默认 0.5）")
     parser.add_argument("--limit", type=int, help="只处理前 N 条（试跑用）")
     parser.add_argument("--overwrite", action="store_true", help="允许覆盖已有的结构化字段（默认只补空缺）")
+    parser.add_argument("--prefer", action="store_true",
+                        help="PW 优先：有 PW 页面时 url 用 PW 链接，commonNames/categories 与已有值取并集"
+                             "（默认整块先到先得会丢掉后来来源的别名与类别）")
     parser.add_argument("--dry-run", action="store_true", help="不写文件、不建目录，只报告会改哪些字段")
     parser.add_argument("--refresh", action="store_true", help="忽略本地缓存重新抓取")
     parser.add_argument("--report", help="报告文件（默认 <cache-dir>/pw-report.json）")

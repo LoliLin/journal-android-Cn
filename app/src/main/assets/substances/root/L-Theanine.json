@@ -1,12 +1,15 @@
 {
   "name": "L-Theanine",
-  "url": "https://tripsit.me/factsheets/?name=l-theanine&p=substance",
+  "url": "https://psychonautwiki.org/wiki/Theanine",
   "commonNames": [
     "L-Theanine",
-    "theanine"
+    "theanine",
+    "Theanine",
+    "L-γ-glutamylethylamide and N5-ethyl-L-glutamine"
   ],
   "categories": [
-    "common"
+    "common",
+    "nootropic"
   ],
   "isApproved": false,
   "tolerance": {

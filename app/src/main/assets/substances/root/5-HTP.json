@@ -1,16 +1,25 @@
 {
   "name": "5-HTP",
-  "url": "https://tripsit.me/factsheets/?name=5-htp&p=substance",
+  "url": "https://psychonautwiki.org/wiki/5-Hydroxytryptophan",
   "commonNames": [
     "5-HTP",
     "5htp",
     "5-hydroxytryptophan",
     "tryptophan",
     "l-tryptophan",
-    "oxitriptan"
+    "oxitriptan",
+    "Oxitriptan",
+    "Cincofarm",
+    "Levothym",
+    "Levotonine",
+    "Oxyfan",
+    "Telesol",
+    "Tript-OH",
+    "Triptum"
   ],
   "categories": [
-    "common"
+    "common",
+    "nootropic"
   ],
   "isApproved": false,
   "interactions": {

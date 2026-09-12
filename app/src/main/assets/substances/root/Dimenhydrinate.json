@@ -1,70 +1,11 @@
 {
   "name": "Dimenhydrinate",
   "url": "https://tripsit.me/factsheets/?name=dramamine&p=substance",
-  "commonNames": [
-    "Dimenhydrinate",
-    "dimenhydrinate",
-    "gravol"
-  ],
   "categories": [
     "depressant",
     "deliriant",
     "common"
   ],
   "isApproved": false,
-  "tolerance": {
-    "full": "with repeated use",
-    "zero": "1 - 2 weeks"
-  },
-  "crossTolerances": [
-    "deliriant"
-  ],
-  "addictionPotential": "produces dependence with chronic use",
-  "toxicities": [
-    "fatal at amounts close to or exceeding 2 grams"
-  ],
-  "roas": [
-    {
-      "name": "oral",
-      "dose": {
-        "units": "mg",
-        "lightMin": 25,
-        "commonMin": 200,
-        "strongMin": 400,
-        "heavyMin": 700
-      },
-      "duration": {
-        "onset": {
-          "min": 30,
-          "max": 90,
-          "units": "minutes"
-        },
-        "comeup": {
-          "min": 45,
-          "max": 90,
-          "units": "minutes"
-        },
-        "peak": {
-          "min": 1,
-          "max": 4,
-          "units": "hours"
-        },
-        "offset": {
-          "min": 2,
-          "max": 6,
-          "units": "hours"
-        },
-        "total": {
-          "min": 3,
-          "max": 10,
-          "units": "hours"
-        },
-        "afterglow": {
-          "max": 24,
-          "units": "hours"
-        }
-      }
-    }
-  ],
   "metabolism": "Human metabolism has not yet been verified for this entry. Responsible enzymes, metabolites and elimination routes are not specified. This is a documentation gap, not evidence that the substance is not metabolized; do not infer a pathway from related compounds."
 }

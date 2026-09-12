@@ -5,7 +5,7 @@
     "8-CTP",
     "1,3-dimethyl-8-chloroxanthine"
   ],
-  "url": "https://en.wikipedia.org/wiki/8-Chlorotheophylline",
+  "url": "https://psychonautwiki.org/wiki/8-Chlorotheophylline",
   "isApproved": false,
   "tolerance": {
     "full": "Tolerance develops with repeated use, similar to caffeine",
@@ -14,12 +14,17 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["Xanthines", "Caffeine"],
+  "crossTolerances": [
+    "Xanthines",
+    "Caffeine"
+  ],
   "addictionPotential": "low addiction potential with minimal abuse liability",
   "toxicities": [
     "May cause cardiac issues at high doses, especially when combined with diphenhydramine in dimenhydrinate"
   ],
-  "categories": ["stimulant"],
+  "categories": [
+    "stimulant"
+  ],
   "summary": "8-Chlorotheophylline is a xanthine-class stimulant chemically and functionally similar to caffeine. It is primarily used as a wakefulness-promoting agent in dimenhydrinate to counteract the sedative effects of diphenhydramine.",
   "effectsSummary": "Stimulation, increased wakefulness, increased heart rate, potential cardiac stress at high doses, especially when combined with diphenhydramine.",
   "dosageRemark": "Usually not taken alone; found in fixed combination with diphenhydramine as dimenhydrinate. Individual dosing is not well established.",
@@ -32,8 +37,14 @@
   ],
   "interactions": {
     "dangerous": [],
-    "unsafe": ["Diphenhydramine", "MAOIs"],
-    "uncertain": ["stimulants", "Alcohol"]
+    "unsafe": [
+      "Diphenhydramine",
+      "MAOIs"
+    ],
+    "uncertain": [
+      "stimulants",
+      "Alcohol"
+    ]
   },
   "roas": []
 }
