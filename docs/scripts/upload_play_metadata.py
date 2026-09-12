@@ -34,6 +34,7 @@ DEFAULT_PACKAGE = "in.kawaiis.journal"
 LOCALES = ("en-US", "zh-CN", "zh-TW")
 METADATA_DIR = REPO_ROOT / "fastlane" / "metadata" / "android"
 API_BASE = "https://androidpublisher.googleapis.com/androidpublisher/v3/applications"
+UPLOAD_BASE = "https://androidpublisher.googleapis.com/upload/androidpublisher/v3/applications"
 
 #: 文件名 -> Play 的 imageType；其余名字是仓库素材，不上传（例如那张 10020x3440 的
 #: "Google Pixel 4 XL Presentation.png"，既不是图标也不是 feature graphic）。
@@ -125,25 +126,36 @@ def main(argv=None) -> int:
     live = {item["language"]: item
             for item in http.get(f"{base}/edits/{edit}/listings").json().get("listings", [])}
     changes = 0
-    for lang, entry in plan.items():
-        current = live.get(lang, {})
-        body = {field: value for field, value in entry["text"].items() if current.get(field) != value}
-        if body:
-            http.patch(f"{base}/edits/{edit}/listings/{lang}", json=body).raise_for_status()
-            print(f"  [{lang}] 文案更新：{sorted(body)}")
-            changes += 1
-        else:
-            print(f"  [{lang}] 文案已一致")
-        if not args.images:
-            continue
-        for image_type, files in entry["images"].items():
-            http.delete(f"{base}/edits/{edit}/listings/{lang}/{image_type}").raise_for_status()
-            for path in files:
-                http.post(f"{base}/edits/{edit}/listings/{lang}/{image_type}",
-                          headers={"Content-Type": "image/png"},
-                          data=path.read_bytes()).raise_for_status()
-            print(f"  [{lang}] {image_type}: 上传 {len(files)} 张")
-            changes += 1
+    try:
+        for lang, entry in plan.items():
+            current = live.get(lang, {})
+            body = {field: value for field, value in entry["text"].items() if current.get(field) != value}
+            if body:
+                response = http.patch(f"{base}/edits/{edit}/listings/{lang}", json=body)
+                if response.status_code in (400, 404):  # 该语言还没有 listing：创建它
+                    response = http.put(f"{base}/edits/{edit}/listings/{lang}", json=body)
+                response.raise_for_status()
+                print(f"  [{lang}] 文案更新：{sorted(body)}" + ("（新建 listing）" if lang not in live else ""))
+                changes += 1
+            else:
+                print(f"  [{lang}] 文案已一致")
+            if not args.images:
+                continue
+            for image_type, files in entry["images"].items():
+                http.delete(f"{base}/edits/{edit}/listings/{lang}/{image_type}").raise_for_status()
+                for path in files:
+                    # 图片走 Google 的上传端点（/upload/ 前缀 + uploadType=media），不是普通 REST 路径
+                    response = http.post(
+                        f"{UPLOAD_BASE}/{args.package}/edits/{edit}/listings/{lang}/{image_type}",
+                        params={"uploadType": "media"},
+                        headers={"Content-Type": "image/png"},
+                        data=path.read_bytes())
+                    response.raise_for_status()
+                print(f"  [{lang}] {image_type}: 上传 {len(files)} 张")
+                changes += 1
+    except Exception:
+        http.delete(f"{base}/edits/{edit}")  # 出错就丢弃，线上保持原样
+        raise
 
     validation = http.post(f"{base}/edits/{edit}:validate")
     if validation.status_code != 200:
