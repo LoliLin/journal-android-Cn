@@ -23,6 +23,7 @@ Play Console 的「用户和权限」里被邀请，并授予该应用的「管�
 from __future__ import annotations
 
 import argparse
+import hashlib
 import struct
 import sys
 from pathlib import Path
@@ -55,6 +56,23 @@ TEXT_FILES = (
 def png_size(path: Path) -> tuple:
     head = path.open("rb").read(24)
     return struct.unpack(">II", head[16:24])
+
+
+def file_sha1(path: Path) -> str:
+    """本地图片的 sha1，用来和线上比对（Play 的 images.list 会返回 sha1）。"""
+    return hashlib.sha1(path.read_bytes()).hexdigest()
+
+
+def content_type(path: Path) -> str:
+    """按魔数判断类型，别一律当 PNG 发。"""
+    head = path.open("rb").read(12)
+    if head[:4] == b"\x89PNG":
+        return "image/png"
+    if head[:3] == b"\xff\xd8\xff":
+        return "image/jpeg"
+    if head[:4] == b"RIFF" and head[8:12] == b"WEBP":
+        return "image/webp"
+    return "application/octet-stream"
 
 
 def local_plan() -> dict:
@@ -142,13 +160,19 @@ def main(argv=None) -> int:
             if not args.images:
                 continue
             for image_type, files in entry["images"].items():
+                live_images = http.get(f"{base}/edits/{edit}/listings/{lang}/{image_type}").json().get("images", [])
+                live_sha1 = sorted(item.get("sha1", "").lower() for item in live_images)
+                local_sha1 = sorted(file_sha1(path) for path in files)
+                if live_sha1 == local_sha1:
+                    print(f"  [{lang}] {image_type}: 与线上一致，跳过")
+                    continue
                 http.delete(f"{base}/edits/{edit}/listings/{lang}/{image_type}").raise_for_status()
                 for path in files:
                     # 图片走 Google 的上传端点（/upload/ 前缀 + uploadType=media），不是普通 REST 路径
                     response = http.post(
                         f"{UPLOAD_BASE}/{args.package}/edits/{edit}/listings/{lang}/{image_type}",
                         params={"uploadType": "media"},
-                        headers={"Content-Type": "image/png"},
+                        headers={"Content-Type": content_type(path)},
                         data=path.read_bytes())
                     response.raise_for_status()
                 print(f"  [{lang}] {image_type}: 上传 {len(files)} 张")

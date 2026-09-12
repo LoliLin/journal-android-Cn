@@ -26,6 +26,10 @@ run-name: "Release ${{ inputs.release_name }} (v${{ inputs.version_name }} / bui
 jobs:
   release:
     runs-on: ubuntu-latest
+    # 同一个仓库的发布串行执行：两次派发同时跑会抢版本号、抢 tag、抢 fastlane 的 edit
+    concurrency:
+      group: release
+      cancel-in-progress: false
     permissions:
       contents: write   # 允许修改代码、推送 Tag 和创建 Release
 
@@ -109,9 +113,11 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v4
 
-      - name: Install build tools and platform
+      - name: Install platform tools and accept licenses
         run: |
-          sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
+          # 不再钉 platforms/build-tools 的具体版本：项目 compileSdk 已经到 37，
+          # AGP 会按项目声明自动下载所需平台，钉一个过期的 34 只是白下一次。
+          sdkmanager "platform-tools"
           yes | sdkmanager --licenses
 
       - name: Grant Gradle execute permission
@@ -209,6 +215,18 @@ jobs:
             echo "::error::$AAB 不存在（需要签名配置，见仓库 Settings 里的 KEYSTORE_* secrets）。"
             exit 1
           fi
+
+          # 更新说明按 versionCode 命名（changelogs/<versionCode>.txt），缺了就静默不显示
+          VERSION_CODE="${{ github.event.inputs.version_code }}"
+          if [ ! -f "fastlane/metadata/android/en-US/changelogs/${VERSION_CODE}.txt" ]; then
+            echo "::error::fastlane/metadata/android/en-US/changelogs/${VERSION_CODE}.txt 不存在；"
+            echo "::error::Play 的「本次更新说明」是按 versionCode 找文件的，缺了不会报错但也不会显示。"
+            exit 1
+          fi
+          for lang in zh-CN zh-TW; do
+            [ -f "fastlane/metadata/android/${lang}/changelogs/${VERSION_CODE}.txt" ] \
+              || echo "::warning::${lang} 缺少 changelogs/${VERSION_CODE}.txt（该语言不会显示更新说明）"
+          done
 
           bundle install --jobs 4 --retry 3
           bundle exec fastlane deploy
