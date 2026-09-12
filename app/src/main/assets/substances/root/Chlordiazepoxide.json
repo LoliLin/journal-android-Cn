@@ -1,0 +1,13 @@
+{
+  "name": "Chlordiazepoxide",
+  "url": "https://en.wikipedia.org/wiki/Chlordiazepoxide",
+  "isApproved": false,
+  "categories": [
+    "anxiolytic",
+    "benzodiazepine"
+  ],
+  "metabolism": "Hepatic metabolism produces active desmethylchlordiazepoxide and demoxepam. Active metabolites persist and can accumulate; urinary elimination includes metabolites and a small unchanged fraction.",
+  "metabolismSources": [
+    "https://www.medicines.org.uk/emc/product/1728/smpc"
+  ]
+}

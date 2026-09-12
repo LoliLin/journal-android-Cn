@@ -1,0 +1,23 @@
+{
+  "name": "25x-NBOH",
+  "url": "https://psychonautwiki.org/wiki/25x-NBOH",
+  "isApproved": false,
+  "tolerance": {
+    "full": "almost immediately after ingestion",
+    "half": "1 week",
+    "zero": "2 weeks"
+  },
+  "crossTolerances": [
+    "psychedelic"
+  ],
+  "addictionPotential": "not habit-forming",
+  "interactions": {
+    "dangerous": [
+      "SNRIs",
+      "MAOIs",
+      "Serotonin releasers",
+      "SSRIs",
+      "5-HTP"
+    ]
+  }
+}

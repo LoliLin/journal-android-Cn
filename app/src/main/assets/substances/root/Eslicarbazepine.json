@@ -1,0 +1,12 @@
+{
+  "name": "Eslicarbazepine",
+  "url": "https://www.wikidata.org/wiki/Q27077226",
+  "isApproved": false,
+  "categories": [
+    "antiepileptic"
+  ],
+  "metabolism": "The marketed acetate prodrug is hydrolyzed during first-pass processing to active eslicarbazepine. Eslicarbazepine is then partly glucuronidated and eliminated mainly by the kidneys, both unchanged and conjugated.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2067fb77-9657-44da-b430-02e8a4efacb5"
+  ]
+}

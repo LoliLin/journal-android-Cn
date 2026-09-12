@@ -21,6 +21,7 @@ package com.isaakhanimann.journal.ui.tabs.journal.addingestion.search.suggestion
 import com.isaakhanimann.journal.data.room.experiences.entities.AdaptiveColor
 import com.isaakhanimann.journal.data.room.experiences.entities.CustomUnit
 import com.isaakhanimann.journal.data.substances.AdministrationRoute
+import com.isaakhanimann.journal.data.substances.ReleaseForm
 import com.isaakhanimann.journal.ui.tabs.search.substance.roa.toReadableString
 import java.time.Instant
 import kotlin.math.pow
@@ -41,14 +42,16 @@ data class DoseAndUnit(
     val dose: Double?,
     val unit: String,
     val isEstimate: Boolean,
-    val estimatedDoseStandardDeviation: Double?
+    val estimatedDoseStandardDeviation: Double?,
+    val releaseForm: ReleaseForm? = null
 )
 
 data class CustomUnitDose(
     val dose: Double,
     val isEstimate: Boolean,
     val estimatedDoseStandardDeviation: Double?,
-    val customUnit: CustomUnit
+    val customUnit: CustomUnit,
+    val releaseForm: ReleaseForm? = null
 ) {
     val calculatedDose: Double? get() = customUnit.dose?.let { dosePerUnit ->
         dose * dosePerUnit

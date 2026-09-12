@@ -1,6 +1,9 @@
 {
   "name": "3-MeO-PCP",
-  "commonNames": ["3-MeO-PCP", "3-MeO"],
+  "commonNames": [
+    "3-MeO-PCP",
+    "3-MeO"
+  ],
   "url": "https://psychonautwiki.org/wiki/3-MeO-PCP",
   "isApproved": true,
   "tolerance": {
@@ -10,9 +13,13 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dissociative"],
+  "crossTolerances": [
+    "dissociative"
+  ],
   "addictionPotential": "produces dependence with chronic use and has a high potential for abuse",
-  "toxicities": ["toxic dosage is unknown"],
+  "toxicities": [
+    "toxic dosage is unknown"
+  ],
   "categories": [
     "dissociative",
     "research-chemical",
@@ -21,7 +28,10 @@
   ],
   "summary": "A potent dissociative often compared to MXE but with a longer duration, much less sedating effects and causing an overall different experience. Users have reported effects as being similar to PCP. Roughtly ten times more potent than 4-MeO-PCP.",
   "interactions": {
-    "dangerous": ["Stimulants", "Depressants"],
+    "dangerous": [
+      "Stimulants",
+      "Depressants"
+    ],
     "unsafe": [],
     "uncertain": []
   },
@@ -112,6 +122,23 @@
     },
     {
       "name": "inhaled",
+      "dose": {
+        "units": "mg",
+        "lightMin": 2,
+        "commonMin": 10,
+        "strongMin": 20,
+        "heavyMin": 25
+      },
+      "duration": {
+        "total": {
+          "min": 45,
+          "max": 120,
+          "units": "minutes"
+        }
+      }
+    },
+    {
+      "name": "smoked",
       "dose": {
         "units": "mg",
         "lightMin": 2,

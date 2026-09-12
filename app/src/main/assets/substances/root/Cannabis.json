@@ -1,0 +1,20 @@
+{
+  "name": "Cannabis",
+  "url": "https://tripsit.me/factsheets/?name=cannabis&p=substance",
+  "commonNames": [
+    "Cannabis",
+    "weed",
+    "thc",
+    "marijuana",
+    "dagga",
+    "hash"
+  ],
+  "categories": [
+    "depressant",
+    "stimulant",
+    "psychedelic",
+    "habit-forming",
+    "common"
+  ],
+  "isApproved": false
+}

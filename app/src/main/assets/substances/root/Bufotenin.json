@@ -1,6 +1,9 @@
 {
   "name": "Bufotenin",
-  "commonNames": ["Bufotenin", "5-HO-DMT"],
+  "commonNames": [
+    "Bufotenin",
+    "5-HO-DMT"
+  ],
   "url": "https://psychonautwiki.org/wiki/Bufotenin",
   "isApproved": true,
   "tolerance": {
@@ -12,16 +15,69 @@
   },
   "crossTolerances": [],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic"
+  ],
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "THC",
+      "Stimulants"
+    ]
   },
   "roas": [
     {
       "name": "inhaled",
+      "dose": {
+        "units": "mg",
+        "lightMin": 2,
+        "commonMin": 20,
+        "strongMin": 40,
+        "heavyMin": 60
+      },
+      "duration": {
+        "onset": {
+          "min": 15,
+          "max": 30,
+          "units": "seconds"
+        },
+        "comeup": {
+          "min": 15,
+          "max": 30,
+          "units": "seconds"
+        },
+        "peak": {
+          "min": 1,
+          "max": 5,
+          "units": "minutes"
+        },
+        "offset": {
+          "min": 5,
+          "max": 10,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 15,
+          "max": 90,
+          "units": "minutes"
+        },
+        "afterglow": {
+          "min": 10,
+          "max": 60,
+          "units": "minutes"
+        }
+      }
+    },
+    {
+      "name": "smoked",
       "dose": {
         "units": "mg",
         "lightMin": 2,

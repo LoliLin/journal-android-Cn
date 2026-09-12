@@ -1,0 +1,140 @@
+{
+  "name": "MXE",
+  "url": "https://psychonautwiki.org/wiki/Methoxetamine",
+  "commonNames": [
+    "MXE",
+    "methoxetamine",
+    "3-meo-2'oxo-pce",
+    "Methoxetamine",
+    "Mexxy"
+  ],
+  "categories": [
+    "dissociative",
+    "research-chemical",
+    "habit-forming"
+  ],
+  "isApproved": false,
+  "tolerance": {
+    "full": "develops with prolonged and repeated use",
+    "half": "3 - 7 days",
+    "zero": "1 - 2 weeks"
+  },
+  "crossTolerances": [
+    "dissociative"
+  ],
+  "addictionPotential": "moderately addictive with a high potential for abuse",
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "interactions": {
+    "dangerous": [
+      "ΑMT",
+      "Alcohol",
+      "GHB",
+      "GBL",
+      "Opioids",
+      "Tramadol"
+    ],
+    "unsafe": [
+      "MAOIs"
+    ],
+    "uncertain": [
+      "DOx",
+      "25x-NBOMe",
+      "2C-T-x",
+      "PCP",
+      "Amphetamines",
+      "MDMA",
+      "Cocaine",
+      "Benzodiazepines",
+      "SSRIs"
+    ]
+  },
+  "roas": [
+    {
+      "name": "insufflated",
+      "dose": {
+        "units": "mg",
+        "lightMin": 5,
+        "commonMin": 20,
+        "strongMin": 35,
+        "heavyMin": 60
+      },
+      "duration": {
+        "onset": {
+          "min": 5,
+          "max": 20,
+          "units": "minutes"
+        },
+        "comeup": {
+          "min": 30,
+          "max": 75,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 1,
+          "max": 2,
+          "units": "hours"
+        },
+        "offset": {
+          "min": 1,
+          "max": 1.5,
+          "units": "hours"
+        },
+        "total": {
+          "min": 3,
+          "max": 5,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 4,
+          "max": 48,
+          "units": "hours"
+        }
+      }
+    },
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg",
+        "lightMin": 5,
+        "commonMin": 25,
+        "strongMin": 45,
+        "heavyMin": 70
+      },
+      "duration": {
+        "onset": {
+          "min": 15,
+          "max": 30,
+          "units": "minutes"
+        },
+        "comeup": {
+          "min": 45,
+          "max": 90,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 1.5,
+          "max": 2.5,
+          "units": "hours"
+        },
+        "offset": {
+          "min": 1,
+          "max": 1.5,
+          "units": "hours"
+        },
+        "total": {
+          "min": 4,
+          "max": 6,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 6,
+          "max": 48,
+          "units": "hours"
+        }
+      }
+    }
+  ],
+  "metabolism": "Human metabolism has not yet been verified for this entry. Responsible enzymes, metabolites and elimination routes are not specified. This is a documentation gap, not evidence that the substance is not metabolized; do not infer a pathway from related compounds."
+}

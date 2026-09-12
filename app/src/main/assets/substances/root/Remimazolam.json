@@ -1,0 +1,13 @@
+{
+  "name": "Remimazolam",
+  "url": "https://en.wikipedia.org/wiki/Remimazolam",
+  "isApproved": false,
+  "categories": [
+    "hypnotic",
+    "benzodiazepine"
+  ],
+  "metabolism": "Ester hydrolysis forms inactive CNS7054, followed by additional hydroxylation and glucuronidation. The inactive metabolite's exposure increases with impaired renal function.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e1838f2-b999-41a7-a761-d94f09aa531f"
+  ]
+}

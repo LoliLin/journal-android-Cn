@@ -1,0 +1,16 @@
+{
+  "name": "Guanfacine",
+  "url": "https://en.wikipedia.org/wiki/Guanfacine",
+  "isApproved": false,
+  "categories": [
+    "centrally-acting-medication"
+  ],
+  "metabolism": "Primarily metabolized by CYP3A4. Clearance includes both hepatic processing and renal elimination; CYP3A4 inhibitors or inducers can alter exposure.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8348e63a-5cbc-489e-b7bf-046c65ba2e8e"
+  ],
+  "oralReleaseForms": [
+    "IMMEDIATE_RELEASE",
+    "EXTENDED_RELEASE"
+  ]
+}

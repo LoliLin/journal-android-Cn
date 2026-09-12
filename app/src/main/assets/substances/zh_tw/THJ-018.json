@@ -7,6 +7,8 @@
     "zeroToleranceInHours": 252
   },
   "addictionPotential": "中度成瘾性且具有高度濫用潛力",
-  "toxicities": ["確切的中毒劑量未知"],
+  "toxicities": [
+    "確切的中毒劑量未知"
+  ],
   "localizedName": "THJ-018"
 }

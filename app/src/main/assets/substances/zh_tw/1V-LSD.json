@@ -7,6 +7,8 @@
     "zeroToleranceInHours": 336
   },
   "addictionPotential": "非成癮性且濫用潛力低",
-  "toxicities": ["相對於劑量而言毒性極低"],
+  "toxicities": [
+    "相對於劑量而言毒性極低"
+  ],
   "localizedName": "1V-LSD"
 }

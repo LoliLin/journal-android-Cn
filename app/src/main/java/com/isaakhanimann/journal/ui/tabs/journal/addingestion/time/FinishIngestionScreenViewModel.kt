@@ -18,13 +18,13 @@
 
 package com.isaakhanimann.journal.ui.tabs.journal.addingestion.time
 
+import android.content.Context
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import android.content.Context
 import com.isaakhanimann.journal.data.room.experiences.ExperienceRepository
 import com.isaakhanimann.journal.data.room.experiences.entities.AdaptiveColor
 import com.isaakhanimann.journal.data.room.experiences.entities.Experience
@@ -32,12 +32,14 @@ import com.isaakhanimann.journal.data.room.experiences.entities.Ingestion
 import com.isaakhanimann.journal.data.room.experiences.entities.SubstanceCompanion
 import com.isaakhanimann.journal.data.room.experiences.relations.ExperienceWithIngestions
 import com.isaakhanimann.journal.data.substances.AdministrationRoute
+import com.isaakhanimann.journal.data.substances.ReleaseForm
 import com.isaakhanimann.journal.data.substances.repositories.SubstanceRepository
 import com.isaakhanimann.journal.ui.main.navigation.routers.ADMINISTRATION_ROUTE_KEY
 import com.isaakhanimann.journal.ui.main.navigation.routers.CUSTOM_UNIT_ID_KEY
 import com.isaakhanimann.journal.ui.main.navigation.routers.DOSE_KEY
 import com.isaakhanimann.journal.ui.main.navigation.routers.ESTIMATED_DOSE_STANDARD_DEVIATION_KEY
 import com.isaakhanimann.journal.ui.main.navigation.routers.IS_ESTIMATE_KEY
+import com.isaakhanimann.journal.ui.main.navigation.routers.RELEASE_FORM_KEY
 import com.isaakhanimann.journal.ui.main.navigation.routers.SUBSTANCE_NAME_KEY
 import com.isaakhanimann.journal.ui.main.navigation.routers.UNITS_KEY
 import com.isaakhanimann.journal.ui.notifications.Notifications
@@ -47,6 +49,12 @@ import com.isaakhanimann.journal.ui.utils.getLocalDateTime
 import com.isaakhanimann.journal.ui.utils.getLongDateText
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
+import java.time.Duration
+import java.time.Instant
+import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.temporal.ChronoUnit
+import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -58,17 +66,12 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.time.Duration
-import java.time.Instant
-import java.time.LocalDateTime
-import java.time.ZoneId
-import java.time.temporal.ChronoUnit
-import javax.inject.Inject
 
 const val hourLimitToSeparateIngestions: Long = 12
 
 enum class IngestionTimePickerOption {
-    POINT_IN_TIME, TIME_RANGE
+    POINT_IN_TIME,
+    TIME_RANGE
 }
 
 @HiltViewModel
@@ -77,21 +80,32 @@ class FinishIngestionScreenViewModel @Inject constructor(
     private val userPreferences: UserPreferences,
     val substanceRepo: SubstanceRepository,
     @ApplicationContext private val appContext: Context,
-    state: SavedStateHandle
+    private val state: SavedStateHandle
 ) : ViewModel() {
     var substanceName by mutableStateOf("")
+    var releaseForm by mutableStateOf(ReleaseForm.fromName(state.get<String>(RELEASE_FORM_KEY)))
+        private set
+    val availableReleaseForms: List<ReleaseForm>
+        get() = substanceRepo.getSubstance(
+            substanceName
+        )?.getReleaseForms(administrationRoute).orEmpty()
+
+    fun changeReleaseForm(form: ReleaseForm?) {
+        releaseForm = form
+        state[RELEASE_FORM_KEY] = form?.name
+    }
     val localDateTimeStartFlow = MutableStateFlow(LocalDateTime.now())
     val localDateTimeEndFlow = MutableStateFlow(LocalDateTime.now().plusMinutes(30))
     val ingestionTimePickerOptionFlow = MutableStateFlow(IngestionTimePickerOption.POINT_IN_TIME)
     val experiencesInRangeFlow = MutableStateFlow<List<ExperienceWithIngestions>>(emptyList())
     val selectedExperienceFlow = MutableStateFlow<ExperienceWithIngestions?>(null)
+
     // Once the user picks an experience (or "new experience") from the dropdown, time changes
     // must not silently re-select a different experience.
     private var hasMadeExplicitExperienceSelection = false
     var enteredTitle by mutableStateOf(LocalDateTime.now().getLongDateText())
     val isEnteredTitleOk get() = enteredTitle.isNotEmpty()
     var consumerName by mutableStateOf("")
-
 
     fun onChangeTimePickerOption(ingestionTimePickerOption: IngestionTimePickerOption) =
         viewModelScope.launch {
@@ -209,14 +223,21 @@ class FinishIngestionScreenViewModel @Inject constructor(
             val clonedIngestionTime = userPreferences.clonedIngestionTimeFlow.first()
             if (clonedIngestionTime != null) {
                 localDateTimeStartFlow.emit(clonedIngestionTime.getLocalDateTime())
-                localDateTimeEndFlow.emit(clonedIngestionTime.plus(30, ChronoUnit.MINUTES).getLocalDateTime())
+                localDateTimeEndFlow.emit(
+                    clonedIngestionTime.plus(30, ChronoUnit.MINUTES).getLocalDateTime()
+                )
                 updateTitleBasedOnTime(clonedIngestionTime)
             } else if (lastIngestionTimeOfExperience != null) {
                 val wasLastIngestionOfExperienceMoreThan20HoursAgo =
                     lastIngestionTimeOfExperience < Instant.now().minus(20, ChronoUnit.HOURS)
                 if (wasLastIngestionOfExperienceMoreThan20HoursAgo) {
                     localDateTimeStartFlow.emit(lastIngestionTimeOfExperience.getLocalDateTime())
-                    localDateTimeEndFlow.emit(lastIngestionTimeOfExperience.plus(30, ChronoUnit.MINUTES).getLocalDateTime())
+                    localDateTimeEndFlow.emit(
+                        lastIngestionTimeOfExperience.plus(
+                            30,
+                            ChronoUnit.MINUTES
+                        ).getLocalDateTime()
+                    )
                     updateTitleBasedOnTime(lastIngestionTimeOfExperience)
                 }
             }
@@ -302,10 +323,7 @@ class FinishIngestionScreenViewModel @Inject constructor(
         }
     }
 
-    fun createSaveAndDismissAfter(
-        dismiss: () -> Unit,
-        lifecycleView: android.view.View? = null
-    ) {
+    fun createSaveAndDismissAfter(dismiss: () -> Unit, lifecycleView: android.view.View? = null) {
         viewModelScope.launch {
             createAndSaveIngestion(lifecycleView)
             withContext(Dispatchers.Main) {
@@ -372,7 +390,7 @@ class FinishIngestionScreenViewModel @Inject constructor(
             // Longest plausible effect window for this substance+route: feeds the
             // screen-on refresh cadence (total-duration / 30).
             val totalDuration = substanceRepo.getSubstance(substanceName)
-                ?.getRoa(administrationRoute)?.roaDuration?.total
+                ?.getRoa(administrationRoute, releaseForm)?.roaDuration?.total
                 ?.interpolateAtValueInSeconds(1f)?.let { java.time.Duration.ofSeconds(it.toLong()) }
             Notifications.showEffectNotification(
                 context = appContext,
@@ -383,7 +401,12 @@ class FinishIngestionScreenViewModel @Inject constructor(
             )
             if (timelineBitmap != null) {
                 com.isaakhanimann.journal.ui.notifications.EffectNotificationRefresher
-                    .onNotificationRendered(savedExperienceId, ingestionTime, substanceName, totalDuration)
+                    .onNotificationRendered(
+                        savedExperienceId,
+                        ingestionTime,
+                        substanceName,
+                        totalDuration
+                    )
             }
         }
     }
@@ -411,7 +434,8 @@ class FinishIngestionScreenViewModel @Inject constructor(
             consumerName = consumerName.ifBlank {
                 null
             },
-            customUnitId = customUnitId
+            customUnitId = customUnitId,
+            releaseForm = releaseForm.takeIf { administrationRoute == AdministrationRoute.ORAL }
         )
     }
 }

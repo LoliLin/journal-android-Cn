@@ -7,6 +7,8 @@
     "zeroToleranceInHours": 336
   },
   "addictionPotential": "無成癮性",
-  "toxicities": ["毒性劑量未知"],
+  "toxicities": [
+    "毒性劑量未知"
+  ],
   "localizedName": "PARGY-LAD"
 }

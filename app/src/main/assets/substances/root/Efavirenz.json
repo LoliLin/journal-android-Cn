@@ -1,6 +1,9 @@
 {
   "name": "Efavirenz",
-  "commonNames": ["Efavirenz", "Sustiva"],
+  "commonNames": [
+    "Efavirenz",
+    "Sustiva"
+  ],
   "url": "https://psychonautwiki.org/wiki/Efavirenz",
   "isApproved": true,
   "crossTolerances": [],
@@ -9,9 +12,17 @@
     "low toxicity",
     "may cause liver toxicity at high doses or after chronic use"
   ],
-  "categories": ["psychedelic"],
+  "categories": [
+    "psychedelic"
+  ],
   "interactions": {
-    "dangerous": ["SNRIs", "MAOIs", "Serotonin releasers", "SSRIs", "5-HTP"],
+    "dangerous": [
+      "SNRIs",
+      "MAOIs",
+      "Serotonin releasers",
+      "SSRIs",
+      "5-HTP"
+    ],
     "unsafe": [],
     "uncertain": []
   },
@@ -22,6 +33,30 @@
         "units": "mg",
         "commonMin": 600,
         "strongMin": 1800
+      },
+      "duration": {
+        "onset": {
+          "min": 1,
+          "max": 5,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 1,
+          "max": 2,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 6,
+          "max": 12,
+          "units": "hours"
+        }
+      }
+    },
+    {
+      "name": "smoked",
+      "dose": {
+        "units": "mg",
+        "commonMin": 600
       },
       "duration": {
         "onset": {

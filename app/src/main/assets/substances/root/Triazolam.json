@@ -1,0 +1,19 @@
+{
+  "name": "Triazolam",
+  "url": "https://en.wikipedia.org/wiki/Triazolam",
+  "commonNames": [
+    "Triazolam",
+    "halcion"
+  ],
+  "categories": [
+    "benzodiazepine",
+    "depressant",
+    "habit-forming",
+    "hypnotic"
+  ],
+  "isApproved": false,
+  "metabolism": "CYP3A hydroxylation forms 1-hydroxytriazolam and 4-hydroxytriazolam. Subsequent glucuronidation produces conjugates eliminated mainly in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5add318e-11b9-42f8-b052-0d8cebb32fcf"
+  ]
+}

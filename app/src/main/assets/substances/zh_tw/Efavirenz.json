@@ -1,5 +1,8 @@
 {
   "addictionPotential": "無已知成癮性",
-  "toxicities": ["低毒性", "高劑量或長期使用可能導致肝毒性"],
+  "toxicities": [
+    "低毒性",
+    "高劑量或長期使用可能導致肝毒性"
+  ],
   "localizedName": "依法韋侖"
 }

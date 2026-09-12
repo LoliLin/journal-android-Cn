@@ -44,11 +44,13 @@ app/src/main/assets/substances/
   - `url`
   - 结构字段（如 `tolerance`、`interactions`、`roas` 等）
 - 可包含英文文本字段，作为默认展示内容。
+- 可选结构字段 `oralReleaseForms` 留在 `root`，选项通过 UI 语言文件翻译，参见 `extended-release-formulations.md`。
 
 ### <current_Lang>（文本覆盖层）
 - 仅放需要翻译的文本字段，例如：
   - `summary`
   - `effectsSummary`
+  - `metabolism`（代谢与排泄说明；来源 URL 数组 `metabolismSources` 留在 `root`）
   - `dosageRemark`
   - `generalRisks`
   - `longtermRisks`

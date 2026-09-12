@@ -1,0 +1,12 @@
+{
+  "name": "Stiripentol",
+  "url": "https://en.wikipedia.org/wiki/Stiripentol",
+  "isApproved": false,
+  "categories": [
+    "antiepileptic"
+  ],
+  "metabolism": "In-vitro evidence identifies hepatic CYP1A2, CYP2C19 and CYP3A4 as major participating enzymes. The reviewed label does not provide a complete metabolite-by-metabolite elimination map.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=58304ba8-9779-4658-811e-94ffe08c3f16"
+  ]
+}

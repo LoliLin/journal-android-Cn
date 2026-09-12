@@ -1,0 +1,12 @@
+{
+  "name": "Rufinamide",
+  "url": "https://en.wikipedia.org/wiki/Rufinamide",
+  "isApproved": false,
+  "categories": [
+    "antiepileptic"
+  ],
+  "metabolism": "Carboxylesterases hydrolyze the carboxamide to inactive CGP 47292; some further glucuronidation occurs. This principal route is not CYP dependent. Elimination is mainly urinary as metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a02ca527-bd8f-49ef-89fa-91fac154bffe"
+  ]
+}

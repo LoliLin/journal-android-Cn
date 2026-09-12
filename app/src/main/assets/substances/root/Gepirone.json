@@ -1,0 +1,12 @@
+{
+  "name": "Gepirone",
+  "url": "https://en.wikipedia.org/wiki/Gepirone",
+  "isApproved": false,
+  "categories": [
+    "antidepressant"
+  ],
+  "metabolism": "CYP3A4 forms the pharmacologically active metabolites 1-PP and 3'-hydroxygepirone. Elimination occurs mainly through urine as metabolites, with a smaller fecal component.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c78edd8-6acb-433c-9d34-2527da8d64e1"
+  ]
+}

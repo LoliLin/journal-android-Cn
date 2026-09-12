@@ -82,13 +82,16 @@ class AddIngestionSearchViewModel @Inject constructor(
                 custom.name.contains(
                     other = searchText,
                     ignoreCase = true
-                ) || custom.substanceName.contains(
-                other = searchText,
-                ignoreCase = true
-            ) || custom.unit.contains(
-                other = searchText,
-                ignoreCase = true
-            ) || custom.note.contains(other = searchText, ignoreCase = true)
+                ) ||
+                custom.substanceName.contains(
+                    other = searchText,
+                    ignoreCase = true
+                ) ||
+                custom.unit.contains(
+                    other = searchText,
+                    ignoreCase = true
+                ) ||
+                custom.note.contains(other = searchText, ignoreCase = true)
         }
     }.stateIn(
         initialValue = emptyList(),
@@ -159,7 +162,8 @@ class AddIngestionSearchViewModel @Inject constructor(
                                 ?: ingestionWithCustomUnit.customUnit?.unit
                                 ?: "",
                             isEstimate = ingestionWithCustomUnit.ingestion.isDoseAnEstimate,
-                            estimatedDoseStandardDeviation = ingestionWithCustomUnit.ingestion.estimatedDoseStandardDeviation
+                            estimatedDoseStandardDeviation = ingestionWithCustomUnit.ingestion.estimatedDoseStandardDeviation,
+                            releaseForm = ingestionWithCustomUnit.ingestion.releaseForm
                         )
                     }.distinct().take(6)
                     val customUnitDoses = routeEntry.value.mapNotNull CustomUnitMapNotNull@{ ingestionWithCustomUnit ->
@@ -171,7 +175,8 @@ class AddIngestionSearchViewModel @Inject constructor(
                                     dose = dose,
                                     isEstimate = ingestion.isDoseAnEstimate,
                                     estimatedDoseStandardDeviation = ingestion.estimatedDoseStandardDeviation,
-                                    customUnit = it
+                                    customUnit = it,
+                                    releaseForm = ingestion.releaseForm
                                 )
                             } else {
                                 null

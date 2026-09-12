@@ -1,0 +1,12 @@
+{
+  "name": "Oliceridine",
+  "url": "https://en.wikipedia.org/wiki/Oliceridine",
+  "isApproved": false,
+  "categories": [
+    "opioid"
+  ],
+  "metabolism": "CYP3A4/CYP2D6 oxidation predominates, with smaller CYP2C9/CYP2C19 contributions and subsequent glucuronidation. Inactive metabolites are eliminated mainly in urine and partly feces.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ce167984-8b9d-40b7-84ce-d0f33fff1eaa"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Tizanidine",
+  "url": "https://psychonautwiki.org/wiki/Tizanidine",
+  "isApproved": false,
+  "categories": [
+    "depressant"
+  ],
+  "interactions": {
+    "dangerous": [
+      "Depressants",
+      "Dissociatives"
+    ],
+    "uncertain": [
+      "Stimulants"
+    ]
+  },
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "µg",
+        "lightMin": 25,
+        "commonMin": 4,
+        "strongMin": 6,
+        "heavyMin": 8
+      },
+      "duration": {
+        "onset": {
+          "min": 15,
+          "max": 45,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 60,
+          "max": 120,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 2,
+          "max": 6,
+          "units": "hours"
+        }
+      }
+    }
+  ],
+  "metabolism": "Extensively metabolized, chiefly by CYP1A2. Metabolites are not known to be active; elimination of drug-related material occurs mainly in urine and partly feces.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=63b7eba3-6dea-4d89-bc42-7e965ae9795d"
+  ]
+}

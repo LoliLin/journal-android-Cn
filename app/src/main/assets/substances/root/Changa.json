@@ -1,0 +1,20 @@
+{
+  "name": "Changa",
+  "url": "https://psychonautwiki.org/wiki/Changa",
+  "categories": [
+    "psychedelic",
+    "tentative"
+  ],
+  "isApproved": false,
+  "interactions": {
+    "dangerous": [
+      "SNRIs",
+      "Stimulants",
+      "MAOIs",
+      "Serotonin releasers",
+      "SSRIs",
+      "5-HTP"
+    ]
+  },
+  "metabolism": "This material contains multiple constituents and has no single ingredient-level metabolic pathway. Composition and constituent-specific metabolism must be distinguished; this entry does not yet provide a verified constituent-by-constituent account."
+}

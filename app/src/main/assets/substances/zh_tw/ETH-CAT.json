@@ -7,6 +7,8 @@
     "zeroToleranceInHours": 96
   },
   "addictionPotential": "輕度成癮，且濫用潛力相對較低",
-  "toxicities": ["確切的中毒劑量未知"],
+  "toxicities": [
+    "確切的中毒劑量未知"
+  ],
   "localizedName": "ETH-CAT"
 }

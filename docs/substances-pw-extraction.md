@@ -57,7 +57,7 @@ Olanzapine Phenazepam  Pseudoephedrine  Psilocybin  THC
 - `interactions` 87 条：PW 改了页面名（仓库 `THC`，PW 现在叫 `Cannabis`）——默认不覆盖，留在报告里。
 - `dose` 50 条：仓库有值而 API 现在返回 `null`（如 `25B-NBOMe.insufflated.heavyMin=500`）——不覆盖。
 - `crossTolerances` 3 条、`tolerance`/`addictionPotential`/`commonNames`/`url` 各 2~3 条：
-  来自非 PW 来源的人工整理（Klop233 那批 ATC/TripSit/EUDA 条目）——不覆盖。
+  来自非 PW 来源的人工整理（处方药与其它目录条目）——不覆盖。
 
 ## PW 给不了的字段
 
@@ -74,6 +74,10 @@ Olanzapine Phenazepam  Pseudoephedrine  Psilocybin  THC
 ## 已知坑
 
 1. **索引页不是数据源**：`Psychoactive_substance_index` 的 wikitext 只有模板调用，要用渲染 HTML。
+   同理，API 全量遍历里混着 PW 的类目页与消歧页（`Substituted cathinones`、`Substituted
+   tryptamines`、`Amphetamine (disambiguation)` 等 8 个），工具按
+   `PW_NON_SUBSTANCE_RE`（`^Substituted…` / `…(disambiguation)`）跳过并列进报告，
+   否则会建出没有任何剂量数据的“物质”。
 2. **单位字形**：API 用 `μg`(U+03BC)，仓库用 `µg`(U+00B5)。不归一化就会有 6/349 的假差异。
 3. **复数**：API 交叉耐受用 `opioids`/`stimulants`/`benzodiazepines`/`entactogens`，
    仓库用单数。`fetch` 复用 `fix-tolerances` 的映射表，避免刚清掉的复数又被写回去。
@@ -85,8 +89,20 @@ Olanzapine Phenazepam  Pseudoephedrine  Psilocybin  THC
    两者对解析器等价（`SubstanceParser` 一律宽容处理）。
 7. **覆盖面**：仍有 61/281 没有 `tolerance`、63 没有 `toxicity`、74 没有 `crossTolerances`。
    **缺字段 ≠ 没有该性质**，不要据此下结论。
-8. **PW 不是唯一来源**：PW 目录 373 条；仓库当前 291 条 + Klop233 扩到 865 条，
-   后者主要来自 ATC(332)/TripSit(225)/EUDA(7)，且明确没有引入 PW 的剂量分级。
+8. **PW 不是唯一来源**：PW 目录 373 条，覆盖仓库 363 个条目；其余条目（处方药、研究化学品、
+   植物与真菌）来自 Wikidata/TripSit/EUDA/FreeODwiki，见 `substances-catalog-sources.md`。
+9. **重定向匹配会串味**：本地名不在 PW 目录时，`pw_resolve_names`（MediaWiki 搜索）会把它解析到
+   **相关但不同**的页面——阿托品→曼陀罗、茶苯海明→苯海拉明、艾司氯胺酮→氯胺酮、右哌甲酯→哌甲酯、
+   烟草→尼古丁、鼠尾草→鼠尾草素甲、喷他左辛→右丙氧芬、氯仿→吸入剂、去羟基氟莫达非尼→
+   N-甲基双氟莫达非尼、THC→大麻。若照单全收，这些条目会带上**另一个物质**的剂量与耐受
+   （右哌甲酯拿到哌甲酯的量、艾司氯胺酮拿到氯胺酮的量），所以它们在 `PW_REDIRECT_SKIP` 里被跳过，
+   只保留本目录自己的数据。判断依据是「重定向 + 本地名在名单里」，PW 哪天真的建了独立页面就会自动恢复。
+   真同物异名的重定向（N2O↔Nitrous、MXE↔Methoxetamine、5-HTP↔5-Hydroxytryptophan、NEP↔Ethyl-Pentedrone 等）
+   不受影响，正常合并。
+10. **`--prefer`（PW 优先）**：有 PW 页面时 `url` 用 PW 链接、`commonNames`/`categories` 与已有值**取并集**。
+    默认的合并规则是「整块先到先得」，TripSit 先建的文件会因此丢掉 PW 的别名与精神活性类别
+    （实测 329 个 TripSit 文件里，N2O 少 7 个别名、Mushrooms 少 5 个）。
+    跨来源并集只对「同名匹配」与真同物异名的重定向生效，第 9 条的名单仍然跳过。
 
 ## 许可与礼仪
 
@@ -145,7 +161,8 @@ python docs/scripts/fetch_psychonautwiki.py --overwrite
 `changed` 与 `kept` 字段，以及 `repo_files_without_api_record`（仓库有、API 无记录）和
 `index_entries_missing_in_api`。
 
-其他来源（ATC / TripSit / EUDA）见 [`substances-catalog-sources.md`](substances-catalog-sources.md)；
+其他来源（Wikidata / TripSit / EUDA）见 [`substances-catalog-sources.md`](substances-catalog-sources.md)；
+许可义务与免责声明见 [`data-sources-and-licenses.md`](data-sources-and-licenses.md)；
 它们共用同一份台账 `docs/substance-catalog-expansion.json`。
 
 ### 排错

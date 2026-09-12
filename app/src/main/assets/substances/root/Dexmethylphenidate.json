@@ -1,0 +1,14 @@
+{
+  "name": "Dexmethylphenidate",
+  "url": "https://en.wikipedia.org/wiki/Dexmethylphenidate",
+  "categories": [
+    "stimulant",
+    "habit-forming",
+    "common"
+  ],
+  "isApproved": false,
+  "metabolism": "Primarily de-esterified to d-ritalinic acid, a metabolite with little pharmacological activity. Drug-related material is eliminated mainly in urine; very little parent drug is recovered unchanged.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dd659d39-41f5-4612-8f17-bad602b4784d"
+  ]
+}

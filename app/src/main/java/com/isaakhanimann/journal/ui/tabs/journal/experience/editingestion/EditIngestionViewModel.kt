@@ -28,7 +28,11 @@ import androidx.lifecycle.viewModelScope
 import com.isaakhanimann.journal.data.room.experiences.ExperienceRepository
 import com.isaakhanimann.journal.data.room.experiences.entities.CustomUnit
 import com.isaakhanimann.journal.data.room.experiences.entities.Ingestion
+import com.isaakhanimann.journal.data.substances.AdministrationRoute
+import com.isaakhanimann.journal.data.substances.ReleaseForm
+import com.isaakhanimann.journal.data.substances.repositories.SubstanceRepository
 import com.isaakhanimann.journal.ui.main.navigation.routers.INGESTION_ID_KEY
+import com.isaakhanimann.journal.ui.main.navigation.routers.RELEASE_FORM_KEY
 import com.isaakhanimann.journal.ui.tabs.journal.addingestion.time.IngestionTimePickerOption
 import com.isaakhanimann.journal.ui.tabs.search.substance.roa.toReadableString
 import com.isaakhanimann.journal.ui.tabs.settings.combinations.UserPreferences
@@ -51,12 +55,24 @@ import kotlinx.coroutines.launch
 @HiltViewModel
 class EditIngestionViewModel @Inject constructor(
     private val experienceRepo: ExperienceRepository,
-    state: SavedStateHandle,
-    private val userPreferences: UserPreferences
+    private val state: SavedStateHandle,
+    private val userPreferences: UserPreferences,
+    private val substanceRepo: SubstanceRepository
 ) : ViewModel() {
     private var ingestionFlow: MutableStateFlow<Ingestion?> = MutableStateFlow(null)
-    var ingestion: Ingestion? = null
+    var ingestion by mutableStateOf<Ingestion?>(null)
     var note by mutableStateOf("")
+    var releaseForm by mutableStateOf<ReleaseForm?>(null)
+        private set
+    val availableReleaseForms: List<ReleaseForm>
+        get() = ingestion?.let {
+            substanceRepo.getSubstance(it.substanceName)?.getReleaseForms(it.administrationRoute)
+        }.orEmpty()
+
+    fun changeReleaseForm(form: ReleaseForm?) {
+        releaseForm = form
+        state[RELEASE_FORM_KEY] = form?.name
+    }
     var isEstimate by mutableStateOf(false)
     var isKnown by mutableStateOf(true)
     var dose by mutableStateOf("")
@@ -101,6 +117,11 @@ class EditIngestionViewModel @Inject constructor(
             val ing = ingestionAndCustomUnit.ingestion
             ingestionFlow.emit(ing)
             ingestion = ing
+            releaseForm = if (state.contains(RELEASE_FORM_KEY)) {
+                ReleaseForm.fromName(state.get<String>(RELEASE_FORM_KEY))
+            } else {
+                ing.releaseForm
+            }
             note = ing.notes ?: ""
             isEstimate = ing.isDoseAnEstimate
             estimatedDoseStandardDeviation =
@@ -186,7 +207,8 @@ class EditIngestionViewModel @Inject constructor(
 
     fun onDoneTap() {
         viewModelScope.launch {
-            val selectedInstant = localDateTimeStartFlow.firstOrNull()?.getInstant() ?: return@launch
+            val selectedInstant =
+                localDateTimeStartFlow.firstOrNull()?.getInstant() ?: return@launch
             ingestion?.let {
                 it.notes = note
                 it.isDoseAnEstimate = isEstimate
@@ -197,12 +219,19 @@ class EditIngestionViewModel @Inject constructor(
                 it.units = units
                 it.customUnitId = customUnit?.id
                 it.time = selectedInstant
-                it.endTime = if (ingestionTimePickerOptionFlow.value == IngestionTimePickerOption.TIME_RANGE) {
-                    localDateTimeEndFlow.firstOrNull()?.getInstant()
-                } else {
-                    null
-                }
+                it.endTime =
+                    if (ingestionTimePickerOptionFlow.value ==
+                        IngestionTimePickerOption.TIME_RANGE
+                    ) {
+                        localDateTimeEndFlow.firstOrNull()?.getInstant()
+                    } else {
+                        null
+                    }
                 it.consumerName = consumerName.ifBlank { null }
+                // Matches the create flow: a formulation is only meaningful for oral
+                // entries, and getRoa() drops all ROA data for extended release.
+                val route = it.administrationRoute
+                it.releaseForm = releaseForm.takeIf { route == AdministrationRoute.ORAL }
                 experienceRepo.update(it)
             }
         }

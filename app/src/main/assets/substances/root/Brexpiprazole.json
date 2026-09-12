@@ -1,0 +1,12 @@
+{
+  "name": "Brexpiprazole",
+  "url": "https://en.wikipedia.org/wiki/Brexpiprazole",
+  "isApproved": false,
+  "categories": [
+    "antipsychotic"
+  ],
+  "metabolism": "CYP3A4 and CYP2D6 are the principal metabolic enzymes. Elimination occurs mainly after metabolism, through urine and feces; little unchanged drug is recovered in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6991c065-0f6e-433a-8f4f-796e0ece327f"
+  ]
+}

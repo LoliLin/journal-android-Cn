@@ -7,6 +7,9 @@
     "zeroToleranceInHours": 720
   },
   "addictionPotential": "中度成癮性",
-  "toxicities": ["毒性劑量未知"],
-  "localizedName": "ΑMT"
+  "toxicities": [
+    "毒性劑量未知"
+  ],
+  "localizedName": "ΑMT",
+  "summary": "α-甲基色胺（α-Methyltryptamine，也稱為 Indopan，通常簡稱為 αMT 或 aMT）是色胺類物質類別中一種較不為人知的共情劑。\n\nαMT 最初是由 Upjohn 公司在 1960 年代開發的。它曾在蘇聯作為抗抑鬱藥短暫使用，商品名為 Indopan。Indopan 的處方劑量通常在 5-10 mg 之間，這比用於娛樂用途的劑量要低得多。"
 }

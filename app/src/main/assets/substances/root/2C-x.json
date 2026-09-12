@@ -1,0 +1,21 @@
+{
+  "name": "2C-x",
+  "url": "https://psychonautwiki.org/wiki/2C-x",
+  "isApproved": false,
+  "interactions": {
+    "dangerous": [
+      "amt"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "5-meo-xxt",
+      "amphetamines",
+      "Cannabis",
+      "Cocaine",
+      "maois",
+      "nbomes"
+    ]
+  }
+}

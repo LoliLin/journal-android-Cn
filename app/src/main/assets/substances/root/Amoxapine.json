@@ -1,0 +1,12 @@
+{
+  "name": "Amoxapine",
+  "url": "https://en.wikipedia.org/wiki/Amoxapine",
+  "isApproved": false,
+  "categories": [
+    "antidepressant"
+  ],
+  "metabolism": "Extensively metabolized, including formation of 8-hydroxyamoxapine. Metabolites are conjugated with glucuronic acid and eliminated mainly through the kidneys.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eed5e856-dd7b-4eaa-9dad-508f2bef9328"
+  ]
+}

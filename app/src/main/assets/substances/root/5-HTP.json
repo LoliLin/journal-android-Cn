@@ -1,0 +1,47 @@
+{
+  "name": "5-HTP",
+  "url": "https://psychonautwiki.org/wiki/5-Hydroxytryptophan",
+  "commonNames": [
+    "5-HTP",
+    "5htp",
+    "5-hydroxytryptophan",
+    "tryptophan",
+    "l-tryptophan",
+    "oxitriptan",
+    "Oxitriptan",
+    "Cincofarm",
+    "Levothym",
+    "Levotonine",
+    "Oxyfan",
+    "Telesol",
+    "Tript-OH",
+    "Triptum"
+  ],
+  "categories": [
+    "common",
+    "nootropic"
+  ],
+  "isApproved": false,
+  "interactions": {
+    "dangerous": [
+      "SSRIs",
+      "SNRIs",
+      "Serotonin releasers",
+      "MAOIs",
+      "Tricyclic antidepressants",
+      "Tramadol"
+    ]
+  },
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg",
+        "lightMin": 25,
+        "commonMin": 100,
+        "strongMin": 300,
+        "heavyMin": 500
+      }
+    }
+  ]
+}

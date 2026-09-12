@@ -1,0 +1,12 @@
+{
+  "name": "Esketamine",
+  "url": "https://en.wikipedia.org/wiki/Esketamine",
+  "isApproved": false,
+  "categories": [
+    "antidepressant"
+  ],
+  "metabolism": "CYP2B6/CYP3A4 N-demethylation forms noresketamine, followed by further CYP processing and glucuronidation. Elimination is mainly urinary as metabolites, with little unchanged parent drug.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d81a6a79-a74a-44b7-822c-0dfa3036eaed"
+  ]
+}

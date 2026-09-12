@@ -1,6 +1,8 @@
 {
   "name": "Haloperidol",
-  "commonNames": ["Haldol"],
+  "commonNames": [
+    "Haldol"
+  ],
   "url": "https://psychonautwiki.org/wiki/Haloperidol",
   "isApproved": true,
   "crossTolerances": [],
@@ -8,7 +10,9 @@
     "can have serious side effects at higher dosages",
     "risk of having severe extrapyramidal symptoms and muscle rigidity"
   ],
-  "categories": ["antipsychotic"],
+  "categories": [
+    "antipsychotic"
+  ],
   "roas": [
     {
       "name": "oral",
@@ -32,5 +36,9 @@
         }
       }
     }
+  ],
+  "metabolism": "Glucuronidation and ketone reduction are major pathways. CYP3A4 and, to a lesser extent, CYP2D6 also contribute. Only a small fraction is excreted unchanged in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2cdd9fca-afe5-4bfa-8db1-337beec13c6b"
   ]
 }

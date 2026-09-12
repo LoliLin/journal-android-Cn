@@ -1,6 +1,9 @@
 {
   "name": "Eszopiclone",
-  "commonNames": ["Lunesta", "Eszop"],
+  "commonNames": [
+    "Lunesta",
+    "Eszop"
+  ],
   "url": "https://psychonautwiki.org/wiki/Eszopiclone",
   "isApproved": false,
   "tolerance": {
@@ -8,13 +11,20 @@
     "zero": "7 - 14 days",
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["benzodiazepine"],
+  "crossTolerances": [
+    "benzodiazepine"
+  ],
   "addictionPotential": "extremely physically and psychologically addictive",
   "toxicities": [
     "low toxicity",
     "potentially lethal when mixed with depressants like benzodiazepines, alcohol or opioids"
   ],
-  "categories": ["hallucinogen", "depressant", "hypnotic", "habit-forming"],
+  "categories": [
+    "hallucinogen",
+    "depressant",
+    "hypnotic",
+    "habit-forming"
+  ],
   "summary": "The d-isomer of Zopiclone, this drug is a potent hypnotic 'Z' drug often used to treat insomnia. High doses may cause amnesia, delirium and lowered inhibitions. Should not be combined with any depressants. Limited recreational value.",
   "roas": [
     {
@@ -44,5 +54,9 @@
         }
       }
     }
+  ],
+  "metabolism": "CYP3A4 and CYP2E1 participate in oxidation and demethylation. Metabolites predominate in urinary elimination; only a small fraction is excreted as unchanged eszopiclone.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c4ff1d6a-918e-c046-e053-2a95a90a9c9b"
   ]
 }

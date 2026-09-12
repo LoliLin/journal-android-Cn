@@ -1,0 +1,90 @@
+{
+  "name": "Vyvanse",
+  "url": "https://psychonautwiki.org/wiki/Lisdexamfetamine",
+  "commonNames": [
+    "Vyvanse",
+    "lisdextroamfetamine",
+    "lisdextroamphetamine",
+    "lisdexamphetamine",
+    "lisdexamfetamine",
+    "Lisdexamfetamine",
+    "Elvanse"
+  ],
+  "categories": [
+    "stimulant",
+    "habit-forming",
+    "common"
+  ],
+  "isApproved": false,
+  "interactions": {
+    "dangerous": [
+      "Tramadol",
+      "aMT",
+      "MAOIs"
+    ],
+    "unsafe": [
+      "DXM",
+      "PCP",
+      "25x-NBOMe",
+      "2C-T-x",
+      "5-MeO-xxT",
+      "DOx"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "GHB",
+      "GBL",
+      "Opioids",
+      "Cocaine",
+      "Cannabis",
+      "Caffeine",
+      "Ketamine",
+      "Methoxetamine",
+      "Psychedelics"
+    ]
+  },
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg",
+        "lightMin": 10,
+        "commonMin": 30,
+        "strongMin": 60,
+        "heavyMin": 90
+      },
+      "duration": {
+        "onset": {
+          "min": 60,
+          "max": 90,
+          "units": "minutes"
+        },
+        "comeup": {
+          "min": 30,
+          "max": 60,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 3,
+          "max": 5,
+          "units": "hours"
+        },
+        "offset": {
+          "min": 4,
+          "max": 6,
+          "units": "hours"
+        },
+        "total": {
+          "min": 10,
+          "max": 14,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 2,
+          "max": 6,
+          "units": "hours"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Agomelatine",
+  "url": "https://en.wikipedia.org/wiki/Agomelatine",
+  "isApproved": false,
+  "categories": [
+    "antidepressant"
+  ],
+  "metabolism": "Mainly oxidized by CYP1A2, with smaller CYP2C9/CYP2C19 contributions. Hydroxylated and demethylated metabolites are inactive, rapidly conjugated and eliminated in urine.",
+  "metabolismSources": [
+    "https://www.ema.europa.eu/en/documents/product-information/valdoxan-epar-product-information_en.pdf"
+  ]
+}

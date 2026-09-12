@@ -1,0 +1,13 @@
+{
+  "name": "Phenelzine",
+  "url": "https://en.wikipedia.org/wiki/Phenelzine",
+  "isApproved": false,
+  "categories": [
+    "antidepressant",
+    "maoi"
+  ],
+  "metabolism": "Extensively metabolized, chiefly by monoamine-oxidase-mediated oxidation. The reviewed label does not establish a complete CYP contribution map.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa041652-fdde-4794-a8d2-279dd309e075"
+  ]
+}

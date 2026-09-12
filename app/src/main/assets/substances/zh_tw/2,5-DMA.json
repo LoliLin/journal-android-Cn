@@ -7,6 +7,8 @@
     "zeroToleranceInHours": 204
   },
   "addictionPotential": "無成癮性",
-  "toxicities": ["毒性劑量未知"],
+  "toxicities": [
+    "毒性劑量未知"
+  ],
   "localizedName": "2,5-二甲氧基安非他命"
 }

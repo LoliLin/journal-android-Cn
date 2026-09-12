@@ -1,0 +1,30 @@
+{
+  "name": "3-Cl-PCP",
+  "url": "https://psychonautwiki.org/wiki/3-Cl-PCP",
+  "isApproved": false,
+  "commonNames": [
+    "3-Cl-PCP"
+  ],
+  "categories": [
+    "dissociative"
+  ],
+  "tolerance": {
+    "full": "with prolonged and repeated use",
+    "half": "4 - 7 days",
+    "zero": "1 - 2 weeks"
+  },
+  "crossTolerances": [
+    "dissociative"
+  ],
+  "addictionPotential": "moderately addictive with a high potential for adverse side effects such as psychosis",
+  "toxicities": [
+    "toxic dosage is unknown"
+  ],
+  "interactions": {
+    "dangerous": [
+      "Stimulants",
+      "Depressants"
+    ]
+  },
+  "metabolism": "Human metabolism has not yet been verified for this entry. Responsible enzymes, metabolites and elimination routes are not specified. This is a documentation gap, not evidence that the substance is not metabolized; do not infer a pathway from related compounds."
+}

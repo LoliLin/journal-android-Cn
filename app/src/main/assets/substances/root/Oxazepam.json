@@ -1,0 +1,19 @@
+{
+  "name": "Oxazepam",
+  "url": "https://en.wikipedia.org/wiki/Oxazepam",
+  "commonNames": [
+    "Oxazepam",
+    "serax"
+  ],
+  "categories": [
+    "anxiolytic",
+    "benzodiazepine",
+    "depressant",
+    "habit-forming"
+  ],
+  "isApproved": false,
+  "metabolism": "Direct glucuronide conjugation forms a major inactive metabolite that is excreted in urine. It does not require conversion to another active benzodiazepine before this elimination step.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=67f821fa-5663-4d69-82c9-5ee13a09f324"
+  ]
+}

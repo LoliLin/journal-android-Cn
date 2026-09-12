@@ -17,10 +17,18 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["opioid"],
+  "crossTolerances": [
+    "opioid"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["low toxicity"],
-  "categories": ["opioid", "habit-forming", "depressant"],
+  "toxicities": [
+    "low toxicity"
+  ],
+  "categories": [
+    "opioid",
+    "habit-forming",
+    "depressant"
+  ],
   "summary": "A semi-synthetic opioid analgesic also known as subutex. Often administered as Butrans patches, or in combination with Naloxone as Suboxone, a heroin replacement therapy drug. Will cause withdrawals if you have an opioid tolerance and don't wait long enough (typically around 48 hours) before taking this.",
   "effectsSummary": "Like all opiates, buprenorphine has analgesic and cough-irritant effects. However, its euphoric and sedative properties are less pronounced than those of other opioids, which is why it is also used for substitution treatment. Buprenorphine is a partial agonist. This means that, for safety reasons, only a submaximal effect is elicited. After a certain dose, a saturation effect (ceiling effect) occurs, which prevents a further increase in the effect. This makes the active ingredient so relevant for substitution treatments, as withdrawal symptoms can be alleviated and overdoses avoided.",
   "dosageRemark": "From 16 mg, the saturation effect (ceiling effect) takes effect and no more effect enhancement is felt.\nWhen consuming for the first time, low doses should be used, as the risk of respiratory arrest is increased.",
@@ -49,7 +57,12 @@
       "Grapefruit"
     ],
     "unsafe": [],
-    "uncertain": ["MAOIs", "Nitrous", "PCP", "Stimulants"]
+    "uncertain": [
+      "MAOIs",
+      "Nitrous",
+      "PCP",
+      "Stimulants"
+    ]
   },
   "roas": [
     {
@@ -116,5 +129,9 @@
         }
       }
     }
+  ],
+  "metabolism": "CYP3A4 N-dealkylation forms norbuprenorphine; both parent and metabolite undergo glucuronidation. Drug-related material is eliminated mainly in feces and partly in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4124c4ad-ef62-4c95-8e57-0d843862ae71"
   ]
 }

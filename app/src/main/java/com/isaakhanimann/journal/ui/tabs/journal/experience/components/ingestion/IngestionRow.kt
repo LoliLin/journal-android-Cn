@@ -35,12 +35,14 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import com.isaakhanimann.journal.data.room.experiences.entities.AdaptiveColor
+import com.isaakhanimann.journal.localization.i18n
 import com.isaakhanimann.journal.localization.i18nOrDefault
 import com.isaakhanimann.journal.ui.tabs.journal.experience.components.DotRows
 import com.isaakhanimann.journal.ui.tabs.journal.experience.components.TimeDisplayOption
 import com.isaakhanimann.journal.ui.tabs.journal.experience.components.TimeText
 import com.isaakhanimann.journal.ui.tabs.journal.experience.models.IngestionElement
 import com.isaakhanimann.journal.ui.utils.administrationRouteKey
+import com.isaakhanimann.journal.ui.utils.releaseFormKey
 import java.time.Instant
 
 @Composable
@@ -60,7 +62,10 @@ fun IngestionRow(
         horizontalArrangement = Arrangement.spacedBy(10.dp),
         modifier = modifier.height(intrinsicSize = IntrinsicSize.Min)
     ) {
-        VerticalLine(color = ingestionWithCompanionAndCustomUnit.substanceCompanion?.color ?: AdaptiveColor.RED)
+        VerticalLine(
+            color =
+            ingestionWithCompanionAndCustomUnit.substanceCompanion?.color ?: AdaptiveColor.RED
+        )
         Column {
             Row(
                 horizontalArrangement = Arrangement.spacedBy(4.dp),
@@ -68,9 +73,14 @@ fun IngestionRow(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 val customUnitName = if (customUnit != null) ", ${customUnit.name}" else ""
+                val formulation = ingestion.releaseForm?.let {
+                    " · ${i18n(releaseFormKey(it))}"
+                }.orEmpty()
                 Text(
                     modifier = Modifier.weight(1f),
-                    text = getSubstanceDisplayName(ingestion.substanceName) + customUnitName,
+                    text =
+                    getSubstanceDisplayName(ingestion.substanceName) + customUnitName +
+                        formulation,
                     style = MaterialTheme.typography.titleMedium
                 )
                 TimeText(

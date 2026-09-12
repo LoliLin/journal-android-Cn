@@ -1,6 +1,13 @@
 {
   "name": "Mirtazapine",
-  "commonNames": ["Avanza", "Axit", "Mirtaz", "Mirtazon", "Remeron", "Zispin"],
+  "commonNames": [
+    "Avanza",
+    "Axit",
+    "Mirtaz",
+    "Mirtazon",
+    "Remeron",
+    "Zispin"
+  ],
   "url": "https://psychonautwiki.org/wiki/Mirtazapine",
   "isApproved": true,
   "tolerance": {
@@ -13,11 +20,17 @@
   "crossTolerances": [],
   "addictionPotential": "not habit-forming",
   "toxicities": [],
-  "categories": ["deliriant", "depressant", "antidepressant"],
+  "categories": [
+    "deliriant",
+    "depressant",
+    "antidepressant"
+  ],
   "interactions": {
     "dangerous": [],
     "unsafe": [],
-    "uncertain": ["Antidepressants"]
+    "uncertain": [
+      "Antidepressants"
+    ]
   },
   "roas": [
     {
@@ -52,5 +65,9 @@
         }
       }
     }
+  ],
+  "metabolism": "CYP2D6/CYP1A2 contribute to hydroxylation and CYP3A to N-demethylation/N-oxidation. Glucuronide conjugation follows, with elimination mainly through urine and partly feces.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d6fbe837-988a-7c75-e053-2995a90a599a"
   ]
 }

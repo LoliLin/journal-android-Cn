@@ -7,6 +7,9 @@
     "zeroToleranceInHours": 252
   },
   "addictionPotential": "輕微成癮性，濫用潛力低",
-  "toxicities": ["確切的中毒劑量未知"],
-  "localizedName": "N-甲基雙氟莫達非尼"
+  "toxicities": [
+    "確切的中毒劑量未知"
+  ],
+  "localizedName": "N-甲基雙氟莫達非尼",
+  "summary": "N-甲基-4,4'-二氟莫達非尼（也被稱為 N-Methylbisfluoromodafinil、Dehydroxyfluorafinil 和 Modafiendz）是一種非常冷門的益智藥喵，屬於二苯甲基類物質，目前還沒有任何研究歷史呢。雖然它在結構上與阿屈非尼和莫達非尼非常接近，但我們不能直接假設它的藥理特性或安全性也和它們一樣哦。"
 }

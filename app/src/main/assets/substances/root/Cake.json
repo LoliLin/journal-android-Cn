@@ -1,0 +1,25 @@
+{
+  "name": "Cake",
+  "url": "https://psychonautwiki.org/wiki/Cake",
+  "isApproved": false,
+  "commonNames": [
+    "Cake",
+    "Caky",
+    "Cokoo"
+  ],
+  "categories": [
+    "depressant"
+  ],
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "g",
+        "lightMin": 30,
+        "commonMin": 65,
+        "strongMin": 100,
+        "heavyMin": 300
+      }
+    }
+  ]
+}

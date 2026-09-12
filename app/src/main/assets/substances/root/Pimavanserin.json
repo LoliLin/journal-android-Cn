@@ -1,0 +1,12 @@
+{
+  "name": "Pimavanserin",
+  "url": "https://en.wikipedia.org/wiki/Pimavanserin",
+  "isApproved": false,
+  "categories": [
+    "antipsychotic"
+  ],
+  "metabolism": "CYP3A4/CYP3A5 dominate metabolism. CYP3A4 forms active N-desmethylpimavanserin (AC-279), which persists longer than the parent. Very little parent drug is eliminated unchanged in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1e6bea44-57d6-4bac-9328-46e1ee59f83b"
+  ]
+}

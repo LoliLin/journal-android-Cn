@@ -1,6 +1,8 @@
 {
   "name": "Diphenidine",
-  "commonNames": ["Diphenidine"],
+  "commonNames": [
+    "Diphenidine"
+  ],
   "url": "https://psychonautwiki.org/wiki/Diphenidine",
   "isApproved": true,
   "tolerance": {
@@ -10,9 +12,13 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dissociative"],
+  "crossTolerances": [
+    "dissociative"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
   "categories": [
     "dissociative",
     "research-chemical",
@@ -21,7 +27,10 @@
   ],
   "summary": "A dissociative anaesthetic related to ephenidine with similar qualities to PCP and ketamine. Has seen some popularity as a recreational RC. Dosage curve has been reported as particularly steep, so care should be taken.",
   "interactions": {
-    "dangerous": ["Stimulants", "Depressants"],
+    "dangerous": [
+      "Stimulants",
+      "Depressants"
+    ],
     "unsafe": [],
     "uncertain": []
   },
@@ -77,6 +86,42 @@
     },
     {
       "name": "inhaled",
+      "dose": {
+        "units": "mg",
+        "commonMin": 20,
+        "strongMin": 40,
+        "heavyMin": 55
+      },
+      "duration": {
+        "onset": {
+          "min": 30,
+          "max": 90,
+          "units": "seconds"
+        },
+        "peak": {
+          "min": 0.5,
+          "max": 2,
+          "units": "hours"
+        },
+        "offset": {
+          "min": 20,
+          "max": 40,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 1,
+          "max": 3,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 2,
+          "max": 5,
+          "units": "hours"
+        }
+      }
+    },
+    {
+      "name": "smoked",
       "dose": {
         "units": "mg",
         "commonMin": 20,

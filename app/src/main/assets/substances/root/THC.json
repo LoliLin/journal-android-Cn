@@ -22,10 +22,15 @@
     "halfToleranceInHours": 252,
     "zeroToleranceInHours": 420
   },
-  "crossTolerances": ["cannabinoid"],
+  "crossTolerances": [
+    "cannabinoid"
+  ],
   "addictionPotential": "moderately habit-forming",
   "toxicities": [],
-  "categories": ["habit-forming", "common"],
+  "categories": [
+    "habit-forming",
+    "common"
+  ],
   "summary": "A common and widely used psychoactive plant, which is beginning to enjoy legal status for medical and even recreational use in some parts of the world. Usually smoked or eaten, primary effects are relaxation and an affinity towards food - a state described as being 'stoned.'",
   "effectsSummary": "The most important of a total of 400 active ingredients are THC (tetrahydrocannabinol) and CBD (cannabidiol), with THC being responsible for the majority of the psychoactive effects felt. CBD also has analgesic, sedative and narcotic effects.\nThe main cannabis active substances THC and CBD dock in the body to the cannabinoid receptors CB1 and CB2. This activates the body's own messenger substance endocannabinoid. This has a relaxing, appetite-stimulating, calming and pain-relieving effect. Feelings are intensified, serenity and/or groundless cheerfulness set in. The experience of time is changed, usually slowed down. In high doses and CBD-free varieties, cannabis can have hallucinogenic effects. Since it is usually consumed together with tobacco, the joint-typical effect is an interaction between cannabis and tobacco. This usually leads to an intensification and prolongation of the effect, as tobacco inhibits the degradation of endocannabinoids. ",
   "dosageRemark": "The main active ingredient content and the ratio of THC to CBD differ greatly depending on the product. Therefore, the dosage is difficult to determine. Hashish contains on average more THC and mostly CBD. Outdoor weed varieties contain less THC and less CBD, while indoor weed varieties contain mainly THC and rarely CBD.\nCYP2C9 genotype affects THC sensitivity significantly: Subjects with the *3/*3 genotype had 3-fold higher THC levels in their blood than subjects with the *1/*1 genotype. Those subjects with one copy of each gene (*1/*3) had intermediate THC levels that were about 2-fold higher than subjects with *1/*1.",
@@ -44,7 +49,9 @@
     "Cannabis use should be avoided in cases of lung disease and existing heart conditions or heart disease."
   ],
   "interactions": {
-    "dangerous": ["Lithium"],
+    "dangerous": [
+      "Lithium"
+    ],
     "unsafe": [],
     "uncertain": [
       "2C-T-x",
@@ -173,6 +180,48 @@
           "min": 3,
           "max": 7,
           "units": "hours"
+        }
+      }
+    },
+    {
+      "name": "smoked",
+      "dose": {
+        "units": "mg",
+        "lightMin": 0.4,
+        "commonMin": 2,
+        "strongMin": 4,
+        "heavyMin": 10
+      },
+      "duration": {
+        "onset": {
+          "min": 0.1,
+          "max": 10,
+          "units": "minutes"
+        },
+        "comeup": {
+          "min": 5,
+          "max": 10,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 15,
+          "max": 45,
+          "units": "minutes"
+        },
+        "offset": {
+          "min": 3,
+          "max": 4,
+          "units": "hours"
+        },
+        "total": {
+          "min": 2.5,
+          "max": 5,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 45,
+          "max": 180,
+          "units": "minutes"
         }
       }
     }

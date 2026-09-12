@@ -1,0 +1,12 @@
+{
+  "name": "Lofexidine",
+  "url": "https://en.wikipedia.org/wiki/Lofexidine",
+  "isApproved": false,
+  "categories": [
+    "addiction-treatment"
+  ],
+  "metabolism": "CYP2D6 is the main hepatic enzyme identified in vitro; CYP1A2/CYP2C19 also contribute. First-pass metabolism forms inactive products; parent and metabolites are eliminated mainly renally.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=77367dfa-434f-4d61-95fe-f0f1628457d1"
+  ]
+}

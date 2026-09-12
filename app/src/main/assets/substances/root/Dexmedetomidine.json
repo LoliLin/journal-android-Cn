@@ -1,0 +1,12 @@
+{
+  "name": "Dexmedetomidine",
+  "url": "https://en.wikipedia.org/wiki/Dexmedetomidine",
+  "isApproved": false,
+  "categories": [
+    "hypnotic"
+  ],
+  "metabolism": "Direct N-glucuronidation and oxidation, especially through CYP2A6, produce metabolites; N-methylation also occurs. Little unchanged drug is eliminated; urinary metabolites dominate clearance.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eee6145b-d83f-4596-92d3-733934d8a3a4"
+  ]
+}

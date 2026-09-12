@@ -85,14 +85,15 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import coil.compose.AsyncImage
 import com.isaakhanimann.journal.data.room.experiences.entities.CustomUnit
+import com.isaakhanimann.journal.data.substances.ReleaseForm
 import com.isaakhanimann.journal.localization.i18n
+import com.isaakhanimann.journal.ui.tabs.journal.addingestion.ReleaseFormPicker
 import com.isaakhanimann.journal.ui.tabs.journal.addingestion.time.IngestionTimePickerOption
 import com.isaakhanimann.journal.ui.tabs.journal.addingestion.time.TimePointOrRangePicker
 import com.isaakhanimann.journal.ui.tabs.journal.experience.components.CardWithTitle
 import com.isaakhanimann.journal.ui.tabs.settings.AvatarUtil
 import com.isaakhanimann.journal.ui.theme.JournalTheme
 import com.isaakhanimann.journal.ui.theme.horizontalPadding
-import com.isaakhanimann.journal.ui.utils.getStringOfPattern
 import java.time.LocalDateTime
 import kotlinx.coroutines.launch
 
@@ -135,7 +136,10 @@ fun EditIngestionScreen(
         customUnit = viewModel.customUnit,
         onCustomUnitChange = viewModel::onChangeCustomUnit,
         otherCustomUnits = viewModel.otherCustomUnits.collectAsState().value,
-        ownerUserName = viewModel.ownerUserNameFlow.collectAsState().value ?: "You"
+        ownerUserName = viewModel.ownerUserNameFlow.collectAsState().value ?: "You",
+        availableReleaseForms = viewModel.availableReleaseForms,
+        releaseForm = viewModel.releaseForm,
+        onChangeReleaseForm = viewModel::changeReleaseForm
     )
 }
 
@@ -212,7 +216,10 @@ fun EditIngestionScreen(
     customUnit: CustomUnit?,
     onCustomUnitChange: (CustomUnit?) -> Unit,
     otherCustomUnits: List<CustomUnit>,
-    ownerUserName: String
+    ownerUserName: String,
+    availableReleaseForms: List<ReleaseForm> = emptyList(),
+    releaseForm: ReleaseForm? = null,
+    onChangeReleaseForm: (ReleaseForm?) -> Unit = {}
 ) {
     var isPresentingBottomSheet by rememberSaveable { mutableStateOf(false) }
     val skipPartiallyExpanded by remember { mutableStateOf(false) }
@@ -406,6 +413,7 @@ fun EditIngestionScreen(
                     singleLine = true
                 )
             }
+            ReleaseFormPicker(availableReleaseForms, releaseForm, onChangeReleaseForm)
             CardWithTitle(title = i18n("common_time")) {
                 Column(
                     verticalArrangement = Arrangement.Center,

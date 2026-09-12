@@ -1,0 +1,12 @@
+{
+  "name": "Lemborexant",
+  "url": "https://en.wikipedia.org/wiki/Lemborexant",
+  "isApproved": false,
+  "categories": [
+    "hypnotic"
+  ],
+  "metabolism": "Metabolized mainly by CYP3A4 and less by CYP3A5. Drug-related material is eliminated in feces and urine, with very little unchanged drug in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7074cb65-77b3-45d2-8e8d-da8dc0f70bfd"
+  ]
+}

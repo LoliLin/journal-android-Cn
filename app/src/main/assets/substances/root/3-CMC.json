@@ -1,0 +1,19 @@
+{
+  "name": "3-CMC",
+  "url": "https://tripsit.me/factsheets/?name=3-cmc&p=substance",
+  "commonNames": [
+    "3-CMC",
+    "3cmc"
+  ],
+  "categories": [
+    "stimulant",
+    "research-chemical",
+    "habit-forming",
+    "tentative"
+  ],
+  "isApproved": false,
+  "metabolism": "Human hepatocyte and case-sample work identified ketone reduction, N-demethylation and carboxylation. Complete enzyme contributions and clinical elimination kinetics remain undetermined.",
+  "metabolismSources": [
+    "https://pubmed.ncbi.nlm.nih.gov/38862871/"
+  ]
+}

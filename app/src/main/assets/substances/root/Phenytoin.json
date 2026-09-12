@@ -1,0 +1,12 @@
+{
+  "name": "Phenytoin",
+  "url": "https://en.wikipedia.org/wiki/Phenytoin",
+  "isApproved": false,
+  "categories": [
+    "antiepileptic"
+  ],
+  "metabolism": "Hepatic CYP2C9 and, to a lesser extent, CYP2C19 generate inactive metabolites. Metabolites pass through bile and/or renal excretion; metabolic capacity can become saturated.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=46d5c0d1-a97b-46d9-8cf4-994780673337"
+  ]
+}

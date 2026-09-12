@@ -1,5 +1,9 @@
 {
   "addictionPotential": "尚未发现具有成瘾性",
-  "toxicities": ["具有神经毒性", "极高剂量下可能致命"],
-  "localizedName": "肉豆蔻醚"
+  "toxicities": [
+    "具有神经毒性",
+    "极高剂量下可能致命"
+  ],
+  "localizedName": "肉豆蔻醚",
+  "summary": "肉豆蔻醚 (Myristicin) 是一种天然存在的苯丙烯类谵妄剂哦。它少量存在于肉豆蔻的精油中，在欧芹 (parsley)和莳萝 (dill)等其他香料中也有少量存在呢。 研究表明它会对内源性大麻素系统产生作用哦。\n\n人们认为肉豆蔻醚和榄香素 (elemicin)一起，是肉豆蔻主要的精神活性成分呢。[来源请求] 当用高锰酸钾氧化时，肉豆蔻醚可以转化为肉豆蔻醛 (Myristicinaldehyde)，然后可以通过还原胺化反应合成 MMDPEA (Lophophine) 哦。[来源请求] 此外，肉豆蔻醚还是合成迷幻剂和共情剂药物 MMDA 的传统前体呢。[来源请求]"
 }

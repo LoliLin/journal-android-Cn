@@ -1,0 +1,13 @@
+{
+  "name": "Selegiline",
+  "url": "https://en.wikipedia.org/wiki/Deprenyl",
+  "isApproved": false,
+  "categories": [
+    "antiparkinsonian",
+    "maoi"
+  ],
+  "metabolism": "Extensive presystemic metabolism forms N-desmethylselegiline, L-methamphetamine and L-amphetamine. These products have their own activity; their contribution to the clinical effect is not fully established.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=040a97e5-efd1-4a2f-b737-2f13e5366d70"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Trazodone",
+  "url": "https://en.wikipedia.org/wiki/Trazodone",
+  "categories": [
+    "antidepressant",
+    "depressant"
+  ],
+  "isApproved": false,
+  "metabolism": "CYP3A4-mediated oxidative cleavage forms active m-chlorophenylpiperazine (mCPP). Other metabolic routes are less well characterized; very little trazodone is excreted unchanged in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4672f8af-93e6-469a-a7b7-41cee7d4d193"
+  ]
+}

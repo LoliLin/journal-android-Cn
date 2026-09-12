@@ -1,0 +1,12 @@
+{
+  "name": "Buspirone",
+  "url": "https://en.wikipedia.org/wiki/Buspirone",
+  "isApproved": false,
+  "categories": [
+    "anxiolytic"
+  ],
+  "metabolism": "CYP3A4-mediated oxidation forms hydroxylated metabolites and active 1-pyrimidinylpiperazine (1-PP). Metabolites leave through both urine and feces.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed2b56fe-e02f-46bc-808a-352f9bbb5b57"
+  ]
+}

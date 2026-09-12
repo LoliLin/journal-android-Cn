@@ -18,7 +18,9 @@
 
 package com.isaakhanimann.journal
 
+import com.isaakhanimann.journal.data.substances.ReleaseForm
 import com.isaakhanimann.journal.data.substances.parse.SubstanceParser
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
@@ -66,6 +68,9 @@ class TestParse {
                 {
                   "name": "Armodafinil",
                   "url": "https://example.com/armodafinil",
+                  "metabolism": "Amide hydrolysis and oxidation.",
+                  "metabolismSources": ["https://example.com/metabolism"],
+                  "oralReleaseForms": ["IMMEDIATE_RELEASE", "EXTENDED_RELEASE", "future_form"],
                   "categories": ["stimulant"],
                   "roas": [
                     {
@@ -76,6 +81,12 @@ class TestParse {
             """.trimIndent()
         )
         assertTrue(substance?.name == "Armodafinil")
+        assertEquals("Amide hydrolysis and oxidation.", substance?.metabolism)
+        assertEquals(listOf("https://example.com/metabolism"), substance?.metabolismSources)
+        assertEquals(
+            listOf(ReleaseForm.IMMEDIATE_RELEASE, ReleaseForm.EXTENDED_RELEASE),
+            substance?.oralReleaseForms
+        )
     }
 
     @Test

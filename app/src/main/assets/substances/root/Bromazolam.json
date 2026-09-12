@@ -1,0 +1,20 @@
+{
+  "name": "Bromazolam",
+  "url": "https://tripsit.me/factsheets/?name=bromazolam&p=substance",
+  "commonNames": [
+    "Bromazolam",
+    "xli-268",
+    "xli268"
+  ],
+  "categories": [
+    "benzodiazepine",
+    "research-chemical",
+    "tentative",
+    "habit-forming"
+  ],
+  "isApproved": false,
+  "metabolism": "Human liver preparations show CYP3A4 hydroxylation and UGT1A4/UGT2B10 N-glucuronidation. Hydroxylated/conjugated metabolites were also identified in human samples; this does not establish complete clinical pharmacokinetics.",
+  "metabolismSources": [
+    "https://pubmed.ncbi.nlm.nih.gov/33048135/"
+  ]
+}

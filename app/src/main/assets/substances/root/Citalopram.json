@@ -1,0 +1,19 @@
+{
+  "name": "Citalopram",
+  "url": "https://en.wikipedia.org/wiki/Citalopram",
+  "commonNames": [
+    "Citalopram",
+    "celexa",
+    "cipramil"
+  ],
+  "categories": [
+    "antidepressant",
+    "common",
+    "ssri"
+  ],
+  "isApproved": false,
+  "metabolism": "CYP2C19 and CYP3A4 mediate N-demethylation to demethylcitalopram, followed by further metabolism. Metabolites are substantially less potent than the parent; unchanged drug and metabolites contribute to urinary elimination.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=625a78b2-4751-4ca5-91b6-7c85fd9f8c2e"
+  ]
+}

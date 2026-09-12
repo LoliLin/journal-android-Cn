@@ -24,12 +24,19 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dopamine", "stimulant"],
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
   "addictionPotential": "highly addictive with a high potential for abuse",
   "toxicities": [
     "individuals have died from as little as 30 mg applied to mucous membranes, whereas addicts may tolerate up to 5 grams daily"
   ],
-  "categories": ["stimulant", "habit-forming", "common"],
+  "categories": [
+    "stimulant",
+    "habit-forming",
+    "common"
+  ],
   "summary": "A highly popular, short acting CNS stimulant that works by blocking the reuptake of dopamine, serotonin, and norepinephrine. It is known to increase euphoria, confidence, sex-drive, focus, body temperature, and heart rate. Cocaine can cause severe vasoconstriction and is known to be cardiotoxic and have a high potential for compulsive redosing and addiction.",
   "effectsSummary": "The increased release and additional reuptake inhibition of the body's own neurotransmitters dopamine and noradrenaline lead to the suppression of tiredness, hunger and thirst, euphoria, feelings of increased performance, greatly increased self-confidence, urge to move, restlessness, talkativeness, elimination of inhibitions and fears, suppressed sense of pain, as well as increased willingness to take risks.\n\nCoca leaves are known as \"Mate de Coca\" or dried leaves. These dried leaves contain about 0.5 to 2.5 % alkaloids, of which up to three quarters consist of cocaine. The leaves are chewed or drunk as tea. However, a psychoactive effect only occurs when they are taken in combination with a basic substance (e.g. lime or plant ash). This combination activates a hydrolysis, resulting in the alkaloid ecgonine. Ecgonine can be absorbed by the body and a slightly stimulating effect sets in. In contrast to cocaine, ecgonine has no dependence potential. If coca leaves are chewed without alkaline additives, they only have a numbing effect on the tongue. Coca leaves are used in South America mainly for medicinal purposes, e.g. to combat nausea or altitude sickness.",
   "generalRisks": "Sleep disturbances, irritability, aggressiveness, exaggerated egocentrism up to \"megalomania\", decrease in critical and judgemental ability, anxiety and delusions, depression, memory/concentration disorders, shortness of breath, hyperactivity, nervous twitching, muscle cramps and tremors, high stress on the cardiovascular system due to constriction of the blood vessels, increase in heart rate, increased blood pressure and hypertensive crises. In extreme cases, overdose can lead to a heart attack or stroke.\nWhen the effect wears off: exhaustion, depressive moods, irritability, feelings of anxiety and a strong urge to take the drug again (\"craving\").",
@@ -47,7 +54,12 @@
     "Do not mix cocaine with alcohol; the mixture makes you aggressive and you risk alcohol poisoning."
   ],
   "interactions": {
-    "dangerous": ["ΑMT", "Opioids", "Tramadol", "MAOIs"],
+    "dangerous": [
+      "ΑMT",
+      "Opioids",
+      "Tramadol",
+      "MAOIs"
+    ],
     "unsafe": [
       "DOx",
       "25x-NBOMe",
@@ -187,6 +199,43 @@
     },
     {
       "name": "inhaled",
+      "dose": {
+        "units": "mg",
+        "lightMin": 2.5,
+        "commonMin": 15,
+        "strongMin": 30,
+        "heavyMin": 45
+      },
+      "duration": {
+        "onset": {
+          "min": 3,
+          "max": 5,
+          "units": "seconds"
+        },
+        "comeup": {
+          "min": 1,
+          "max": 2,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 2,
+          "max": 10,
+          "units": "minutes"
+        },
+        "offset": {
+          "min": 1,
+          "max": 5,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 5,
+          "max": 15,
+          "units": "minutes"
+        }
+      }
+    },
+    {
+      "name": "smoked",
       "dose": {
         "units": "mg",
         "lightMin": 2.5,

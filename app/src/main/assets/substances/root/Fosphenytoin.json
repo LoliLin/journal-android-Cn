@@ -1,0 +1,12 @@
+{
+  "name": "Fosphenytoin",
+  "url": "https://en.wikipedia.org/wiki/Fosphenytoin",
+  "isApproved": false,
+  "categories": [
+    "antiepileptic"
+  ],
+  "metabolism": "A prodrug hydrolyzed to phenytoin, phosphate and formaldehyde, with formaldehyde converted to formate. Phenytoin then undergoes CYP2C9/CYP2C19 metabolism before mainly urinary metabolite elimination.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0def32c-e693-43e5-9509-0cef9642441c"
+  ]
+}

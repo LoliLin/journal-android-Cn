@@ -89,7 +89,6 @@ import com.isaakhanimann.journal.ui.theme.horizontalPadding
 import com.isaakhanimann.journal.ui.theme.verticalPaddingCards
 import com.isaakhanimann.journal.ui.utils.administrationRouteKey
 import com.isaakhanimann.journal.ui.utils.getInstant
-import com.isaakhanimann.journal.ui.utils.getStringOfPattern
 import com.isaakhanimann.journal.ui.utils.getTimeText
 import java.time.LocalDateTime
 import java.time.temporal.ChronoUnit
@@ -215,6 +214,30 @@ fun SubstanceScreen(
                                 CategoryChipFromSubstanceScreen(category, navigateToCategoryScreen)
                             }
                         }
+                    }
+                }
+            }
+            substance.metabolism?.let { metabolism ->
+                SectionWithTitle(title = i18n("substance_metabolism_title")) {
+                    Column(Modifier.padding(horizontal = horizontalPadding)) {
+                        Text(text = metabolism)
+                        substance.metabolismSources.forEachIndexed { index, url ->
+                            TextButton(onClick = { navigateToURL(url) }) {
+                                Icon(
+                                    imageVector = Icons.Outlined.Newspaper,
+                                    contentDescription = null,
+                                    modifier = Modifier.size(ButtonDefaults.IconSize)
+                                )
+                                Spacer(Modifier.size(ButtonDefaults.IconSpacing))
+                                Text(
+                                    i18n(
+                                        "substance_metabolism_source",
+                                        mapOf("number" to (index + 1).toString())
+                                    )
+                                )
+                            }
+                        }
+                        VerticalSpace()
                     }
                 }
             }

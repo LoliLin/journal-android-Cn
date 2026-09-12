@@ -1,0 +1,12 @@
+{
+  "name": "Lurasidone",
+  "url": "https://en.wikipedia.org/wiki/Lurasidone",
+  "isApproved": false,
+  "categories": [
+    "antipsychotic"
+  ],
+  "metabolism": "Mainly metabolized by CYP3A4, forming active ID-14283 and ID-14326 as well as inactive metabolites. Elimination of drug-related material is predominantly fecal.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6008ccac-948e-4b6a-a288-7dd245c2bac4"
+  ]
+}

@@ -38,6 +38,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.isaakhanimann.journal.data.substances.AdministrationRoute
+import com.isaakhanimann.journal.data.substances.ReleaseForm
 import com.isaakhanimann.journal.localization.i18n
 import com.isaakhanimann.journal.localization.i18nOrDefault
 import com.isaakhanimann.journal.ui.tabs.journal.addingestion.search.ColorCircle
@@ -46,6 +47,7 @@ import com.isaakhanimann.journal.ui.tabs.journal.components.RelativeDateTextNew
 import com.isaakhanimann.journal.ui.tabs.search.substance.roa.toReadableString
 import com.isaakhanimann.journal.ui.theme.horizontalPadding
 import com.isaakhanimann.journal.ui.utils.administrationRouteKey
+import com.isaakhanimann.journal.ui.utils.releaseFormKey
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -61,7 +63,8 @@ fun SuggestionRow(
         units: String?,
         isEstimate: Boolean,
         estimatedDoseStandardDeviation: Double?,
-        customUnitId: Int?
+        customUnitId: Int?,
+        releaseForm: ReleaseForm?
     ) -> Unit,
     getSubstanceDisplayName: (substanceName: String) -> String
 ) {
@@ -91,6 +94,9 @@ fun SuggestionRow(
         }
         FlowRow(horizontalArrangement = Arrangement.spacedBy(5.dp)) {
             substanceRouteSuggestion.dosesAndUnit.forEach { doseAndUnit ->
+                val formLabel = doseAndUnit.releaseForm?.let {
+                    " · ${i18n(releaseFormKey(it))}"
+                }.orEmpty()
                 SuggestionChip(
                     onClick = {
                         navigateToChooseTime(
@@ -100,19 +106,20 @@ fun SuggestionRow(
                             doseAndUnit.unit,
                             doseAndUnit.isEstimate,
                             doseAndUnit.estimatedDoseStandardDeviation,
-                            null
+                            null,
+                            doseAndUnit.releaseForm
                         )
                     },
                     label = {
                         if (doseAndUnit.dose != null) {
                             val description =
-                                "${doseAndUnit.dose.toReadableString()} ${doseAndUnit.unit}"
+                                "${doseAndUnit.dose.toReadableString()} ${doseAndUnit.unit}$formLabel"
                             if (doseAndUnit.isEstimate) {
                                 if (doseAndUnit.estimatedDoseStandardDeviation != null) {
                                     Text(
                                         text = "${doseAndUnit.dose.toReadableString()}±${
                                             doseAndUnit.estimatedDoseStandardDeviation.toReadableString()
-                                        } ${doseAndUnit.unit}"
+                                        } ${doseAndUnit.unit}$formLabel"
                                     )
                                 } else {
                                     Text(
@@ -128,7 +135,7 @@ fun SuggestionRow(
                                 Text(text = description)
                             }
                         } else {
-                            Text(text = i18n("dose_unknown_short"))
+                            Text(text = i18n("dose_unknown_short") + formLabel)
                         }
                     }
                 )
@@ -167,7 +174,8 @@ fun SuggestionRow(
                         customUnitDose.customUnit.unit,
                         customUnitDose.isEstimate,
                         customUnitDose.estimatedDoseStandardDeviation,
-                        customUnitDose.customUnit.id
+                        customUnitDose.customUnit.id,
+                        customUnitDose.releaseForm
                     )
                 }, label = {
                     Column(modifier = Modifier.padding(vertical = 5.dp)) {
@@ -176,6 +184,7 @@ fun SuggestionRow(
                             style = MaterialTheme.typography.labelSmall
                         )
                         Text(text = customUnitDose.doseDescription)
+                        customUnitDose.releaseForm?.let { Text(i18n(releaseFormKey(it))) }
                     }
                 })
             }

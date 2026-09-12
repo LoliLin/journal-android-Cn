@@ -1,0 +1,13 @@
+{
+  "name": "Safinamide",
+  "url": "https://en.wikipedia.org/wiki/Safinamide",
+  "isApproved": false,
+  "categories": [
+    "antiparkinsonian",
+    "maoi"
+  ],
+  "metabolism": "Non-microsomal amidases and MAO-A dominate metabolism; CYP pathways play a minor role. Further conjugation occurs, and inactive metabolites are eliminated mainly by the kidneys.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c4d65f28-983f-42b4-bb23-023ae0fe81b2"
+  ]
+}

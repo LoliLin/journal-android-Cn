@@ -1,0 +1,12 @@
+{
+  "name": "Lamotrigine",
+  "url": "https://en.wikipedia.org/wiki/Lamotrigine",
+  "isApproved": false,
+  "categories": [
+    "antiepileptic"
+  ],
+  "metabolism": "Primarily conjugated with glucuronic acid to inactive N-glucuronides, especially the 2-N-glucuronide, followed by urinary elimination. Valproate inhibits this conjugation pathway.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0833d3df-2df1-4abd-abe0-7fb2c0253c80"
+  ]
+}

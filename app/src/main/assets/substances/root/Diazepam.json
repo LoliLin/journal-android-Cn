@@ -1,6 +1,11 @@
 {
   "name": "Diazepam",
-  "commonNames": ["Valium", "Diastat", "Mother's Little Helper", "Apaurin"],
+  "commonNames": [
+    "Valium",
+    "Diastat",
+    "Mother's Little Helper",
+    "Apaurin"
+  ],
   "url": "https://psychonautwiki.org/wiki/Diazepam",
   "isApproved": true,
   "tolerance": {
@@ -8,13 +13,20 @@
     "zero": "7-14 days",
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["benzodiazepine"],
+  "crossTolerances": [
+    "benzodiazepine"
+  ],
   "addictionPotential": "extremely physically and psychologically addictive",
   "toxicities": [
     "low toxicity",
     "potentially lethal when mixed with depressants like alcohol or opioids"
   ],
-  "categories": ["depressant", "benzodiazepine", "habit-forming", "common"],
+  "categories": [
+    "depressant",
+    "benzodiazepine",
+    "habit-forming",
+    "common"
+  ],
   "summary": "A very common and widely prescribed benzodiazepine with hypnotic and sedative qualities. The metre by which other benzodiazepines are compared. May cause amnesia and lowered inhibitions in excess. Has a relatively long half-life in comparison with other benzodiazepines.",
   "effectsSummary": "Diazepam has a calming, relaxing, antispasmodic, anti-anxiety and sleep-inducing effect.\nTaking benzodiazepines increases the effectiveness of the neurotransmitter gamma-aminobutyric acid (GABA) at the GABA-A receptor. This triggers sedative (calming), hypnotic, anxiolytic (anxiety-relieving), anticonvulsant (anticonvulsant) and muscle-relaxing effects in the body. Benzodiazepines have a depressant effect on the central nervous system. The flow of information in the brain between the brain cells (neurons) is thereby reduced / disturbed and feelings and perceptions are dampened.\nThe breakdown of the individual active ingredients of benzodiazepines in the body is age-dependent and therefore varies from person to person.",
   "generalRisks": "There is little information available on risks, toxicity, side effects and long-term consequences. Therefore, the general information on benzodiazepines applies:\nWhen mixing with other downers (alcohol, GHB/GBL, heroin) there is a risk of respiratory paralysis!\nTaking benzodiazepines can cause numerous undesirable side effects. In addition, regular and long-term use carries a very high risk of physical and psychological dependence. Benzodiazepines should only be taken as prescribed by a doctor and only for a short period of time (max. 4-6 weeks). Longer-term use should be discussed with the treating specialist. The dosages and duration of action of the individual benzodiazepines differ considerably.\nSide effects of benzodiazepines may be as follows: Prolonged fatigue, gastrointestinal problems, impaired reactions, hypersensitivity reactions, headaches, dizziness, motor difficulties, visual disturbances, slowed breathing, muscle weakness, confusion, sexual dysfunction, aggression, outbursts of anger, restlessness, random movements, allergies, skin problems/rashes and speech and movement disorders. Some benzodiazepines can cause seizures in epileptics.",
@@ -26,7 +38,11 @@
     "The simultaneous consumption of depressant substances such as alcohol, ketamine, GHB/GBL, nitrous oxide, opioids and/or other benzodiazepines is dangerous as there is an increased risk of vomiting and unconsciousness. The risk of suffocation is high!"
   ],
   "interactions": {
-    "dangerous": ["Depressants", "Dissociatives", "Stimulants"],
+    "dangerous": [
+      "Depressants",
+      "Dissociatives",
+      "Stimulants"
+    ],
     "unsafe": [],
     "uncertain": []
   },
@@ -63,5 +79,9 @@
         }
       }
     }
+  ],
+  "metabolism": "CYP2C19/CYP3A4 form active nordazepam; CYP3A4 also forms active temazepam. Both can be converted to oxazepam. Glucuronidation and urinary excretion follow.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=260e2041-2bb3-482f-850e-b5d47a7bdbe6"
   ]
 }

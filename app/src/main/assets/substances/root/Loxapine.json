@@ -1,0 +1,12 @@
+{
+  "name": "Loxapine",
+  "url": "https://en.wikipedia.org/wiki/Loxapine",
+  "isApproved": false,
+  "categories": [
+    "antipsychotic"
+  ],
+  "metabolism": "Extensively metabolized. Metabolites are eliminated as conjugates in urine and in unconjugated form in feces; the reviewed label does not assign one dominant enzyme.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ce8c5a31-7600-4525-a0c7-b3adc9ec2977"
+  ]
+}

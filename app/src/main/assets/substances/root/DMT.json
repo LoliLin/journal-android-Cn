@@ -12,10 +12,17 @@
   "tolerance": {
     "full": "does not appear to occur"
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "non-addictive with a low abuse potential",
-  "toxicities": ["extremely low toxicity"],
-  "categories": ["psychedelic", "common"],
+  "toxicities": [
+    "extremely low toxicity"
+  ],
+  "categories": [
+    "psychedelic",
+    "common"
+  ],
   "summary": "A popular and powerful psychedelic, typically used in two ways; either it is vapourised for a short 'breakthrough' experience, or it is taken in combination with an enzyme inhibitor for a long, intense trip (this is also known as ayahuasca or pharmahuasca).",
   "effectsSummary": "The effect depends very much on the set and the setting. Blood pressure and pulse increase, pupils dilate. Detachment of the body from the mind and ego dissolution are common, near-death experiences also occur relatively often, especially when high doses are consumed. The perception of time changes greatly during intoxication. A few minutes can be perceived as very long and intense. In addition, different feelings such as fear, euphoria, etc. can be experienced within a short period of time. Consumers report immersion in very \"bizarre\" worlds in which connections between being, environment and matter arise. With DMT, this phenomenon is also visually pronounced, i.e., images are linked with oneself, matter and being in one's own society. Physical perception can also be influenced, in that one feels weightless or thinks one is falling.\nWhen swallowed, DMT is only effective in combination with MAO inhibitors. MAO inhibitors (e.g. harmine) are substances and drugs that prevent the enzyme MAO from breaking down the body's own messenger substances such as adrenaline, dopamine, serotonin etc. as well as foreign alkaloids such as caffeine, cocaine, morphine. The psychoactive potion ayahuasca and changa are such a combination. After the consumption of MAO inhibitors, the consumption of certain everyday foods such as cheese is life-threatening.",
   "dosageRemark": "Ayahuasca is a shamanic herbal potion made from DMT-containing chacruna leaves (Psychotria viridis) and the harmaline-containing ayahuasca liana Banisteriopsis caapi. Harmaline is an MAO inhibitor. MAO inhibitors are substances and drugs that prevent the enzyme MAO from breaking down the body's own messenger substances such as adrenalin, dopamine, serotonin, etc. as well as foreign alkaloids such as caffeine, cocaine, etc.. MAO normally also degrades the active substance DMT even before it can enter the central nervous system via the blood-brain barrier.\nChanga is a mixture for smoking of DMT-containing plants (but usually mostly crystalline DMT) and herbs that act as MAO inhibitors.",
@@ -31,9 +38,16 @@
     "A trip with DMT should remain an exceptional experience. Make sure you take long breaks from using DMT and talk to others about your experience so that it can be processed."
   ],
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "THC",
+      "Stimulants"
+    ]
   },
   "roas": [
     {
@@ -75,6 +89,48 @@
     },
     {
       "name": "inhaled",
+      "dose": {
+        "units": "mg",
+        "lightMin": 2,
+        "commonMin": 20,
+        "strongMin": 40,
+        "heavyMin": 60
+      },
+      "duration": {
+        "onset": {
+          "min": 20,
+          "max": 40,
+          "units": "seconds"
+        },
+        "comeup": {
+          "min": 1,
+          "max": 3,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 2,
+          "max": 8,
+          "units": "minutes"
+        },
+        "offset": {
+          "min": 1,
+          "max": 6,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 5,
+          "max": 20,
+          "units": "minutes"
+        },
+        "afterglow": {
+          "min": 10,
+          "max": 60,
+          "units": "minutes"
+        }
+      }
+    },
+    {
+      "name": "smoked",
       "dose": {
         "units": "mg",
         "lightMin": 2,

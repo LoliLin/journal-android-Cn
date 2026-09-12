@@ -1,0 +1,1567 @@
+{
+  "checkedOn": "2026-09-08",
+  "scope": "Substance-specific metabolism and elimination; product information, pharmacogenetic guidance, and explicitly labelled human-material studies.",
+  "reviewed": [
+    {
+      "name": "3-CMC",
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/38862871/"],
+      "evidence": "human-material-study"
+    },
+    {
+      "name": "4-CMC",
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/38862871/"],
+      "evidence": "human-material-study"
+    },
+    {
+      "name": "Acamprosate",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1cfe4675-766f-4f1a-b1a8-96bbdacfcfa5"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260714"
+    },
+    {
+      "name": "Agomelatine",
+      "sources": [
+        "https://www.ema.europa.eu/en/documents/product-information/valdoxan-epar-product-information_en.pdf"
+      ],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Alprazolam",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260827"
+    },
+    {
+      "name": "Amisulpride",
+      "sources": ["https://www.medicines.org.uk/emc/product/102319/smpc"],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Amitriptyline",
+      "sources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479/"],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Amoxapine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eed5e856-dd7b-4eaa-9dad-508f2bef9328"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20241218"
+    },
+    {
+      "name": "Aripiprazole",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14910dae-da81-3d73-d0a4-e98d13917c69"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260903"
+    },
+    {
+      "name": "Armodafinil",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4128759d-ed7c-4130-b24c-a0541f2b9e7f"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260306"
+    },
+    {
+      "name": "Asenapine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3512687b-d1c7-45c4-8822-3a2ad53575a5"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20251125"
+    },
+    {
+      "name": "Atomoxetine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0ab8d905-e890-4e91-a730-3e5d12f5c23f"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260818"
+    },
+    {
+      "name": "Baclofen",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e2cd27d-91c7-4f15-96cc-3971769dbeaa"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260903"
+    },
+    {
+      "name": "Benzgalantamine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=af47bf67-1f07-4650-8064-24c38afc4656"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260317"
+    },
+    {
+      "name": "Brexpiprazole",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6991c065-0f6e-433a-8f4f-796e0ece327f"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260602"
+    },
+    {
+      "name": "Brivaracetam",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3cf2f439-0e97-443e-8e33-25ecef616f6c"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260820"
+    },
+    {
+      "name": "Bromazolam",
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/33048135/"],
+      "evidence": "human-material-study"
+    },
+    {
+      "name": "Buprenorphine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4124c4ad-ef62-4c95-8e57-0d843862ae71"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260817"
+    },
+    {
+      "name": "Bupropion",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=136f29fa-a859-4efb-8365-1382716d6f8f"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260903"
+    },
+    {
+      "name": "Buspirone",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed2b56fe-e02f-46bc-808a-352f9bbb5b57"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260827"
+    },
+    {
+      "name": "Carbamazepine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5f9535b1-ff6a-41b3-bbb2-efcf8fbacf4c"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260828"
+    },
+    {
+      "name": "Cariprazine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4b5f7c65-aa2d-452a-b3db-bc85c06ff12f"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20251218"
+    },
+    {
+      "name": "Cenobamate",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=565c2126-57ae-4e29-b443-723bbe7e2072"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20250825"
+    },
+    {
+      "name": "Chlordiazepoxide",
+      "sources": ["https://www.medicines.org.uk/emc/product/1728/smpc"],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Chlorpromazine",
+      "sources": ["https://www.medicines.org.uk/emc/product/3476/smpc"],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Citalopram",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=625a78b2-4751-4ca5-91b6-7c85fd9f8c2e"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260827"
+    },
+    {
+      "name": "Clobazam",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fd1e63bf-496c-427c-83b7-6acabc00a5e5"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260714"
+    },
+    {
+      "name": "Clomipramine",
+      "sources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479/"],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Clonazepam",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260827"
+    },
+    {
+      "name": "Clonidine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=826de1dc-378e-4c90-86d1-e33f7a4248cd"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260812"
+    },
+    {
+      "name": "Clorazepate",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=11b72861-64c9-4cdc-9289-c7fa9ea23bf6"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260724"
+    },
+    {
+      "name": "Clozapine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61fe53d5-ed5c-4e45-9189-709d08d386cb"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260511"
+    },
+    {
+      "name": "Codeine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40d4a71e-341e-48b3-b925-ba35b7910dff"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260827"
+    },
+    {
+      "name": "Cyclobenzaprine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=34e57aff-dc4b-4631-9d57-31020244835d"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260903"
+    },
+    {
+      "name": "Daridorexant",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3a2d1503-b816-40c9-9fac-7e03c5a3bcef"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260226"
+    },
+    {
+      "name": "Desipramine",
+      "sources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479/"],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Desvenlafaxine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ff837eb1-24c3-4c63-9b4b-c6b5935a9b47"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260821"
+    },
+    {
+      "name": "Dexmedetomidine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eee6145b-d83f-4596-92d3-733934d8a3a4"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260805"
+    },
+    {
+      "name": "Dexmethylphenidate",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=dd659d39-41f5-4612-8f17-bad602b4784d"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260701"
+    },
+    {
+      "name": "Diazepam",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=260e2041-2bb3-482f-850e-b5d47a7bdbe6"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260811"
+    },
+    {
+      "name": "Donepezil",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0516d548-db9b-410a-aec9-79aedbc3f6e9"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260818"
+    },
+    {
+      "name": "Doxepin",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=21dc77be-23af-4a1f-b189-dfee8ae2f894"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260903"
+    },
+    {
+      "name": "Duloxetine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00628e5e-4c5b-2573-e063-6294a90a0e3b"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260820"
+    },
+    {
+      "name": "Escitalopram",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d75e3b97-1ead-4e7b-9ae3-3626aede1efd"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260903"
+    },
+    {
+      "name": "Esketamine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d81a6a79-a74a-44b7-822c-0dfa3036eaed"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260331"
+    },
+    {
+      "name": "Eslicarbazepine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2067fb77-9657-44da-b430-02e8a4efacb5"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260807"
+    },
+    {
+      "name": "Estazolam",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a1e3b4bf-22e9-430a-a768-4d86ae886c9e"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20240630"
+    },
+    {
+      "name": "Eszopiclone",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c4ff1d6a-918e-c046-e053-2a95a90a9c9b"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260901"
+    },
+    {
+      "name": "Etodesnitazene",
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/38582802/"],
+      "evidence": "human-material-study"
+    },
+    {
+      "name": "Felbamate",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0afffb17-e6ac-4bea-a90e-7ef3c8150290"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260714"
+    },
+    {
+      "name": "Fluoxetine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=23899405-007b-48d9-82a9-a530b8e90784"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260820"
+    },
+    {
+      "name": "Flurazepam",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8f476891-1346-4e8c-ac1b-f8cbdc64f5a1"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20241028"
+    },
+    {
+      "name": "Fluvoxamine",
+      "sources": ["https://www.medicines.org.uk/emc/product/1169/smpc"],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Fosphenytoin",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0def32c-e693-43e5-9509-0cef9642441c"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260218"
+    },
+    {
+      "name": "Gabapentin",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d35cd5ac-5ed6-2405-e053-2995a90a6946"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260903"
+    },
+    {
+      "name": "Galantamine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=261889d3-41c8-4655-98f7-41317778e7a1"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260702"
+    },
+    {
+      "name": "Ganaxolone",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d91612c4-b03a-4be4-a1ee-6a13e3b83d4e"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20251128"
+    },
+    {
+      "name": "Gepirone",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c78edd8-6acb-433c-9d34-2527da8d64e1"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260714"
+    },
+    {
+      "name": "Guanfacine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8348e63a-5cbc-489e-b7bf-046c65ba2e8e"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260902"
+    },
+    {
+      "name": "HHC acetate",
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/38804224/"],
+      "evidence": "human-material-study"
+    },
+    {
+      "name": "Haloperidol",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2cdd9fca-afe5-4bfa-8db1-337beec13c6b"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260901"
+    },
+    {
+      "name": "Hexahydrocannabinol",
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/38804224/"],
+      "evidence": "human-material-study"
+    },
+    {
+      "name": "Hexahydrocannabiphorol",
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/38804224/"],
+      "evidence": "human-material-study"
+    },
+    {
+      "name": "Hydroxyzine",
+      "sources": ["https://www.medicines.org.uk/emc/product/101010/smpc"],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Iloperidone",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=33f60b40-3fca-11de-8f56-0002a5d5c51b"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260506"
+    },
+    {
+      "name": "Imipramine",
+      "sources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479/"],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Isotonitazene",
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/38582802/"],
+      "evidence": "human-material-study"
+    },
+    {
+      "name": "Lacosamide",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b9a0ca8c-593c-48e8-b2a7-d30d5f6e6a9b"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260812"
+    },
+    {
+      "name": "Lamotrigine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0833d3df-2df1-4abd-abe0-7fb2c0253c80"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260813"
+    },
+    {
+      "name": "Lemborexant",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7074cb65-77b3-45d2-8e8d-da8dc0f70bfd"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20250224"
+    },
+    {
+      "name": "Levetiracetam",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2d307850-0ed5-4f32-ac62-0e1e2fe27a7a"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260903"
+    },
+    {
+      "name": "Levomilnacipran",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f371258d-91b3-4b6a-ac99-434a1964c3af"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20240430"
+    },
+    {
+      "name": "Lisdexamfetamine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c11cb3b6-3dff-477b-a249-b4c3118edc5f"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260828"
+    },
+    {
+      "name": "Lithium",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be1346df-4a39-45e8-874b-e2a496847fd5"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260831"
+    },
+    {
+      "name": "Lofexidine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=77367dfa-434f-4d61-95fe-f0f1628457d1"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260814"
+    },
+    {
+      "name": "Lorazepam",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86630bdd-13ad-4ab5-9e94-fcf2ea2113e1"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260903"
+    },
+    {
+      "name": "Loxapine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ce8c5a31-7600-4525-a0c7-b3adc9ec2977"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260903"
+    },
+    {
+      "name": "Lumateperone",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=db730b06-6351-47fd-8183-e61e61bbead5"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20250620"
+    },
+    {
+      "name": "Lurasidone",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6008ccac-948e-4b6a-a288-7dd245c2bac4"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260901"
+    },
+    {
+      "name": "Memantine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=007d4cb9-3fa9-40f3-b5ca-4083eccd6038"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260901"
+    },
+    {
+      "name": "Methadone",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=544483e6-6f9d-4371-9e93-313e54e0ea05"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260804"
+    },
+    {
+      "name": "Methohexital",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f76d4ab9-2f6c-420b-afec-b9cdfdc083ce"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260727"
+    },
+    {
+      "name": "Methylphenidate",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=768bf181-d0d8-49e5-9c87-cacbb069e0b2"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260827"
+    },
+    {
+      "name": "Metonitazene",
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/38582802/"],
+      "evidence": "human-material-study"
+    },
+    {
+      "name": "Mianserin",
+      "sources": ["https://www.medicines.org.uk/emc/product/2741/smpc"],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Midazolam",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b690f5c-2923-4c34-a8f7-11af5f546b62"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260826"
+    },
+    {
+      "name": "Milnacipran",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e39b4890-99e4-4e48-9f45-978d5ac9f402"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260724"
+    },
+    {
+      "name": "Mirtazapine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d6fbe837-988a-7c75-e053-2995a90a599a"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260828"
+    },
+    {
+      "name": "Moclobemide",
+      "sources": ["https://www.medicines.org.uk/emc/product/7295/smpc"],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Modafinil",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1a309416-bd6a-45b1-982f-b689b097453d"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260903"
+    },
+    {
+      "name": "Nalmefene",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a59a5847-9fe4-4341-a203-be0a5e6d3e36"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260731"
+    },
+    {
+      "name": "Naltrexone",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=57e8b767-54c2-dfa3-e063-6394a90ae6c2"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260731"
+    },
+    {
+      "name": "Nefazodone",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0bd4c34a-4f43-4c84-8b98-1d074cba97d5"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20250904"
+    },
+    {
+      "name": "Nortriptyline",
+      "sources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479/"],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Olanzapine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=63bcfe98-d1fc-4cd7-9212-f59ee4dcc6d1"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260825"
+    },
+    {
+      "name": "Oliceridine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ce167984-8b9d-40b7-84ce-d0f33fff1eaa"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20251231"
+    },
+    {
+      "name": "Oxazepam",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=67f821fa-5663-4d69-82c9-5ee13a09f324"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20250711"
+    },
+    {
+      "name": "Oxcarbazepine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8841174a-9f4b-424f-a50d-01478f2aeb29"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260826"
+    },
+    {
+      "name": "Paliperidone",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bbbaa057-f587-4eb9-a0d2-463dbcd57661"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260728"
+    },
+    {
+      "name": "Paroxetine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=598ece4d-0ac4-993b-e063-6294a90a1d34"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260821"
+    },
+    {
+      "name": "Perampanel",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3c72a5f7-bb22-4c48-942a-543ca84ed5a9"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260602"
+    },
+    {
+      "name": "Perphenazine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c4150683-0772-4344-bb1c-f050b84175d6"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260827"
+    },
+    {
+      "name": "Phenelzine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fa041652-fdde-4794-a8d2-279dd309e075"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260521"
+    },
+    {
+      "name": "Phenytoin",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=46d5c0d1-a97b-46d9-8cf4-994780673337"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260820"
+    },
+    {
+      "name": "Pimavanserin",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1e6bea44-57d6-4bac-9328-46e1ee59f83b"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260618"
+    },
+    {
+      "name": "Pimozide",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e954fc2-fdff-486c-beb6-2b8ace717081"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260710"
+    },
+    {
+      "name": "Pregabalin",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e897d7e8-2743-4512-8417-375cb11ceec6"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260903"
+    },
+    {
+      "name": "Propofol",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=28d7ba00-f824-4e55-139a-03f509c099db"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260813"
+    },
+    {
+      "name": "Propranolol",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7ae2dac-6048-41ea-95d3-cad06cc2baf3"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260903"
+    },
+    {
+      "name": "Protonitazene",
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/38679851/"],
+      "evidence": "human-material-study"
+    },
+    {
+      "name": "Quazepam",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7d63f3f-5303-48ab-bce2-35fd62c45799"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20251023"
+    },
+    {
+      "name": "Quetiapine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=711f42c5-0719-46de-81fb-3d03801b9ed9"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260825"
+    },
+    {
+      "name": "Ramelteon",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5a3cf917-3569-4fc1-8b81-ffecfd2de005"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260901"
+    },
+    {
+      "name": "Rasagiline",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9bf059f4-4da8-48fe-aacb-c50717d36606"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260826"
+    },
+    {
+      "name": "Reboxetine",
+      "sources": ["https://www.medicines.org.uk/emc/product/1578/smpc"],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Remimazolam",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e1838f2-b999-41a7-a761-d94f09aa531f"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20250220"
+    },
+    {
+      "name": "Risperidone",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4ab6d256-6590-45be-a5df-f505987f96c3"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260830"
+    },
+    {
+      "name": "Rivastigmine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2bb5e0d6-f677-4021-9888-3ff90979ef7d"
+      ],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Rufinamide",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a02ca527-bd8f-49ef-89fa-91fac154bffe"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260807"
+    },
+    {
+      "name": "Safinamide",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c4d65f28-983f-42b4-bb23-023ae0fe81b2"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20251022"
+    },
+    {
+      "name": "Selegiline",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=040a97e5-efd1-4a2f-b737-2f13e5366d70"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20251124"
+    },
+    {
+      "name": "Sertraline",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7d598f1a-6c76-458a-a155-7a6a0743a2d3"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260903"
+    },
+    {
+      "name": "Solriamfetol",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=362f206b-73e7-4009-8c34-5a9df55679ab"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260505"
+    },
+    {
+      "name": "Stiripentol",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=58304ba8-9779-4658-811e-94ffe08c3f16"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260427"
+    },
+    {
+      "name": "Sulpiride",
+      "sources": ["https://www.medicines.org.uk/emc/product/2430/smpc"],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Suvorexant",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e5b72731-1acb-45b7-9c13-290ad12d3951"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20250310"
+    },
+    {
+      "name": "Tasimelteon",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ce5a2fa3-ed54-422d-96c2-1821496eb32f"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260818"
+    },
+    {
+      "name": "Temazepam",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=62379cd5-a314-43eb-a1ee-33997623bfa3"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260810"
+    },
+    {
+      "name": "Thioridazine",
+      "sources": ["https://www.ncbi.nlm.nih.gov/books/NBK424018/"],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Tiagabine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=953ef3cc-e3cb-480f-b9ea-256520fd62b8"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20210930"
+    },
+    {
+      "name": "Tizanidine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=63b7eba3-6dea-4d89-bc42-7e965ae9795d"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260828"
+    },
+    {
+      "name": "Topiramate",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c0a6774-e234-47a5-866e-462cfd99744c"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260901"
+    },
+    {
+      "name": "Tramadol",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260901"
+    },
+    {
+      "name": "Trazodone",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4672f8af-93e6-469a-a7b7-41cee7d4d193"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260902"
+    },
+    {
+      "name": "Triazolam",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5add318e-11b9-42f8-b052-0d8cebb32fcf"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260710"
+    },
+    {
+      "name": "Trimipramine",
+      "sources": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479/"],
+      "evidence": "product-information-or-guideline"
+    },
+    {
+      "name": "Valproic acid",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1edd220d-d151-4177-9a29-9fee36489fb7"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260903"
+    },
+    {
+      "name": "Varenicline",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59e125e3-5204-122b-e063-6394a90a0092"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260825"
+    },
+    {
+      "name": "Venlafaxine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c41d847b-88ba-49a5-9d73-269ac4caa4ed"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260903"
+    },
+    {
+      "name": "Vigabatrin",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=93ba3894-fd97-4432-9f2d-e7050371e91f"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260812"
+    },
+    {
+      "name": "Vilazodone",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f917f30d-f2a7-43eb-836f-53eaa2a31cb0"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20251008"
+    },
+    {
+      "name": "Viloxazine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aedf408d-0f84-418d-9416-7c39ddb0d29a"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20251205"
+    },
+    {
+      "name": "Vortioxetine",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=239215eb-be32-4286-9677-1e5556c6cccf"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260423"
+    },
+    {
+      "name": "Zaleplon",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a1277ef5-6072-43ff-a6ce-0a7cea58b7cb"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20251017"
+    },
+    {
+      "name": "Ziprasidone",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=947881af-08e6-47eb-87e3-24cc162c12bc"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260811"
+    },
+    {
+      "name": "Zolpidem",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1584bad1-7bf4-4805-bdd9-7eb0fac92721"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260901"
+    },
+    {
+      "name": "Zonisamide",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40094d96-e979-4b3e-840f-a96677480f96"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260818"
+    },
+    {
+      "name": "Zuranolone",
+      "sources": [
+        "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f18e53b0-d0bb-422d-8de7-ab64b7292b29"
+      ],
+      "evidence": "product-information",
+      "labelDate": "20260615"
+    }
+  ],
+  "notYetVerified": [
+    "2-Chloroephenidine",
+    "2-MEC",
+    "2-MMC",
+    "2-MPPP",
+    "2-Me-DMT",
+    "2-PA",
+    "2-PTA",
+    "25B-NBOH",
+    "25E-NBOMe",
+    "25G-NBOMe",
+    "25H-NBOMe",
+    "25I-NBF",
+    "25I-NBMD",
+    "25P-NBOMe",
+    "25T-2-NBOMe",
+    "25T-4-NBOMe",
+    "25iP-NBOMe",
+    "2C-B-AN",
+    "2C-B-FLY-NBOMe",
+    "2C-G",
+    "2C-G-5",
+    "2C-IP",
+    "2C-N",
+    "2C-T-4",
+    "3,6-DMPM",
+    "3-Cl-PCP",
+    "3-FMC",
+    "3-MEC",
+    "3-MeO-PCPR",
+    "3-MeO-PCPY",
+    "3-MeOMC",
+    "3-OH-Phenazepam",
+    "4,4-DMAR",
+    "4-AcO-DALT",
+    "4-AcO-DPT",
+    "4-Benzylpiperidine",
+    "4-CBC",
+    "4-CMA",
+    "4-Chlorodiazepam",
+    "4-EMC",
+    "4-EPD",
+    "4-FEA",
+    "4-FMC",
+    "4-FPM",
+    "4-FPP",
+    "4-Fluorobutyrfentanyl",
+    "4-Fluoropentedrone",
+    "4-HO-MCPT",
+    "4-HO-MPMI",
+    "4-MEC",
+    "4-MPD",
+    "4-MPM",
+    "4-MTA",
+    "4-MeO-Butyrfentanyl",
+    "4-MeO-MiPT",
+    "4-Methylaminorex",
+    "4-Methylmethylphenidate",
+    "4F-NEB",
+    "4F-PHP",
+    "4F-PVP",
+    "5-APDB",
+    "5-APDI",
+    "5-BPDI",
+    "5-Bromo-DMT",
+    "5-DBFPV",
+    "5-EAPB",
+    "5-IAI",
+    "5-IT",
+    "5-MAPDB",
+    "5-MeO-AMT",
+    "5-MeO-DPT",
+    "5-MeO-EiPT",
+    "5-MeO-MALT",
+    "5-MeO-MET",
+    "5-MeO-NIPT",
+    "5-MeO-PYR-T",
+    "5-Methylethylone",
+    "5-PPDI",
+    "6-EAPB",
+    "6-MAPB",
+    "6-MDDM",
+    "A-PBP",
+    "A-PIHP",
+    "A-PVT",
+    "AB-CHMINACA",
+    "AET",
+    "AH-7921",
+    "ALEPH-2",
+    "AM-2201",
+    "Acepromazine",
+    "Acetophenazine",
+    "Acetylcarnitine",
+    "Acetylglycinamide chloral hydrate",
+    "Acrylfentanyl",
+    "Adinazolam",
+    "Afloqualone",
+    "Alaproclate",
+    "Aleph",
+    "Allobarbital",
+    "Amanita muscaria",
+    "Amfecloral",
+    "Amfepramone",
+    "Amfonelic acid",
+    "Amineptine",
+    "Amino(diphenylhydantoin) valeric acid",
+    "Aminorex",
+    "Amobarbital",
+    "Anadenanthera peregrina",
+    "Aprobarbital",
+    "Apronal",
+    "Ashwagandha",
+    "Atropa belladonna",
+    "BOD",
+    "BOHB",
+    "BZP",
+    "Banisteriopsis caapi",
+    "Barbital",
+    "Beclamide",
+    "Benperidol",
+    "Bentazepam",
+    "Benzoctamine",
+    "Benzodioxole-Fentanyl",
+    "Bezitramide",
+    "Bifemelane",
+    "Biperiden",
+    "Blarcamesine",
+    "Bornaprine",
+    "Brexanolone",
+    "Bromadol",
+    "Bromisoval",
+    "Bromperidol",
+    "Brotizolam",
+    "Buphedrone",
+    "Butaperazine",
+    "Butobarbital",
+    "Butorphanol",
+    "Butriptyline",
+    "Butyrfentanyl",
+    "CRL-40-940",
+    "CRL-40-941",
+    "Calcium carbimide",
+    "Camazepam",
+    "Captodiame",
+    "Carbromal",
+    "Carisbamate",
+    "Cathine",
+    "Cathinone",
+    "Changa",
+    "Chloral betaine",
+    "Chloral hydrate",
+    "Chloralodol",
+    "Chloroform",
+    "Chlorproethazine",
+    "Chlorprothixene",
+    "Cinolazepam",
+    "Clobenzorex",
+    "Clomethiazole",
+    "Cloniprazepam",
+    "Clonitazene",
+    "Clopenthixol",
+    "Clotiapine",
+    "Clotiazepam",
+    "Cloxazolam",
+    "Coronaridine",
+    "Cyamemazine",
+    "Cyclizine",
+    "Cyclo-Methiodrone",
+    "Cyclobarbital",
+    "Cyclopentyl-Fentanyl",
+    "Cyclopropylmescaline",
+    "Cytisine",
+    "D2PM",
+    "DALT",
+    "DMAA",
+    "DOET",
+    "DOIP",
+    "DON",
+    "DOPR",
+    "Deanol",
+    "Delorazepam",
+    "Delta-8-THC",
+    "Deoxymethoxetamine",
+    "Desmethylflunitrazepam",
+    "Dexetimide",
+    "Dexfenfluramine",
+    "Dextromoramide",
+    "Dezocine",
+    "Dibenzepin",
+    "Dibutylone",
+    "Dichloralphenazone",
+    "Diclofensine",
+    "Diethyl ether",
+    "Dimdazenil",
+    "Dimemebfe",
+    "Dimenhydrinate",
+    "Dimetacrine",
+    "Dimethocaine",
+    "Dipipanone",
+    "Disulfiram",
+    "Dixyrazine",
+    "Dizocilpine",
+    "Dosulepin",
+    "Doxefazepam",
+    "Doxylamine",
+    "Droperidol",
+    "Emylcamate",
+    "Etallobarbital",
+    "Ethadione",
+    "Ethaqualone",
+    "Ethchlorvynol",
+    "Ethketamine",
+    "Ethosuximide",
+    "Ethotoin",
+    "Ethyl loflazepate",
+    "Ethylamphetamine",
+    "Etifoxine",
+    "Etoperidone",
+    "Fabomotizole",
+    "Fasoracetam",
+    "Fencamfamin",
+    "Fenfluramine",
+    "Fenozolone",
+    "Fipexide",
+    "Fluanisone",
+    "Fluclotizolam",
+    "Fludiazepam",
+    "Fluorolintane",
+    "Flupentixol",
+    "Fluphenazine",
+    "Fluspirilene",
+    "Flutazolam",
+    "Flutoprazepam",
+    "Furanylfentanyl",
+    "G-130",
+    "GABA",
+    "Gedocarnil",
+    "Ginkgo biloba",
+    "Glutethimide",
+    "HDEP-28",
+    "HOT-2",
+    "HOT-7",
+    "Halazepam",
+    "Halothane",
+    "Heptabarbital",
+    "Hexapropymate",
+    "Hexobarbital",
+    "Homomazindol",
+    "Huperzine A",
+    "Hydromethylthionine",
+    "Ibotenic acid",
+    "Idebenone",
+    "Imipramine oxide",
+    "Indapex",
+    "Indapyrophenidone",
+    "Ipidacrine",
+    "Iprindole",
+    "Iproclozide",
+    "Iproniazide",
+    "Isocarboxazid",
+    "Isomethadone",
+    "Isophenmetrazine",
+    "Isoproscaline",
+    "Kanna",
+    "Kava",
+    "Ketazolam",
+    "Ketobemidone",
+    "Khat",
+    "Lavender oil",
+    "Levacetylmethadol",
+    "Levomepromazine",
+    "Levomethadone",
+    "Levosulpiride",
+    "Linopirdine",
+    "Lofepramine",
+    "Loprazolam",
+    "Lorcaserin",
+    "Lormetazepam",
+    "MBDB",
+    "MBZP",
+    "MDOH",
+    "MDPA",
+    "MDPHP",
+    "MEM",
+    "MT-45",
+    "Maprotiline",
+    "Mazaticol",
+    "Mazindol",
+    "Mebroqualone",
+    "Mebutamate",
+    "Meclonazepam",
+    "Medazepam",
+    "Medifoxamine",
+    "Mefenorex",
+    "Melitracen",
+    "Melperone",
+    "Mephenoxalone",
+    "Mephenytoin",
+    "Mephtetramine",
+    "Meprobamate",
+    "Meptazinol",
+    "Mesoridazine",
+    "Mesuximide",
+    "Metaclazepam",
+    "Metaxalone",
+    "Methamnetamine",
+    "Metharbital",
+    "Methedrone",
+    "Methiodone",
+    "Methoxmetamine",
+    "Methoxyacetyl-Fentanyl",
+    "Methoxyketamine",
+    "Methylmethaqualone",
+    "Methylmorphenate",
+    "Methylpentynol",
+    "Methylphenobarbital",
+    "Methyprylon",
+    "Metixene",
+    "Mexazolam",
+    "Minaprine",
+    "Molindone",
+    "Moperone",
+    "Morpheridine",
+    "Mosapramine",
+    "Moxonidine",
+    "N-Ethylbuphedrone",
+    "Nalbuphine",
+    "Naphyrone",
+    "Nefiracetam",
+    "Nialamide",
+    "Niaprazine",
+    "Nicomorphine",
+    "Nimetazepam",
+    "Nitemazepam",
+    "Nitracaine",
+    "Nitrazepam",
+    "Nitrazolam",
+    "Nizofenone",
+    "Nomifensine",
+    "Nordazepam",
+    "Norflurazepam",
+    "Ondelopran",
+    "Opipramol",
+    "Opium",
+    "Ortetamine",
+    "Oxaflozane",
+    "Oxazolam",
+    "Oxypertine",
+    "PFBT",
+    "PRE-084",
+    "PRL-8-53",
+    "PV-8",
+    "Pagoclone",
+    "Parafluorofentanyl",
+    "Paraldehyde",
+    "Paramethadione",
+    "Pemoline",
+    "Penfluridol",
+    "Pentazocine",
+    "Pentylone",
+    "Perazine",
+    "Periciazine",
+    "Phenacemide",
+    "Phenazocine",
+    "Phenethylamine",
+    "Phenetrazine",
+    "Pheneturide",
+    "Phenglutarimide",
+    "Phenmetrazine",
+    "Phensuximide",
+    "Phentermine",
+    "PiPT",
+    "Picamilon",
+    "Pinazepam",
+    "Pipamperone",
+    "Pipotiazine",
+    "Pipradrol",
+    "Pirisudanol",
+    "Piritramide",
+    "Pivagabine",
+    "Prazepam",
+    "Primidone",
+    "Procyclidine",
+    "Profenamine",
+    "Progabide",
+    "Promazine",
+    "Propentofylline",
+    "Propiomazine",
+    "Propylphenidate",
+    "Prothipendyl",
+    "Protriptyline",
+    "Proxibarbal",
+    "Pyrithyldione",
+    "Pyritinol",
+    "Pyrophenidone",
+    "Quinupramine",
+    "Remoxipride",
+    "Reposal",
+    "Retigabine",
+    "Rilmazafone",
+    "Rilmenidine",
+    "Salvinorin B methoxymethyl ether",
+    "Scopolamine",
+    "Sertindole",
+    "Sibutramine",
+    "Sinicuichi",
+    "St. John's wort",
+    "Sulbutiamine",
+    "Sultiame",
+    "Sultopride",
+    "TH-PVP",
+    "Tacrine",
+    "Talbutal",
+    "Temgicoluril",
+    "Tetrahydrocannabiphorol",
+    "Tetrahydrofuran-Fentanyl",
+    "Tetrazepam",
+    "Theobromine",
+    "Thiopental",
+    "Thiopropamine",
+    "Thiopropazate",
+    "Thioproperazine",
+    "Tiapride",
+    "Tiletamine",
+    "Tilidine",
+    "Tiotixene",
+    "Tofisopam",
+    "Tolibut",
+    "Tolonidine",
+    "Toloxatone",
+    "Tranylcypromine",
+    "Triclofos",
+    "Trifluoperazine",
+    "Trifluperidol",
+    "Triflupromazine",
+    "Trimethadione",
+    "Troparil",
+    "Tropatepine",
+    "Tryptophan",
+    "U-49900",
+    "U-51754",
+    "Valerian",
+    "Valerylfentanyl",
+    "Valnoctamide",
+    "Valpromide",
+    "Veralipride",
+    "Vinbarbital",
+    "Vinpocetine",
+    "Vinylbital",
+    "Yerba mate",
+    "Zimeldine",
+    "Zolazepam",
+    "Zotepine",
+    "Zuclopenthixol",
+    "Βk-2C-I",
+    "Βk-IVP"
+  ]
+}

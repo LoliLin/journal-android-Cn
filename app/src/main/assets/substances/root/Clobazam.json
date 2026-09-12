@@ -1,0 +1,19 @@
+{
+  "name": "Clobazam",
+  "url": "https://en.wikipedia.org/wiki/Clobazam",
+  "commonNames": [
+    "Clobazam",
+    "frisium"
+  ],
+  "categories": [
+    "anxiolytic",
+    "benzodiazepine",
+    "depressant",
+    "habit-forming"
+  ],
+  "isApproved": false,
+  "metabolism": "CYP3A4, with smaller CYP2C19/CYP2B6 contributions, forms active N-desmethylclobazam. This metabolite is cleared mainly by CYP2C19. Elimination is mostly urinary as metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fd1e63bf-496c-427c-83b7-6acabc00a5e5"
+  ]
+}

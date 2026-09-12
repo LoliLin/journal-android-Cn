@@ -1,0 +1,12 @@
+{
+  "name": "Clomipramine",
+  "url": "https://en.wikipedia.org/wiki/Clomipramine",
+  "isApproved": false,
+  "categories": [
+    "antidepressant"
+  ],
+  "metabolism": "CYP2C19-mediated demethylation and CYP2D6-mediated hydroxylation contribute to parent/metabolite clearance.",
+  "metabolismSources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479/"
+  ]
+}

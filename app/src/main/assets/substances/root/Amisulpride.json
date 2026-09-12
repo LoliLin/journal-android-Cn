@@ -1,0 +1,12 @@
+{
+  "name": "Amisulpride",
+  "url": "https://en.wikipedia.org/wiki/Amisulpride",
+  "isApproved": false,
+  "categories": [
+    "antipsychotic"
+  ],
+  "metabolism": "Metabolism is limited. Much of the absorbed drug is eliminated unchanged by the kidneys; oxidative CYP metabolism is not its principal elimination route.",
+  "metabolismSources": [
+    "https://www.medicines.org.uk/emc/product/102319/smpc"
+  ]
+}

@@ -20,6 +20,7 @@ package com.isaakhanimann.journal.data.substances.parse
 
 import androidx.compose.ui.graphics.Color
 import com.isaakhanimann.journal.data.substances.AdministrationRoute
+import com.isaakhanimann.journal.data.substances.ReleaseForm
 import com.isaakhanimann.journal.data.substances.classes.*
 import com.isaakhanimann.journal.data.substances.classes.roa.*
 import javax.inject.Inject
@@ -144,7 +145,14 @@ class SubstanceParser @Inject constructor() : SubstanceParserInterface {
             longtermRisks = longtermRisks,
             saferUse = saferUse,
             interactions = interactions,
-            roas = roas
+            roas = roas,
+            metabolism = jsonSubstance.getOptionalString("metabolism"),
+            metabolismSources = parseJsonArrayToStringArray(
+                jsonSubstance.getOptionalJSONArray("metabolismSources")
+            ),
+            oralReleaseForms = parseJsonArrayToStringArray(
+                jsonSubstance.getOptionalJSONArray("oralReleaseForms")
+            ).mapNotNull(ReleaseForm::fromName).distinct()
         )
     }
 

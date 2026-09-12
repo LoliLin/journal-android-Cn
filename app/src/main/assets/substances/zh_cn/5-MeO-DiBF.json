@@ -7,6 +7,9 @@
     "zeroToleranceInHours": 168
   },
   "addictionPotential": "无成瘾性",
-  "toxicities": ["毒性剂量未知"],
-  "localizedName": "5-甲氧基-N,N-二异丙基苯并呋喃-2-乙胺"
+  "toxicities": [
+    "毒性剂量未知"
+  ],
+  "localizedName": "5-甲氧基-N,N-二异丙基苯并呋喃-2-乙胺",
+  "summary": "5-甲氧基-N,N-二异丙基苯并呋喃乙胺（也称为 5-MeO-DiBF）是一种苯并呋喃类物质的新型致幻剂，给药后会产生致幻和刺激效果。它在结构上与 5-MeO-DiPT 相关喵。\n\n在 2015 年 9 月在网上研究用化学品市场发布之前，该化合物几乎没有人类使用历史。"
 }

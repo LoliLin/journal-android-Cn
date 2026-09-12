@@ -1,0 +1,12 @@
+{
+  "name": "Naltrexone",
+  "url": "https://en.wikipedia.org/wiki/Naltrexone",
+  "isApproved": false,
+  "categories": [
+    "addiction-treatment"
+  ],
+  "metabolism": "Extensive first-pass and extrahepatic metabolism produces 6-beta-naltrexol and conjugated metabolites. Elimination is mainly renal, with very little unchanged naltrexone in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=57e8b767-54c2-dfa3-e063-6394a90ae6c2"
+  ]
+}

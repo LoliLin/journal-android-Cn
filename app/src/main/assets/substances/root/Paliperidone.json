@@ -1,0 +1,15 @@
+{
+  "name": "Paliperidone",
+  "url": "https://en.wikipedia.org/wiki/Paliperidone",
+  "isApproved": false,
+  "categories": [
+    "antipsychotic"
+  ],
+  "metabolism": "Renal excretion of unchanged drug is the main elimination route. CYP2D6/CYP3A4 show activity in vitro but contribute little to overall in-vivo clearance. Paliperidone is also risperidone's active 9-hydroxy metabolite.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bbbaa057-f587-4eb9-a0d2-463dbcd57661"
+  ],
+  "oralReleaseForms": [
+    "EXTENDED_RELEASE"
+  ]
+}

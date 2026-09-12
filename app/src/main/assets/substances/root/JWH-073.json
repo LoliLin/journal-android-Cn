@@ -1,6 +1,9 @@
 {
   "name": "JWH-073",
-  "commonNames": ["JWH-073", "Spice"],
+  "commonNames": [
+    "JWH-073",
+    "Spice"
+  ],
   "url": "https://psychonautwiki.org/wiki/JWH-073",
   "isApproved": true,
   "tolerance": {
@@ -10,12 +13,18 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["cannabinoid"],
+  "crossTolerances": [
+    "cannabinoid"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
   "toxicities": [],
-  "categories": ["cannabinoid"],
+  "categories": [
+    "cannabinoid"
+  ],
   "interactions": {
-    "dangerous": ["Lithium"],
+    "dangerous": [
+      "Lithium"
+    ],
     "unsafe": [],
     "uncertain": [
       "2C-T-x",
@@ -41,6 +50,41 @@
         "commonMin": 5,
         "strongMin": 10,
         "heavyMin": 15
+      },
+      "duration": {
+        "onset": {
+          "min": 5,
+          "max": 10,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 60,
+          "max": 90,
+          "units": "minutes"
+        },
+        "offset": {
+          "min": 5,
+          "max": 10,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 1,
+          "max": 2,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 60,
+          "max": 90,
+          "units": "minutes"
+        }
+      }
+    },
+    {
+      "name": "smoked",
+      "dose": {
+        "units": "mg",
+        "commonMin": 5,
+        "strongMin": 10
       },
       "duration": {
         "onset": {

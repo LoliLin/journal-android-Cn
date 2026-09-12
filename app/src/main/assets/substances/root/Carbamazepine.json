@@ -1,0 +1,16 @@
+{
+  "name": "Carbamazepine",
+  "url": "https://en.wikipedia.org/wiki/Carbamazepine",
+  "isApproved": false,
+  "categories": [
+    "antiepileptic"
+  ],
+  "metabolism": "CYP3A4 forms carbamazepine-10,11-epoxide; epoxide hydrolase then forms the trans-diol. Carbamazepine induces its own metabolism. Elimination is mainly urinary as hydroxylated/conjugated metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5f9535b1-ff6a-41b3-bbb2-efcf8fbacf4c"
+  ],
+  "oralReleaseForms": [
+    "IMMEDIATE_RELEASE",
+    "EXTENDED_RELEASE"
+  ]
+}

@@ -19,6 +19,7 @@
 package com.isaakhanimann.journal.data.substances.classes
 
 import com.isaakhanimann.journal.data.substances.AdministrationRoute
+import com.isaakhanimann.journal.data.substances.ReleaseForm
 import com.isaakhanimann.journal.data.substances.classes.roa.Roa
 import com.isaakhanimann.journal.ui.utils.getInteractionExplanationURLForSubstance
 
@@ -40,9 +41,21 @@ data class Substance(
     val longtermRisks: String?,
     val saferUse: List<String>,
     val interactions: Interactions?,
-    val roas: List<Roa>
+    val roas: List<Roa>,
+    val metabolism: String? = null,
+    val metabolismSources: List<String> = emptyList(),
+    val oralReleaseForms: List<ReleaseForm> = emptyList()
 ) {
-    fun getRoa(route: AdministrationRoute): Roa? = roas.firstOrNull { it.route == route }
+    fun getRoa(route: AdministrationRoute, releaseForm: ReleaseForm? = null): Roa? =
+        if (releaseForm == ReleaseForm.EXTENDED_RELEASE) {
+            // The catalog currently has no formulation-specific dose or duration data.
+            null
+        } else {
+            roas.firstOrNull { it.route == route }
+        }
+
+    fun getReleaseForms(route: AdministrationRoute): List<ReleaseForm> =
+        if (route == AdministrationRoute.ORAL) oralReleaseForms else emptyList()
 
     val hasInteractions: Boolean get() {
         return if (interactions == null) {

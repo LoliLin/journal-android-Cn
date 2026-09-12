@@ -1,0 +1,12 @@
+{
+  "name": "Doxepin",
+  "url": "https://www.wikidata.org/wiki/Q27077103",
+  "isApproved": false,
+  "categories": [
+    "antidepressant"
+  ],
+  "metabolism": "Hepatic demethylation forms active nordoxepin. Additional pathways include N-oxidation, hydroxylation and glucuronidation. Elimination is mainly urinary as free or conjugated metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=21dc77be-23af-4a1f-b189-dfee8ae2f894"
+  ]
+}

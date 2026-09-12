@@ -1,0 +1,12 @@
+{
+  "name": "Zaleplon",
+  "url": "https://en.wikipedia.org/wiki/Zaleplon",
+  "isApproved": false,
+  "categories": [
+    "hypnotic"
+  ],
+  "metabolism": "Aldehyde oxidase is the main pathway to 5-oxo-zaleplon; CYP3A4 contributes a smaller desethylation pathway. Oxidized metabolites are glucuronidated and eliminated in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a1277ef5-6072-43ff-a6ce-0a7cea58b7cb"
+  ]
+}

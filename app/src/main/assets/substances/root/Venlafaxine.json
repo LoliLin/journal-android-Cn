@@ -1,0 +1,16 @@
+{
+  "name": "Venlafaxine",
+  "url": "https://en.wikipedia.org/wiki/Venlafaxine",
+  "isApproved": false,
+  "categories": [
+    "antidepressant"
+  ],
+  "metabolism": "Hepatic CYP2D6 O-demethylation produces active O-desmethylvenlafaxine (desvenlafaxine). Other demethylation/conjugation routes also occur. Elimination is mainly urinary as parent and metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c41d847b-88ba-49a5-9d73-269ac4caa4ed"
+  ],
+  "oralReleaseForms": [
+    "IMMEDIATE_RELEASE",
+    "EXTENDED_RELEASE"
+  ]
+}

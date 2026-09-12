@@ -7,6 +7,10 @@
     "zeroToleranceInHours": 336
   },
   "addictionPotential": "无成瘾性",
-  "toxicities": ["毒性剂量未知", "极低毒性"],
-  "localizedName": "1cP-AL-LAD"
+  "toxicities": [
+    "毒性剂量未知",
+    "极低毒性"
+  ],
+  "localizedName": "1cP-AL-LAD",
+  "summary": "1-环丙酰基-6-烯丙基-6-去甲基-麦角酸二乙酰胺（通常也被称为 1cP-AL-LAD）是一种属于麦角酸酰胺类物质的新型迷幻剂喵。1cP-AL-LAD 与 AL-LAD 高度相关，被怀疑是其前药，但目前还没有足够的数据或大量的轶事报告来证实这一点呢。\n\n1cP-AL-LAD 是一种新型的研究用化学品，可能最初是由一小群化学家在 2020 年或 2021 年左右，与 1cP-MiPLA、LSZ 和 LST 等其他各种新型麦角酸酰胺类物质一起合成的。不过嘛，证明这一说法真实性的证据非常有限哦。"
 }

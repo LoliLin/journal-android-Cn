@@ -1,0 +1,12 @@
+{
+  "name": "Desipramine",
+  "url": "https://en.wikipedia.org/wiki/Desipramine",
+  "isApproved": false,
+  "categories": [
+    "antidepressant"
+  ],
+  "metabolism": "CYP2D6-mediated hydroxylation contributes substantially to clearance.",
+  "metabolismSources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479/"
+  ]
+}

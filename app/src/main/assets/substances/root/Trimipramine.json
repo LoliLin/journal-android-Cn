@@ -1,0 +1,12 @@
+{
+  "name": "Trimipramine",
+  "url": "https://en.wikipedia.org/wiki/Trimipramine",
+  "isApproved": false,
+  "categories": [
+    "antidepressant"
+  ],
+  "metabolism": "CYP2C19 demethylation and CYP2D6 hydroxylation participate in metabolism.",
+  "metabolismSources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479/"
+  ]
+}

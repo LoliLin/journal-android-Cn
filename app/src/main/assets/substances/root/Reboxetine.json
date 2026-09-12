@@ -1,0 +1,12 @@
+{
+  "name": "Reboxetine",
+  "url": "https://en.wikipedia.org/wiki/Reboxetine",
+  "isApproved": false,
+  "categories": [
+    "antidepressant"
+  ],
+  "metabolism": "Mainly metabolized by CYP3A4, including O-desethylation. CYP2D6 is not a major metabolic route; urinary elimination includes drug-related metabolites.",
+  "metabolismSources": [
+    "https://www.medicines.org.uk/emc/product/1578/smpc"
+  ]
+}

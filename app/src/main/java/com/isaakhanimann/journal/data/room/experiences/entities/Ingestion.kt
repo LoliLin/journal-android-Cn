@@ -21,6 +21,7 @@ package com.isaakhanimann.journal.data.room.experiences.entities
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.isaakhanimann.journal.data.substances.AdministrationRoute
+import com.isaakhanimann.journal.data.substances.ReleaseForm
 import java.time.Instant
 
 @Entity
@@ -40,5 +41,6 @@ data class Ingestion(
     var notes: String?,
     var stomachFullness: StomachFullness?,
     var consumerName: String?,
-    var customUnitId: Int?
+    var customUnitId: Int?,
+    var releaseForm: ReleaseForm? = null
 )

@@ -1,7 +1,11 @@
 {
   "name": "Trihexyphenidyl",
-  "commonNames": ["Trihexyphenidyl", "Benzhexol", "Artane"],
-  "url": "https://en.wikipedia.org/wiki/Trihexyphenidyl",
+  "commonNames": [
+    "Trihexyphenidyl",
+    "Benzhexol",
+    "Artane"
+  ],
+  "url": "https://psychonautwiki.org/wiki/Trihexyphenidyl",
   "isApproved": true,
   "tolerance": {
     "full": "develops with repeated use",
@@ -10,12 +14,18 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["Anticholinergics", "deliriant"],
+  "crossTolerances": [
+    "Anticholinergics",
+    "deliriant"
+  ],
   "addictionPotential": "moderate addictive potential; psychological dependence reported; abuse potential increasing in recent years",
   "toxicities": [
     "Anticholinergic toxicity: hyperthermia, seizures, cardiac arrhythmias, circulatory collapse. Chronic use may cause permanent cognitive deficits."
   ],
-  "categories": ["deliriant", "antiparkinsonian"],
+  "categories": [
+    "deliriant",
+    "antiparkinsonian"
+  ],
   "summary": "Trihexyphenidyl is a centrally acting muscarinic acetylcholine receptor antagonist used primarily for Parkinson's disease and drug-induced extrapyramidal symptoms. At high doses, it produces deliriant effects with hallucinations and euphoria, leading to increasing abuse potential.",
   "effectsSummary": "Antiparkinsonian effects at therapeutic doses, mild euphoria, relaxation, hallucinations (visual and auditory), dry mouth, dilated pupils, blurred vision, confusion, delirium at high doses.",
   "dosageRemark": "Medical doses for Parkinson's: 1-5mg daily. Recreational doses are not well established. Abuse typically involves exceeding prescribed doses significantly.",
@@ -28,9 +38,16 @@
     "Monitor for cognitive changes with long-term use"
   ],
   "interactions": {
-    "dangerous": ["Alcohol", "Other anticholinergics", "CNS depressants"],
+    "dangerous": [
+      "Alcohol",
+      "Other anticholinergics",
+      "CNS depressants"
+    ],
     "unsafe": [],
-    "uncertain": ["Antipsychotics", "SSRIs"]
+    "uncertain": [
+      "Antipsychotics",
+      "SSRIs"
+    ]
   },
   "roas": [
     {

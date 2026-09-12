@@ -1,0 +1,12 @@
+{
+  "name": "Topiramate",
+  "url": "https://en.wikipedia.org/wiki/Topiramate",
+  "isApproved": false,
+  "categories": [
+    "antiepileptic"
+  ],
+  "metabolism": "Mostly eliminated unchanged in urine. A smaller fraction undergoes hydroxylation, hydrolysis and glucuronidation; extensive hepatic metabolism is not its main clearance route.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c0a6774-e234-47a5-866e-462cfd99744c"
+  ]
+}

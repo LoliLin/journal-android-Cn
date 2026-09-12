@@ -1,0 +1,27 @@
+{
+  "name": "Psychedelic",
+  "url": "https://psychonautwiki.org/wiki/Psychedelic",
+  "isApproved": false,
+  "tolerance": {
+    "full": "almost immediately after ingestion"
+  },
+  "crossTolerances": [
+    "psychedelic"
+  ],
+  "addictionPotential": "low abuse potential",
+  "toxicities": [
+    "very low toxicity"
+  ],
+  "interactions": {
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "Stimulants"
+    ]
+  }
+}

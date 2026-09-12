@@ -1,0 +1,19 @@
+{
+  "name": "Kava",
+  "url": "https://psychonautwiki.org/wiki/Kava",
+  "categories": [
+    "depressant",
+    "habit-forming"
+  ],
+  "isApproved": false,
+  "interactions": {
+    "dangerous": [
+      "Depressants",
+      "Dissociatives"
+    ],
+    "uncertain": [
+      "Stimulants"
+    ]
+  },
+  "metabolism": "This material contains multiple constituents and has no single ingredient-level metabolic pathway. Composition and constituent-specific metabolism must be distinguished; this entry does not yet provide a verified constituent-by-constituent account."
+}

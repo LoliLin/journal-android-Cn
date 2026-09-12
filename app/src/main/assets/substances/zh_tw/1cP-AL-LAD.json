@@ -7,6 +7,9 @@
     "zeroToleranceInHours": 336
   },
   "addictionPotential": "無成癮性",
-  "toxicities": ["毒性劑量未知", "極低毒性"],
+  "toxicities": [
+    "毒性劑量未知",
+    "極低毒性"
+  ],
   "localizedName": "1cP-AL-LAD"
 }

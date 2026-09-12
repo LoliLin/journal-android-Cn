@@ -1,6 +1,11 @@
 {
   "name": "4-HO-MET",
-  "commonNames": ["4-HO-MET", "Metocin", "Methylcybin", "Colour"],
+  "commonNames": [
+    "4-HO-MET",
+    "Metocin",
+    "Methylcybin",
+    "Colour"
+  ],
   "url": "https://psychonautwiki.org/wiki/4-HO-MET",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +15,30 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "research-chemical", "common"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical",
+    "common"
+  ],
   "summary": "A lesser known psychedelic tryptamine. Functional analogue of Psilocin. Very poorly soluble in water and alcohol.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Tramadol"],
-    "uncertain": ["THC", "Stimulants"]
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "THC",
+      "Stimulants"
+    ]
   },
   "roas": [
     {
@@ -65,6 +85,28 @@
     },
     {
       "name": "inhaled",
+      "dose": {
+        "units": "mg",
+        "lightMin": 5,
+        "commonMin": 25,
+        "strongMin": 35,
+        "heavyMin": 60
+      },
+      "duration": {
+        "onset": {
+          "min": 15,
+          "max": 120,
+          "units": "seconds"
+        },
+        "total": {
+          "min": 25,
+          "max": 45,
+          "units": "minutes"
+        }
+      }
+    },
+    {
+      "name": "smoked",
       "dose": {
         "units": "mg",
         "lightMin": 5,

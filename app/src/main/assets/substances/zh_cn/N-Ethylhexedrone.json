@@ -7,6 +7,9 @@
     "zeroToleranceInHours": 252
   },
   "addictionPotential": "中度成瘾，具有较高的滥用潜力",
-  "toxicities": ["确切的中毒剂量未知"],
-  "localizedName": "N-乙基己酮"
+  "toxicities": [
+    "确切的中毒剂量未知"
+  ],
+  "localizedName": "N-乙基己酮",
+  "summary": "请勿与 NMH 混淆哦。\n\nNEH（也称 NEH、ethyl-hex、ethyl-hexedrone、hex-en、ethylhexedrone 和 hexen）是一种较少为人所知的新型兴奋剂，属于卡西酮类物质。NEH 是 NMH 的衍生物，并且属于被称为取代卡西酮类物质的一大类化合物。关于它的药理学，目前所知很少，不过它很可能会通过提高大脑中的去甲肾上腺素和多巴胺水平而起作用。NEH 很可能是一种强效的多巴胺与去甲肾上腺素再摄取抑制剂，不会释放神经递质，也不会影响其他神经递质呢。"
 }

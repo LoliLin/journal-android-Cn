@@ -6,6 +6,9 @@ Copyright (C) 2026 Lolin Verse.
 
 Licensed, GPLv3-Only
 
+物质数据来自 PsychonautWiki / TripSit / EUDA / FreeODwiki / Wikidata，来源、许可义务与免责声明见
+[docs/data-sources-and-licenses.md](docs/data-sources-and-licenses.md)。
+
 # Journal Android Multilingual
 
 <a href='https://f-droid.org/en/packages/in.kawaiis.journal/'><img src="https://fdroid.gitlab.io/artwork/badge/get-it-on-zh-cn.png" height="100" /></a>

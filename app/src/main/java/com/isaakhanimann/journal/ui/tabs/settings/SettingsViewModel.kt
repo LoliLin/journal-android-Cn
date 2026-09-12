@@ -261,8 +261,7 @@ class SettingsViewModel @Inject constructor(
                     } else {
                         bytes.toString(Charsets.UTF_8)
                     }
-                    val json = Json { ignoreUnknownKeys = true }
-                    val journalExport = json.decodeFromString<JournalExport>(text)
+                    val journalExport = journalImportJson.decodeFromString<JournalExport>(text)
                     // Decode all avatars up front: an invalid base64 payload aborts the
                     // import before the database is replaced, leaving no partial state.
                     val decodedAvatars = journalExport.avatars.map { (userName, base64) ->
@@ -303,21 +302,7 @@ class SettingsViewModel @Inject constructor(
                     sortDate = it.experience.sortDate,
                     isFavorite = it.experience.isFavorite,
                     ingestions = it.ingestions.map { ingestion ->
-                        IngestionSerializable(
-                            substanceName = ingestion.substanceName,
-                            time = ingestion.time,
-                            endTime = ingestion.endTime,
-                            creationDate = ingestion.creationDate,
-                            administrationRoute = ingestion.administrationRoute,
-                            dose = ingestion.dose,
-                            estimatedDoseStandardDeviation = ingestion.estimatedDoseStandardDeviation,
-                            isDoseAnEstimate = ingestion.isDoseAnEstimate,
-                            units = ingestion.units,
-                            notes = ingestion.notes,
-                            stomachFullness = ingestion.stomachFullness,
-                            consumerName = ingestion.consumerName,
-                            customUnitId = ingestion.customUnitId
-                        )
+                        ingestion.toIngestionSerializable()
                     },
                     location = if (location != null) {
                         LocationSerializable(

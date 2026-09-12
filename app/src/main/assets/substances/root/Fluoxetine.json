@@ -1,0 +1,18 @@
+{
+  "name": "Fluoxetine",
+  "url": "https://en.wikipedia.org/wiki/Fluoxetine",
+  "commonNames": [
+    "Fluoxetine",
+    "prozac",
+    "sarafem"
+  ],
+  "categories": [
+    "antidepressant",
+    "ssri"
+  ],
+  "isApproved": false,
+  "metabolism": "Hepatic demethylation, involving CYP2D6 and other pathways, produces active norfluoxetine. Both persist for a long time and undergo further metabolism before predominantly renal elimination of metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=23899405-007b-48d9-82a9-a530b8e90784"
+  ]
+}

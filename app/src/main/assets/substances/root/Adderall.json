@@ -1,0 +1,184 @@
+{
+  "name": "Adderall",
+  "url": "https://psychonautwiki.org/wiki/Amphetamine",
+  "commonNames": [
+    "Adderall",
+    "aderal",
+    "aderall",
+    "adderal",
+    "d-amphetamine",
+    "d-amph",
+    "Amphetamine",
+    "Speed",
+    "Pep"
+  ],
+  "categories": [
+    "stimulant",
+    "habit-forming",
+    "common"
+  ],
+  "isApproved": false,
+  "tolerance": {
+    "full": "develops with prolonged and repeated use",
+    "half": "3 - 7 days",
+    "zero": "1 - 2 weeks"
+  },
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
+  "addictionPotential": "has high abuse potential and can cause psychological dependence with chronic use",
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "interactions": {
+    "dangerous": [
+      "Tramadol",
+      "aMT",
+      "MAOIs"
+    ],
+    "unsafe": [
+      "DXM",
+      "PCP",
+      "25x-NBOMe",
+      "2C-T-x",
+      "5-MeO-xxT",
+      "DOx"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "GHB",
+      "GBL",
+      "Opioids",
+      "Cocaine",
+      "Cannabis",
+      "Caffeine",
+      "Ketamine",
+      "Methoxetamine",
+      "Psychedelics"
+    ]
+  },
+  "roas": [
+    {
+      "name": "insufflated",
+      "dose": {
+        "units": "mg",
+        "lightMin": 4,
+        "commonMin": 15,
+        "strongMin": 30,
+        "heavyMin": 50
+      },
+      "duration": {
+        "onset": {
+          "min": 1,
+          "max": 5,
+          "units": "minutes"
+        },
+        "comeup": {
+          "min": 30,
+          "max": 90,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 1,
+          "max": 2,
+          "units": "hours"
+        },
+        "offset": {
+          "min": 1.5,
+          "max": 3,
+          "units": "hours"
+        },
+        "total": {
+          "min": 3,
+          "max": 6,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 2,
+          "max": 4,
+          "units": "hours"
+        }
+      }
+    },
+    {
+      "name": "intravenous",
+      "dose": {
+        "units": "mg",
+        "lightMin": 4,
+        "commonMin": 15,
+        "strongMin": 30,
+        "heavyMin": 50
+      },
+      "duration": {
+        "onset": {
+          "min": 2,
+          "max": 10,
+          "units": "seconds"
+        },
+        "comeup": {
+          "min": 2,
+          "max": 10,
+          "units": "seconds"
+        },
+        "peak": {
+          "min": 2,
+          "max": 4,
+          "units": "hours"
+        },
+        "offset": {
+          "min": 1,
+          "max": 2,
+          "units": "hours"
+        },
+        "total": {
+          "min": 3,
+          "max": 6,
+          "units": "hours"
+        }
+      }
+    },
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg",
+        "lightMin": 2.5,
+        "commonMin": 10,
+        "strongMin": 25,
+        "heavyMin": 50
+      },
+      "duration": {
+        "onset": {
+          "min": 30,
+          "max": 45,
+          "units": "minutes"
+        },
+        "comeup": {
+          "min": 30,
+          "max": 135,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 2.5,
+          "max": 4,
+          "units": "hours"
+        },
+        "offset": {
+          "min": 2,
+          "max": 3,
+          "units": "hours"
+        },
+        "total": {
+          "min": 6,
+          "max": 8,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 3,
+          "max": 6,
+          "units": "hours"
+        }
+      }
+    }
+  ]
+}
