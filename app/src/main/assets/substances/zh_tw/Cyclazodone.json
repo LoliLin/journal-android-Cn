@@ -6,6 +6,9 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "toxicities": ["確切的中毒劑量未知"],
-  "localizedName": "Cyclazodone"
+  "toxicities": [
+    "確切的中毒劑量未知"
+  ],
+  "localizedName": "Cyclazodone",
+  "summary": "N-環丙基匹莫林（也稱為環唑酮）是一種新型興奮劑物質，屬於4-噁唑烷酮類。它在結構上與匹莫林和4-甲基阿米雷司相關。作用機制涉及促進大腦中多巴胺和去甲腎上腺素的釋放呢。\n\n環唑酮是在1960年代由美國氰胺公司開發的。作為研究用化學品學習輔助的非臨床用途最近才引起注意哦。需要注意的是，缺乏藥理學資料和極有限的人類使用歷史，對其作為處方興奮劑替代品的長期使用構成相當大的擔憂嘛。"
 }

@@ -1,5 +1,8 @@
 {
   "addictionPotential": "無成癮性",
-  "toxicities": ["極低毒性"],
-  "localizedName": "加蘭他敏"
+  "toxicities": [
+    "極低毒性"
+  ],
+  "localizedName": "加蘭他敏",
+  "summary": "給藥途徑\n\n相互作用"
 }

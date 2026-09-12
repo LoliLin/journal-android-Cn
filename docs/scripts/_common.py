@@ -270,11 +270,16 @@ def merge_ledger(path: Path, *, source: str, snapshot: dict | None = None,
 
     for key, items in (("excluded", excluded), ("resolved", resolved)):
         for item in items:
-            if not any(
-                existing.get("source") == item.get("source") and existing.get("key") == item.get("key")
-                for existing in ledger[key]
-            ):
+            found = next(
+                (existing for existing in ledger[key]
+                 if existing.get("source") == item.get("source") and existing.get("key") == item.get("key")),
+                None,
+            )
+            if found is None:
                 ledger[key].append(item)
+            elif key == "resolved" and found.get("name") != item.get("name"):
+                # 「来源键 → 规范名」要反映最新一轮的对照（改名/人工对照表会改结果）
+                found["name"] = item.get("name")
 
     for item in notes:
         if not any(

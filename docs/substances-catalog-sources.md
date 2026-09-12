@@ -129,8 +129,19 @@ TripSit 的 17 个分类与仓库词表高度重合（`common`/`tentative`/`habi
   实测 2C-B 的 insufflated 时长与当前 PW 有出入（PW/仓库 4–6 h、onset 1–5 min；
   译文页 4–7 h、onset 0–20 min）——**说明译文页会滞后或经过编辑，先看差异再决定**；
 - 输出是**纯文本**（去掉了 markdown 链接/粗体/脚注），因为应用用 `Text` 直接渲染；
-- 名字对齐：优先复用 `root/` 已有文件名；否则取条目里的 ASCII 标题/常用名
-  （实测 `药物/1,4-丁二醇.md` → `1,4-Butanediol`）；两者都没有就记入 `excluded` 等人工定名。
+- **名字对齐**按优先级：`root/` 同名 → 人工对照表 → 中文名反查（语言文件的 `localizedName`
+  → 对应条目）→ 页面英文名按「物质名 → 别名」两轮反查（先 `name` 再 `commonNames`，
+  避免 `DPD` 这类缩写把页面配到别的物质）→ 才当新名字。
+  实测只有这条路才对：FreeODwiki 用「系统命名」当标题的页面（`1,3,7-Trimethylxanthine` = 咖啡因、
+  `(RS)-1-Phenylpropan-2-amine` = 安非他命）如果直接拿标题建条目，会写出**应用根本不加载的孤立覆盖层**。
+- **人工对照表** `docs/freeodwiki-name-map.json`：`{map: {页名: 仓库名}, skipped: {页名: 原因}}`。
+  已覆盖全部 391 个条目（145 条映射、19 条跳过），纯中文页名（`鼠尾草素甲` → `Salvinorin A`、
+  `苄达明` → `Benzydamine`）、代号/商品名页（`Ro5-3448` → `Diclazepam`、`洛哌丁胺` → `Loperamide`）
+  都在里面。跳过的都是索引页、分类页、植物属页、复方制剂、讨论页。
+- **`--create-root`**：对照表映射到仓库里没有的英文名时（`Thujone`、`Flumazenil`、`Yohimbine`、
+  `Tobacco`、`Psilocybe cyanescens` 等），建一个最小 root 条目（只写 `name`/`url`/`categories`/
+  `isApproved:false`，正文仍走覆盖层）——否则覆盖层没有对应物质、应用不会加载。
+  没有可写内容的页面（无正文、无剂量表）不会建条目。
 
 ## 不同语言的来源怎么快速处理
 

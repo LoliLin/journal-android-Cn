@@ -12,10 +12,13 @@ FreeODwiki（https://github.com/SalviaSWC/FreeODwiki，CC-BY-SA 4.0）是 Psycho
   `saferUse`/`generalRisks`/`commonNames`/`localizedName`；
 - **不动** `root/`（结构化剂量/时长要显式 `--structure fill|check|overwrite`）；
 - 不写 `isApproved`、不覆盖已有值（`--overwrite` 才覆盖）。
+- 纯中文页名用 `--name-map`（默认 docs/freeodwiki-name-map.json）人工对照；
+  加 `--create-root` 才会为仓库里没有的英文名建最小 root 条目。
 
 用法：
     python docs/scripts/fetch_freeodwiki.py --repo <FreeODwiki 检出目录> --dry-run --verbose
     python docs/scripts/fetch_freeodwiki.py --repo … --fields summary,saferUse
+    python docs/scripts/fetch_freeodwiki.py --repo … --create-root   # 含对照表里的新物质
     python docs/scripts/fetch_freeodwiki.py --repo … --structure check     # 与 root 交叉校验剂量/时长
 
 来源与映射依据：docs/substances-catalog-sources.md
@@ -48,6 +51,9 @@ FREEOD_DRUG_DIR = "药物"
 
 #: 结构化数据写入 root 时允许改动的字段
 FREEOD_STRUCTURE_FIELDS = ("url", "roas")
+
+#: 人工对照表：纯中文页名 -> 仓库英文名；skipped 里的页直接跳过
+DEFAULT_NAME_MAP = Path("docs/freeodwiki-name-map.json")
 
 #: 覆盖层允许写入的字段
 OVERLAY_FIELDS = ("summary", "saferUse", "generalRisks", "commonNames", "localizedName")
@@ -205,6 +211,8 @@ def prose_block(text: str) -> str:
             continue
         if PURE_LINK_RE.match(raw) or HEADING_UNDERLINE_RE.match(raw) or BOILERPLATE_RE.match(plain(raw)):
             continue
+        if LABEL_LINE_RE.match(plain(raw)) or WARNING_RE.search(plain(raw)):
+            continue
         cleaned = plain(raw)
         if cleaned:
             lines.append(cleaned)
@@ -215,6 +223,20 @@ LIST_ITEM_RE = re.compile(r"^[-*+]\s")
 PURE_LINK_RE = re.compile(r"^\[[^\]]*\]\([^)]*\)\s*$")
 BOILERPLATE_RE = re.compile(r"^(强烈建议|更多信息|参见|另见|主条目)")
 HEADING_UNDERLINE_RE = re.compile(r"^[=\-]{2,}\s*$")
+
+#: 免责声明/剂量警告这类套话不是正文（FreeODwiki 每条前面都有一段）
+WARNING_RE = re.compile(
+    r"免责声明|本网站的给药剂量信息|本站的剂量信息|由于个体体重|由于个体间体重|"
+    r"请务必从低剂量开始|请参阅负责任|请参阅负责任的用药"
+)
+
+#: 信息表的标签行（部分是 **粗体** 伪表格，没有 | 管道）
+LABEL_LINE_RE = re.compile(
+    r"^(化学名称|常见名称|常用名称|系统名称|系统命名|取代名称|分类|分类归属|精神活性类别|化学类别|给药途径)\s*[：:]"
+)
+
+#: localizedName 只在真是中文名时才写（否则会显示成 "DPD" 这样的缩写）
+CJK_RE = re.compile(r"[\u4e00-\u9fff]")
 
 #: 剂量表附近的“给药途径”碎片不是摘要（页面没有正文时会把表格当首段）
 ROUTE_ONLY_WORDS = {
@@ -267,6 +289,8 @@ def prose_paragraphs(text: str, limit: int = 3) -> str:
             or PURE_LINK_RE.match(raw)
             or HEADING_UNDERLINE_RE.match(raw)
             or BOILERPLATE_RE.match(plain(raw))
+            or LABEL_LINE_RE.match(plain(raw))
+            or WARNING_RE.search(plain(raw))
         )
         cleaned = "" if skip else plain(raw)
         if not cleaned:
@@ -369,23 +393,107 @@ def parse_info(text: str) -> dict:
     return info
 
 
-def canonical_name(stem: str, front: dict, h1: str, names: list, root_stems: set) -> tuple[str, str]:
-    """确定条目名与依据：优先复用 root 已有文件名，其次取 ASCII 标题/常用名。"""
+def build_catalog_index(assets_dir: Path, root_stems: set) -> tuple[dict, dict, dict]:
+    """用现有资产建反查表：中文名 -> root 名、物质名 -> root 名、别名 -> root 名。
+
+    覆盖层要写到应用真正加载的名字上：语言文件里的 `localizedName` 与 root 的
+    `commonNames` 都能把 FreeODwiki 的中文标题/英文别名对回已有的物质条目，
+    避免写出没有人加载的孤立覆盖层，也避免把系统命名当成新物质。
+    只统计有对应 root 条目的覆盖层——孤立覆盖层（应用不加载）不能作为命名依据。
+    """
+    zh_index: dict = {}
+    name_index: dict = {}
+    alias_index: dict = {}
+    for lang in ("zh_cn", "zh_tw"):
+        for path in sorted((assets_dir / lang).glob("*.json")):
+            if path.stem not in root_stems:
+                continue
+            localized = (read_json(path).get("localizedName") or "").strip()
+            if localized:
+                zh_index.setdefault(localized, path.stem)
+    for path in sorted((assets_dir / "root").glob("*.json")):
+        if path.name == "_categories.json":
+            continue
+        data = read_json(path)
+        name_index.setdefault(fold_name(data.get("name") or path.stem), path.stem)
+        for alias in data.get("commonNames") or []:
+            if isinstance(alias, str) and alias.strip():
+                alias_index.setdefault(fold_name(alias), path.stem)
+    return zh_index, name_index, alias_index
+
+
+def fold_name(text: str) -> str:
+    """去大小写与标点，用于反查（1,3,7-Trimethylxanthine == 137trimethylxanthine）。"""
+    return re.sub(r"[^a-z0-9]", "", text.casefold())
+
+
+def canonical_name(stem: str, front: dict, h1: str, names: list, root_stems: set,
+                   name_map: dict | None = None, zh_index: dict | None = None,
+                   name_index: dict | None = None,
+                   alias_index: dict | None = None) -> tuple[str, str]:
+    """确定条目名与依据。优先级：root 同名 → 人工对照表 → 中文名反查 → 页面上的英文名按
+    「物质名 → 别名」两轮反查（物质名优先，避免 "DPD" 这类缩写把页面配到别的物质）→
+    最后才当新名字（仅当它不像系统命名）。"""
     if stem in root_stems:
         return stem, "root-stem"
-    for candidate in [front.get("title", ""), h1] + list(names):
+    if name_map and stem in name_map:
+        return name_map[stem], "name-map"
+    zh_index = zh_index or {}
+    name_index = name_index or {}
+    alias_index = alias_index or {}
+    for candidate in [stem, front.get("title", ""), h1] + list(names):
         text = (candidate or "").strip()
-        if len(text) >= 2 and text.isascii() and not text.isdigit():
+        if text and text in zh_index:
+            return zh_index[text], "zh-localizedName"
+        base = re.sub(r"[（(].*?[)）]\s*$", "", text).strip()
+        if base and base in zh_index:
+            return zh_index[base], "zh-localizedName"
+    candidates = [(c or "").strip() for c in [front.get("title", ""), h1] + list(names)]
+    for text in candidates:
+        if len(text) < 2 or text.isdigit():
+            continue
+        if text in root_stems:
+            return text, "root-stem"
+        folded = fold_name(text)
+        if folded in name_index:
+            return name_index[folded], "name-fold"
+    for text in candidates:
+        if len(text) < 2:
+            continue
+        folded = fold_name(text)
+        if folded and folded in alias_index:
+            return alias_index[folded], "alias-fold"
+    for text in candidates:
+        # 不像系统命名（无括号/逗号）才接受为新英文名，否则交人工对照表
+        if len(text) >= 2 and text.isascii() and not text.isdigit() and not re.search(r"[(),\[\]]", text):
             return text, "ascii-name"
     return stem, "unresolved-name"
 
 
-def parse_entry(path: Path, root_stems: set) -> dict:
+def load_name_map(path) -> tuple[dict, dict, str]:
+    """加载人工对照表 {map: {页名: 仓库名}, skipped: {页名: 原因}}。"""
+    if not path:
+        return {}, {}, ""
+    target = Path(path)
+    if not target.exists():
+        return {}, {}, ""
+    data = read_json(target)
+    if not isinstance(data, dict):
+        die(f"名称对照表 '{target}' 应该是对象。")
+    mapping = {k: v for k, v in (data.get("map") or {}).items() if isinstance(v, str)}
+    skipped = {k: str(v) for k, v in (data.get("skipped") or {}).items()}
+    return mapping, skipped, str(target)
+
+
+def parse_entry(path: Path, root_stems: set, name_map: dict | None = None,
+                zh_index: dict | None = None, name_index: dict | None = None,
+                alias_index: dict | None = None) -> dict:
     text = path.read_text(encoding="utf-8")
     front = parse_frontmatter(text)
     h1 = parse_h1(text)
     info = parse_info(text)
-    name, name_source = canonical_name(path.stem, front, h1, info["names"], root_stems)
+    name, name_source = canonical_name(path.stem, front, h1, info["names"], root_stems,
+                                       name_map, zh_index, name_index, alias_index)
     sections = split_sections(text)
     safer_use, risk_blocks = [], []
     for _level, title, body in sections:
@@ -409,12 +517,18 @@ def parse_entry(path: Path, root_stems: set) -> dict:
     summary = prose_paragraphs(lead_text(text), limit=2)
     if looks_like_route_fragment(summary):
         summary = ""
+    localized_name = ""
+    for candidate in [front.get("title"), h1, path.stem] + list(info["names"]):
+        text_value = (candidate or "").strip()
+        if text_value and CJK_RE.search(text_value):
+            localized_name = text_value
+            break
     return {
         "file": path.name,
         "stem": path.stem,
         "name": name,
         "name_source": name_source,
-        "localized_name": front.get("title") or h1 or path.stem,
+        "localized_name": localized_name,
         "names": info["names"],
         "categories": categories,
         "unmapped_categories": [c for c in info["categories"] if c not in CATEGORY_MAP],
@@ -476,6 +590,8 @@ def run(args) -> int:
     lang_dir = Path(args.out) if args.out else assets_dir / args.lang
     root_dir = assets_dir / "root"
     root_stems = {p.stem for p in root_dir.glob("*.json")} if root_dir.is_dir() else set()
+    name_map, skipped_pages, name_map_path = load_name_map(args.name_map)
+    zh_index, name_index, alias_index = build_catalog_index(assets_dir, root_stems)
     if not args.dry_run:
         lang_dir.mkdir(parents=True, exist_ok=True)
 
@@ -484,7 +600,10 @@ def run(args) -> int:
         files = files[: args.limit]
     print(f"FreeODwiki：{drug_dir}（{len(files)} 个条目）")
     print(f"覆盖层输出：{lang_dir}（语言 {args.lang}）")
-    print(f"字段：{', '.join(args.fields)} | root 结构：{args.structure}")
+    print(f"字段：{', '.join(args.fields)} | root 结构：{args.structure}"
+          + (f" | 名称对照表：{name_map_path}（{len(name_map)} 条映射，{len(skipped_pages)} 条跳过）"
+             if name_map_path else ""))
+    print(f"反查表：中文名 {len(zh_index)} 条、物质名 {len(name_index)} 条、别名 {len(alias_index)} 条")
 
     report = {
         "generated_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
@@ -497,11 +616,18 @@ def run(args) -> int:
         "entries": [],
     }
     added, resolved, notes, excluded = [], [], [], []
-    counts = {"created": 0, "updated": 0, "unchanged": 0, "no_fields": 0}
+    counts = {"created": 0, "updated": 0, "unchanged": 0, "no_fields": 0,
+              "skipped_by_map": 0, "root_created": 0}
+    root_created: list = []
     structure_diffs, used_categories, no_dose = [], set(), 0
 
     for path in files:
-        entry = parse_entry(path, root_stems)
+        if path.stem in skipped_pages:
+            excluded.append({"source": FREEOD_SOURCE, "key": path.stem, "name": "",
+                             "reason": f"人工对照表标记跳过：{skipped_pages[path.stem]}"})
+            counts["skipped_by_map"] += 1
+            continue
+        entry = parse_entry(path, root_stems, name_map, zh_index, name_index, alias_index)
         name = entry["name"]
         resolved.append({"source": FREEOD_SOURCE, "key": entry["stem"], "name": name})
         if entry["name_source"] == "unresolved-name":
@@ -516,6 +642,27 @@ def run(args) -> int:
         if not entry["roas"]:
             no_dose += 1
         used_categories.update(entry["categories"])
+
+        # 对照表把纯中文页映射成了仓库里没有的英文名：建一个最小的 root 条目
+        # （只有名称/来源/分类，正文仍走覆盖层），否则覆盖层没有对应物质、应用不会加载。
+        if args.create_root and name not in root_stems:
+            has_content = any(entry[key] for key in ("summary", "risks", "saferUse", "roas"))
+            if not has_content:
+                excluded.append({
+                    "source": FREEOD_SOURCE, "key": entry["stem"], "name": name,
+                    "reason": "对照表有英文名，但条目里没有可写内容（无正文、无剂量表），不建条目。",
+                })
+                counts["skipped_by_map"] += 1
+                continue
+            incoming = {"name": name, "isApproved": False,
+                        "url": f"{FREEOD_REPO_URL}/blob/main/{FREEOD_DRUG_DIR}/{entry['file']}"}
+            if entry["categories"]:
+                incoming["categories"] = entry["categories"]
+            if not args.dry_run:
+                write_json(root_dir / f"{sanitize_filename(name)}.json", incoming)
+                root_stems.add(name)
+            root_created.append(name)
+            counts["root_created"] += 1
 
         overlay = build_overlay(entry, args.fields)
         overlay_path = lang_dir / f"{sanitize_filename(name)}.json"
@@ -561,6 +708,8 @@ def run(args) -> int:
 
     warn_unknown_categories(sorted(used_categories), FREEOD_SOURCE)
     report["counts"] = counts
+    report["nameMap"] = name_map_path
+    report["createdRootEntries"] = root_created
     report["entriesWithoutDoseTables"] = no_dose
     report["structureDiffCount"] = len(structure_diffs)
     report_path = Path(args.report) if args.report else DEFAULT_WORK_DIR / "freeodwiki-report.json"
@@ -576,7 +725,10 @@ def run(args) -> int:
             )
 
     print(f"\n完成：新建 {counts['created']}，更新 {counts['updated']}，无变化 {counts['unchanged']}，"
-          f"无字段可写 {counts['no_fields']}，待人工定名 {len(excluded)}")
+          f"无字段可写 {counts['no_fields']}，新建 root {counts['root_created']}，"
+          f"对照表跳过/无内容 {counts['skipped_by_map']}，待人工定名 {len(excluded) - counts['skipped_by_map']}")
+    if root_created:
+        print(f"新建的 root 条目：{'、'.join(root_created)}")
     print(f"没有剂量表的条目：{no_dose}；结构差异：{len(structure_diffs)}")
     if args.dry_run:
         print("--dry-run：没有写任何文件。")
@@ -607,6 +759,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--structure", choices=("skip", "check", "fill", "overwrite"), default="skip",
                         help="对 root 的结构化剂量/时长：skip(默认)/check(只报告)/fill(只补空缺)/overwrite")
     parser.add_argument("--version", default="", help="FreeODwiki 版本说明（写进台账快照）")
+    parser.add_argument("--name-map", default=str(DEFAULT_NAME_MAP),
+                        help=f"人工名称对照表（默认 {DEFAULT_NAME_MAP}；"
+                             "{{map: {{页名: 仓库名}}, skipped: {{页名: 原因}}}}）")
+    parser.add_argument("--create-root", action="store_true",
+                        help="对照表映射到仓库里没有的英文名时，建一个最小 root 条目（名称/来源/分类）")
     parser.add_argument("--overwrite", action="store_true", help="允许覆盖覆盖层里已有的值")
     parser.add_argument("--dry-run", action="store_true", help="不写文件、不建目录，只报告")
     parser.add_argument("--limit", type=int, help="只处理前 N 条（试跑用）")
