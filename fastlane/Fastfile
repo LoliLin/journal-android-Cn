@@ -1,0 +1,51 @@
+# Google Play 上传：把签名好的 AAB 和 fastlane/metadata/android 里的上架文案一起提交。
+#
+#   bundle install
+#   bundle exec fastlane deploy                     # 默认 internal 轨道
+#   PLAY_TRACK=production bundle exec fastlane deploy
+#
+# 凭据：仓库根目录的 google-play-api.json（本地放一份；CI 由 GOOGLE_PLAY_API secret
+# 写出来，见 .github/workflows/build-release.yml）。该文件已加入 .gitignore。
+
+default_platform(:android)
+
+platform :android do
+  desc "上传签名 AAB 与上架文案到 Google Play（PLAY_TRACK 默认 internal）"
+  lane :deploy do
+    aab = ENV["PLAY_AAB_PATH"].to_s.strip
+    aab = "app/build/outputs/bundle/release/app-release.aab" if aab.empty?
+    track = ENV["PLAY_TRACK"].to_s.strip
+    track = "internal" if track.empty?
+    release_status = ENV["PLAY_RELEASE_STATUS"].to_s.strip
+    release_status = "completed" if release_status.empty?
+    json_key = ENV["SUPPLY_JSON_KEY"].to_s.strip
+    json_key = "google-play-api.json" if json_key.empty?
+
+    UI.user_error!("找不到 AAB：#{aab}（先跑 ./gradlew bundleRelease）") unless File.exist?(aab)
+    UI.message("上传 #{aab} 到 #{track} 轨道（release_status=#{release_status}）")
+
+    supply(
+      aab: aab,
+      json_key: json_key,
+      track: track,
+      release_status: release_status,
+      metadata_path: "fastlane/metadata/android",
+      skip_upload_apk: true,
+      skip_upload_metadata: false,
+      skip_upload_images: false,
+      skip_upload_screenshots: false
+    )
+  end
+
+  desc "只校验凭据与上架文案，不真正上传"
+  lane :validate do
+    json_key = ENV["SUPPLY_JSON_KEY"].to_s.strip
+    json_key = "google-play-api.json" if json_key.empty?
+
+    supply(
+      json_key: json_key,
+      metadata_path: "fastlane/metadata/android",
+      validate_only: true
+    )
+  end
+end

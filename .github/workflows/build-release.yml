@@ -12,6 +12,14 @@ on:
       release_name:
         description: 'Release Title'
         required: true
+      play_track:
+        description: 'Google Play 轨道（internal / alpha / beta / production）'
+        required: false
+        default: 'internal'
+      play_release_status:
+        description: '上架状态（completed / draft / halted / inProgress）'
+        required: false
+        default: 'completed'
 
 run-name: "Release ${{ inputs.release_name }} (v${{ inputs.version_name }} / build ${{ inputs.version_code }})"
 
@@ -164,3 +172,43 @@ jobs:
           name: ${{ github.event.inputs.release_name }}
           generateReleaseNotes: true   
           allowUpdates: true
+
+      # 5. 上传到 Google Play：签名 AAB + fastlane/metadata/android（标题/描述/截图/按 versionCode 的 changelog）
+      #    服务账号密钥不在仓库里：这里从 GOOGLE_PLAY_API secret 写出 google-play-api.json（已在 .gitignore 中）。
+      - name: Set up Ruby
+        if: github.repository == 'LoliLin/journal-android-multilingual'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+
+      - name: Upload to Google Play
+        if: github.repository == 'LoliLin/journal-android-multilingual'
+        env:
+          GOOGLE_PLAY_API: ${{ secrets.GOOGLE_PLAY_API }}
+          PLAY_TRACK: ${{ github.event.inputs.play_track }}
+          PLAY_RELEASE_STATUS: ${{ github.event.inputs.play_release_status }}
+        run: |
+          set -euo pipefail
+
+          if [ -z "${GOOGLE_PLAY_API:-}" ]; then
+            echo "::warning::未配置 GOOGLE_PLAY_API secret，跳过 Google Play 上传。"
+            exit 0
+          fi
+
+          # secret 里可能是原始 JSON，也可能是 base64（与 KEYSTORE_BASE64 一致的习惯）
+          printf '%s' "$GOOGLE_PLAY_API" > google-play-api.json
+          if ! python3 -c "import json;json.load(open('google-play-api.json'))" 2>/dev/null; then
+            base64 -d google-play-api.json > google-play-api.decoded.json
+            mv google-play-api.decoded.json google-play-api.json
+          fi
+          python3 -c "import json;json.load(open('google-play-api.json'))" \
+            || { echo "::error::GOOGLE_PLAY_API 既不是合法 JSON 也不是合法 base64。"; exit 1; }
+
+          AAB="app/build/outputs/bundle/release/app-release.aab"
+          if [ ! -f "$AAB" ]; then
+            echo "::error::$AAB 不存在（需要签名配置，见仓库 Settings 里的 KEYSTORE_* secrets）。"
+            exit 1
+          fi
+
+          bundle install --jobs 4 --retry 3
+          bundle exec fastlane deploy

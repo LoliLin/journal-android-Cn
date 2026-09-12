@@ -16,3 +16,14 @@ release
 keystore_b64.txt
 __pycache__/
 docs/scripts/_work/
+
+# Google Play 服务账号密钥：只在本地存在，CI 由 GOOGLE_PLAY_API secret 现写
+google-play-api*.json
+
+# fastlane 运行时产物（上架文案在 fastlane/metadata/ 下，需要提交）
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output/
+.bundle/
+vendor/bundle/

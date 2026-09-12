@@ -29,6 +29,7 @@ GPLv3 fork of PsychonautWiki Journal (a substance-use journaling app): single-mo
 | `app/src/test/` | JVM unit tests |
 | `docs/` | `substances-translation-protocol.md`, `substances-pipeline.md`, `substances-pw-extraction.md`, `substances-catalog-sources.md`, `extension-pack-protocol.md`, `scripts/` (Python tooling: pipeline + one fetcher per source), `glossary/` (term tables for `translate`/`convert`), `VC_Demo_Extension/` |
 | `Sample Files/` | Example journal export JSONs (import/export fixtures) |
+| `fastlane/` | Google Play listing metadata (`metadata/android/{en-US,zh-CN,zh-TW}/`) + `Appfile`/`Fastfile`; uploaded by `build-release.yml` via `supply` |
 | `app/schemas/` | Room schema exports (KSP `room.schemaLocation`) |
 
 ## Development Commands
@@ -47,7 +48,7 @@ GPLv3 fork of PsychonautWiki Journal (a substance-use journaling app): single-mo
 
 - Formatting (mirrors `.github/workflows/format.yml`): `ktlint 1.3.1 -F "**/*.kt"` + `prettier --write "**/*.json"`. CI auto-commits "style: format" fixes on manual dispatch — keep changes pre-formatted.
 - Release signing: env vars `KEYSTORE_BASE64` (base64 JKS, decoded to `build/release.keystore.jks`), `KEYSTORE_PASSWORD`, `KEY_ALIAS`, `KEY_PASSWORD`. Without them `release.signingConfig` is null → unsigned APK.
-- Releases: `.github/workflows/build-release.yml` (manual dispatch) bumps `versionCode`/`versionName` in `app/build.gradle` AND `VERSION_NAME` in `ui/Constants.kt` (keep in sync), tags, and publishes APKs per-ABI.
+- Releases: `.github/workflows/build-release.yml` (manual dispatch) bumps `versionCode`/`versionName` in `app/build.gradle` AND `VERSION_NAME` in `ui/Constants.kt` (keep in sync), tags, and publishes APKs per-ABI. On the main repo it then uploads the signed AAB plus `fastlane/metadata/android` (title/short/full description, per-`versionCode` changelogs, images) to Google Play through fastlane `supply` (`Gemfile` + `fastlane/Appfile`/`Fastfile`, lanes `deploy`/`validate`, track from the `play_track` input, default `internal`). The service-account key is never committed: CI writes `google-play-api.json` from the `GOOGLE_PLAY_API` secret (raw JSON or base64) and the file is in `.gitignore`; without that secret the upload step only warns and skips.
 - Local properties: create `local.properties` with `sdk.dir` as needed; `.gitignore` covers it.
 
 ## Code Conventions & Common Patterns

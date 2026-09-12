@@ -1,0 +1,6 @@
+# Google Play 服务账号密钥。
+# 仓库里不放这个文件（见 .gitignore）；本地运行 fastlane 时把它放在仓库根目录，
+# CI 里由 build-release.yml 从 GOOGLE_PLAY_API secret 写入同名文件。
+json_key_file(ENV["SUPPLY_JSON_KEY"] || "google-play-api.json")
+
+package_name("in.kawaiis.journal")
