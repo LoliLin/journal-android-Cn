@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antipsychotic"
+  ],
+  "metabolism": "Extensively metabolized through CYP1A2, CYP3A4 and CYP2D6, including demethylation, hydroxylation and N-oxidation. Norclozapine has pharmacological activity. Metabolites leave through urine and feces.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=61fe53d5-ed5c-4e45-9189-709d08d386cb"
   ]
 }

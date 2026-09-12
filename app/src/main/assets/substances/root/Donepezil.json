@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antidementia"
+  ],
+  "metabolism": "CYP2D6 and CYP3A4 metabolism and glucuronidation produce multiple metabolites, some active. Elimination includes both unchanged drug and metabolites in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0516d548-db9b-410a-aec9-79aedbc3f6e9"
   ]
 }

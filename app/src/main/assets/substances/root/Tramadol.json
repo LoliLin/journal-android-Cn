@@ -1,6 +1,12 @@
 {
   "name": "Tramadol",
-  "commonNames": ["Tramadol", "Tramal", "Tadol", "Tramacur", "Tramundin"],
+  "commonNames": [
+    "Tramadol",
+    "Tramal",
+    "Tadol",
+    "Tramacur",
+    "Tramundin"
+  ],
   "url": "https://psychonautwiki.org/wiki/Tramadol",
   "isApproved": true,
   "tolerance": {
@@ -10,13 +16,20 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["opioid"],
+  "crossTolerances": [
+    "opioid"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
   "toxicities": [
     "low toxicity",
     "potentially lethal when mixed with depressants like alcohol or benzodiazepines"
   ],
-  "categories": ["opioid", "habit-forming", "depressant", "common"],
+  "categories": [
+    "opioid",
+    "habit-forming",
+    "depressant",
+    "common"
+  ],
   "summary": "A synthetic opioid analgesic, tramadol is used to treat moderate pain and can be considered a medium-strength opioid. Tramadol also has the unusual effect of being a serotonin releasing agent and a serotonin reuptake inhibitor, and as a consequence should not be taken in excess due to the risk of serotonin syndrome. Risk of seizures above 300mg doses.",
   "effectsSummary": "Analgesic, anxiety-relieving, euphoric, mood-lifting, causes a general feeling of contentment.\nThe human body has its own pain-relieving system. The endogenous substance endorphin ensures that pain messages are sent to the human brain in a reduced form by docking to certain receptors in the human body. The active ingredient tramadol has a similar mode of action in that the active ingredient attaches to neurotransmitter docking sites (opioid receptors) and transmits a signal to the brain, which subsequently triggers pain relief. In addition, tramadol inhibits the reuptake of certain nerve messengers (noradrenaline and serotonin), which in turn increases the amount of free messengers in the tissue and supports the analgesic effect.",
   "dosageRemark": "When consuming for the first time, low doses should be used, as the risk of respiratory arrest is increased.",
@@ -43,7 +56,9 @@
       "MDMA",
       "aMT"
     ],
-    "unsafe": ["2C-T-x"],
+    "unsafe": [
+      "2C-T-x"
+    ],
     "uncertain": [
       "Benzodiazepines",
       "MXE",
@@ -94,5 +109,9 @@
         "max": 90
       }
     }
+  ],
+  "metabolism": "CYP2D6 forms active O-desmethyltramadol (M1); CYP3A4 and other pathways participate in N-demethylation. Glucuronidation/sulfation also occur. Parent and metabolites are cleared mainly by the kidneys.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c6104e62-5b2c-41a1-afb3-00dcf267a384"
   ]
 }

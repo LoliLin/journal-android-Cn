@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antidepressant"
+  ],
+  "metabolism": "Extensively oxidized, with CYP2D6 the principal enzyme and several other CYPs contributing, followed by glucuronidation. Metabolites are eliminated through urine and feces.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=239215eb-be32-4286-9677-1e5556c6cccf"
   ]
 }

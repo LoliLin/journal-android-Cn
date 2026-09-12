@@ -775,5 +775,11 @@
   "release_form_immediate": "Conventional / immediate release",
   "release_form_extended": "Extended / controlled release (SR/ER/XR/CR)",
   "release_form_hint": "Choose the release form stated on the package. Enteric coating alone does not mean extended release; the recorded dose is not converted.",
-  "release_form_no_reference": "Dose classes and effect-duration curves are unavailable for this formulation."
+  "release_form_no_reference": "Dose classes and effect-duration curves are unavailable for this formulation.",
+  "categories.arylcyclohexylamine": "Arylcyclohexylamine",
+  "categories.arylcyclohexylamine.desc": "Arylcyclohexylamines are a class of dissociatives that act primarily as NMDA receptor antagonists, including ketamine, PCP and their analogues.",
+  "categories.phenethylamine": "Phenethylamine",
+  "categories.phenethylamine.desc": "Phenethylamines are a chemical class that includes stimulants, psychedelics and entactogens such as amphetamine, mescaline and MDMA.",
+  "categories.decongestant": "Decongestant",
+  "categories.decongestant.desc": "Decongestants reduce swelling of the nasal passages; some, such as pseudoephedrine, also act as stimulants."
 }

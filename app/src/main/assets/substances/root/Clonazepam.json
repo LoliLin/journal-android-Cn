@@ -1,6 +1,11 @@
 {
   "name": "Clonazepam",
-  "commonNames": ["Clonazepam", "Klonopin", "K-Pins", "Rivotril"],
+  "commonNames": [
+    "Clonazepam",
+    "Klonopin",
+    "K-Pins",
+    "Rivotril"
+  ],
   "url": "https://psychonautwiki.org/wiki/Clonazepam",
   "isApproved": true,
   "tolerance": {
@@ -8,18 +13,30 @@
     "zero": "7 - 14 days",
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["benzodiazepine"],
+  "crossTolerances": [
+    "benzodiazepine"
+  ],
   "addictionPotential": "extremely physically and psychologically addictive",
   "toxicities": [
     "low toxicity",
     "potentially lethal when mixed with depressants like alcohol or opioids"
   ],
-  "categories": ["depressant", "benzodiazepine", "habit-forming", "common"],
+  "categories": [
+    "depressant",
+    "benzodiazepine",
+    "habit-forming",
+    "common"
+  ],
   "summary": "A medium-length common prescription benzodiazepine, often used to treat panic attacks because of its relatively fast sublingual onset. Primarily anxiolytic, but also possessing of other benzo traits.",
   "interactions": {
-    "dangerous": ["Depressants", "Dissociatives"],
+    "dangerous": [
+      "Depressants",
+      "Dissociatives"
+    ],
     "unsafe": [],
-    "uncertain": ["Stimulants"]
+    "uncertain": [
+      "Stimulants"
+    ]
   },
   "roas": [
     {
@@ -59,5 +76,9 @@
         }
       }
     }
+  ],
+  "metabolism": "The nitro group is reduced to a 7-amino derivative, followed by acetylation, hydroxylation and glucuronidation. CYP3A participates in reduction/oxidation. Very little clonazepam is excreted unchanged in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2606ecf9-3d71-4c1c-bfda-d7d98ffc6011"
   ]
 }

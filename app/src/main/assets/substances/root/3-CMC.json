@@ -11,5 +11,9 @@
     "habit-forming",
     "tentative"
   ],
-  "isApproved": false
+  "isApproved": false,
+  "metabolism": "Human hepatocyte and case-sample work identified ketone reduction, N-demethylation and carboxylation. Complete enzyme contributions and clinical elimination kinetics remain undetermined.",
+  "metabolismSources": [
+    "https://pubmed.ncbi.nlm.nih.gov/38862871/"
+  ]
 }

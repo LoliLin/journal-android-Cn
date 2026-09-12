@@ -5,5 +5,9 @@
   "categories": [
     "antidepressant",
     "maoi"
+  ],
+  "metabolism": "Oxidation, mainly of the morpholine portion, precedes renal elimination of metabolites. CYP2C19 phenotype influences exposure; little drug is excreted unchanged.",
+  "metabolismSources": [
+    "https://www.medicines.org.uk/emc/product/7295/smpc"
   ]
 }

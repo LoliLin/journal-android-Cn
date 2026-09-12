@@ -58,6 +58,8 @@ TRIPSIT_CATEGORY_MAP = {
     "empathogen": "entactogen",
     "inactive": None,
     "supplement": None,
+    # TripSit 写的是带空格的 "research chemical"，仓库词表用连字符
+    "research chemical": "research-chemical",
 }
 
 #: TripSit 给药途径 -> 仓库 AdministrationRoute 名（小写）。未列出的（Vapourized、

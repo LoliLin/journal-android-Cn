@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antiepileptic"
+  ],
+  "metabolism": "A substantial fraction is excreted unchanged in urine; the remainder includes metabolites and conjugates. Monocarbamate and hydroxylated metabolites have little contribution to anticonvulsant activity.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0afffb17-e6ac-4bea-a90e-7ef3c8150290"
   ]
 }

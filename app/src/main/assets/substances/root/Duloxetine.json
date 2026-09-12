@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antidepressant"
+  ],
+  "metabolism": "CYP1A2 and CYP2D6 mediate hepatic oxidation, followed by glucuronide or sulfate conjugation. Major circulating metabolites do not contribute substantially to activity; elimination is mainly urinary as metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00628e5e-4c5b-2573-e063-6294a90a0e3b"
   ]
 }

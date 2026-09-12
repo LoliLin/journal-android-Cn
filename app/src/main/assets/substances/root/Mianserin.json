@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antidepressant"
+  ],
+  "metabolism": "Hepatic metabolism includes aromatic hydroxylation, N-oxidation and N-demethylation, with substantial first-pass processing. The reviewed product information does not quantify individual enzyme contributions.",
+  "metabolismSources": [
+    "https://www.medicines.org.uk/emc/product/2741/smpc"
   ]
 }

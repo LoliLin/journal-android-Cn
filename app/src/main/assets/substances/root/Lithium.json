@@ -1,6 +1,10 @@
 {
   "name": "Lithium",
-  "commonNames": ["Lithium", "Lithium carbonate", "Lithium orotate"],
+  "commonNames": [
+    "Lithium",
+    "Lithium carbonate",
+    "Lithium orotate"
+  ],
   "url": "https://en.wikipedia.org/wiki/Lithium_(medication)",
   "isApproved": true,
   "tolerance": {
@@ -15,7 +19,10 @@
   "toxicities": [
     "Lithium has a narrow therapeutic window (0.6-1.2 mM blood concentration). Toxicity occurs above 1.5 mM. Symptoms: nausea, vomiting, tremor, confusion, seizures, coma, death. Chronic toxicity: kidney damage, thyroid dysfunction."
   ],
-  "categories": ["mood-stabilizer", "nootropic"],
+  "categories": [
+    "mood-stabilizer",
+    "nootropic"
+  ],
   "summary": "Lithium is a naturally occurring alkali metal used primarily as a mood stabilizer for bipolar disorder. It inhibits GSK-3β activating the Wnt/β-catenin pathway, and substitutes for sodium in voltage-gated channels. Recent research suggests endogenous lithium deficiency may be an early molecular event in Alzheimer's disease.",
   "effectsSummary": "Mood stabilization, reduced manic episodes, suicide prevention, neuroprotection via GSK-3β inhibition, enhanced neurogenesis, reduced amyloid deposition. Low doses (5-25mg elemental lithium as orotate) may have nootropic and anti-aging effects.",
   "dosageRemark": "Lithium carbonate therapeutic dose: 600-1800mg daily (110-330mg elemental lithium), blood level 0.6-1.2mM requires monitoring. Low-dose lithium orotate supplements (5-25mg elemental lithium) available without prescription. Lithium orotate has better brain penetration and avoids Aβ plaque sequestration compared to carbonate.",
@@ -35,7 +42,11 @@
       "NSAIDs"
     ],
     "unsafe": [],
-    "uncertain": ["SSRIs", "Antipsychotics", "Other mood stabilizers"]
+    "uncertain": [
+      "SSRIs",
+      "Antipsychotics",
+      "Other mood stabilizers"
+    ]
   },
   "roas": [
     {
@@ -58,5 +69,13 @@
         }
       }
     }
+  ],
+  "metabolism": "Not metabolized. Lithium ions are eliminated mainly through the kidneys, with renal handling linked to sodium and water balance. There is no hepatic CYP pathway to describe.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=be1346df-4a39-45e8-874b-e2a496847fd5"
+  ],
+  "oralReleaseForms": [
+    "IMMEDIATE_RELEASE",
+    "EXTENDED_RELEASE"
   ]
 }

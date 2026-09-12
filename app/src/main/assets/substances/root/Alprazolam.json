@@ -1,6 +1,10 @@
 {
   "name": "Alprazolam",
-  "commonNames": ["Xanax", "Alprazolam", "Ksalol"],
+  "commonNames": [
+    "Xanax",
+    "Alprazolam",
+    "Ksalol"
+  ],
   "url": "https://psychonautwiki.org/wiki/Alprazolam",
   "isApproved": true,
   "tolerance": {
@@ -8,13 +12,20 @@
     "zero": "7-14 days",
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["benzodiazepine"],
+  "crossTolerances": [
+    "benzodiazepine"
+  ],
   "addictionPotential": "extremely physically and psychologically addictive",
   "toxicities": [
     "low toxicity",
     "potentially lethal when mixed with depressants like alcohol, opioids, or barbiturates"
   ],
-  "categories": ["depressant", "benzodiazepine", "habit-forming", "common"],
+  "categories": [
+    "depressant",
+    "benzodiazepine",
+    "habit-forming",
+    "common"
+  ],
   "summary": "An extremely common benzodiazepine better known as Xanax, frequently prescribed for the treatment of anxiety and panic disorders. Alprazolam is short-lasting and primarily anxiolytic, though also possesses hypnotic properties. At high doses amnesia and loss of inhibition are common. Do not mix with other depressants.",
   "effectsSummary": "Anti-excitant and anti-anxiety, sedative, soporific and muscle relaxant. At high doses: slowing down, drowsiness, danger of memory lapses (\"film tear\").\nTaking benzodiazepines increases the effectiveness of the neurotransmitter gamma-aminobutyric acid (GABA) at the GABA-A receptor. This triggers sedative (calming), hypnotic, anxiolytic (anxiety-relieving), anticonvulsant (anticonvulsant) and muscle-relaxing effects in the body. Benzodiazepines have a depressant effect on the central nervous system. The flow of information in the brain between the brain cells (neurons) is thereby reduced / disturbed and feelings and perceptions are dampened.\nThe breakdown of the individual active ingredients of benzodiazepines in the body is age-dependent and therefore varies from person to person.",
   "generalRisks": "There is little information available on risks, toxicity, side effects and long-term consequences. Therefore, the general information on benzodiazepines applies:\nWhen mixing with other downers (alcohol, GHB/GBL, heroin) there is a risk of respiratory paralysis!\nTaking benzodiazepines can cause numerous undesirable side effects. In addition, regular and long-term use carries a very high risk of physical and psychological dependence. Benzodiazepines should only be taken as prescribed by a doctor and only for a short period of time (max. 4-6 weeks). Longer-term use should be discussed with the treating specialist. The dosages and duration of action of the individual benzodiazepines differ considerably.\nSide effects of benzodiazepines may be as follows: Prolonged fatigue, gastrointestinal problems, impaired reactions, hypersensitivity reactions, headaches, dizziness, motor difficulties, visual disturbances, slowed breathing, muscle weakness, confusion, sexual dysfunction, aggression, outbursts of anger, restlessness, random movements, allergies, skin problems/rashes and speech and movement disorders. Some benzodiazepines can cause seizures in epileptics.",
@@ -26,9 +37,14 @@
     "The simultaneous consumption of depressant substances such as alcohol, ketamine, GHB/GBL, nitrous oxide, opioids and/or other benzodiazepines is dangerous as there is an increased risk of vomiting and unconsciousness. The risk of suffocation is high!"
   ],
   "interactions": {
-    "dangerous": ["Depressants", "Dissociatives"],
+    "dangerous": [
+      "Depressants",
+      "Dissociatives"
+    ],
     "unsafe": [],
-    "uncertain": ["Stimulants"]
+    "uncertain": [
+      "Stimulants"
+    ]
   },
   "roas": [
     {
@@ -110,5 +126,13 @@
         }
       }
     }
+  ],
+  "metabolism": "CYP3A4 hydroxylates alprazolam to alpha-hydroxyalprazolam and 4-hydroxyalprazolam. These metabolites have activity but usually contribute little because their concentrations are low. Elimination is mainly urinary.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=563e09db-2f3d-4ce8-b356-ae44477be6d0"
+  ],
+  "oralReleaseForms": [
+    "IMMEDIATE_RELEASE",
+    "EXTENDED_RELEASE"
   ]
 }

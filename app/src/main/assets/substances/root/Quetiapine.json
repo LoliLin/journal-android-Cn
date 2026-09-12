@@ -1,6 +1,9 @@
 {
   "name": "Quetiapine",
-  "commonNames": ["Quetiapine", "Seroquel"],
+  "commonNames": [
+    "Quetiapine",
+    "Seroquel"
+  ],
   "url": "https://psychonautwiki.org/wiki/Quetiapine",
   "isApproved": true,
   "tolerance": {
@@ -10,13 +13,23 @@
   },
   "crossTolerances": [],
   "addictionPotential": "moderately physically and psychologically addictive",
-  "toxicities": ["low toxicity"],
-  "categories": ["antipsychotic", "depressant"],
+  "toxicities": [
+    "low toxicity"
+  ],
+  "categories": [
+    "antipsychotic",
+    "depressant"
+  ],
   "summary": "An atypical antipsychotic medication under the brand name Seroquel. Also used to treat insomnia and mood swings. This drug is very sedating and can stop/slow down psychedelic drug trips. Infrequently abused.",
   "interactions": {
-    "dangerous": ["Depressants"],
+    "dangerous": [
+      "Depressants"
+    ],
     "unsafe": [],
-    "uncertain": ["Stimulants", "Dissociatives"]
+    "uncertain": [
+      "Stimulants",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {
@@ -60,5 +73,13 @@
         "max": 100
       }
     }
+  ],
+  "metabolism": "Extensively metabolized in the liver, chiefly through CYP3A4. Products include active norquetiapine and inactive sulfoxide metabolites; drug-related material is eliminated in urine and feces.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=711f42c5-0719-46de-81fb-3d03801b9ed9"
+  ],
+  "oralReleaseForms": [
+    "IMMEDIATE_RELEASE",
+    "EXTENDED_RELEASE"
   ]
 }

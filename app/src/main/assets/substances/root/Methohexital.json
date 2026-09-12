@@ -5,5 +5,9 @@
   "categories": [
     "hypnotic",
     "barbiturate"
+  ],
+  "metabolism": "Hepatic demethylation and oxidation precede renal excretion. The product information notes that the complete metabolic fate is not fully characterized.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f76d4ab9-2f6c-420b-afec-b9cdfdc083ce"
   ]
 }

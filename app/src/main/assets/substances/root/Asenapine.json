@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antipsychotic"
+  ],
+  "metabolism": "Cleared mainly by UGT1A4 glucuronidation and CYP1A2 oxidation, with smaller CYP3A4/CYP2D6 contributions. Metabolites include asenapine N-glucuronide and N-desmethylasenapine; elimination occurs through urine and feces.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3512687b-d1c7-45c4-8822-3a2ad53575a5"
   ]
 }

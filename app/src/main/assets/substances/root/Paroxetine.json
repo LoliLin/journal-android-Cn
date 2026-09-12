@@ -9,5 +9,13 @@
   "categories": [
     "ssri"
   ],
-  "isApproved": false
+  "isApproved": false,
+  "metabolism": "Extensively metabolized, with CYP2D6 contributing. Oxidation and conjugation produce metabolites with little relevant activity; elimination occurs in urine and feces, mainly as metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=598ece4d-0ac4-993b-e063-6294a90a1d34"
+  ],
+  "oralReleaseForms": [
+    "IMMEDIATE_RELEASE",
+    "EXTENDED_RELEASE"
+  ]
 }

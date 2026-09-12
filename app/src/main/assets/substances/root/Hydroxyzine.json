@@ -10,5 +10,9 @@
     "depressant",
     "deliriant"
   ],
-  "isApproved": false
+  "isApproved": false,
+  "metabolism": "Alcohol dehydrogenase forms cetirizine by oxidation; CYP3A4/5 also participates in metabolism. Cetirizine is an active antihistamine and is eliminated substantially through the kidneys.",
+  "metabolismSources": [
+    "https://www.medicines.org.uk/emc/product/101010/smpc"
+  ]
 }

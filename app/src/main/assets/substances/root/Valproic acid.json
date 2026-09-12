@@ -4,5 +4,13 @@
   "isApproved": false,
   "categories": [
     "antiepileptic"
+  ],
+  "metabolism": "Almost entirely metabolized in the liver, mainly by glucuronidation and mitochondrial beta-oxidation, with smaller oxidative pathways. Very little valproate is eliminated unchanged in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1edd220d-d151-4177-9a29-9fee36489fb7"
+  ],
+  "oralReleaseForms": [
+    "IMMEDIATE_RELEASE",
+    "EXTENDED_RELEASE"
   ]
 }

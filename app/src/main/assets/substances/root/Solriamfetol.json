@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "stimulant"
+  ],
+  "metabolism": "Only minimally metabolized. Most is eliminated unchanged in urine; N-acetylsolriamfetol is a minor inactive metabolite.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=362f206b-73e7-4009-8c34-5a9df55679ab"
   ]
 }

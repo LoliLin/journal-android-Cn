@@ -11,5 +11,9 @@
     "depressant",
     "common"
   ],
-  "isApproved": false
+  "isApproved": false,
+  "metabolism": "Extensive first-pass metabolism includes CYP2D6 aromatic hydroxylation, side-chain processing and direct glucuronidation. CYP2C19 also participates. Most metabolites are eliminated in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7ae2dac-6048-41ea-95d3-cad06cc2baf3"
+  ]
 }

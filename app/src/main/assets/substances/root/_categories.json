@@ -183,5 +183,22 @@
     "name": "anesthetic",
     "description": "Substances used for general anesthesia under professional supervision.",
     "color": 4293455940
+  },
+  {
+    "name": "arylcyclohexylamine",
+    "description": "Arylcyclohexylamines are a class of dissociatives that act primarily as NMDA receptor antagonists, including ketamine, PCP and their analogues.",
+    "url": "https://psychonautwiki.org/wiki/Arylcyclohexylamines",
+    "color": 4294928359
+  },
+  {
+    "name": "phenethylamine",
+    "description": "Phenethylamines are a chemical class that includes stimulants, psychedelics and entactogens such as amphetamine, mescaline and MDMA.",
+    "url": "https://psychonautwiki.org/wiki/Phenethylamine",
+    "color": 4287564543
+  },
+  {
+    "name": "decongestant",
+    "description": "Decongestants reduce swelling of the nasal passages; some, such as pseudoephedrine, also act as stimulants.",
+    "color": 4293455940
   }
 ]

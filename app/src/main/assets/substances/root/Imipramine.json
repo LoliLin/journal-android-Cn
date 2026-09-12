@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antidepressant"
+  ],
+  "metabolism": "CYP2C19 forms active desipramine; CYP2D6 hydroxylates parent and metabolite.",
+  "metabolismSources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC5478479/"
   ]
 }

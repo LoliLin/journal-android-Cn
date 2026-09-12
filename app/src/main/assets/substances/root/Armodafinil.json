@@ -17,12 +17,20 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["benzhydryl", "nootropic"],
+  "crossTolerances": [
+    "benzhydryl",
+    "nootropic"
+  ],
   "addictionPotential": "mildly addictive with a low potential for abuse",
   "toxicities": [
     "The median lethal dose at which 50% of participants die (LD50) from either armodafinil or modafinil for human beings has never been reached"
   ],
-  "categories": ["stimulant", "eugeroic", "nootropic", "habit-forming"],
+  "categories": [
+    "stimulant",
+    "eugeroic",
+    "nootropic",
+    "habit-forming"
+  ],
   "summary": "The more potent of the two modafinil isomers, said to have a longer duration and lesser side effects. Sometimes prescribed for ADHD and daytime sleepiness.",
   "interactions": {
     "dangerous": [
@@ -32,8 +40,16 @@
       "MAOIs",
       "Hormonal birth control"
     ],
-    "unsafe": ["DXM", "MDMA", "Stimulants"],
-    "uncertain": ["Alcohol", "MXE", "Dissociatives"]
+    "unsafe": [
+      "DXM",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {
@@ -78,5 +94,9 @@
         }
       }
     }
+  ],
+  "metabolism": "Amide hydrolysis is the main metabolic route; CYP3A4/5 sulfone formation is next in importance. Hydroxylation and glucuronidation also occur. The reviewed label provides no armodafinil-specific mass-balance excretion study.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4128759d-ed7c-4130-b24c-a0541f2b9e7f"
   ]
 }

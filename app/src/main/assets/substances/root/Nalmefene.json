@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "addiction-treatment"
+  ],
+  "metabolism": "Mainly undergoes hepatic glucuronidation to an inactive metabolite, with minor N-dealkylation. Parent and metabolites are eliminated mainly in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a59a5847-9fe4-4341-a203-be0a5e6d3e36"
   ]
 }

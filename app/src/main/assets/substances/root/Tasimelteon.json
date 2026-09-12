@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "hypnotic"
+  ],
+  "metabolism": "CYP1A2/CYP3A4 mediate oxidation and oxidative dealkylation, including ring opening and carboxylic-acid formation. Glucuronidation follows; elimination is mainly urinary as metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ce5a2fa3-ed54-422d-96c2-1821496eb32f"
   ]
 }

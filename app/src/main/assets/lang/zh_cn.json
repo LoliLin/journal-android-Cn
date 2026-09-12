@@ -775,5 +775,11 @@
   "release_form_immediate": "普通 / 速释",
   "release_form_extended": "缓释 / 控释（SR/ER/XR/CR）",
   "release_form_hint": "按包装标示选择。仅有肠溶包衣不代表缓释；记录剂量不会自动换算。",
-  "release_form_no_reference": "暂无该剂型专用的剂量分级和作用时长曲线。"
+  "release_form_no_reference": "暂无该剂型专用的剂量分级和作用时长曲线。",
+  "categories.arylcyclohexylamine": "芳基环己胺类",
+  "categories.arylcyclohexylamine.desc": "芳基环己胺类是一类离解剂，主要作为 NMDA 受体拮抗剂，包括氯胺酮、PCP 及其类似物。",
+  "categories.phenethylamine": "苯乙胺类",
+  "categories.phenethylamine.desc": "苯乙胺类是一个化学类别，包括苯丙胺类兴奋剂、麦司卡林类迷幻剂与 MDMA 类共情剂。",
+  "categories.decongestant": "减充血剂",
+  "categories.decongestant.desc": "减充血剂用于减轻鼻腔黏膜肿胀；其中部分物质（如伪麻黄碱）同时具有兴奋作用。"
 }

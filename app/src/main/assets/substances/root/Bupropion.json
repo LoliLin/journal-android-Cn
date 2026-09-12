@@ -16,12 +16,19 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["Cathinones", "stimulant", "NDRIs"],
+  "crossTolerances": [
+    "Cathinones",
+    "stimulant",
+    "NDRIs"
+  ],
   "addictionPotential": "moderate addictive potential; higher with insufflation; can produce dependence at both therapeutic and recreational doses",
   "toxicities": [
     "Seizure risk increases with dose. LD50 in rats and mice is moderate. Overdose may cause monoamine storm, seizures, cardiac arrest, or stroke."
   ],
-  "categories": ["stimulant", "antidepressant"],
+  "categories": [
+    "stimulant",
+    "antidepressant"
+  ],
   "summary": "Bupropion is a cathinone-class NDRI (norepinephrine-dopamine reuptake inhibitor) and nicotinic acetylcholine receptor antagonist. It is used clinically for major depressive disorder, smoking cessation, and off-label for ADHD and SAD. It has both stimulant and deliriant-like effects at high doses.",
   "effectsSummary": "Stimulation, increased heart rate and blood pressure, appetite suppression, nausea, pupil dilation, motivation enhancement, dream potentiation, anxiety, potential for seizures at high doses. At very high doses: delirium, hallucinations, paranoia.",
   "dosageRemark": "Seizure risk is dose-dependent. Maximum recommended daily dose is 450mg. Immediate release, sustained release, and controlled release formulations have different dosing schedules.",
@@ -41,8 +48,18 @@
       "Other seizure threshold lowering drugs",
       "Alcohol"
     ],
-    "unsafe": ["Stimulants", "Dextromethorphan", "Cocaine", "Ketamine"],
-    "uncertain": ["Caffeine", "Cannabis", "Psychedelics", "SSRIs"]
+    "unsafe": [
+      "Stimulants",
+      "Dextromethorphan",
+      "Cocaine",
+      "Ketamine"
+    ],
+    "uncertain": [
+      "Caffeine",
+      "Cannabis",
+      "Psychedelics",
+      "SSRIs"
+    ]
   },
   "roas": [
     {
@@ -119,5 +136,13 @@
         }
       }
     }
+  ],
+  "metabolism": "CYP2B6 forms active hydroxybupropion. Carbonyl reduction forms active threo- and erythrohydrobupropion through non-CYP pathways. Further metabolites are eliminated predominantly in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=136f29fa-a859-4efb-8365-1382716d6f8f"
+  ],
+  "oralReleaseForms": [
+    "IMMEDIATE_RELEASE",
+    "EXTENDED_RELEASE"
   ]
 }

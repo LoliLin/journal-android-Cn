@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antipsychotic"
+  ],
+  "metabolism": "CYP2D6 forms active mesoridazine, which is further converted to sulforidazine. Enzyme activity affects parent and active-metabolite exposure.",
+  "metabolismSources": [
+    "https://www.ncbi.nlm.nih.gov/books/NBK424018/"
   ]
 }

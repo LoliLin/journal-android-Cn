@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antipsychotic"
+  ],
+  "metabolism": "Hepatic pathways include sulfoxidation, hydroxylation, dealkylation and glucuronidation. CYP2D6 variation affects clearance; the available description does not establish a single exclusive pathway.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c4150683-0772-4344-bb1c-f050b84175d6"
   ]
 }

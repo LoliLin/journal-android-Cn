@@ -9,5 +9,9 @@
   "categories": [
     "ssri"
   ],
-  "isApproved": false
+  "isApproved": false,
+  "metabolism": "CYP2C19 and CYP3A4 mediate N-demethylation to S-demethylcitalopram, followed by further demethylation. The metabolites have weaker serotonin-reuptake effects; some parent and metabolites are eliminated in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d75e3b97-1ead-4e7b-9ae3-3626aede1efd"
+  ]
 }

@@ -12,5 +12,9 @@
     "habit-forming",
     "depressant"
   ],
-  "isApproved": false
+  "isApproved": false,
+  "metabolism": "Hepatic CYP3A hydroxylation forms 4-hydroxyestazolam, with other oxidation products also present. Metabolites have low potency and concentrations; elimination is mainly urinary as free/conjugated metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a1e3b4bf-22e9-430a-a768-4d86ae886c9e"
+  ]
 }

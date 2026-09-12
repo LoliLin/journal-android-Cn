@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "addiction-treatment"
+  ],
+  "metabolism": "Minimal metabolism; most is eliminated unchanged in urine through filtration and tubular secretion. CYP biotransformation contributes little to clearance.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=59e125e3-5204-122b-e063-6394a90a0092"
   ]
 }

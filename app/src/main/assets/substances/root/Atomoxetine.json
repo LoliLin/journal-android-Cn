@@ -9,5 +9,9 @@
     "stimulant",
     "tentative"
   ],
-  "isApproved": false
+  "isApproved": false,
+  "metabolism": "CYP2D6 forms active 4-hydroxyatomoxetine, which is rapidly glucuronidated. CYP2C19 and other enzymes form the less active N-desmethyl metabolite. Elimination is predominantly urinary as metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0ab8d905-e890-4e91-a730-3e5d12f5c23f"
+  ]
 }

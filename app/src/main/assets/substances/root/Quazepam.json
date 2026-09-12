@@ -10,5 +10,9 @@
     "depressant",
     "habit-forming"
   ],
-  "isApproved": false
+  "isApproved": false,
+  "metabolism": "Extensively metabolized in the liver to 2-oxoquazepam and N-desalkyl-2-oxoquazepam. These circulating metabolites can persist; the reviewed label does not identify one principal enzyme.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7d63f3f-5303-48ab-bce2-35fd62c45799"
+  ]
 }

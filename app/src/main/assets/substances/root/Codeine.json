@@ -1,6 +1,11 @@
 {
   "name": "Codeine",
-  "commonNames": ["Codeine", "Lean", "Purple Drank", "Syrup"],
+  "commonNames": [
+    "Codeine",
+    "Lean",
+    "Purple Drank",
+    "Syrup"
+  ],
   "url": "https://psychonautwiki.org/wiki/Codeine",
   "isApproved": true,
   "tolerance": {
@@ -10,13 +15,20 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["opioid"],
+  "crossTolerances": [
+    "opioid"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
   "toxicities": [
     "low toxicity",
     "potentially lethal when mixed with depressants like alcohol or benzodiazepines"
   ],
-  "categories": ["opioid", "habit-forming", "depressant", "common"],
+  "categories": [
+    "opioid",
+    "habit-forming",
+    "depressant",
+    "common"
+  ],
   "summary": "Codeine is a weaker opioid used to treat mild to moderate pain and to relieve cough. In many countries it is available over the counter in combination with paracetamol, which can easily be extracted to retrieve near-pure codeine. For this reason, it is used widely as a recreational opioid. It is metabolised into morphine in the body at a rate of 5% mg for mg.",
   "effectsSummary": "Codeine is converted into morphine in the body. Taking it has a pain-relieving, cough-irritating, calming, euphoric and aphrodisiac effect. An increase in self-confidence is also possible. It should be remembered, however, that the effect varies greatly depending on the individual metabolism. While some people react very sensitively to codeine, others feel no psychoactive effect at all.",
   "dosageRemark": "An increase in effect at high doses is rarely seen, as the body can only absorb limited amounts of codeine.",
@@ -42,7 +54,12 @@
       "Grapefruit"
     ],
     "unsafe": [],
-    "uncertain": ["MAOIs", "Nitrous", "PCP", "Stimulants"]
+    "uncertain": [
+      "MAOIs",
+      "Nitrous",
+      "PCP",
+      "Stimulants"
+    ]
   },
   "roas": [
     {
@@ -82,5 +99,9 @@
         }
       }
     }
+  ],
+  "metabolism": "UGT2B7/UGT2B4 form codeine-6-glucuronide; CYP2D6 O-demethylation forms active morphine, and CYP3A4 N-demethylation forms norcodeine. Further conjugation precedes mainly urinary elimination.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40d4a71e-341e-48b3-b925-ba35b7910dff"
   ]
 }

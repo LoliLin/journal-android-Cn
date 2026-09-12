@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "addiction-treatment"
+  ],
+  "metabolism": "Not metabolized to a meaningful extent; eliminated by the kidneys as unchanged acamprosate. CYP metabolism is not a major clearance pathway.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1cfe4675-766f-4f1a-b1a8-96bbdacfcfa5"
   ]
 }

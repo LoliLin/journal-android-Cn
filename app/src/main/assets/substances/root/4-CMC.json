@@ -10,5 +10,9 @@
     "research-chemical",
     "habit-forming"
   ],
-  "isApproved": false
+  "isApproved": false,
+  "metabolism": "Human hepatocyte/case samples show ketone reduction and N-demethylation, with oxidative deamination and glucuronidation among further transformations. The full clinical pathway is not established.",
+  "metabolismSources": [
+    "https://pubmed.ncbi.nlm.nih.gov/38862871/"
+  ]
 }

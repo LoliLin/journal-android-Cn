@@ -12,5 +12,9 @@
     "benzodiazepine",
     "habit-forming"
   ],
-  "isApproved": false
+  "isApproved": false,
+  "metabolism": "Rapidly converted to active nordazepam, which undergoes hepatic hydroxylation to oxazepam and further conjugation. Elimination is mainly urinary as conjugated metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=11b72861-64c9-4cdc-9289-c7fa9ea23bf6"
+  ]
 }

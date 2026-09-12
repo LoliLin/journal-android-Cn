@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antiepileptic"
+  ],
+  "metabolism": "Mostly eliminated unchanged by the kidneys. A smaller fraction undergoes non-CYP hydrolysis of the acetamide group to inactive ucb L057, which is also eliminated renally.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2d307850-0ed5-4f32-ac62-0e1e2fe27a7a"
   ]
 }

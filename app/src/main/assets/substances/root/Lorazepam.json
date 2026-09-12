@@ -1,6 +1,11 @@
 {
   "name": "Lorazepam",
-  "commonNames": ["Lorazepam", "Ativan", "Orfidal", "Lorsilan"],
+  "commonNames": [
+    "Lorazepam",
+    "Ativan",
+    "Orfidal",
+    "Lorsilan"
+  ],
   "url": "https://psychonautwiki.org/wiki/Lorazepam",
   "isApproved": true,
   "tolerance": {
@@ -8,13 +13,20 @@
     "zero": "7 - 14 days",
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["benzodiazepine"],
+  "crossTolerances": [
+    "benzodiazepine"
+  ],
   "addictionPotential": "extremely physically and psychologically addictive",
   "toxicities": [
     "low toxicity",
     "potentially lethal when mixed with depressants like alcohol or opioids"
   ],
-  "categories": ["depressant", "benzodiazepine", "habit-forming", "common"],
+  "categories": [
+    "depressant",
+    "benzodiazepine",
+    "habit-forming",
+    "common"
+  ],
   "summary": "An intermediate acting benzodiazepine commonly known as Ativan, commonly prescribed as an alternative to Xanax. Sedating, hypnotic and anxiolytic. Potential to induce amnesia and lowered inhibitions in overdose. Do not combine with other depressants.",
   "effectsSummary": "Lorazepam has a calming, relaxing, antispasmodic, anti-anxiety and sleep-inducing effect.\nTaking benzodiazepines increases the effectiveness of the neurotransmitter gamma-aminobutyric acid (GABA) at the GABA-A receptor. This triggers sedative (calming), hypnotic, anxiolytic (anxiety-relieving), anticonvulsant (anticonvulsant) and muscle-relaxing effects in the body. Benzodiazepines have a depressant effect on the central nervous system. The flow of information in the brain between the brain cells (neurons) is thereby reduced / disturbed and feelings and perceptions are dampened.\nThe breakdown of the individual active ingredients of benzodiazepines in the body is age-dependent and therefore varies from person to person.",
   "generalRisks": "There is little information available on risks, toxicity, side effects and long-term consequences. Therefore, the general information on benzodiazepines applies:\nWhen mixing with other downers (alcohol, GHB/GBL, heroin) there is a risk of respiratory paralysis!\nTaking benzodiazepines can cause numerous undesirable side effects. In addition, regular and long-term use carries a very high risk of physical and psychological dependence. Benzodiazepines should only be taken as prescribed by a doctor and only for a short period of time (max. 4-6 weeks). Longer-term use should be discussed with the treating specialist. The dosages and duration of action of the individual benzodiazepines differ considerably.\nSide effects of benzodiazepines may be as follows: Prolonged fatigue, gastrointestinal problems, impaired reactions, hypersensitivity reactions, headaches, dizziness, motor difficulties, visual disturbances, slowed breathing, muscle weakness, confusion, sexual dysfunction, aggression, outbursts of anger, restlessness, random movements, allergies, skin problems/rashes and speech and movement disorders. Some benzodiazepines can cause seizures in epileptics.",
@@ -43,5 +55,9 @@
         }
       }
     }
+  ],
+  "metabolism": "Directly conjugated at the 3-hydroxy group to lorazepam glucuronide, which has no demonstrated CNS activity in the cited animal testing, then excreted in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86630bdd-13ad-4ab5-9e94-fcf2ea2113e1"
   ]
 }

@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antidepressant"
+  ],
+  "metabolism": "Extensively metabolized through N-dealkylation and aliphatic/aromatic hydroxylation. Very little is eliminated as unchanged drug in urine; metabolites account for most clearance.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0bd4c34a-4f43-4c84-8b98-1d074cba97d5"
   ]
 }

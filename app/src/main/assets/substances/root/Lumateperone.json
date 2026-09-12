@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antipsychotic"
+  ],
+  "metabolism": "Multiple pathways contribute: CYP3A4/CYP2C8/CYP1A2 oxidation, UGT glucuronidation and aldo-keto reductases. Numerous metabolites form; elimination is through urine and feces, with little unchanged drug in urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=db730b06-6351-47fd-8183-e61e61bbead5"
   ]
 }

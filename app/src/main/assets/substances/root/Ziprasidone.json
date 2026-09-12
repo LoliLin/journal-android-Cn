@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antipsychotic"
+  ],
+  "metabolism": "Most metabolic clearance is reductive, involving glutathione and aldehyde oxidase, rather than CYP oxidation. CYP3A4 contributes to the smaller oxidative component. Elimination is mainly fecal as metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=947881af-08e6-47eb-87e3-24cc162c12bc"
   ]
 }

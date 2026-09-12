@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antipsychotic"
+  ],
+  "metabolism": "Largely recovered unchanged in urine and feces. Renal elimination is important; extensive biotransformation is not needed for most drug elimination.",
+  "metabolismSources": [
+    "https://www.medicines.org.uk/emc/product/2430/smpc"
   ]
 }

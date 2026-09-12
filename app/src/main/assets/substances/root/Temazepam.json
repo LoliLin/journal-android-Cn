@@ -1,6 +1,10 @@
 {
   "name": "Temazepam",
-  "commonNames": ["Temazepam", "Restoril", "Normison"],
+  "commonNames": [
+    "Temazepam",
+    "Restoril",
+    "Normison"
+  ],
   "url": "https://psychonautwiki.org/wiki/Temazepam",
   "isApproved": true,
   "tolerance": {
@@ -8,13 +12,19 @@
     "zero": "7-14 days",
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["benzodiazepine"],
+  "crossTolerances": [
+    "benzodiazepine"
+  ],
   "addictionPotential": "extremely physically and psychologically addictive",
   "toxicities": [
     "low toxicity",
     "potentially lethal when mixed with depressants like alcohol or opioids"
   ],
-  "categories": ["depressant", "benzodiazepine", "habit-forming"],
+  "categories": [
+    "depressant",
+    "benzodiazepine",
+    "habit-forming"
+  ],
   "summary": "Temazepam's brand name is Restoril. It is a hypnotic benzodiazepine with effects similar to clonazepam, frequently prescribed as a sleep aid. Some users report mild euphoria alongside the hypnotic effects.",
   "roas": [
     {
@@ -44,5 +54,9 @@
         }
       }
     }
+  ],
+  "metabolism": "Mainly cleared by conjugation to inactive products, including an O-conjugate, followed by urinary excretion. No active metabolites were identified in the cited human disposition study.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=62379cd5-a314-43eb-a1ee-33997623bfa3"
   ]
 }

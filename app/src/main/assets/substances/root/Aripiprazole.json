@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antipsychotic"
+  ],
+  "metabolism": "Hepatic CYP2D6 and CYP3A4 mediate dehydrogenation and hydroxylation; CYP3A4 also mediates N-dealkylation. Dehydro-aripiprazole is active. Drug-related material is eliminated in feces and urine.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=14910dae-da81-3d73-d0a4-e98d13917c69"
   ]
 }

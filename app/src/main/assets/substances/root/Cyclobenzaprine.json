@@ -13,5 +13,9 @@
     "habit-forming",
     "common"
   ],
-  "isApproved": false
+  "isApproved": false,
+  "metabolism": "Extensively metabolized, then eliminated mainly by the kidneys as glucuronide conjugates. The reviewed label does not quantify the contributions of individual enzymes.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=34e57aff-dc4b-4631-9d57-31020244835d"
+  ]
 }

@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antiepileptic"
+  ],
+  "metabolism": "Thiophene-ring oxidation forms inactive 5-oxo-tiagabine, with glucuronidation also occurring. In-vitro evidence points mainly to CYP3A. Elimination is mainly fecal and urinary as metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=953ef3cc-e3cb-480f-b9ea-256520fd62b8"
   ]
 }

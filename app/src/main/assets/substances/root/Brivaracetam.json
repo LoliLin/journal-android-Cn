@@ -4,5 +4,9 @@
   "isApproved": false,
   "categories": [
     "antiepileptic"
+  ],
+  "metabolism": "Amidases hydrolyze the amide to an inactive carboxylic acid; CYP2C19 also mediates side-chain hydroxylation. Elimination is predominantly urinary as metabolites.",
+  "metabolismSources": [
+    "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3cf2f439-0e97-443e-8e33-25ecef616f6c"
   ]
 }
