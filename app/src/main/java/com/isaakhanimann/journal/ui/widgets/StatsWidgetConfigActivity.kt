@@ -77,16 +77,7 @@ class StatsWidgetConfigActivity : ComponentActivity() {
                                     appWidgetId,
                                     StatsWidgetConfig(substanceName, days)
                                 )
-                                app.applicationScope.launch {
-                                    try {
-                                        StatsWidgetUpdater.refreshAll(
-                                            this@StatsWidgetConfigActivity,
-                                            app.experienceRepository
-                                        )
-                                    } catch (_: Exception) {
-                                        // Widget refresh must never crash the app process.
-                                    }
-                                }
+                                StatsWidgetProvider.requestUpdate(this@StatsWidgetConfigActivity)
                                 setResult(
                                     Activity.RESULT_OK,
                                     Intent().putExtra(

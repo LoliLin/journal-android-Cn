@@ -3,6 +3,7 @@ package com.isaakhanimann.journal.ui.widgets
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
+import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.widget.RemoteViews
@@ -74,6 +75,26 @@ class StatsWidgetProvider : AppWidgetProvider() {
     }
 
     companion object {
+
+        /**
+         * Asks the framework to re-run [onUpdate] for every placed stats widget.
+         * Rendering lives only in the provider, so callers (data changes, app
+         * start, language changes, config save) just poke AppWidgetManager and
+         * never build RemoteViews themselves. No-op when no widget is placed.
+         */
+        fun requestUpdate(context: Context) {
+            val appContext = context.applicationContext
+            val provider = ComponentName(appContext, StatsWidgetProvider::class.java)
+            val ids = AppWidgetManager.getInstance(appContext).getAppWidgetIds(provider)
+            if (ids.isEmpty()) return
+            appContext.sendBroadcast(
+                Intent(appContext, StatsWidgetProvider::class.java).apply {
+                    action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
+                    putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids)
+                }
+            )
+        }
+
         fun render(context: Context, appWidgetId: Int): RemoteViews {
             val summary = StatsWidgetData.readSummary(context, appWidgetId)
             val app = context.applicationContext as? com.isaakhanimann.journal.di.JournalApplication

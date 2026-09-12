@@ -29,9 +29,8 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.isaakhanimann.journal.ui.main.MainScreen
 import com.isaakhanimann.journal.ui.theme.JournalTheme
-import com.isaakhanimann.journal.ui.widgets.StatsWidgetUpdater
+import com.isaakhanimann.journal.ui.widgets.StatsWidgetProvider
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MainActivity : FragmentActivity() {
@@ -69,16 +68,9 @@ class MainActivity : FragmentActivity() {
             root,
             force = false
         )
-        // Keep the stats widget in sync after any journal change made while
-        // the app was closed or in the background. The updater computes on
-        // Dispatchers.Default; only the RemoteViews push runs here.
-        val app = application as com.isaakhanimann.journal.di.JournalApplication
-        app.applicationScope.launch {
-            try {
-                StatsWidgetUpdater.refreshAll(this@MainActivity, app.experienceRepository)
-            } catch (_: Exception) {
-                // Widget refresh must never crash the app process.
-            }
-        }
+        // Keep the stats widget in sync after any journal change made while the
+        // app was closed or in the background: ask the framework to re-run the
+        // provider, which owns the rendering.
+        StatsWidgetProvider.requestUpdate(this)
     }
 }
