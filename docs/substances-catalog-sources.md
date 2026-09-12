@@ -4,6 +4,9 @@
 有什么坑，以及**不同语言的来源怎么快速处理**。每个来源一个脚本，共用 `_common.py` 与同一份台账；
 PsychonautWiki 的字段映射与实测见 [`substances-pw-extraction.md`](substances-pw-extraction.md)。
 
+> 各来源的**许可义务、再分发条款与免责声明**统一写在
+> [`data-sources-and-licenses.md`](data-sources-and-licenses.md)，下表只列字段与取数方式。
+
 ## 分工与取数方式（均实测）
 
 | 源 | 语言 | 能提供 | 取数方式 | 许可 |
