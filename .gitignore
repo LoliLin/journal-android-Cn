@@ -14,3 +14,5 @@ release
 *.keystore.jks
 *.keystore
 keystore_b64.txt
+__pycache__/
+docs/scripts/_work/

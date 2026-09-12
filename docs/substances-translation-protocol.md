@@ -2,6 +2,10 @@
 
 本协议用于拆分 `substances` 的结构与文本，以便多语言翻译时只覆盖需要翻译的字段。
 
+> 工具与操作步骤见 [`substances-pipeline.md`](substances-pipeline.md)：
+> 单文件入口 `docs/scripts/substances_pipeline.py` 负责拆分、翻译、回填与校对，
+> 跑 `python docs/scripts/substances_pipeline.py guide` 可打印完整流程。
+
 ## 目录结构
 
 ```

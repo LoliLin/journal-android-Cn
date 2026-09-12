@@ -4,6 +4,8 @@ import android.content.Context
 import com.isaakhanimann.journal.data.room.experiences.ExperienceRepository
 import java.time.Instant
 import java.time.temporal.ChronoUnit
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 private const val PREFS_NAME = "widget_stats"
 private const val KEY_PREFIX = "summary_"
@@ -64,32 +66,31 @@ object StatsWidgetData {
             }
         }.apply()
     }
+
+    /**
+     * Recomputes the summary for one widget and stores it. All work runs on
+     * Dispatchers.Default: callers may be on the main thread (application
+     * scope, activity onResume), and the SQL aggregate does the counting so
+     * no ingestion rows are materialized in Kotlin.
+     */
     suspend fun refresh(
         context: Context,
         appWidgetId: Int,
         experienceRepository: ExperienceRepository
-    ) {
+    ) = withContext(Dispatchers.Default) {
         val config = readConfig(context, appWidgetId)
-        val from = Instant.now().minus(config.days.toLong(), ChronoUnit.DAYS)
-        val ingestions =
-            experienceRepository.getIngestionsWithCompanions(from, Instant.now())
-        val filtered = if (config.substanceName == null) {
-            ingestions
-        } else {
-            ingestions.filter { it.ingestion.substanceName == config.substanceName }
-        }
-        val summary = StatsWidgetSummary(
-            substanceName = config.substanceName,
-            days = config.days,
-            ingestionCount = filtered.size,
-            experienceCount = filtered.map { it.ingestion.experienceId }.distinct().size,
-            substanceCount = filtered.map { it.ingestion.substanceName }.distinct().size
+        val to = Instant.now()
+        val from = to.minus(config.days.toLong(), ChronoUnit.DAYS)
+        val counts = experienceRepository.getIngestionWindowCounts(
+            from,
+            to,
+            config.substanceName
         )
         context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
             .edit()
-            .putInt(configKey(appWidgetId, "sum_ingestions"), summary.ingestionCount)
-            .putInt(configKey(appWidgetId, "sum_experiences"), summary.experienceCount)
-            .putInt(configKey(appWidgetId, "sum_substances"), summary.substanceCount)
+            .putInt(configKey(appWidgetId, "sum_ingestions"), counts.ingestionCount)
+            .putInt(configKey(appWidgetId, "sum_experiences"), counts.experienceCount)
+            .putInt(configKey(appWidgetId, "sum_substances"), counts.substanceCount)
             .apply()
     }
 

@@ -39,6 +39,7 @@ import com.isaakhanimann.journal.data.room.experiences.relations.ExperienceWithI
 import com.isaakhanimann.journal.data.room.experiences.relations.ExperienceWithIngestionsAndCompanions
 import com.isaakhanimann.journal.data.room.experiences.relations.ExperienceWithIngestionsCompanionsAndRatings
 import com.isaakhanimann.journal.data.room.experiences.relations.ExperienceWithIngestionsTimedNotesAndRatings
+import com.isaakhanimann.journal.data.room.experiences.relations.IngestionWindowCounts
 import com.isaakhanimann.journal.data.room.experiences.relations.IngestionWithCompanion
 import com.isaakhanimann.journal.data.room.experiences.relations.IngestionWithCompanionAndCustomUnit
 import com.isaakhanimann.journal.data.room.experiences.relations.IngestionWithExperienceAndCustomUnit
@@ -208,6 +209,20 @@ interface ExperienceDao {
         fromInstant: Instant,
         toInstant: Instant
     ): List<IngestionWithCompanion>
+
+    /** Aggregates the three widget counts in SQL; no row materialization. */
+    @Query(
+        "SELECT COUNT(*) AS ingestionCount," +
+            " COUNT(DISTINCT experienceId) AS experienceCount," +
+            " COUNT(DISTINCT substanceName) AS substanceCount" +
+            " FROM ingestion WHERE time >= :fromInstant AND time < :toInstant" +
+            " AND (:substanceName IS NULL OR substanceName = :substanceName)"
+    )
+    suspend fun getIngestionWindowCounts(
+        fromInstant: Instant,
+        toInstant: Instant,
+        substanceName: String?
+    ): IngestionWindowCounts
 
     @Transaction
     @Query("SELECT * FROM ingestion WHERE id =:id")
