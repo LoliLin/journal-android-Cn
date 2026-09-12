@@ -200,6 +200,19 @@ jobs:
         run: |
           set -euo pipefail
 
+          # 第一步先装依赖并补上锁文件：要在"密钥缺失就退出"之前做，否则永远生成不了 Gemfile.lock
+          bundle install --jobs 4 --retry 3
+          if ! git ls-files --error-unmatch Gemfile.lock >/dev/null 2>&1; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add Gemfile.lock
+            if ! git diff --cached --exit-code; then
+              git commit -m "chore: lock the fastlane dependencies"
+              git push origin HEAD:${{ github.ref }} \
+                || echo "::warning::Gemfile.lock 提交失败，请手动提交（否则缓存不会生效）"
+            fi
+          fi
+
           if [ -z "${GOOGLE_PLAY_API:-}" ]; then
             echo "::warning::未配置 GOOGLE_PLAY_API secret，跳过 Google Play 上传。"
             exit 0
@@ -231,19 +244,5 @@ jobs:
             [ -f "fastlane/metadata/android/${lang}/changelogs/${VERSION_CODE}.txt" ] \
               || echo "::warning::${lang} 缺少 changelogs/${VERSION_CODE}.txt（该语言不会显示更新说明）"
           done
-
-          bundle install --jobs 4 --retry 3
-
-          # 第一次跑会生成 Gemfile.lock：提交回去，之后 CI 才能命中 gem 缓存（省掉每次 1-2 分钟）
-          if ! git ls-files --error-unmatch Gemfile.lock >/dev/null 2>&1; then
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add Gemfile.lock
-            if ! git diff --cached --exit-code; then
-              git commit -m "chore: lock the fastlane dependencies"
-              git push origin HEAD:${{ github.ref }} \
-                || echo "::warning::Gemfile.lock 提交失败，请手动提交（否则缓存不会生效）"
-            fi
-          fi
 
           bundle exec fastlane deploy
