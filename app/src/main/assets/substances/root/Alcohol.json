@@ -18,12 +18,19 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["GABA", "depressants"],
+  "crossTolerances": [
+    "GABA",
+    "depressants"
+  ],
   "addictionPotential": "extremely addictive with a high potential for abuse",
   "toxicities": [
     "Death from ethanol consumption is possible when blood alcohol levels reach 0.4%"
   ],
-  "categories": ["depressant", "habit-forming", "common"],
+  "categories": [
+    "depressant",
+    "habit-forming",
+    "common"
+  ],
   "summary": "Alcohol is a CNS depressant that acts through the GABAₐ receptor, and is one of the most common strong psychoactives used by humans. It has a long history of use and its intoxicating effects are well-studied and documented. It remains legal in most parts of the world.",
   "effectsSummary": "Stimulation, relaxation, calming down, disinhibition, sociability, euphoria, reduction of the ability to react, overestimation of oneself and urge to talk, but also melancholy or irritability up to aggressiveness.\nAbsinthe (\"The Green Fairy\"), a high-proof spirit (usually 50 - 70 % by volume), contains the plant substance thujone. Together with the main active ingredient alcohol, thujone is said to have stimulating and mind-altering effects. In Europe, as in Switzerland, clear limits apply (max. 35 mg thujone per kg alcohol). Caution with chronic use! A thujone overdose manifests itself in seizures and epilepsy-like symptoms.",
   "dosageRemark": "Standard drinks such as 3 dl beer, 1 dl wine or 2 cl spirits contain about 12 g alcohol. The effect of alcohol is influenced by the amount consumed, the type of alcohol (sugary and/or carbonated), the period of consumption and individual factors (age, sex, weight). The blood alcohol concentration is measured in parts per thousand (‰). The higher the alcohol concentration in the blood, the stronger the effect of alcohol.",
@@ -42,10 +49,10 @@
   ],
   "interactions": {
     "dangerous": [
-      "Depressants",
+      "Depressant",
       "Dissociatives",
       "Benzodiazepines",
-      "DXM",
+      "Dextromethorphan",
       "GHB",
       "GBL",
       "Ketamine",
@@ -55,7 +62,7 @@
     ],
     "unsafe": [
       "Cocaine",
-      "MAOIs",
+      "MAOI",
       "PCP",
       "ALDH2 inhibitors",
       "Hepatotoxic drugs"
@@ -64,10 +71,10 @@
       "Stimulants",
       "THC",
       "Amphetamines",
-      "AMT",
+      "ΑMT",
       "MDMA",
       "Nitrous",
-      "SSRIs"
+      "ssri"
     ]
   },
   "roas": [

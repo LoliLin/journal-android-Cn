@@ -1,6 +1,8 @@
 {
   "name": "Cyclazodone",
-  "commonNames": ["Cyclazodone"],
+  "commonNames": [
+    "Cyclazodone"
+  ],
   "url": "https://psychonautwiki.org/wiki/Cyclazodone",
   "isApproved": true,
   "tolerance": {
@@ -10,13 +12,32 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dopamine", "stimulant"],
-  "toxicities": ["exact toxic dosage is unknown"],
-  "categories": ["stimulant"],
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "categories": [
+    "stimulant"
+  ],
   "interactions": {
-    "dangerous": ["25x-NBOMe", "25x-NBOH", "Tramadol"],
-    "unsafe": ["DXM", "MDMA", "Stimulants"],
-    "uncertain": ["Alcohol", "MXE", "Dissociatives"]
+    "dangerous": [
+      "25x-NBOMe",
+      "25x-NBOH",
+      "Tramadol"
+    ],
+    "unsafe": [
+      "Dextromethorphan",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {

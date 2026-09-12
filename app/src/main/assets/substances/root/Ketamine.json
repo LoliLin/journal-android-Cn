@@ -19,10 +19,16 @@
   "tolerance": {
     "full": "develops with prolonged and repeated use"
   },
-  "crossTolerances": ["dissociative"],
+  "crossTolerances": [
+    "dissociative"
+  ],
   "addictionPotential": "moderate to high abuse potential and produces psychological dependence with chronic use",
   "toxicities": [],
-  "categories": ["dissociative", "habit-forming", "common"],
+  "categories": [
+    "dissociative",
+    "habit-forming",
+    "common"
+  ],
   "summary": "A short acting dissociative anaesthetic and hallucinogen commonly used in emergency medicine. It is the prototypical dissociative, and is widely used at sub-anesthetic doses recreationally. Small doses are comparable with alcohol, while larger doses are immobilising and lead to psychedelic experiences: the \"K-Hole.\"",
   "effectsSummary": "The effect of ketamine as an intoxicant is strongly dependent on the dosage: In lower doses, it has a disinhibiting and relaxing effect similar to alcohol, while higher doses can induce trance-like states up to out-of-body or near-death experiences (K-Hole). There can be a fragmentary dissolution of the environment and bodily sensation, thoughts can break off, feelings of weightlessness or floating can appear. Sensory perceptions and the sense of space-time change. At higher doses, detachment from one's own body and/or ego dissolution or merging with the environment may occur.\nAfter the trip: drowsiness, memory of the experience is often only partially possible.",
   "dosageRemark": "The dosage of ketamine depends strongly on the desired effect.",
@@ -39,13 +45,19 @@
     "People with cardiovascular problems, high blood pressure or glaucoma should absolutely refrain from consuming ketamine!"
   ],
   "interactions": {
-    "dangerous": ["Alcohol", "GHB", "GBL", "Opioids", "Tramadol"],
+    "dangerous": [
+      "Alcohol",
+      "GHB",
+      "GBL",
+      "Opioids",
+      "Tramadol"
+    ],
     "unsafe": [],
     "uncertain": [
       "Amphetamines",
       "Cocaine",
       "Benzodiazepines",
-      "MAOIs",
+      "MAOI",
       "Trazodone",
       "Grapefruit"
     ]

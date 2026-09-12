@@ -1,6 +1,8 @@
 {
   "name": "3-FEA",
-  "commonNames": ["3-FEA"],
+  "commonNames": [
+    "3-FEA"
+  ],
   "url": "https://psychonautwiki.org/wiki/3-FEA",
   "isApproved": true,
   "tolerance": {
@@ -10,9 +12,15 @@
     "halfToleranceInHours": 60,
     "zeroToleranceInHours": 120
   },
-  "crossTolerances": ["dopamine", "serotonin|serotonergic", "stimulant"],
+  "crossTolerances": [
+    "dopamine",
+    "serotonin|serotonergic",
+    "stimulant"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
   "categories": [
     "entactogen",
     "stimulant",
@@ -22,8 +30,19 @@
   ],
   "summary": "A novel fluorinated amphetamine with serotonergic properties. Effects are similar to 4-FA, in that it provides slight dopamine and norepinephrine release or reuptake inhibition, as well as serotonin release and reuptake inhibition. Effects on the serotonin side are more pronounced than dopamine and norepinephrine, the latter two being almost negligibly.",
   "interactions": {
-    "dangerous": ["Tramadol", "aMT", "MAOIs"],
-    "unsafe": ["DXM", "PCP", "25x-NBOMe", "2C-T-x", "5-MeO-xxT", "DOx"],
+    "dangerous": [
+      "Tramadol",
+      "ΑMT",
+      "MAOI"
+    ],
+    "unsafe": [
+      "Dextromethorphan",
+      "PCP",
+      "25x-NBOMe",
+      "2C-T-x",
+      "5-MeO-xxT",
+      "DOx"
+    ],
     "uncertain": [
       "Alcohol",
       "GHB",
@@ -34,7 +53,7 @@
       "Caffeine",
       "Ketamine",
       "Methoxetamine",
-      "Psychedelics"
+      "Psychedelic"
     ]
   },
   "roas": [

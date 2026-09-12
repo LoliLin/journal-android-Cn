@@ -1,6 +1,8 @@
 {
   "name": "Acetylfentanyl",
-  "commonNames": ["Acetylfentanyl"],
+  "commonNames": [
+    "Acetylfentanyl"
+  ],
   "url": "https://psychonautwiki.org/wiki/Acetylfentanyl",
   "isApproved": true,
   "tolerance": {
@@ -10,34 +12,46 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["opioid"],
+  "crossTolerances": [
+    "opioid"
+  ],
   "addictionPotential": "extremely addictive with a high potential for abuse",
   "toxicities": [
     "potentially fatal at heavy dosages",
     "potentially lethal when mixed with depressants like alcohol or benzodiazepines",
     "unintentionally spilling a very small amount of acetylfentanyl on one's skin could result in a fatal overdose."
   ],
-  "categories": ["opioid", "research-chemical", "habit-forming", "depressant"],
+  "categories": [
+    "opioid",
+    "research-chemical",
+    "habit-forming",
+    "depressant"
+  ],
   "summary": "Acetyl-Fentanyl is an opioid analgesic substance that is an analogue of Fentanyl. It's potency is roughly ~6.67 times that of Morphine. Making it ~15 times less potent than its parent compound Fentanyl.",
   "interactions": {
     "dangerous": [
       "SNRIs",
       "Alcohol",
       "Benzodiazepines",
-      "DXM",
+      "Dextromethorphan",
       "GHB",
       "GBL",
       "Ketamine",
       "MXE",
       "Tramadol",
       "Grapefruit",
-      "MAOIs",
+      "MAOI",
       "Serotonin releasers",
-      "SSRIs",
+      "ssri",
       "5-HTP"
     ],
     "unsafe": [],
-    "uncertain": ["MAOIs", "Nitrous", "PCP", "Stimulants"]
+    "uncertain": [
+      "MAOI",
+      "Nitrous",
+      "PCP",
+      "Stimulants"
+    ]
   },
   "roas": [
     {

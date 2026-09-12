@@ -4,18 +4,18 @@
   "isApproved": false,
   "interactions": {
     "dangerous": [
-      "amt"
+      "ΑMT"
     ],
     "unsafe": [
       "Tramadol"
     ],
     "uncertain": [
-      "5-meo-xxt",
-      "amphetamines",
+      "5-MeO-xxT",
+      "Amphetamines",
       "Cannabis",
       "Cocaine",
-      "maois",
-      "nbomes"
+      "MAOI",
+      "NBOMes"
     ]
   }
 }

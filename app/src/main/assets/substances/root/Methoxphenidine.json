@@ -1,6 +1,11 @@
 {
   "name": "Methoxphenidine",
-  "commonNames": ["Methoxphenidine", "Methoxyphenidine", "MXP", "2-MXP"],
+  "commonNames": [
+    "Methoxphenidine",
+    "Methoxyphenidine",
+    "MXP",
+    "2-MXP"
+  ],
   "url": "https://psychonautwiki.org/wiki/Methoxphenidine",
   "isApproved": true,
   "tolerance": {
@@ -10,9 +15,13 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dissociative"],
+  "crossTolerances": [
+    "dissociative"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
   "categories": [
     "dissociative",
     "research-chemical",
@@ -21,7 +30,11 @@
   ],
   "summary": "A dissociative from the diarylethylamine class, a more potent analogue of diphenidine. Known to be unpredictable, and can cause blackouts.",
   "interactions": {
-    "dangerous": ["Depressants", "Stimulants", "Dissociatives"],
+    "dangerous": [
+      "Depressant",
+      "Stimulants",
+      "Dissociatives"
+    ],
     "unsafe": [],
     "uncertain": []
   },

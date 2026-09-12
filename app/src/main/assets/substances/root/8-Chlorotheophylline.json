@@ -39,10 +39,10 @@
     "dangerous": [],
     "unsafe": [
       "Diphenhydramine",
-      "MAOIs"
+      "MAOI"
     ],
     "uncertain": [
-      "stimulants",
+      "Stimulants",
       "Alcohol"
     ]
   },

@@ -51,12 +51,12 @@
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol",
-      "MAOIs",
+      "MAOI",
       "Hormonal Birth Control",
       "CYP2C19-substrates"
     ],
     "unsafe": [
-      "DXM",
+      "Dextromethorphan",
       "MDMA",
       "Stimulants"
     ],

@@ -1,17 +1,25 @@
 {
   "name": "Oxymorphone",
-  "commonNames": ["Opana"],
+  "commonNames": [
+    "Opana"
+  ],
   "url": "https://psychonautwiki.org/wiki/Oxymorphone",
   "isApproved": true,
-  "crossTolerances": ["opioid"],
+  "crossTolerances": [
+    "opioid"
+  ],
   "toxicities": [],
-  "categories": ["opioid", "habit-forming", "depressant"],
+  "categories": [
+    "opioid",
+    "habit-forming",
+    "depressant"
+  ],
   "summary": "A powerful semisynthetic opioid analgesic also known as opana. A derivative of morphine it is approximately ten times as potent. Has a low oral bioavailability, and as such it is usually insufflated or taken rectally.",
   "interactions": {
     "dangerous": [
       "Alcohol",
       "Benzodiazepines",
-      "DXM",
+      "Dextromethorphan",
       "GHB",
       "GBL",
       "Ketamine",
@@ -20,7 +28,12 @@
       "Grapefruit"
     ],
     "unsafe": [],
-    "uncertain": ["MAOIs", "Nitrous", "PCP", "Stimulants"]
+    "uncertain": [
+      "MAOI",
+      "Nitrous",
+      "PCP",
+      "Stimulants"
+    ]
   },
   "roas": [
     {

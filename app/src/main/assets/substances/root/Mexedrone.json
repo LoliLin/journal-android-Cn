@@ -1,6 +1,9 @@
 {
   "name": "Mexedrone",
-  "commonNames": ["Mexedrone", "4-MMC-MeO"],
+  "commonNames": [
+    "Mexedrone",
+    "4-MMC-MeO"
+  ],
   "url": "https://psychonautwiki.org/wiki/Mexedrone",
   "isApproved": true,
   "tolerance": {
@@ -10,9 +13,14 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dopamine", "stimulant"],
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
   "categories": [
     "stimulant",
     "entactogen",
@@ -27,13 +35,21 @@
       "25x-NBOH",
       "Tramadol",
       "SNRIs",
-      "MAOIs",
+      "MAOI",
       "Serotonin releasers",
-      "SSRIs",
+      "ssri",
       "5-HTP"
     ],
-    "unsafe": ["DXM", "MDMA", "Stimulants"],
-    "uncertain": ["Alcohol", "MXE", "Dissociatives"]
+    "unsafe": [
+      "Dextromethorphan",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {

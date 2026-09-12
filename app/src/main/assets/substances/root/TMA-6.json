@@ -1,6 +1,8 @@
 {
   "name": "TMA-6",
-  "commonNames": ["TMA-6"],
+  "commonNames": [
+    "TMA-6"
+  ],
   "url": "https://psychonautwiki.org/wiki/TMA-6",
   "isApproved": true,
   "tolerance": {
@@ -10,13 +12,28 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "stimulant", "research-chemical", "tentative"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "stimulant",
+    "research-chemical",
+    "tentative"
+  ],
   "summary": "A rarely seen Psychedelic Amphetamine and Mescaline analogue. First synthesised by Alexander Shulgin, who descrived it as  \"one of the most rewarding and pleasurable of the methoxylated amphetamines.\"",
   "interactions": {
-    "dangerous": ["SNRIs", "MAOIs", "Serotonin releasers", "SSRIs", "5-HTP"],
+    "dangerous": [
+      "SNRIs",
+      "MAOI",
+      "Serotonin releasers",
+      "ssri",
+      "5-HTP"
+    ],
     "unsafe": [],
     "uncertain": []
   },

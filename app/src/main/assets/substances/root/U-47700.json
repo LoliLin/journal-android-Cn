@@ -1,6 +1,8 @@
 {
   "name": "U-47700",
-  "commonNames": ["U-47700"],
+  "commonNames": [
+    "U-47700"
+  ],
   "url": "https://psychonautwiki.org/wiki/U-47700",
   "isApproved": true,
   "tolerance": {
@@ -10,19 +12,26 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["opioid"],
+  "crossTolerances": [
+    "opioid"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
   "toxicities": [
     "high toxicity relative to its dose due to its extreme potency",
     "potentially lethal when mixed with depressants like alcohol or benzodiazepines"
   ],
-  "categories": ["opioid", "research-chemical", "habit-forming", "depressant"],
+  "categories": [
+    "opioid",
+    "research-chemical",
+    "habit-forming",
+    "depressant"
+  ],
   "summary": "A µ-opioid receptor agonist that is related to AH-7921. Having a very short duration.",
   "interactions": {
     "dangerous": [
       "Alcohol",
       "Benzodiazepines",
-      "DXM",
+      "Dextromethorphan",
       "GHB",
       "GBL",
       "Ketamine",
@@ -31,7 +40,12 @@
       "Grapefruit"
     ],
     "unsafe": [],
-    "uncertain": ["MAOIs", "Nitrous", "PCP", "Stimulants"]
+    "uncertain": [
+      "MAOI",
+      "Nitrous",
+      "PCP",
+      "Stimulants"
+    ]
   },
   "roas": [
     {

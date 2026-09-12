@@ -14,9 +14,9 @@
   "interactions": {
     "dangerous": [
       "SNRIs",
-      "MAOIs",
+      "MAOI",
       "Serotonin releasers",
-      "SSRIs",
+      "ssri",
       "5-HTP"
     ]
   }

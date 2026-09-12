@@ -1,6 +1,8 @@
 {
   "name": "MDAI",
-  "commonNames": ["MDAI"],
+  "commonNames": [
+    "MDAI"
+  ],
   "url": "https://psychonautwiki.org/wiki/MDAI",
   "isApproved": true,
   "tolerance": {
@@ -10,9 +12,13 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["entactogen"],
+  "crossTolerances": [
+    "entactogen"
+  ],
   "addictionPotential": "somewhat habit-forming with a low potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
   "categories": [
     "entactogen",
     "psychedelic",
@@ -27,13 +33,21 @@
       "25x-NBOH",
       "Tramadol",
       "SNRIs",
-      "MAOIs",
+      "MAOI",
       "Serotonin releasers",
-      "SSRIs",
+      "ssri",
       "5-HTP"
     ],
-    "unsafe": ["DXM", "MDMA", "Stimulants"],
-    "uncertain": ["Alcohol", "MXE", "Dissociatives"]
+    "unsafe": [
+      "Dextromethorphan",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {

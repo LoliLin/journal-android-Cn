@@ -1,6 +1,11 @@
 {
   "name": "Ephylone",
-  "commonNames": ["Ephylone", "bk-EBDP", "βk-EBDP", "bk-ethyl-K"],
+  "commonNames": [
+    "Ephylone",
+    "bk-EBDP",
+    "βk-EBDP",
+    "bk-ethyl-K"
+  ],
   "url": "https://psychonautwiki.org/wiki/Ephylone",
   "isApproved": true,
   "tolerance": {
@@ -8,21 +13,34 @@
   },
   "crossTolerances": [],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
-  "categories": ["entactogen", "stimulant"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "categories": [
+    "entactogen",
+    "stimulant"
+  ],
   "interactions": {
     "dangerous": [
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol",
       "SNRIs",
-      "MAOIs",
+      "MAOI",
       "Serotonin releasers",
-      "SSRIs",
+      "ssri",
       "5-HTP"
     ],
-    "unsafe": ["DXM", "MDMA", "Stimulants"],
-    "uncertain": ["Alcohol", "MXE", "Dissociatives"]
+    "unsafe": [
+      "Dextromethorphan",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {

@@ -15,13 +15,15 @@
   "isApproved": true,
   "crossTolerances": [],
   "toxicities": [],
-  "categories": ["nootropic"],
+  "categories": [
+    "nootropic"
+  ],
   "interactions": {
     "dangerous": [
-      "SSRIs",
+      "ssri",
       "SNRIs",
       "Serotonin releasers",
-      "MAOIs",
+      "MAOI",
       "Tricyclic antidepressants",
       "Tramadol"
     ],

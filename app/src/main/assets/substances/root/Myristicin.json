@@ -1,16 +1,34 @@
 {
   "name": "Myristicin",
-  "commonNames": ["Nutmeg"],
+  "commonNames": [
+    "Nutmeg"
+  ],
   "url": "https://psychonautwiki.org/wiki/Myristicin",
   "isApproved": true,
   "crossTolerances": [],
   "addictionPotential": "is not known to be addictive",
-  "toxicities": ["is neurotoxic", "can be fatal in extremely high doses"],
-  "categories": ["deliriant"],
+  "toxicities": [
+    "is neurotoxic",
+    "can be fatal in extremely high doses"
+  ],
+  "categories": [
+    "deliriant"
+  ],
   "interactions": {
-    "dangerous": ["Opioids", "DXM", "DPH"],
-    "unsafe": ["Stimulants", "Alcohol", "Serotonin releasers"],
-    "uncertain": ["Benzodiazepines", "Depressants"]
+    "dangerous": [
+      "Opioids",
+      "Dextromethorphan",
+      "Diphenhydramine"
+    ],
+    "unsafe": [
+      "Stimulants",
+      "Alcohol",
+      "Serotonin releasers"
+    ],
+    "uncertain": [
+      "Benzodiazepines",
+      "Depressant"
+    ]
   },
   "roas": [
     {

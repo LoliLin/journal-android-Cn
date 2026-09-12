@@ -1,17 +1,27 @@
 {
   "name": "Hydromorphone",
-  "commonNames": ["Dilaudid", "Jurnista", "Palladone"],
+  "commonNames": [
+    "Dilaudid",
+    "Jurnista",
+    "Palladone"
+  ],
   "url": "https://psychonautwiki.org/wiki/Hydromorphone",
   "isApproved": true,
-  "crossTolerances": ["opioid"],
+  "crossTolerances": [
+    "opioid"
+  ],
   "toxicities": [],
-  "categories": ["opioid", "habit-forming", "depressant"],
+  "categories": [
+    "opioid",
+    "habit-forming",
+    "depressant"
+  ],
   "summary": "An opioid that is roughly 5x the potency of IV Morphine. Only comes in IR tablets in the US, and is given mostly as XR in other countries. It is frequently used in hospitals for short immediate pain relief during procedures, requiring the patient to be awake. Also frequently used as a recreational opiate.",
   "interactions": {
     "dangerous": [
       "Alcohol",
       "Benzodiazepines",
-      "DXM",
+      "Dextromethorphan",
       "GHB",
       "GBL",
       "Ketamine",
@@ -20,7 +30,12 @@
       "Grapefruit"
     ],
     "unsafe": [],
-    "uncertain": ["MAOIs", "Nitrous", "PCP", "Stimulants"]
+    "uncertain": [
+      "MAOI",
+      "Nitrous",
+      "PCP",
+      "Stimulants"
+    ]
   },
   "roas": [
     {

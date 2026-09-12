@@ -73,6 +73,14 @@ def warn_unknown_categories(categories, source: str) -> list:
     return unknown
 
 
+def fold_key(text: str) -> str:
+    """折叠写法：去大小写与非字母数字，用来把不同写法对到同一个键。
+
+    例：'Stimulants'/'stimulants' -> 'stimulants'，'aMT'/'ΑMT'/'amt' -> 'mt'（希腊字母被去掉）。
+    """
+    return re.sub(r"[^a-z0-9]", "", (text or "").casefold())
+
+
 def die(message: str, code: int = 1):
     """打印错误并退出。"""
     print(f"错误：{message}", file=sys.stderr)

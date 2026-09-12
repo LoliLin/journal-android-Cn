@@ -1,6 +1,9 @@
 {
   "name": "3-MeO-PCE",
-  "commonNames": ["3-MeO-PCE", "Methoxyeticyclidine"],
+  "commonNames": [
+    "3-MeO-PCE",
+    "Methoxyeticyclidine"
+  ],
   "url": "https://psychonautwiki.org/wiki/3-MeO-PCE",
   "isApproved": true,
   "tolerance": {
@@ -10,9 +13,13 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dissociative"],
+  "crossTolerances": [
+    "dissociative"
+  ],
   "addictionPotential": "highly addictive with a high potential for adverse side effects such as psychosis",
-  "toxicities": ["toxic dosage is unknown"],
+  "toxicities": [
+    "toxic dosage is unknown"
+  ],
   "categories": [
     "dissociative",
     "research-chemical",
@@ -21,7 +28,10 @@
   ],
   "summary": "3-MeO-PCP with a change of a ring replacement. Slightly more potent than 3-MeO-PCP.",
   "interactions": {
-    "dangerous": ["Stimulants", "Depressants"],
+    "dangerous": [
+      "Stimulants",
+      "Depressant"
+    ],
     "unsafe": [],
     "uncertain": []
   },

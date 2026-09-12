@@ -25,7 +25,11 @@
   "toxicities": [
     "Long half-life (up to 60 hours) increases overdose risk. Active metabolite 3-hydroxyphenazepam. Fatal respiratory depression when combined with other depressants."
   ],
-  "categories": ["depressant", "benzodiazepine", "research-chemical"],
+  "categories": [
+    "depressant",
+    "benzodiazepine",
+    "research-chemical"
+  ],
   "summary": "Phenazepam is a benzodiazepine depressant originally developed in the Soviet Union. It produces anxiolytic, sedative, muscle relaxant, and amnesic effects. It is known for its long duration and high potency, with street names including 'Bonsai', 'Soviet Benzodiazepine', and 'Panda'.",
   "effectsSummary": "Anxiety suppression, sedation, muscle relaxation, disinhibition, amnesia, respiratory depression, dizziness, paradoxical reactions including aggression and anxiety.",
   "dosageRemark": "Extremely potent — threshold effects at 0.5mg. Long onset (1-4 hours) creates risk of redosing before effects manifest. Half-life up to 60 hours.",
@@ -45,10 +49,14 @@
       "Barbiturates",
       "GHB/GBL",
       "Other benzodiazepines",
-      "Depressants"
+      "Depressant"
     ],
-    "unsafe": ["Dissociatives"],
-    "uncertain": ["Stimulants"]
+    "unsafe": [
+      "Dissociatives"
+    ],
+    "uncertain": [
+      "Stimulants"
+    ]
   },
   "roas": [
     {

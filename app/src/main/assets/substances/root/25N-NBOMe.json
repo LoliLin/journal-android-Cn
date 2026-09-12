@@ -1,6 +1,8 @@
 {
   "name": "25N-NBOMe",
-  "commonNames": ["25N-NBOMe"],
+  "commonNames": [
+    "25N-NBOMe"
+  ],
   "url": "https://psychonautwiki.org/wiki/25N-NBOMe",
   "isApproved": true,
   "tolerance": {
@@ -10,21 +12,37 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["potentially fatal at heavy dosages"],
-  "categories": ["psychedelic", "research-chemical", "tentative"],
+  "toxicities": [
+    "potentially fatal at heavy dosages"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical",
+    "tentative"
+  ],
   "summary": "A rare, highly potent and yellow psychedelic phenethylamine and derivative of 2C-N. Effects are similar to other NBOMe compounds, with hallucinations, intense body load, stimulation and vasoconstriction. At high doses vasoconstriction can be dangerous, exercise caution.",
   "interactions": {
-    "dangerous": ["Lithium"],
-    "unsafe": ["Amphetamines", "aMT", "Cocaine", "DXM", "Tramadol"],
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Amphetamines",
+      "ΑMT",
+      "Cocaine",
+      "Dextromethorphan",
+      "Tramadol"
+    ],
     "uncertain": [
       "2C-T-x",
-      "5-MeO-xxt",
+      "5-MeO-xxT",
       "Caffeine",
       "THC",
       "DOx",
-      "MAOIs",
+      "MAOI",
       "MDMA",
       "MXE"
     ]

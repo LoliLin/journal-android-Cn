@@ -1,6 +1,10 @@
 {
   "name": "ETH-CAT",
-  "commonNames": ["ETH-CAT", "Ethcathinone", "Ethylpropion"],
+  "commonNames": [
+    "ETH-CAT",
+    "Ethcathinone",
+    "Ethylpropion"
+  ],
   "url": "https://psychonautwiki.org/wiki/ETH-CAT",
   "isApproved": true,
   "tolerance": {
@@ -10,14 +14,34 @@
     "halfToleranceInHours": 60,
     "zeroToleranceInHours": 96
   },
-  "crossTolerances": ["dopamine", "stimulant"],
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
   "addictionPotential": "mildly addictive with a comparatively low potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
-  "categories": ["stimulant"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "categories": [
+    "stimulant"
+  ],
   "interactions": {
-    "dangerous": ["MAOIs", "25x-NBOMe", "25x-NBOH", "Tramadol"],
-    "unsafe": ["DXM", "MDMA", "Stimulants"],
-    "uncertain": ["Alcohol", "MXE", "Dissociatives"]
+    "dangerous": [
+      "MAOI",
+      "25x-NBOMe",
+      "25x-NBOH",
+      "Tramadol"
+    ],
+    "unsafe": [
+      "Dextromethorphan",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {

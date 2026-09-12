@@ -1,6 +1,8 @@
 {
   "name": "2-FMA",
-  "commonNames": ["2-FMA"],
+  "commonNames": [
+    "2-FMA"
+  ],
   "url": "https://psychonautwiki.org/wiki/2-FMA",
   "isApproved": true,
   "tolerance": {
@@ -10,14 +12,34 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dopamine", "stimulant"],
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
-  "categories": ["stimulant", "research-chemical", "habit-forming"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "categories": [
+    "stimulant",
+    "research-chemical",
+    "habit-forming"
+  ],
   "summary": "A long-acting stimulant often compared to lisdexamphetamine. Thought to lack some of amphetamine's neurotoxic metabolites. Very functional, and for this reason it is commonly used for studying.",
   "interactions": {
-    "dangerous": ["Tramadol", "aMT", "MAOIs"],
-    "unsafe": ["DXM", "PCP", "25x-NBOMe", "2C-T-x", "5-MeO-xxT", "DOx"],
+    "dangerous": [
+      "Tramadol",
+      "ΑMT",
+      "MAOI"
+    ],
+    "unsafe": [
+      "Dextromethorphan",
+      "PCP",
+      "25x-NBOMe",
+      "2C-T-x",
+      "5-MeO-xxT",
+      "DOx"
+    ],
     "uncertain": [
       "Alcohol",
       "GHB",
@@ -28,7 +50,7 @@
       "Caffeine",
       "Ketamine",
       "Methoxetamine",
-      "Psychedelics"
+      "Psychedelic"
     ]
   },
   "roas": [

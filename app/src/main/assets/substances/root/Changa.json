@@ -10,9 +10,9 @@
     "dangerous": [
       "SNRIs",
       "Stimulants",
-      "MAOIs",
+      "MAOI",
       "Serotonin releasers",
-      "SSRIs",
+      "ssri",
       "5-HTP"
     ]
   },

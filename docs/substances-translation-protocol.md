@@ -43,6 +43,11 @@ app/src/main/assets/substances/
   - `localizedName`（默认与 `name` 相同）
   - `url`
   - 结构字段（如 `tolerance`、`interactions`、`roas` 等）
+- `interactions` 的每个字符串必须是**分类键**（`_categories.json` 里的名字，如 `stimulant`、`ssri`、`benzodiazepine`）或**目录里的规范物质名**（如 `Tramadol`、`Dextromethorphan`）：
+  应用在 `InteractionChecker` 里对物质名按**精确相等**匹配、对分类按 `interactionName.contains(categoryKey, ignoreCase = true)` 匹配，
+  写法不对（复数、大小写、简称）就匹配不上。三个例外必须原样保留，应用会用代码展开它们：
+  `Substituted amphetamines`、`Serotonin releasers`（展开成具体物质）、`Tricyclic antidepressants`（有意清空，避免误匹配 `depressant`）。
+  用 `substances_pipeline.py fix-interactions` 批量规范化（规则与残留清单见 [substances-pipeline.md](substances-pipeline.md)）。
 - 可包含英文文本字段，作为默认展示内容。
 - 可选结构字段 `oralReleaseForms` 留在 `root`，选项通过 UI 语言文件翻译，参见 `extended-release-formulations.md`。
 
@@ -89,7 +94,7 @@ app/src/main/assets/substances/
     "unsafe": [],
     "uncertain": [
       "Oxycodone",
-      "SSRIs",
+      "ssri",
       "MDMA"
     ]
   },

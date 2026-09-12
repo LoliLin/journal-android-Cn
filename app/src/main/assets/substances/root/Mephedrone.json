@@ -1,6 +1,12 @@
 {
   "name": "Mephedrone",
-  "commonNames": ["Mephedrone", "4-MMC", "Drone", "M-CAT", "Meow Meow"],
+  "commonNames": [
+    "Mephedrone",
+    "4-MMC",
+    "Drone",
+    "M-CAT",
+    "Meow Meow"
+  ],
   "url": "https://psychonautwiki.org/wiki/Mephedrone",
   "isApproved": true,
   "tolerance": {
@@ -10,8 +16,13 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dopamine", "stimulant"],
-  "toxicities": ["exact toxic dosage is unknown"],
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
   "categories": [
     "entactogen",
     "stimulant",
@@ -37,13 +48,21 @@
       "25x-NBOH",
       "Tramadol",
       "SNRIs",
-      "MAOIs",
+      "MAOI",
       "Serotonin releasers",
-      "SSRIs",
+      "ssri",
       "5-HTP"
     ],
-    "unsafe": ["DXM", "MDMA", "Stimulants"],
-    "uncertain": ["Alcohol", "MXE", "Dissociatives"]
+    "unsafe": [
+      "Dextromethorphan",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {

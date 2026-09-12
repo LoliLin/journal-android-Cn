@@ -24,10 +24,10 @@
   "isApproved": false,
   "interactions": {
     "dangerous": [
-      "SSRIs",
+      "ssri",
       "SNRIs",
       "Serotonin releasers",
-      "MAOIs",
+      "MAOI",
       "Tricyclic antidepressants",
       "Tramadol"
     ]

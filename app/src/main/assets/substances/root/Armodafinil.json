@@ -37,11 +37,11 @@
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol",
-      "MAOIs",
-      "Hormonal birth control"
+      "MAOI",
+      "Hormonal Birth Control"
     ],
     "unsafe": [
-      "DXM",
+      "Dextromethorphan",
       "MDMA",
       "Stimulants"
     ],

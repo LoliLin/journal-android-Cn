@@ -1,6 +1,9 @@
 {
   "name": "MXiPr",
-  "commonNames": ["MXiPR", "MXiP"],
+  "commonNames": [
+    "MXiPR",
+    "MXiP"
+  ],
   "url": "https://psychonautwiki.org/wiki/MXiPr",
   "isApproved": true,
   "tolerance": {
@@ -10,12 +13,21 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dissociative"],
+  "crossTolerances": [
+    "dissociative"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["toxic dosage is unknown"],
-  "categories": ["dissociative"],
+  "toxicities": [
+    "toxic dosage is unknown"
+  ],
+  "categories": [
+    "dissociative"
+  ],
   "interactions": {
-    "dangerous": ["Stimulants", "Depressants"],
+    "dangerous": [
+      "Stimulants",
+      "Depressant"
+    ],
     "unsafe": [],
     "uncertain": []
   },

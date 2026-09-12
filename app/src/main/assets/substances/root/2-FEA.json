@@ -1,6 +1,8 @@
 {
   "name": "2-FEA",
-  "commonNames": ["2-FEA"],
+  "commonNames": [
+    "2-FEA"
+  ],
   "url": "https://psychonautwiki.org/wiki/2-FEA",
   "isApproved": true,
   "tolerance": {
@@ -10,23 +12,41 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dopamine", "stimulant"],
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
-  "categories": ["entactogen", "stimulant", "tentative", "research-chemical"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "categories": [
+    "entactogen",
+    "stimulant",
+    "tentative",
+    "research-chemical"
+  ],
   "summary": "Stimulant closely related to 2-FMA. Presumably slightly less potent than the prior. Toxicology and the likes are pretty much completely unknown. Tread with caution.",
   "interactions": {
     "dangerous": [
       "25x-NBOMe",
       "25x-NBOH",
       "Tramadol",
-      "MAOIs",
+      "MAOI",
       "Stimulants",
       "MDMA",
       "Cocaine"
     ],
-    "unsafe": ["DXM", "MDMA", "Stimulants"],
-    "uncertain": ["Alcohol", "MXE", "Dissociatives"]
+    "unsafe": [
+      "Dextromethorphan",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
   },
   "roas": [
     {
