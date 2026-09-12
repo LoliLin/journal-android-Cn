@@ -1,0 +1,117 @@
+{
+  "name": "2-DPMP",
+  "url": "https://tripsit.me/factsheets/?name=2-dpmp&p=substance",
+  "commonNames": [
+    "2-DPMP",
+    "desoxypipradrol",
+    "2dpmp",
+    "2-desoxypiperadol",
+    "desoxypipradol"
+  ],
+  "categories": [
+    "stimulant",
+    "research-chemical",
+    "habit-forming",
+    "tentative"
+  ],
+  "isApproved": false,
+  "tolerance": {
+    "full": "develops with prolonged and repeated use",
+    "half": "3 - 7 days",
+    "zero": "1 - 2 weeks"
+  },
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
+  "addictionPotential": "moderately addictive with a high potential for abuse",
+  "interactions": {
+    "dangerous": [
+      "25x-NBOMe",
+      "25x-NBOH",
+      "Tramadol",
+      "MAOIs"
+    ],
+    "unsafe": [
+      "DXM",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
+  },
+  "roas": [
+    {
+      "name": "insufflated",
+      "dose": {
+        "units": "mg",
+        "lightMin": 0.25,
+        "commonMin": 1.5,
+        "strongMin": 3.5,
+        "heavyMin": 5
+      },
+      "duration": {
+        "onset": {
+          "min": 15,
+          "max": 240,
+          "units": "minutes"
+        },
+        "comeup": {
+          "min": 2,
+          "max": 6,
+          "units": "hours"
+        },
+        "peak": {
+          "min": 6,
+          "max": 30,
+          "units": "hours"
+        },
+        "offset": {
+          "min": 6,
+          "max": 40,
+          "units": "hours"
+        },
+        "total": {
+          "min": 10,
+          "max": 72,
+          "units": "hours"
+        }
+      }
+    },
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg",
+        "lightMin": 0.25,
+        "commonMin": 2,
+        "strongMin": 6,
+        "heavyMin": 8
+      },
+      "duration": {
+        "onset": {
+          "min": 1,
+          "max": 4,
+          "units": "hours"
+        },
+        "peak": {
+          "min": 9,
+          "max": 30,
+          "units": "hours"
+        },
+        "offset": {
+          "min": 6,
+          "max": 40,
+          "units": "hours"
+        },
+        "total": {
+          "min": 16,
+          "max": 72,
+          "units": "hours"
+        }
+      }
+    }
+  ]
+}

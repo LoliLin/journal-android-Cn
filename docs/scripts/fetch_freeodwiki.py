@@ -203,7 +203,7 @@ def prose_block(text: str) -> str:
         raw = line.strip()
         if not raw or raw.startswith(("|", ">", "#", "!", "<", "[◀")):
             continue
-        if PURE_LINK_RE.match(raw) or BOILERPLATE_RE.match(plain(raw)):
+        if PURE_LINK_RE.match(raw) or HEADING_UNDERLINE_RE.match(raw) or BOILERPLATE_RE.match(plain(raw)):
             continue
         cleaned = plain(raw)
         if cleaned:
@@ -214,14 +214,42 @@ def prose_block(text: str) -> str:
 LIST_ITEM_RE = re.compile(r"^[-*+]\s")
 PURE_LINK_RE = re.compile(r"^\[[^\]]*\]\([^)]*\)\s*$")
 BOILERPLATE_RE = re.compile(r"^(强烈建议|更多信息|参见|另见|主条目)")
+HEADING_UNDERLINE_RE = re.compile(r"^[=\-]{2,}\s*$")
+
+#: 剂量表附近的“给药途径”碎片不是摘要（页面没有正文时会把表格当首段）
+ROUTE_ONLY_WORDS = {
+    "给药途径", "途径", "口服", "抽吸", "鼻吸", "吸入", "舌下", "颊部", "直肠", "经皮",
+    "注射", "静脉注射", "肌肉注射", "皮下注射", "口服/鼻吸", "抽吸/吸入",
+}
+
+
+def looks_like_route_fragment(text: str) -> bool:
+    if not text:
+        return False
+    if "⇣" in text:
+        return True
+    lines = [line.strip().strip("：:") for line in text.splitlines() if line.strip()]
+    return bool(lines) and all(line in ROUTE_ONLY_WORDS for line in lines)
 
 
 def strip_frontmatter(text: str) -> str:
-    """去掉 YAML 头。"""
-    if not text.startswith("---"):
-        return text
-    end = text.find("\n---", 3)
-    return text[end + 4:] if end >= 0 else text
+    """去掉 YAML 头、开头的一级标题（含 Setext 下划线）与分隔线。"""
+    if text.startswith("---"):
+        end = text.find("\n---", 3)
+        text = text[end + 4:] if end >= 0 else text
+    lines = text.splitlines()
+    index = 0
+    while index < len(lines):
+        line = lines[index].strip()
+        if not line or HEADING_UNDERLINE_RE.match(line) or line.startswith("#"):
+            index += 1
+            continue
+        # Setext 标题：标题行 + 紧跟一行 === / --- 下划线（FreeODwiki 的条目名就是这样）
+        if index + 1 < len(lines) and HEADING_UNDERLINE_RE.match(lines[index + 1].strip()):
+            index += 2
+            continue
+        break
+    return "\n".join(lines[index:])
 
 
 def prose_paragraphs(text: str, limit: int = 3) -> str:
@@ -237,6 +265,8 @@ def prose_paragraphs(text: str, limit: int = 3) -> str:
             or raw.startswith(("|", ">", "#", "!", "<", "[◀"))
             or LIST_ITEM_RE.match(raw)
             or PURE_LINK_RE.match(raw)
+            or HEADING_UNDERLINE_RE.match(raw)
+            or BOILERPLATE_RE.match(plain(raw))
         )
         cleaned = "" if skip else plain(raw)
         if not cleaned:
@@ -376,6 +406,9 @@ def parse_entry(path: Path, root_stems: set) -> dict:
         mapped = CATEGORY_MAP.get(raw)
         if mapped and mapped not in categories:
             categories.append(mapped)
+    summary = prose_paragraphs(lead_text(text), limit=2)
+    if looks_like_route_fragment(summary):
+        summary = ""
     return {
         "file": path.name,
         "stem": path.stem,
@@ -385,7 +418,7 @@ def parse_entry(path: Path, root_stems: set) -> dict:
         "names": info["names"],
         "categories": categories,
         "unmapped_categories": [c for c in info["categories"] if c not in CATEGORY_MAP],
-        "summary": prose_paragraphs(lead_text(text), limit=2),
+        "summary": summary,
         "saferUse": safer_use,
         "risks": "\n\n".join(risk_blocks),
         "sections": [title for _level, title, _body in sections],
@@ -405,8 +438,10 @@ def build_overlay(entry: dict, fields: list) -> dict:
         overlay["saferUse"] = entry["saferUse"]
     if "generalRisks" in fields and entry["risks"]:
         overlay["generalRisks"] = entry["risks"]
-    if "localizedName" in fields:
-        overlay["localizedName"] = entry["localized_name"]
+    if "localizedName" in fields and entry["localized_name"]:
+        # 与英文名相同就没有信息量（应用本来就会回退到 name），不写冗余键
+        if entry["localized_name"] != entry["name"]:
+            overlay["localizedName"] = entry["localized_name"]
     return overlay
 
 
@@ -462,7 +497,7 @@ def run(args) -> int:
         "entries": [],
     }
     added, resolved, notes, excluded = [], [], [], []
-    counts = {"created": 0, "updated": 0, "unchanged": 0}
+    counts = {"created": 0, "updated": 0, "unchanged": 0, "no_fields": 0}
     structure_diffs, used_categories, no_dose = [], set(), 0
 
     for path in files:
@@ -488,6 +523,12 @@ def run(args) -> int:
         item = {"stem": entry["stem"], "name": name, "file": overlay_path.name,
                 "routes": sorted(entry["roas"]), "sections": entry["sections"],
                 "unmappedCategories": entry["unmapped_categories"]}
+        if existing is None and not overlay:
+            # 没有任何可写字段（例如 localizedName 与英文名相同）：不建空文件
+            counts["no_fields"] += 1
+            item.update(changed=False, kept=[])
+            report["entries"].append(item)
+            continue
         if existing is None:
             merged, changed, kept = overlay, sorted(overlay), []
             counts["created"] += 1
@@ -535,7 +576,7 @@ def run(args) -> int:
             )
 
     print(f"\n完成：新建 {counts['created']}，更新 {counts['updated']}，无变化 {counts['unchanged']}，"
-          f"待人工定名 {len(excluded)}")
+          f"无字段可写 {counts['no_fields']}，待人工定名 {len(excluded)}")
     print(f"没有剂量表的条目：{no_dose}；结构差异：{len(structure_diffs)}")
     if args.dry_run:
         print("--dry-run：没有写任何文件。")

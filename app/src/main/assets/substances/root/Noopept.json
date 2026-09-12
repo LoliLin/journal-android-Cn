@@ -1,0 +1,77 @@
+{
+  "name": "Noopept",
+  "url": "https://tripsit.me/factsheets/?name=noopept&p=substance",
+  "categories": [
+    "research-chemical",
+    "nootropic"
+  ],
+  "isApproved": false,
+  "commonNames": [
+    "Noopept",
+    "Ноопепт",
+    "GVS-111",
+    "Omberacetam"
+  ],
+  "tolerance": {
+    "full": "develops over several weeks of prolonged and repeated use",
+    "half": "3 - 7 days",
+    "zero": "1 - 2 weeks"
+  },
+  "crossTolerances": [
+    "racetam",
+    "nootropic"
+  ],
+  "addictionPotential": "non-addictive with a low potential for abuse",
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "roas": [
+    {
+      "name": "insufflated",
+      "dose": {
+        "units": "mg",
+        "lightMin": 1,
+        "commonMin": 5,
+        "strongMin": 10,
+        "heavyMin": 20
+      },
+      "duration": {
+        "onset": {
+          "min": 0,
+          "max": 5,
+          "units": "minutes"
+        },
+        "peak": {
+          "max": 2,
+          "units": "hours"
+        },
+        "offset": {
+          "max": 3,
+          "units": "hours"
+        },
+        "total": {
+          "min": 2,
+          "max": 5,
+          "units": "hours"
+        }
+      }
+    },
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg",
+        "lightMin": 5,
+        "commonMin": 10,
+        "strongMin": 20,
+        "heavyMin": 40
+      },
+      "duration": {
+        "total": {
+          "min": 3,
+          "max": 5,
+          "units": "hours"
+        }
+      }
+    }
+  ]
+}

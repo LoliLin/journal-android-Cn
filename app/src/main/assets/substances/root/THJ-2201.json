@@ -1,6 +1,8 @@
 {
   "name": "THJ-2201",
-  "commonNames": ["THJ-2201"],
+  "commonNames": [
+    "THJ-2201"
+  ],
   "url": "https://psychonautwiki.org/wiki/THJ-2201",
   "isApproved": true,
   "tolerance": {
@@ -10,12 +12,20 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["cannabinoid"],
+  "crossTolerances": [
+    "cannabinoid"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
-  "categories": ["cannabinoid"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "categories": [
+    "cannabinoid"
+  ],
   "interactions": {
-    "dangerous": ["Lithium"],
+    "dangerous": [
+      "Lithium"
+    ],
     "unsafe": [],
     "uncertain": [
       "2C-T-x",
@@ -35,6 +45,43 @@
   "roas": [
     {
       "name": "inhaled",
+      "dose": {
+        "units": "mg",
+        "lightMin": 0.5,
+        "commonMin": 1,
+        "strongMin": 2,
+        "heavyMin": 5
+      },
+      "duration": {
+        "onset": {
+          "min": 5,
+          "max": 10,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 30,
+          "max": 45,
+          "units": "minutes"
+        },
+        "offset": {
+          "min": 0,
+          "max": 0,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 1,
+          "max": 2,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 60,
+          "max": 90,
+          "units": "minutes"
+        }
+      }
+    },
+    {
+      "name": "smoked",
       "dose": {
         "units": "mg",
         "lightMin": 0.5,

@@ -88,25 +88,28 @@ TripSit 的 17 个分类与仓库词表高度重合（`common`/`tentative`/`habi
 
 ### EUDA 分类 → 仓库分类
 
-`Arylcyclohexylamine → arylcyclohexylamine`、`Benzodiazepines → benzodiazepine`、
-`Cannabinoids → cannabinoid`、`Opioids → opioid`、`Cathinones → stimulant`；
-`Others` 与其它（如 `Phenethylamines`）**不猜**，记入 `excluded` 待人工归类。
+`Arylcyclohexylamine → dissociative`（芳基环己胺类就是解离剂，写自造分类会让分类芯片消失）、
+`Benzodiazepines → benzodiazepine`、`Cannabinoids → cannabinoid`、`Opioids → opioid`、
+`Cathinones → stimulant`；`Others` 与其它（如 `Phenethylamines`）**不猜**，记入 `excluded` 待人工归类。
 `--mark-nps` 会按参考目录的做法追加 `research-chemical` + `tentative`。
 
 ## 已知限制
 
 1. **ATC 亚组 ≠ 药理**：同一个 5 位亚组里可能有例外（例如 N06AB 并非全部是 SSRI），
    自动映射只是起点，`resolved`/报告就是留给人工复核的。
-2. **ATC 用拉丁药名与盐名**：`Ginkgo folium`、`Valerianae radix`、`Lavandulae aetheroleum`、
-   `Hyperici herba` 已按参考目录改名（记入 `normalizationNotes`）；`Dipotassium clorazepate`、
-   `Amfetamine`（ATC 拼写）这类盐名/拼写差异需要人工改名，或用 `--rename-map` 传
-   `{ATC 名: 仓库名}`。
+2. **ATC 用拉丁药名与盐名/INN 拼写**：`Ginkgo folium`、`Valerianae radix`、`Lavandulae aetheroleum`、
+   `Hyperici herba`，以及 `amfetamine`/`metamfetamine`/`dexamfetamine`/`potassium clorazepate`
+   （仓库用 USAN/母体名）都已在 `ATC_NAME_OVERRIDES` 里改名（大小写不敏感，逐条记入
+   `normalizationNotes` 并带 ATC 码）；其它盐名/拼写差异用 `--rename-map {ATC 名: 仓库名}`，
+   否则会建出重复条目（如 `Amfetamine` 与 `Amphetamine` 并存）。
 3. **EUDA 通报表只有当年**：EDR2026 的表 6 是 2025 年新通报的 50 条；参考目录里那 7 条
    （HHC、HHC-P、Isotonitazene 等）来自**报告正文**，不在表里。两者互补：表用于发现新物质，
    正文用于补充既有物质。
 4. **TripSit 无许可**：不要逐字复制其 `properties.summary`；工具只把它写进报告供人工参考。
-5. **分类词表**：工具会检查写入的分类是否在已采用的 33 个之内，不在就提示补
-   `app/src/main/assets/lang/*.json` 的 `categories.<name>` 键，否则界面显示 `missing_key`。
+5. **分类词表**：`categories` 的值要同时满足两处，否则界面上有可见损失——① 在
+   `root/_categories.json` 里有定义：`SubstanceRepository` 按它过滤，缺定义的分类**芯片整个
+   不显示**；② 在 `assets/lang/<语言>.json` 里有 `categories.<name>` 键：缺键时
+   `translateOrDefault` 回退显示英文原名。工具会提示写入的分类是否超出已采用的 33 个。
 6. **不要引入剂量建议**：ATC 的 DDD 是统计口径；TripSit 的剂量字符串仅在 `--with-doses`
    时写入，质量不如 PW。
 

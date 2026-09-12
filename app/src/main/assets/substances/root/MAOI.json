@@ -1,0 +1,31 @@
+{
+  "name": "MAOI",
+  "url": "https://psychonautwiki.org/wiki/MAOI",
+  "isApproved": false,
+  "interactions": {
+    "dangerous": [
+      "5-MeO-xxT",
+      "Amphetamines",
+      "aMT",
+      "Cocaine",
+      "DXM",
+      "MDMA",
+      "PCP",
+      "SSRIs",
+      "Tramadol"
+    ],
+    "unsafe": [
+      "Alcohol",
+      "MXE"
+    ],
+    "uncertain": [
+      "2C-T-x",
+      "2C-x",
+      "DOx",
+      "Ketamine",
+      "Mescaline",
+      "NBOMes",
+      "Opioids"
+    ]
+  }
+}

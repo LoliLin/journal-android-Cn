@@ -1,0 +1,106 @@
+{
+  "name": "RTI-111",
+  "url": "https://tripsit.me/factsheets/?name=rti-111&p=substance",
+  "commonNames": [
+    "RTI-111",
+    "dichloropane"
+  ],
+  "categories": [
+    "stimulant",
+    "research-chemical",
+    "tentative",
+    "habit-forming"
+  ],
+  "isApproved": false,
+  "tolerance": {
+    "full": "develops with prolonged and repeated use",
+    "half": "2 - 4 days",
+    "zero": "1 - 1.5 weeks"
+  },
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
+  "addictionPotential": "moderately addictive with a high potential for abuse",
+  "interactions": {
+    "dangerous": [
+      "MAOIs"
+    ]
+  },
+  "roas": [
+    {
+      "name": "insufflated",
+      "dose": {
+        "units": "mg",
+        "lightMin": 3,
+        "commonMin": 20,
+        "strongMin": 40,
+        "heavyMin": 60
+      },
+      "duration": {
+        "onset": {
+          "min": 15,
+          "max": 30,
+          "units": "minutes"
+        },
+        "comeup": {
+          "min": 15,
+          "max": 30,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 60,
+          "max": 90,
+          "units": "minutes"
+        },
+        "offset": {
+          "min": 60,
+          "max": 90,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 2,
+          "max": 4,
+          "units": "hours"
+        }
+      }
+    },
+    {
+      "name": "smoked",
+      "dose": {
+        "units": "mg",
+        "lightMin": 2.5,
+        "commonMin": 7.5,
+        "strongMin": 20,
+        "heavyMin": 50
+      },
+      "duration": {
+        "onset": {
+          "min": 15,
+          "max": 60,
+          "units": "seconds"
+        },
+        "comeup": {
+          "min": 15,
+          "max": 60,
+          "units": "seconds"
+        },
+        "peak": {
+          "min": 15,
+          "max": 30,
+          "units": "minutes"
+        },
+        "offset": {
+          "min": 20,
+          "max": 40,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 40,
+          "max": 75,
+          "units": "minutes"
+        }
+      }
+    }
+  ]
+}

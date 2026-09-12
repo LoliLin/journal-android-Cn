@@ -74,6 +74,10 @@ Olanzapine Phenazepam  Pseudoephedrine  Psilocybin  THC
 ## 已知坑
 
 1. **索引页不是数据源**：`Psychoactive_substance_index` 的 wikitext 只有模板调用，要用渲染 HTML。
+   同理，API 全量遍历里混着 PW 的类目页与消歧页（`Substituted cathinones`、`Substituted
+   tryptamines`、`Amphetamine (disambiguation)` 等 8 个），工具按
+   `PW_NON_SUBSTANCE_RE`（`^Substituted…` / `…(disambiguation)`）跳过并列进报告，
+   否则会建出没有任何剂量数据的“物质”。
 2. **单位字形**：API 用 `μg`(U+03BC)，仓库用 `µg`(U+00B5)。不归一化就会有 6/349 的假差异。
 3. **复数**：API 交叉耐受用 `opioids`/`stimulants`/`benzodiazepines`/`entactogens`，
    仓库用单数。`fetch` 复用 `fix-tolerances` 的映射表，避免刚清掉的复数又被写回去。

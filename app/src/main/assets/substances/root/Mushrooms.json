@@ -1,0 +1,83 @@
+{
+  "name": "Mushrooms",
+  "url": "https://tripsit.me/factsheets/?name=mushrooms&p=substance",
+  "commonNames": [
+    "Mushrooms",
+    "psilocybin",
+    "shrooms",
+    "mushroom",
+    "psylocybin"
+  ],
+  "categories": [
+    "psychedelic",
+    "common"
+  ],
+  "isApproved": false,
+  "tolerance": {
+    "full": "almost immediately after ingestion",
+    "half": "3 days",
+    "zero": "7 days"
+  },
+  "crossTolerances": [
+    "psychedelic"
+  ],
+  "addictionPotential": "low abuse potential, no physical dependence potential",
+  "toxicities": [
+    "extremely low toxicity relative to dose"
+  ],
+  "interactions": {
+    "unsafe": [
+      "Tramadol",
+      "Lithium"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "Amphetamines",
+      "Cocaine"
+    ]
+  },
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg",
+        "lightMin": 2.5,
+        "commonMin": 10,
+        "strongMin": 25,
+        "heavyMin": 50
+      },
+      "duration": {
+        "onset": {
+          "min": 20,
+          "max": 45,
+          "units": "minutes"
+        },
+        "comeup": {
+          "min": 1,
+          "max": 1.5,
+          "units": "hours"
+        },
+        "peak": {
+          "min": 2,
+          "max": 2.5,
+          "units": "hours"
+        },
+        "offset": {
+          "min": 2.5,
+          "max": 3.5,
+          "units": "hours"
+        },
+        "total": {
+          "min": 6,
+          "max": 8,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 4,
+          "max": 24,
+          "units": "hours"
+        }
+      }
+    }
+  ]
+}

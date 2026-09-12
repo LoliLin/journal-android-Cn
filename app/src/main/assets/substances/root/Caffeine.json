@@ -1,6 +1,8 @@
 {
   "name": "Caffeine",
-  "commonNames": ["Caffeine"],
+  "commonNames": [
+    "Caffeine"
+  ],
   "url": "https://psychonautwiki.org/wiki/Caffeine",
   "isApproved": true,
   "tolerance": {
@@ -15,7 +17,12 @@
   "toxicities": [
     "The LD50 of caffeine in humans is dependent on individual sensitivity, but is estimated to be about 150 to 200 milligrams per kilogram of body mass or roughly 80 to 100 cups of coffee for an average adult"
   ],
-  "categories": ["stimulant", "habit-forming", "nootropic", "common"],
+  "categories": [
+    "stimulant",
+    "habit-forming",
+    "nootropic",
+    "common"
+  ],
   "summary": "Caffeine is a a CNS stimulant, and also the most widely used psychoactive substance in the world. It is legal and unregulated in most parts of the world, and is found in many commonly sold products. It has a good safety profile, though regular heavy use can cause physical dependence and contribute to certain medical conditions.",
   "effectsSummary": "Caffeine makes you awake, speeds up the heartbeat and temporarily increases mental performance. In higher doses (approx. 300 - 600 mg = approx. 8 cups of coffee) it produces euphoria.",
   "generalRisks": "Caffeine dehydrates the body (dehydration). At very high doses: sweating, fluttering of the heart, urge to urinate, cardiac arrhythmia, strong disturbances of perception, trembling, nervousness and sleep disturbances.",
@@ -125,6 +132,43 @@
     },
     {
       "name": "inhaled",
+      "dose": {
+        "units": "mg",
+        "lightMin": 25,
+        "commonMin": 75,
+        "strongMin": 125,
+        "heavyMin": 175
+      },
+      "duration": {
+        "onset": {
+          "min": 2,
+          "max": 5,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 10,
+          "max": 20,
+          "units": "minutes"
+        },
+        "offset": {
+          "min": 30,
+          "max": 45,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 45,
+          "max": 70,
+          "units": "minutes"
+        },
+        "afterglow": {
+          "min": 2,
+          "max": 4,
+          "units": "hours"
+        }
+      }
+    },
+    {
+      "name": "smoked",
       "dose": {
         "units": "mg",
         "lightMin": 25,

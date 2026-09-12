@@ -1,0 +1,24 @@
+{
+  "name": "Opioids",
+  "url": "https://psychonautwiki.org/wiki/Opioids",
+  "isApproved": false,
+  "interactions": {
+    "dangerous": [
+      "Alcohol",
+      "Benzodiazepines",
+      "DXM",
+      "GHB",
+      "GBL",
+      "Ketamine",
+      "MXE",
+      "Tramadol",
+      "Grapefruit"
+    ],
+    "uncertain": [
+      "MAOIs",
+      "Nitrous",
+      "PCP",
+      "Stimulants"
+    ]
+  }
+}

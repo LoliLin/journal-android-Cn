@@ -7,6 +7,9 @@
     "zeroToleranceInHours": 336
   },
   "addictionPotential": "無成癮性",
-  "toxicities": ["極低毒性"],
-  "localizedName": "Alpha-GPC"
+  "toxicities": [
+    "極低毒性"
+  ],
+  "localizedName": "Alpha-GPC",
+  "summary": "Alpha-GPC (L-alpha-甘油磷醯膽鹼，膽鹼甘油磷酸酯) 是一種水溶性營養素，在某種程度上是大腦中膽鹼和甘油磷酸酯的前體。在人類中，膽鹼被認為是一種必需營養素，其在降低神經管缺陷、脂肪肝和其他病理風險方面的作用已有充分的記錄。\n\n值得注意的是，Alpha-GPC 是三種可以口服補充的含膽鹼磷脂之一（另外兩種是胞磷膽鹼和磷脂醯膽鹼），其流行可能是因為它是膽鹼最有效的前藥（能夠影響系統和大腦中的膽鹼濃度）。由於提供了 Alpha-GPC 分子的另一半（甘油磷酸酯），它似乎也像胞磷膽鹼一樣支援細胞膜的結構和維護。"
 }

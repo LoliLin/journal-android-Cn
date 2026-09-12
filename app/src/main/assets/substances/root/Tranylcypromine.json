@@ -1,0 +1,9 @@
+{
+  "name": "Tranylcypromine",
+  "url": "https://atcddd.fhi.no/atc_ddd_index/?code=N06AF04&showdescription=yes",
+  "isApproved": false,
+  "categories": [
+    "antidepressant",
+    "maoi"
+  ]
+}

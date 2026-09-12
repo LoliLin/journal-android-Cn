@@ -1,6 +1,10 @@
 {
   "name": "APICA",
-  "commonNames": ["APICA", "SDB-001", "2NE1"],
+  "commonNames": [
+    "APICA",
+    "SDB-001",
+    "2NE1"
+  ],
   "url": "https://psychonautwiki.org/wiki/APICA",
   "isApproved": true,
   "tolerance": {
@@ -10,13 +14,56 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["cannabinoid"],
+  "crossTolerances": [
+    "cannabinoid"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
-  "categories": ["cannabinoid"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "categories": [
+    "cannabinoid"
+  ],
   "roas": [
     {
       "name": "inhaled",
+      "dose": {
+        "units": "mg",
+        "lightMin": 0.5,
+        "commonMin": 1.5,
+        "strongMin": 2,
+        "heavyMin": 4
+      },
+      "duration": {
+        "onset": {
+          "min": 0,
+          "max": 20,
+          "units": "seconds"
+        },
+        "peak": {
+          "min": 10,
+          "max": 30,
+          "units": "minutes"
+        },
+        "offset": {
+          "min": 5,
+          "max": 10,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 30,
+          "max": 60,
+          "units": "minutes"
+        },
+        "afterglow": {
+          "min": 15,
+          "max": 35,
+          "units": "minutes"
+        }
+      }
+    },
+    {
+      "name": "smoked",
       "dose": {
         "units": "mg",
         "lightMin": 0.5,

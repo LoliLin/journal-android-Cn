@@ -1,0 +1,41 @@
+{
+  "name": "25B-NBOH",
+  "url": "https://tripsit.me/factsheets/?name=25b-nboh&p=substance",
+  "commonNames": [
+    "25B-NBOH",
+    "25bnboh",
+    "nboh-2cb",
+    "2cb-nboh",
+    "2c-b-nboh"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical",
+    "tentative"
+  ],
+  "isApproved": false,
+  "tolerance": {
+    "full": "almost immediately after ingestion",
+    "half": "1 week",
+    "zero": "2 weeks"
+  },
+  "crossTolerances": [
+    "psychedelic"
+  ],
+  "addictionPotential": "not habit-forming",
+  "toxicities": [
+    "potentially fatal at heavy dosages"
+  ],
+  "interactions": {
+    "dangerous": [
+      "Lithium"
+    ],
+    "unsafe": [
+      "Tramadol"
+    ],
+    "uncertain": [
+      "Cannabis",
+      "Stimulants"
+    ]
+  }
+}

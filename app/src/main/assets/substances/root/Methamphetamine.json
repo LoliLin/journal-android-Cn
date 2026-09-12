@@ -26,10 +26,17 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dopamine", "stimulant"],
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
   "addictionPotential": "extremely addictive with a high potential for abuse",
   "toxicities": [],
-  "categories": ["stimulant", "habit-forming", "common"],
+  "categories": [
+    "stimulant",
+    "habit-forming",
+    "common"
+  ],
   "summary": "A fairly common and very strong CNS stimulant. It is sometimes prescribed in the form of desoxyn for ADHD and severe obesity. In low doses, methamphetamine can elevate mood, increase alertness, concentration, energy and reduces appetite. At higher doses, it can induce mania, psychosis and muscle degeneration among other issues. Tolerant users may report much higher doses than new users.",
   "effectsSummary": "The body's own performance drug noradrenaline is released, the simultaneous release of dopamine increases self-esteem. Since methamphetamine reaches the brain more quickly than amphetamine and the stimulating effect is stronger, it causes a stronger high and has a higher addiction potential than amphetamine. The body temperature rises, pulse and breathing are accelerated, blood pressure is increased. Hunger and the need for sleep are suppressed. The willingness to take risks is increased, the sensation of pain is suppressed, and euphoria, extreme nervousness, and an increased urge to talk (\"babble flash\") can occur. Methamphetamine has a pleasure-increasing and disinhibiting effect, which is why it is also used as a sex drug.",
   "generalRisks": "Methamphetamine can sometimes hardly be distinguished from amphetamine, but has a much stronger effect. Short-term side effects are: tense jaw muscles, dry mouth, temperature increase, great loss of fluid, increased heart rate as well as increased blood pressure and trembling all over the body. Irritability and aggressive behaviour can also occur (especially in combination with alcohol).",
@@ -46,8 +53,19 @@
     "Have your substance analysed in a drug check."
   ],
   "interactions": {
-    "dangerous": ["Tramadol", "aMT", "MAOIs"],
-    "unsafe": ["DXM", "PCP", "25x-NBOMe", "2C-T-x", "5-MeO-xxT", "DOx"],
+    "dangerous": [
+      "Tramadol",
+      "aMT",
+      "MAOIs"
+    ],
+    "unsafe": [
+      "DXM",
+      "PCP",
+      "25x-NBOMe",
+      "2C-T-x",
+      "5-MeO-xxT",
+      "DOx"
+    ],
     "uncertain": [
       "Alcohol",
       "GHB",
@@ -232,6 +250,48 @@
     },
     {
       "name": "inhaled",
+      "dose": {
+        "units": "mg",
+        "lightMin": 5,
+        "commonMin": 10,
+        "strongMin": 20,
+        "heavyMin": 60
+      },
+      "duration": {
+        "onset": {
+          "min": 7,
+          "max": 10,
+          "units": "seconds"
+        },
+        "comeup": {
+          "min": 5,
+          "max": 10,
+          "units": "seconds"
+        },
+        "peak": {
+          "min": 1,
+          "max": 3,
+          "units": "hours"
+        },
+        "offset": {
+          "min": 1,
+          "max": 3,
+          "units": "hours"
+        },
+        "total": {
+          "min": 2,
+          "max": 6,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 2,
+          "max": 24,
+          "units": "hours"
+        }
+      }
+    },
+    {
+      "name": "smoked",
       "dose": {
         "units": "mg",
         "lightMin": 5,

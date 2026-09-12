@@ -7,6 +7,9 @@
     "zeroToleranceInHours": 252
   },
   "addictionPotential": "中度成瘾，具有较高的滥用潜力",
-  "toxicities": ["确切的中毒剂量未知"],
-  "localizedName": "甲硫丙胺"
+  "toxicities": [
+    "确切的中毒剂量未知"
+  ],
+  "localizedName": "甲硫丙胺",
+  "summary": "甲基噻吩丙胺（也称MPA）是一种属于噻吩类的兴奋剂。它是甲基苯丙胺的环系结构类似物。\n\n甲基噻吩丙胺最早于 1942 年被合成。2010 年 12 月，它开始在英国公开出售，作为一种研究用化学品或所谓的“合法嗨药”，近来还曾以“Blow”为品牌名进行销售。"
 }

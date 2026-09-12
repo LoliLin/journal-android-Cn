@@ -1,6 +1,8 @@
 {
   "name": "Rolicyclidine",
-  "commonNames": ["PCPy"],
+  "commonNames": [
+    "PCPy"
+  ],
   "url": "https://psychonautwiki.org/wiki/Rolicyclidine",
   "isApproved": true,
   "tolerance": {
@@ -10,7 +12,9 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dissociative"],
+  "crossTolerances": [
+    "dissociative"
+  ],
   "addictionPotential": "highly addictive with a high potential for adverse side effects such as psychosis",
   "toxicities": [],
   "categories": [
@@ -41,7 +45,10 @@
       "SSRIs",
       "DXM"
     ],
-    "uncertain": ["MXE", "Caffeine"]
+    "uncertain": [
+      "MXE",
+      "Caffeine"
+    ]
   },
   "roas": [
     {
@@ -136,6 +143,47 @@
         "commonMin": 4,
         "strongMin": 8,
         "heavyMin": 12
+      },
+      "duration": {
+        "onset": {
+          "min": 2,
+          "max": 20,
+          "units": "minutes"
+        },
+        "comeup": {
+          "min": 20,
+          "max": 40,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 2,
+          "max": 3,
+          "units": "hours"
+        },
+        "offset": {
+          "min": 1,
+          "max": 2,
+          "units": "hours"
+        },
+        "total": {
+          "min": 4,
+          "max": 6,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 4,
+          "max": 48,
+          "units": "hours"
+        }
+      }
+    },
+    {
+      "name": "smoked",
+      "dose": {
+        "units": "mg",
+        "lightMin": 1,
+        "commonMin": 4,
+        "strongMin": 8
       },
       "duration": {
         "onset": {

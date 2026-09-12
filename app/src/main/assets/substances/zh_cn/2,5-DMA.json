@@ -7,6 +7,9 @@
     "zeroToleranceInHours": 204
   },
   "addictionPotential": "无成瘾性",
-  "toxicities": ["毒性剂量未知"],
-  "localizedName": "2,5-二甲氧基苯丙胺"
+  "toxicities": [
+    "毒性剂量未知"
+  ],
+  "localizedName": "2,5-二甲氧基苯丙胺",
+  "summary": "2,5-二甲氧基苯丙胺（也称为2,5-DMA，非正式地也简称为DMA，并且还有一个非官方名称DOH）是一种较少为人所知的苯丙胺类物质精神活性物质。2,5-DMA 属于DOx家族，也就是取代苯丙胺类物质中的一个分支呢。\n\n不过，据报告它并没有明显的迷幻特性，主要被用作合成其他迷幻性苯丙胺的前体，例如DOB、DOI和DON。"
 }

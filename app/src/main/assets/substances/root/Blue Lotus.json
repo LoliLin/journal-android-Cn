@@ -51,6 +51,16 @@
         "strongMin": 2.5,
         "heavyMin": 5
       }
+    },
+    {
+      "name": "smoked",
+      "dose": {
+        "units": "g",
+        "lightMin": 0.5,
+        "commonMin": 1.25,
+        "strongMin": 2.5,
+        "heavyMin": 5
+      }
     }
   ]
 }

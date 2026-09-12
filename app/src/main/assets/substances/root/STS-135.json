@@ -1,6 +1,8 @@
 {
   "name": "STS-135",
-  "commonNames": ["STS-135"],
+  "commonNames": [
+    "STS-135"
+  ],
   "url": "https://psychonautwiki.org/wiki/STS-135",
   "isApproved": true,
   "tolerance": {
@@ -10,12 +12,20 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["cannabinoid"],
+  "crossTolerances": [
+    "cannabinoid"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
-  "categories": ["cannabinoid"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "categories": [
+    "cannabinoid"
+  ],
   "interactions": {
-    "dangerous": ["Lithium"],
+    "dangerous": [
+      "Lithium"
+    ],
     "unsafe": [],
     "uncertain": [
       "2C-T-x",
@@ -35,6 +45,48 @@
   "roas": [
     {
       "name": "inhaled",
+      "dose": {
+        "units": "mg",
+        "lightMin": 0.5,
+        "commonMin": 1.5,
+        "strongMin": 2,
+        "heavyMin": 4
+      },
+      "duration": {
+        "onset": {
+          "min": 10,
+          "max": 45,
+          "units": "seconds"
+        },
+        "comeup": {
+          "min": 10,
+          "max": 45,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 10,
+          "max": 30,
+          "units": "minutes"
+        },
+        "offset": {
+          "min": 5,
+          "max": 10,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 30,
+          "max": 60,
+          "units": "minutes"
+        },
+        "afterglow": {
+          "min": 15,
+          "max": 45,
+          "units": "minutes"
+        }
+      }
+    },
+    {
+      "name": "smoked",
       "dose": {
         "units": "mg",
         "lightMin": 0.5,

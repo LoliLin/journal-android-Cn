@@ -102,6 +102,9 @@ PW_INDEX_SKIP = {
     "Psychonautics",
 }
 
+#: API 全量遍历里不是具体物质的页面：PW 的 "Substituted X" 类目页与消歧页
+PW_NON_SUBSTANCE_RE = re.compile(r"^Substituted\b|\(disambiguation\)\s*$", re.IGNORECASE)
+
 PW_GRAPHQL_CATALOG_QUERY = """
 {
   substances(limit: %d, offset: %d) {
@@ -469,10 +472,14 @@ def run(args: argparse.Namespace) -> int:
         "substances": [],
     }
     counts = {"updated": 0, "created": 0, "unchanged": 0}
+    skipped_pages: list = []
     ledger_added, ledger_resolved = [], []
 
     for api_record in targets:
         api_name = api_record["name"]
+        if PW_NON_SUBSTANCE_RE.search(api_name):
+            skipped_pages.append(api_name)
+            continue
         stem = alias.get(api_name, api_name)
         path = out_dir / f"{sanitize_filename(stem)}.json"
         existing = read_json(path) if path.exists() else None
@@ -511,6 +518,7 @@ def run(args: argparse.Namespace) -> int:
         stem for stem in repo_stems if stem not in by_name and stem not in set(alias.values())
     )
     report["index_entries_missing_in_api"] = index_missing
+    report["skipped_pages"] = sorted(skipped_pages)
 
     report_path = Path(args.report) if args.report else cache_dir / "pw-report.json"
     if not args.dry_run:
@@ -524,6 +532,8 @@ def run(args: argparse.Namespace) -> int:
             )
 
     print(f"\n完成：新建 {counts['created']}，更新 {counts['updated']}，无变化 {counts['unchanged']}")
+    if skipped_pages:
+        print(f"跳过的非物质页面（{len(skipped_pages)}）：{'、'.join(sorted(skipped_pages))}")
     if report["repo_files_without_api_record"]:
         print(f"仓库中找不到 API 记录的：{'、'.join(report['repo_files_without_api_record'])}")
     if index_missing:

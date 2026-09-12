@@ -1,12 +1,21 @@
 {
   "name": "MET",
-  "commonNames": ["MET", "Methylethyltryptamine"],
+  "commonNames": [
+    "MET",
+    "Methylethyltryptamine"
+  ],
   "url": "https://psychonautwiki.org/wiki/MET",
   "isApproved": true,
   "crossTolerances": [],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "research-chemical", "tentative"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical",
+    "tentative"
+  ],
   "summary": "A rare psychedelic tryptamine, related to DMT and DET. Little information exists about the effects or pharmacology of this drug.",
   "roas": [
     {
@@ -95,6 +104,43 @@
     },
     {
       "name": "inhaled",
+      "dose": {
+        "units": "mg",
+        "lightMin": 10,
+        "commonMin": 40,
+        "strongMin": 60,
+        "heavyMin": 90
+      },
+      "duration": {
+        "onset": {
+          "min": 30,
+          "max": 60,
+          "units": "seconds"
+        },
+        "peak": {
+          "min": 10,
+          "max": 20,
+          "units": "minutes"
+        },
+        "offset": {
+          "min": 20,
+          "max": 40,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 30,
+          "max": 75,
+          "units": "minutes"
+        },
+        "afterglow": {
+          "min": 20,
+          "max": 60,
+          "units": "minutes"
+        }
+      }
+    },
+    {
+      "name": "smoked",
       "dose": {
         "units": "mg",
         "lightMin": 10,

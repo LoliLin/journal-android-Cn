@@ -7,6 +7,9 @@
     "zeroToleranceInHours": 252
   },
   "addictionPotential": "中度成瘾性且具有高度濫用潛力",
-  "toxicities": ["確切的中毒劑量未知"],
-  "localizedName": "2M2B"
+  "toxicities": [
+    "確切的中毒劑量未知"
+  ],
+  "localizedName": "2M2B",
+  "summary": "我們非常不建議把這些東西混在一起呢，特別是劑量達到 中等 到 嚴重 程度的時候，千萬不要嘗試喵！🚫"
 }

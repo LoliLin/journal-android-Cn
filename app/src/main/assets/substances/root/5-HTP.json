@@ -1,0 +1,38 @@
+{
+  "name": "5-HTP",
+  "url": "https://tripsit.me/factsheets/?name=5-htp&p=substance",
+  "commonNames": [
+    "5-HTP",
+    "5htp",
+    "5-hydroxytryptophan",
+    "tryptophan",
+    "l-tryptophan",
+    "oxitriptan"
+  ],
+  "categories": [
+    "common"
+  ],
+  "isApproved": false,
+  "interactions": {
+    "dangerous": [
+      "SSRIs",
+      "SNRIs",
+      "Serotonin releasers",
+      "MAOIs",
+      "Tricyclic antidepressants",
+      "Tramadol"
+    ]
+  },
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg",
+        "lightMin": 25,
+        "commonMin": 100,
+        "strongMin": 300,
+        "heavyMin": 500
+      }
+    }
+  ]
+}

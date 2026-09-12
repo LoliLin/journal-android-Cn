@@ -21,10 +21,15 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["dissociative"],
+  "crossTolerances": [
+    "dissociative"
+  ],
   "addictionPotential": "highly addictive with a high potential for adverse side effects such as psychosis",
   "toxicities": [],
-  "categories": ["dissociative", "habit-forming"],
+  "categories": [
+    "dissociative",
+    "habit-forming"
+  ],
   "summary": "A strong dissociative drug.  PCP works primarily as an NMDA receptor antagonist. Also referred to as \"wet\" or \"angel dust\". Best known for stories of the strange and sometimes violent behaviour of those under its influence, though it is likely these are only in overdose cases.",
   "interactions": {
     "dangerous": [
@@ -46,7 +51,11 @@
       "Benzodiazepines",
       "SSRIs"
     ],
-    "uncertain": ["MXE", "Caffeine", "Opioids"]
+    "uncertain": [
+      "MXE",
+      "Caffeine",
+      "Opioids"
+    ]
   },
   "roas": [
     {
@@ -141,6 +150,47 @@
         "commonMin": 4,
         "strongMin": 8,
         "heavyMin": 12
+      },
+      "duration": {
+        "onset": {
+          "min": 2,
+          "max": 20,
+          "units": "minutes"
+        },
+        "comeup": {
+          "min": 20,
+          "max": 40,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 2,
+          "max": 3,
+          "units": "hours"
+        },
+        "offset": {
+          "min": 1,
+          "max": 2,
+          "units": "hours"
+        },
+        "total": {
+          "min": 4,
+          "max": 6,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 4,
+          "max": 48,
+          "units": "hours"
+        }
+      }
+    },
+    {
+      "name": "smoked",
+      "dose": {
+        "units": "mg",
+        "lightMin": 1,
+        "commonMin": 4,
+        "strongMin": 8
       },
       "duration": {
         "onset": {

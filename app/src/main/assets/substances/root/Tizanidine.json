@@ -1,0 +1,46 @@
+{
+  "name": "Tizanidine",
+  "url": "https://psychonautwiki.org/wiki/Tizanidine",
+  "isApproved": false,
+  "categories": [
+    "depressant"
+  ],
+  "interactions": {
+    "dangerous": [
+      "Depressants",
+      "Dissociatives"
+    ],
+    "uncertain": [
+      "Stimulants"
+    ]
+  },
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "µg",
+        "lightMin": 25,
+        "commonMin": 4,
+        "strongMin": 6,
+        "heavyMin": 8
+      },
+      "duration": {
+        "onset": {
+          "min": 15,
+          "max": 45,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 60,
+          "max": 120,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 2,
+          "max": 6,
+          "units": "hours"
+        }
+      }
+    }
+  ]
+}

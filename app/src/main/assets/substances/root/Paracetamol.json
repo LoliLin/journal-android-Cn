@@ -1,0 +1,14 @@
+{
+  "name": "Paracetamol",
+  "url": "https://tripsit.me/factsheets/?name=apap&p=substance",
+  "commonNames": [
+    "Paracetamol",
+    "acetaminophen",
+    "paracetamol",
+    "tylenol"
+  ],
+  "categories": [
+    "common"
+  ],
+  "isApproved": false
+}

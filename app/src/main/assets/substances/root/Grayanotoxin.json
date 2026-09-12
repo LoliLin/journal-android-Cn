@@ -1,0 +1,17 @@
+{
+  "name": "Grayanotoxin",
+  "url": "https://psychonautwiki.org/wiki/Grayanotoxin",
+  "isApproved": false,
+  "categories": [
+    "depressant"
+  ],
+  "interactions": {
+    "dangerous": [
+      "Opioids"
+    ],
+    "unsafe": [
+      "Cholinergics",
+      "Depressants"
+    ]
+  }
+}

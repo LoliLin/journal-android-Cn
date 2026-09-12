@@ -1,0 +1,61 @@
+{
+  "name": "Fluorophenibut",
+  "url": "https://tripsit.me/factsheets/?name=fluorophenibut&p=substance",
+  "categories": [
+    "tentative",
+    "depressant",
+    "habit-forming"
+  ],
+  "isApproved": false,
+  "commonNames": [
+    "F-Phenibut",
+    "Fluorophenibut",
+    "Fluorobut"
+  ],
+  "tolerance": {
+    "full": "within a couple of days of continuous use",
+    "zero": "7 - 14 days"
+  },
+  "crossTolerances": [
+    "GABA"
+  ],
+  "addictionPotential": "moderately physically and psychologically addictive",
+  "toxicities": [
+    "low toxicity",
+    "potentially lethal when mixed with depressants like alcohol, benzodiazepines or opioids",
+    "exact toxic dosage is unknown"
+  ],
+  "interactions": {
+    "dangerous": [
+      "Depressants",
+      "Dissociatives"
+    ],
+    "uncertain": [
+      "Stimulants"
+    ]
+  },
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg",
+        "lightMin": 50,
+        "commonMin": 150,
+        "strongMin": 400,
+        "heavyMin": 600
+      },
+      "duration": {
+        "onset": {
+          "min": 20,
+          "max": 60,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 6,
+          "max": 8,
+          "units": "hours"
+        }
+      }
+    }
+  ]
+}

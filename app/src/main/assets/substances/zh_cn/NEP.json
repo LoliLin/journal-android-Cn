@@ -7,6 +7,9 @@
     "zeroToleranceInHours": 252
   },
   "addictionPotential": "中度成瘾，具有较高的滥用潜力",
-  "toxicities": ["确切的中毒剂量未知"],
-  "localizedName": "NEP"
+  "toxicities": [
+    "确切的中毒剂量未知"
+  ],
+  "localizedName": "NEP",
+  "summary": "N-乙基-去甲-戊通（也被称为 N-Ethylpentedrone、Ethyl-pentedrone、Ethylpentedrone 或者更常见的 NEP）是一种较冷门的新型兴奋剂物质，属于卡西酮类物质。使用后会产生兴奋、欣快感和轻微的共情效应喵。\n\nNEP 的刺激作用被认为主要是由于其作为去甲肾上腺素-多巴胺再摄取抑制剂 (NDRI) 的活性引起的。它表现出的共情效应也可能是由于在中高剂量下作为血清素再摄取抑制剂或释放剂的活性，尽管新的研究显示其对血清素的重摄取抑制非常低。NEP 实际上可能是一种血清素-去甲肾上腺素-多巴胺再摄取抑制剂 (SNDRI) 呢。"
 }

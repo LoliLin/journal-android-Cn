@@ -7,6 +7,9 @@
     "zeroToleranceInHours": 252
   },
   "addictionPotential": "中度成瘾性且具有高度濫用潛力",
-  "toxicities": ["確切的中毒劑量未知"],
-  "localizedName": "APICA"
+  "toxicities": [
+    "確切的中毒劑量未知"
+  ],
+  "localizedName": "APICA",
+  "summary": "APICA（也稱SDB-001和2NE1）是一種新型合成大麻素類物質，在給藥後會產生經過改變的類大麻效應。研究表明，它可作為 CB1 與 CB2 大麻素受體的強效激動劑發揮作用。\n\n名稱“2NE1”看起來是在致敬韓國女子 K-pop 組合 2NE1；與之關係密切的化學物質 AKB48 也採用了類似的命名方式。2011 年，這兩種化學物質首次在日本以混合物形式被檢出，存在於一種名為“Fragrance Powder”的產品中。此後，APICA 便通過線上商家以灰色地帶的研究用化學品形式出售。"
 }

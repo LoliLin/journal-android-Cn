@@ -7,6 +7,9 @@
     "zeroToleranceInHours": 168
   },
   "addictionPotential": "無成癮性",
-  "toxicities": ["毒性劑量未知"],
-  "localizedName": "MPT"
+  "toxicities": [
+    "毒性劑量未知"
+  ],
+  "localizedName": "MPT",
+  "summary": "N-甲基-N-丙基色胺（縮寫為 MPT；也稱為 Methylpropyltryptamine）是一種色胺類的合成致幻劑，據報道顯示出強效的致幻和有時共情的效果。它在結構上類似於 N,N-二甲基色胺 (DMT) 和各種基礎致幻色胺，通過這些色胺人們可以獲得“突破性”體驗，例如 MET、EPT 和 DPT。\n\n雖然對這種物質的藥理學知之甚少，但早期報告表明，蒸發或游離基形式的化合物具有 DMT 體驗的大部分核心成分，只是具有其獨特的藥效動力學和動力學變化哦。"
 }

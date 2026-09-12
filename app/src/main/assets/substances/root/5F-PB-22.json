@@ -10,9 +10,13 @@
     "halfToleranceInHours": 120,
     "zeroToleranceInHours": 252
   },
-  "crossTolerances": ["cannabinoid"],
+  "crossTolerances": [
+    "cannabinoid"
+  ],
   "addictionPotential": "moderately addictive with a high potential for abuse",
-  "toxicities": ["exact toxic dosage is unknown"],
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
   "categories": [
     "cannabinoid",
     "tentative",
@@ -21,7 +25,9 @@
   ],
   "summary": "Synthetic cannabinoid, agonist of the cannabinoid receptors which has a strong sedating aspect. Being a synthetic cannabinoid it has a very fast onset.",
   "interactions": {
-    "dangerous": ["Lithium"],
+    "dangerous": [
+      "Lithium"
+    ],
     "unsafe": [],
     "uncertain": [
       "2C-T-x",
@@ -58,6 +64,16 @@
     },
     {
       "name": "inhaled",
+      "dose": {
+        "units": "mg",
+        "lightMin": 1,
+        "commonMin": 3,
+        "strongMin": 5,
+        "heavyMin": 8
+      }
+    },
+    {
+      "name": "smoked",
       "dose": {
         "units": "mg",
         "lightMin": 1,

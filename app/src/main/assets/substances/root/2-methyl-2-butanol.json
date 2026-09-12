@@ -1,0 +1,65 @@
+{
+  "name": "2-methyl-2-butanol",
+  "url": "https://tripsit.me/factsheets/?name=2-methyl-2-butanol&p=substance",
+  "commonNames": [
+    "2-methyl-2-butanol",
+    "2m2b"
+  ],
+  "categories": [
+    "habit-forming",
+    "depressant",
+    "tentative"
+  ],
+  "isApproved": false,
+  "tolerance": {
+    "full": "develops with prolonged and repeated use",
+    "half": "3 - 7 days",
+    "zero": "1 - 2 weeks"
+  },
+  "crossTolerances": [
+    "GABA",
+    "depressants"
+  ],
+  "addictionPotential": "moderately addictive with a high potential for abuse",
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "interactions": {
+    "dangerous": [
+      "Depressants",
+      "Dissociatives"
+    ],
+    "uncertain": [
+      "Stimulants"
+    ]
+  },
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mL",
+        "lightMin": 0.5,
+        "commonMin": 5,
+        "strongMin": 10,
+        "heavyMin": 15
+      },
+      "duration": {
+        "peak": {
+          "min": 6,
+          "max": 8,
+          "units": "hours"
+        },
+        "offset": {
+          "min": 4,
+          "max": 6,
+          "units": "hours"
+        },
+        "total": {
+          "min": 8,
+          "max": 14,
+          "units": "hours"
+        }
+      }
+    }
+  ]
+}

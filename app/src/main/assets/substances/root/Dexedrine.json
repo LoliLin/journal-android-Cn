@@ -1,0 +1,128 @@
+{
+  "name": "Dexedrine",
+  "url": "https://tripsit.me/factsheets/?name=dexedrine&p=substance",
+  "commonNames": [
+    "Dexedrine",
+    "dextroamphetamine",
+    "dexamfetamine"
+  ],
+  "categories": [
+    "stimulant",
+    "habit-forming",
+    "common"
+  ],
+  "isApproved": false,
+  "interactions": {
+    "dangerous": [
+      "Tramadol",
+      "aMT",
+      "MAOIs"
+    ],
+    "unsafe": [
+      "DXM",
+      "PCP",
+      "25x-NBOMe",
+      "2C-T-x",
+      "5-MeO-xxT",
+      "DOx"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "GHB",
+      "GBL",
+      "Opioids",
+      "Cocaine",
+      "Cannabis",
+      "Caffeine",
+      "Ketamine",
+      "Methoxetamine",
+      "Psychedelics"
+    ]
+  },
+  "roas": [
+    {
+      "name": "insufflated",
+      "dose": {
+        "units": "mg",
+        "lightMin": 3,
+        "commonMin": 7.5,
+        "strongMin": 12,
+        "heavyMin": 21.5
+      },
+      "duration": {
+        "onset": {
+          "min": 1,
+          "max": 5,
+          "units": "minutes"
+        },
+        "comeup": {
+          "min": 5,
+          "max": 15,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 1,
+          "max": 2,
+          "units": "hours"
+        },
+        "offset": {
+          "min": 1.5,
+          "max": 3,
+          "units": "hours"
+        },
+        "total": {
+          "min": 3,
+          "max": 6,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 2,
+          "max": 4,
+          "units": "hours"
+        }
+      }
+    },
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg",
+        "lightMin": 3.75,
+        "commonMin": 10,
+        "strongMin": 16,
+        "heavyMin": 30
+      },
+      "duration": {
+        "onset": {
+          "min": 15,
+          "max": 30,
+          "units": "minutes"
+        },
+        "comeup": {
+          "min": 30,
+          "max": 60,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 2.5,
+          "max": 4,
+          "units": "hours"
+        },
+        "offset": {
+          "min": 2,
+          "max": 3,
+          "units": "hours"
+        },
+        "total": {
+          "min": 6,
+          "max": 8,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 3,
+          "max": 6,
+          "units": "hours"
+        }
+      }
+    }
+  ]
+}

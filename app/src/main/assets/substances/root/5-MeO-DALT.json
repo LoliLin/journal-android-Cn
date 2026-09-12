@@ -1,6 +1,9 @@
 {
   "name": "5-MeO-DALT",
-  "commonNames": ["5-MeO-DALT", "Foxtrot"],
+  "commonNames": [
+    "5-MeO-DALT",
+    "Foxtrot"
+  ],
   "url": "https://psychonautwiki.org/wiki/5-MeO-DALT",
   "isApproved": true,
   "tolerance": {
@@ -10,15 +13,39 @@
     "halfToleranceInHours": 72,
     "zeroToleranceInHours": 168
   },
-  "crossTolerances": ["psychedelic"],
+  "crossTolerances": [
+    "psychedelic"
+  ],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "research-chemical"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical"
+  ],
   "summary": "A strange drug with an unknown mechanism of action. Some psychedelic effects alongside some effects non-characteristic of psychedelics like appetite enhancement. Reported as having rapid, intense and short acting entheogenic effects.",
   "interactions": {
-    "dangerous": ["aMT", "MAOIs", "PCP"],
-    "unsafe": ["Amphetamines", "Cocaine", "DXM", "Tramadol"],
-    "uncertain": ["2C-T-x", "2C-x", "THC", "DOx", "MDMA", "Mescaline", "NBOMe"]
+    "dangerous": [
+      "aMT",
+      "MAOIs",
+      "PCP"
+    ],
+    "unsafe": [
+      "Amphetamines",
+      "Cocaine",
+      "DXM",
+      "Tramadol"
+    ],
+    "uncertain": [
+      "2C-T-x",
+      "2C-x",
+      "THC",
+      "DOx",
+      "MDMA",
+      "Mescaline",
+      "NBOMe"
+    ]
   },
   "roas": [
     {
@@ -65,6 +92,46 @@
         "lightMin": 3,
         "commonMin": 5,
         "strongMin": 10
+      },
+      "duration": {
+        "onset": {
+          "min": 15,
+          "max": 30,
+          "units": "seconds"
+        },
+        "comeup": {
+          "min": 15,
+          "max": 30,
+          "units": "seconds"
+        },
+        "peak": {
+          "min": 1,
+          "max": 5,
+          "units": "minutes"
+        },
+        "offset": {
+          "min": 5,
+          "max": 10,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 15,
+          "max": 20,
+          "units": "minutes"
+        },
+        "afterglow": {
+          "min": 5,
+          "max": 10,
+          "units": "minutes"
+        }
+      }
+    },
+    {
+      "name": "smoked",
+      "dose": {
+        "units": "mg",
+        "lightMin": 3,
+        "commonMin": 5
       },
       "duration": {
         "onset": {

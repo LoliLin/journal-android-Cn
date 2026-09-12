@@ -1,0 +1,120 @@
+{
+  "name": "Dexmethylphenidate",
+  "url": "https://tripsit.me/factsheets/?name=focalin&p=substance",
+  "commonNames": [
+    "Dexmethylphenidate",
+    "dexmethylphenidate",
+    "dextromethylphenidate"
+  ],
+  "categories": [
+    "stimulant",
+    "habit-forming",
+    "common"
+  ],
+  "isApproved": false,
+  "addictionPotential": "moderately addictive with a high potential for abuse",
+  "interactions": {
+    "dangerous": [
+      "25x-NBOMe",
+      "25x-NBOH",
+      "Tramadol",
+      "MAOIs"
+    ],
+    "unsafe": [
+      "DXM",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
+  },
+  "roas": [
+    {
+      "name": "insufflated",
+      "dose": {
+        "units": "mg",
+        "lightMin": 1,
+        "commonMin": 10,
+        "strongMin": 30,
+        "heavyMin": 60
+      },
+      "duration": {
+        "onset": {
+          "min": 5,
+          "max": 20,
+          "units": "minutes"
+        },
+        "comeup": {
+          "min": 15,
+          "max": 40,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 30,
+          "max": 45,
+          "units": "minutes"
+        },
+        "offset": {
+          "min": 2,
+          "max": 4,
+          "units": "hours"
+        },
+        "total": {
+          "min": 2,
+          "max": 4,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 1,
+          "max": 4,
+          "units": "hours"
+        }
+      }
+    },
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg",
+        "lightMin": 5,
+        "commonMin": 20,
+        "strongMin": 40,
+        "heavyMin": 60
+      },
+      "duration": {
+        "onset": {
+          "min": 30,
+          "max": 60,
+          "units": "minutes"
+        },
+        "comeup": {
+          "min": 20,
+          "max": 45,
+          "units": "minutes"
+        },
+        "peak": {
+          "min": 60,
+          "max": 90,
+          "units": "minutes"
+        },
+        "offset": {
+          "min": 45,
+          "max": 60,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 2.5,
+          "max": 4,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 2,
+          "max": 6,
+          "units": "hours"
+        }
+      }
+    }
+  ]
+}

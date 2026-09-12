@@ -7,6 +7,9 @@
     "zeroToleranceInHours": 96
   },
   "addictionPotential": "轻度成瘾，滥用潜力相对较低",
-  "toxicities": ["确切的中毒剂量未知"],
-  "localizedName": "ETH-CAT"
+  "toxicities": [
+    "确切的中毒剂量未知"
+  ],
+  "localizedName": "ETH-CAT",
+  "summary": "乙卡西酮（也被称为 Ethylpropion、Ethcathinone，通常缩写为 ETH-CAT）是一种卡西酮类的兴奋剂物质哦。当使用时，它会产生兴奋和专注力增强的效果呢。它在结构上与卡西酮和甲卡西酮（MCAT）有关，大致上与苯丙胺或哌甲酯具有相似的效应概况。\n\n在取代卡西酮类物质中，据报道 ETH-CAT 产生的刺激感最为温和，且残余的刺激感持续时间较长，微妙的效果在最初的冲击（Rush）感消退后仍会持续很久。有人描述它比起娱乐性，更具有功能性的特点，因为作为一种兴奋剂，它产生的欣快感有限嘛。不过，它较短的起效时间可能会促使人们进行强迫性加量（Compulsive redosing）。"
 }

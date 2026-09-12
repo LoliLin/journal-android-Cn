@@ -1,12 +1,21 @@
 {
   "name": "DPT",
-  "commonNames": ["DPT", "Dipropyltryptamine", "The Light"],
+  "commonNames": [
+    "DPT",
+    "Dipropyltryptamine",
+    "The Light"
+  ],
   "url": "https://psychonautwiki.org/wiki/DPT",
   "isApproved": true,
   "crossTolerances": [],
   "addictionPotential": "not habit-forming",
-  "toxicities": ["toxic dose is unknown"],
-  "categories": ["psychedelic", "research-chemical"],
+  "toxicities": [
+    "toxic dose is unknown"
+  ],
+  "categories": [
+    "psychedelic",
+    "research-chemical"
+  ],
   "summary": "N,N-Dipropyltryptamine, a psychedelic tryptamine compound and lesser-known analogue of DMT, with similar psychedelic effects. Like DMT it is a partial serotonin receptor agonist.",
   "roas": [
     {
@@ -70,6 +79,28 @@
     },
     {
       "name": "inhaled",
+      "dose": {
+        "units": "mg",
+        "lightMin": 10,
+        "commonMin": 20,
+        "strongMin": 50,
+        "heavyMin": 100
+      },
+      "duration": {
+        "total": {
+          "min": 30,
+          "max": 90,
+          "units": "minutes"
+        },
+        "afterglow": {
+          "min": 2,
+          "max": 4,
+          "units": "hours"
+        }
+      }
+    },
+    {
+      "name": "smoked",
       "dose": {
         "units": "mg",
         "lightMin": 10,

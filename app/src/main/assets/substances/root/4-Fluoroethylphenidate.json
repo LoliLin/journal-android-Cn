@@ -1,0 +1,73 @@
+{
+  "name": "4-Fluoroethylphenidate",
+  "url": "https://tripsit.me/factsheets/?name=4-fluoroethylphenidate&p=substance",
+  "commonNames": [
+    "4-Fluoroethylphenidate",
+    "4f-eph",
+    "4-feph"
+  ],
+  "categories": [
+    "stimulant",
+    "research-chemical",
+    "habit-forming",
+    "tentative"
+  ],
+  "isApproved": false,
+  "tolerance": {
+    "full": "develops with prolonged and repeated use",
+    "half": "3 - 7 days",
+    "zero": "1 - 2 weeks"
+  },
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
+  "addictionPotential": "moderately addictive with a high potential for abuse",
+  "interactions": {
+    "dangerous": [
+      "25x-NBOMe",
+      "25x-NBOH",
+      "Tramadol",
+      "MAOIs"
+    ],
+    "unsafe": [
+      "DXM",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
+  },
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg",
+        "lightMin": 5,
+        "commonMin": 10,
+        "strongMin": 15,
+        "heavyMin": 30
+      },
+      "duration": {
+        "onset": {
+          "min": 10,
+          "max": 25,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 5,
+          "max": 6,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 4,
+          "max": 12,
+          "units": "hours"
+        }
+      }
+    }
+  ]
+}

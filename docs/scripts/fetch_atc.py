@@ -127,10 +127,12 @@ def atc_name(raw: str, rename_map: dict | None = None) -> tuple[str, str | None]
     """ATC 用小写 INN 名；返回 (句子化后的名字, 规范化说明或 None)。"""
     name = " ".join(raw.split())
     original = name
-    if original in ATC_NAME_OVERRIDES:
-        name = ATC_NAME_OVERRIDES[original]
-    if rename_map and original in rename_map:
-        name = rename_map[original]
+    # ATC 返回小写名（'amfetamine'），改名表按大小写不敏感匹配
+    override = ATC_NAME_OVERRIDES_FOLD.get(original.casefold())
+    if override:
+        name = override
+    if rename_map:
+        name = rename_map.get(original.casefold(), name)
     name = name[:1].upper() + name[1:] if name else name
     note = None
     if name != original[:1].upper() + original[1:]:
@@ -209,7 +211,15 @@ ATC_NAME_OVERRIDES = {
     "Valerianae radix": "Valerian",
     "Lavandulae aetheroleum": "Lavender oil",
     "Hyperici herba": "St. John's wort",
+    # ATC 用 INN 拼写/盐名，仓库用 USAN/母体名——同一物质，改名后再合并，避免建出重复条目
+    "Amfetamine": "Amphetamine",
+    "Metamfetamine": "Methamphetamine",
+    "Dexamfetamine": "Dextroamphetamine",
+    "Potassium clorazepate": "Clorazepate",
 }
+
+#: 大小写不敏感查找（ATC 的 INN 名是小写：'amfetamine'、'potassium clorazepate'）
+ATC_NAME_OVERRIDES_FOLD = {key.casefold(): value for key, value in ATC_NAME_OVERRIDES.items()}
 
 
 def is_biologic(name: str) -> bool:
@@ -273,6 +283,7 @@ def run(args) -> int:
     rename_map = read_json(Path(args.rename_map)) if args.rename_map else {}
     if rename_map and not isinstance(rename_map, dict):
         die(f"--rename-map '{args.rename_map}' 应是 {{原ATC名: 仓库名}} 的 JSON 对象。")
+    rename_map = {key.casefold(): value for key, value in rename_map.items()}
 
     for code, raw_name in sorted(unique.items()):
         name, note = atc_name(raw_name, rename_map)
@@ -376,7 +387,7 @@ def build_parser() -> argparse.ArgumentParser:
                         help="ATC 类目前缀，可用逗号分隔或重复多次；"
                              "默认就是那轮扩张用的 9 个：" + ",".join(DEFAULT_ATC_PREFIXES))
     parser.add_argument("--atc-version", default="", help="索引版本（写进台账快照，如 2026-01-20）")
-    parser.add_argument("--rename-map", help="自定义改名表 JSON：{ATC 名: 仓库名}（会记入台账）")
+    parser.add_argument("--rename-map", help="自定义改名表 JSON：{ATC 名: 仓库名}（大小写不敏感，会记入台账）")
     parser.add_argument("--cache-dir", help="缓存目录（默认 docs/scripts/_work/atc-cache）")
     parser.add_argument("--out", help="输出目录（默认 <assets>/root）")
     parser.add_argument("--assets-dir", help=f"assets/substances 目录（默认自动探测 {REPO_ASSETS_HINT}）")

@@ -1,0 +1,79 @@
+{
+  "name": "2-AI",
+  "url": "https://tripsit.me/factsheets/?name=2-ai&p=substance",
+  "commonNames": [
+    "2-AI",
+    "2ai",
+    "2-aminoindan"
+  ],
+  "categories": [
+    "stimulant",
+    "research-chemical",
+    "habit-forming",
+    "tentative"
+  ],
+  "isApproved": false,
+  "tolerance": {
+    "full": "develops with prolonged and repeated use",
+    "half": "3 - 7 days",
+    "zero": "1 - 2 weeks"
+  },
+  "crossTolerances": [
+    "dopamine",
+    "stimulant"
+  ],
+  "addictionPotential": "moderately addictive with a high potential for abuse",
+  "toxicities": [
+    "exact toxic dosage is unknown"
+  ],
+  "interactions": {
+    "dangerous": [
+      "25x-NBOMe",
+      "25x-NBOH",
+      "Tramadol",
+      "MAOIs",
+      "Stimulants",
+      "MDMA",
+      "Cocaine"
+    ],
+    "unsafe": [
+      "DXM",
+      "MDMA",
+      "Stimulants"
+    ],
+    "uncertain": [
+      "Alcohol",
+      "MXE",
+      "Dissociatives"
+    ]
+  },
+  "roas": [
+    {
+      "name": "oral",
+      "dose": {
+        "units": "mg",
+        "lightMin": 3,
+        "commonMin": 10,
+        "strongMin": 20,
+        "heavyMin": 40
+      },
+      "duration": {
+        "onset": {
+          "min": 10,
+          "max": 30,
+          "units": "minutes"
+        },
+        "total": {
+          "min": 1,
+          "max": 2,
+          "units": "hours"
+        },
+        "afterglow": {
+          "min": 2,
+          "max": 4,
+          "units": "hours"
+        }
+      }
+    }
+  ]
+}

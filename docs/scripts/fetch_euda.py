@@ -67,7 +67,7 @@ EUDA_MANAGED_FIELDS = ("url",)
 
 #: EUDA classification -> 仓库分类（有先例的才映射，其余交给人工）
 EUDA_CLASS_CATEGORIES = {
-    "arylcyclohexylamine": "arylcyclohexylamine",
+    "arylcyclohexylamine": "dissociative",
     "benzodiazepines": "benzodiazepine",
     "cannabinoids": "cannabinoid",
     "cathinones": "stimulant",
