@@ -48,7 +48,7 @@ jobs:
           version_code: "${{ github.event.inputs.version_code }}"
           locales: 'zh-CN,en-US,zh-TW'
 
-      # 1. 根据输入修改 Android 项目的版本号文件
+      # 1. 按输入改版本号（只改工作区，先不提交：构建失败就不留痕）
       - name: Update Version in Source Files
         run: |
           NEW_V_NAME="${{ github.event.inputs.version_name }}"
@@ -74,34 +74,6 @@ jobs:
             echo "Error: $CONSTANTS_FILE not found!"
             exit 1
           fi
-
-      # 2. Commit 刚才修改的版本文件并 Push 源码
-      - name: Commit & Push Version Bump
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          git add app/build.gradle app/src/main/java/com/isaakhanimann/journal/ui/Constants.kt fastlane/
-          
-          if ! git diff --cached --exit-code; then
-            git commit -m "chore: bump version to v${{ github.event.inputs.version_name }} (${{ github.event.inputs.version_code }})"
-            git push origin HEAD:${{ github.ref }}
-          else
-            echo "No changes detected, skipping commit."
-          fi
-
-      # 3. 自动创建并推送 Git Tag
-      - name: Create and Push Tag
-        run: |
-          TAG_TAG="${{ github.event.inputs.version_name }}"
-          echo "TAG_TAG=$TAG_TAG" >> $GITHUB_ENV
-          
-          # 如果云端已有同名 tag 先清理（防止重复运行报错）
-          git tag -d "$TAG_TAG" 2>/dev/null || true
-          git push origin :refs/tags/$TAG_TAG 2>/dev/null || true
-          
-          git tag "$TAG_TAG"
-          git push origin "$TAG_TAG"
 
       - name: Set up JDK
         uses: actions/setup-java@v6.0.0
@@ -170,6 +142,35 @@ jobs:
             done
           fi
           
+      # 4. 构建与产物都成功了，才把版本号提交回去并打 tag：
+      #    之前是先提交、先打 tag 再构建，构建一失败就留下"有 tag 没产物"的空壳。
+      - name: Commit & Push Version Bump
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add app/build.gradle app/src/main/java/com/isaakhanimann/journal/ui/Constants.kt fastlane/
+
+          if ! git diff --cached --exit-code; then
+            git commit -m "chore: bump version to v${{ github.event.inputs.version_name }} (${{ github.event.inputs.version_code }})"
+            git push origin HEAD:${{ github.ref }}
+          else
+            echo "No changes detected, skipping commit."
+          fi
+
+      - name: Create and Push Tag
+        run: |
+          TAG_TAG="${{ github.event.inputs.version_name }}"
+          echo "TAG_TAG=$TAG_TAG" >> $GITHUB_ENV
+
+          # 如果云端已有同名 tag 先清理（防止重复运行报错）
+          git tag -d "$TAG_TAG" 2>/dev/null || true
+          git push origin :refs/tags/$TAG_TAG 2>/dev/null || true
+
+          git tag "$TAG_TAG"
+          git push origin "$TAG_TAG"
+
+      # 5. 发布 GitHub Release（tag 已指向 bump 提交）
       - name: Release to GitHub
         uses: ncipollo/release-action@v1
         with:
@@ -179,13 +180,16 @@ jobs:
           generateReleaseNotes: true   
           allowUpdates: true
 
-      # 5. 上传到 Google Play：签名 AAB + fastlane/metadata/android（标题/描述/截图/按 versionCode 的 changelog）
+      # 6. 上传到 Google Play：签名 AAB + fastlane/metadata/android（标题/描述/截图/按 versionCode 的 changelog）
       #    服务账号密钥不在仓库里：这里从 GOOGLE_PLAY_API secret 写出 google-play-api.json（已在 .gitignore 中）。
       - name: Set up Ruby
         if: github.repository == 'LoliLin/journal-android-multilingual'
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"
+          # 只有存在 Gemfile.lock 时才开缓存：第一次跑没有锁文件，bundler 生成后
+          # 由下一步提交回仓库，之后的运行才会命中 gem 缓存。
+          bundler-cache: ${{ hashFiles('Gemfile.lock') != '' }}
 
       - name: Upload to Google Play
         if: github.repository == 'LoliLin/journal-android-multilingual'
@@ -229,4 +233,17 @@ jobs:
           done
 
           bundle install --jobs 4 --retry 3
+
+          # 第一次跑会生成 Gemfile.lock：提交回去，之后 CI 才能命中 gem 缓存（省掉每次 1-2 分钟）
+          if ! git ls-files --error-unmatch Gemfile.lock >/dev/null 2>&1; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add Gemfile.lock
+            if ! git diff --cached --exit-code; then
+              git commit -m "chore: lock the fastlane dependencies"
+              git push origin HEAD:${{ github.ref }} \
+                || echo "::warning::Gemfile.lock 提交失败，请手动提交（否则缓存不会生效）"
+            fi
+          fi
+
           bundle exec fastlane deploy
