@@ -10,9 +10,9 @@ PsychonautWiki 的字段映射与实测见 [`substances-pw-extraction.md`](subst
 |---|---|---|---|---|
 | **PsychonautWiki** | en | 剂量、时长、生物利用度、耐受、交叉耐受、毒性、成瘾性、相互作用、别名 | GraphQL `api.psychonautwiki.org`（`fetch_psychonautwiki.py`） | CC BY-SA 4.0 |
 | **TripSit** | en | 名称、别名、分类、按途径的剂量字符串、时长字符串、组合矩阵、短摘要 | 单文件 `raw.githubusercontent.com/TripSit/drugs/main/drugs.json`（555 条，1.6 MB，一次 GET） | ⚠️ **仓库无 LICENSE 文件**（默认保留所有权利）：只当名称/别名/分类的核对来源，不要逐字搬文案 |
-| **ATC**（WHOCC） | en | INN 名称、ATC 码、层级归属、DDD（统计口径，**不能当剂量**） | `?code=<5位亚组>` 的 HTML 表格（iso-8859-1）；2/4 位页只列子级，需逐层下钻 | WHOCC copyright/disclaimer |
-| **EUDA** | en | 当年新通报 NPS：Common name、**IUPAC name**、classification、通报日期、国家 | 通报表 CSV；⚠️ 站点有 Cloudflare，脚本直连拿不到，需浏览器会话 | EUDA 版权；建议半自动 |
-| **FreeODwiki** | **zh** | 中文正文（概述/风险）、常用名与系统命名、精神活性类别、**按途径的剂量与时长表** | GitHub 仓库 `药物/*.md`（391 条，markdown + 表格） | CC BY-SA 4.0（README/index/常见问题均如此标注；⚠️ 仓库另有一个未被引用的 `LICENSE-STRICT`＝CC BY-ND，用前建议与维护者确认） |
+| **ATC**（WHOCC） | en | INN 名称、ATC 码、层级归属、DDD（统计口径，**不能当剂量**） | `?code=<5位亚组>` 的 HTML 表格（iso-8859-1）；2/4 位页只列子级，需逐层下钻 | © WHOCC：**使用须注明来源**、**不得复制/分发用于商业目的**、**不得改变或操纵材料**（原文：atcddd.fhi.no/copyright_disclaimer/）。我们只存名称/ATC 码/层级，**没有存储 DDD 数值** |
+| **EUDA** | en | 当年新通报 NPS：Common name、**IUPAC name**、classification、通报日期、国家 | 通报表 CSV；⚠️ 站点有 Cloudflare，脚本直连拿不到，需浏览器会话 | EUDA 拥有版权，但**允许复制/改编/分发（含部分）、任何介质与格式，条件是每一份副本都注明 EUDA 为来源**；其 legal notice 同时声明内容非专业/临床建议 |
+| **FreeODwiki** | **zh** | 中文正文（概述/风险）、常用名与系统命名、精神活性类别、**按途径的剂量与时长表** | GitHub 仓库 `药物/*.md`（391 条，markdown + 表格） | CC BY-SA 4.0（`LICENSE`、README、index、常见问题一致，CODE_OF_CONDUCT 还写明允许商业使用）；⚠️ `LICENSE-STRICT`＝CC BY-ND 4.0 **只覆盖少数文件**（`文档/观点讨论/*`、`文档/od.md`、`关于本站/文档翻译指南和提示词.md`）——391 个 `药物/*.md` 里没有任何 ND 声明，我们取的正文与中文名都在 BY-SA 部分；术语表取自被标记 ND 的那份翻译指南，属事实性词对，风险低但可直接与维护者确认 |
 
 几个实测细节：
 
